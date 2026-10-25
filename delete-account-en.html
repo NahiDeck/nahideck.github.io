@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account and Data Deletion Request — NahiDeck</title>
+  <meta name="description" content="Instructions on how to permanently delete your NahiDeck account and associated personal data.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <a href="index-en.html" class="brand">NahiDeck</a>
+        <nav>
+          <a href="index-en.html">Home</a>
+          <a href="privacy-en.html">Privacy Policy</a>
+          <a href="delete-account-en.html" class="active">Delete Account</a>
+          <div class="lang-switch">
+            <a href="delete-account.html">[TR]</a>
+            <span>[EN]</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Account & Data Deletion Request</h1>
+      <p>At NahiDeck, we respect your right to privacy and data control. If you wish to permanently delete your NahiDeck account and all associated data, you may follow either of the procedures outlined below.</p>
+
+      <h2>Method 1: Direct In-App Deletion (Recommended)</h2>
+      <p>The quickest way to erase your data immediately is directly within the mobile application:</p>
+      <ol>
+        <li>Open the <strong>NahiDeck</strong> app on your Android device.</li>
+        <li>Navigate to the <strong>Settings</strong> screen via the navigation dock (or top bar menu).</li>
+        <li>Open the <strong>Account</strong> section.</li>
+        <li>Scroll to the bottom and tap <strong>"Delete My Account"</strong>.</li>
+        <li>Confirm the action in the prompt.</li>
+        <li>Upon confirmation, your Firebase user record, active paired devices, and cloud license documents will be erased immediately and irreversibly.</li>
+      </ol>
+      <p><em>Note: Even if you delete your account, your app backup in Google Drive will not be deleted automatically. You must delete the backup yourself from Google Drive settings (Google Drive &gt; Settings &gt; Manage Apps).</em></p>
+
+      <h2>Method 2: Web & Email Deletion Request</h2>
+      <p>If you have uninstalled the application or cannot access your device, you can submit an account deletion request via email:</p>
+      <div class="card">
+        <p><strong>Support Email:</strong> nahideck.app@gmail.com</p>
+        <p><strong>Email Subject:</strong> <code>NahiDeck Account and Data Deletion Request</code></p>
+        <p><strong>Required Details:</strong></p>
+        <ul>
+          <li>The <strong>Google Account Email Address</strong> used to authenticate with NahiDeck.</li>
+          <li><em>(Optional)</em> Google Play order number or RevenueCat subscription identifier, if applicable.</li>
+        </ul>
+      </div>
+      <p>Once identity verification is confirmed, your account and all associated cloud records will be permanently removed within <strong>7 business days</strong>.</p>
+
+      <h2>What Data Is Permanently Deleted?</h2>
+      <ul>
+        <li>Firebase Authentication user profile, email address, and authentication tokens.</li>
+        <li>Pro license document under the Firestore <code>entitlements</code> collection.</li>
+        <li>Paired hardware device records under the Firestore <code>devices</code> collection.</li>
+        <li>RevenueCat subscriber profile (<code>app_user_id</code>).</li>
+        <li>Local secure storage tokens and hardware pairing secrets.</li>
+      </ul>
+
+      <h2>What Data Is Retained?</h2>
+      <ul>
+        <li><strong>Google Play Billing Records:</strong> Historical transaction and invoice records are held directly by Google Inc. in accordance with legal and financial compliance requirements; NahiDeck does not host payment details.</li>
+        <li><strong>Infrastructure Security Logs:</strong> Anonymous audit and security logs without personal attribution expire automatically within 90 days (TTL).</li>
+      </ul>
+
+      <div class="card card-danger">
+        <h3>Important: Please Cancel Active Store Subscriptions</h3>
+        <p>Deleting your NahiDeck account <strong>does not automatically cancel active recurring subscriptions</strong> managed via Google Play (per Google Play developer guidelines, third-party apps cannot cancel customer store subscriptions on their behalf).</p>
+        <p>To prevent future billing, please cancel your subscription prior to deleting your account:</p>
+        <ol>
+          <li>Open the <strong>Google Play Store</strong> app on Android.</li>
+          <li>Tap your profile avatar > <strong>Payments & Subscriptions</strong> > <strong>Subscriptions</strong>.</li>
+          <li>Locate <strong>NahiDeck</strong> and select <strong>"Cancel Subscription"</strong>.</li>
+        </ol>
+      </div>
+    </main>
+
+    <footer>
+      <div>&copy; 2026 NahiDeck. All rights reserved.</div>
+      <div>
+        <a href="privacy-en.html">Privacy Policy</a> | 
+        <a href="delete-account-en.html">Delete Account</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

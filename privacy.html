@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası — NahiDeck</title>
+  <meta name="description" content="NahiDeck Mobil Uygulaması, Windows Masaüstü İstemcisi ve Web Tarayıcı Eklentisi Gizlilik Politikası.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <a href="index.html" class="brand">NahiDeck</a>
+        <nav>
+          <a href="index.html">Ana Sayfa</a>
+          <a href="privacy.html" class="active">Gizlilik Politikası</a>
+          <a href="delete-account.html">Hesap Silme</a>
+          <div class="lang-switch">
+            <span>[TR]</span>
+            <a href="privacy-en.html">[EN]</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>NahiDeck Gizlilik Politikası</h1>
+      <p><strong>Son Güncelleme:</strong> 25 Ekim 2026</p>
+      
+      <p>NahiDeck ("biz", "uygulama" veya "hizmet"), kullanıcılarının kişisel verilerinin korunmasına ve gizliliğine azami önem verir. Bu Gizlilik Politikası; <strong>NahiDeck Android Mobil Uygulaması</strong>, <strong>NahiDeck Windows Masaüstü İstemcisi</strong> ve <strong>NahiDeck Web Tarayıcı Eklentisi (NahiDeck Connect)</strong> dahil olmak üzere tüm NahiDeck ekosistemini kapsar.</p>
+
+      <h2>1. Veri Sorumlusu ve İletişim</h2>
+      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında veri sorumlusu:</p>
+      <div class="card">
+        <p><strong>Veri Sorumlusu:</strong> [GELİŞTİRİCİ / ŞİRKET ADI SOYADI YER TUTUCU]</p>
+        <p><strong>İletişim E-Posta:</strong> nahideck.app@gmail.com</p>
+        <p><strong>Web Sitesi:</strong> https://nahideck.github.io</p>
+      </div>
+
+      <h2>2. Temel Mimari ve Yerel İletişim (Sıfır Bulut Bağımlılığı)</h2>
+      <p>NahiDeck, Android telefonunuz ile Windows bilgisayarınız arasında doğrudan yerel ağ (Wi-Fi), USB kablosu veya Bluetooth Düşük Enerji (BLE) üzerinden doğrudan eşler arası (peer-to-peer) çalışır:</p>
+      <ul>
+        <li><strong>Medya ve Ses Komutları:</strong> Tuş basımları, ses düzeyi ayarları ve medya denetimleri tamamen yerel ağ üzerinden iletilir; harici sunuculara gitmez.</li>
+        <li><strong>Masaüstü Makroları ve Komut Dosyaları:</strong> PC üzerinde çalıştırılan kısayollar ve özel aksiyonlar yerel bilgisayarınızda işlenir.</li>
+        <li><strong>Şifreleme:</strong> Yerel ağ bağlantısı yerel olarak üretilen TLS sertifikaları ve TOFU (Trust On First Use) parmak izi sabitlemesiyle uçtan uca şifrelenir.</li>
+      </ul>
+
+      <h2>3. Hangi Verileri Topluyoruz ve Nasıl Kullanıyoruz?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Veri Kategorisi</th>
+            <th>Toplanan Bilgi</th>
+            <th>Hizmet Sağlayıcı / Konum</th>
+            <th>Kullanım Amacı</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Kullanıcı Hesabı</strong></td>
+            <td>E-posta adresi, ad/soyad, Firebase kullanıcı kimliği (UID)</td>
+            <td>Google Firebase Authentication</td>
+            <td>Kullanıcı oturumunun yönetimi ve Pro lisans sahipliğinin doğrulanması (isteğe bağlıdır; Free plan oturumsuz kullanılabilir).</td>
+          </tr>
+          <tr>
+            <td><strong>Lisans ve Eşleşme</strong></td>
+            <td>Rastgele üretilen telefon cihaz UUID'si, PC UUID'si, UID</td>
+            <td>Google Cloud Firestore & Cloud KMS</td>
+            <td>1 Telefon + 1 PC adil kullanım politikası ve dijital lisans imzalama.</td>
+          </tr>
+          <tr>
+            <td><strong>Satın Alma ve Abonelik</strong></td>
+            <td>Google Play sipariş/token bilgisi, RevenueCat App User ID, aktif hak durumu</td>
+            <td>Google Play Billing & RevenueCat</td>
+            <td>Pro abonelik satın alımı, yenilemesi ve hak doğrulaması.</td>
+          </tr>
+          <tr>
+            <td><strong>Kullanım ve Düzen Telemetrisi (İsteğe Bağlı)</strong></td>
+            <td>Rastgele kurulum kimliği (installId), ızgara yapısal düzeni (widget türleri, konumları), tema tercihi, plan türü</td>
+            <td>Google Cloud Firestore (anonymous_layouts)</td>
+            <td>Popüler widget ve ekran düzenlerini analiz ederek arayüz geliştirmesi yapmak. <strong>Kişisel veri, metin veya hesap bilgisi içermez.</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Yerel Eklenti Verileri</strong></td>
+            <td>Aktif sekme medya durumu (şarkı adı, sanatçı, oynatma durumu)</td>
+            <td>Yalnızca yerel tarayıcı ve PC uygulaması</td>
+            <td>Desteklenen tarayıcılardaki medya oynatıcılarını PC ve telefona yansıtmak. Buluta gönderilmez.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Bulut Yedekleme (Google Drive — Ayrı Başlık)</h2>
+      <p>NahiDeck, kullanıcıların ekran yerleşimlerini, profillerini ve tercihlerini yedekleyebilmeleri için isteğe bağlı Google Drive bulut yedekleme özelliği sunar:</p>
+      <ul>
+        <li><strong>Veri Depolama Konumu:</strong> Bulut yedekleri <strong>doğrudan kullanıcının kendi Google Drive hesabındaki gizli uygulama klasöründe (drive.appdata)</strong> saklanır. Bu veriler NahiDeck sunucularına veya üçüncü şahıs sunucularına ASLA aktarılmaz veya kaydedilmez.</li>
+        <li><strong>Yedekleme İçeriği:</strong> Ekran ızgara yerleşimleri, profiller, görsel tercihler ve isteğe bağlı masaüstü aksiyon tanımları. Cihaz oturum sırları, eşleşme anahtarları ve hesap şifreleri yedeğe dahil edilmez.</li>
+        <li><strong>Telemetriden Tam Bağımsızlık:</strong> Bulut yedekleme sistemi ile kullanım telemetrisi tamamen farklı altyapılardır; yedekleme verileri telemetri amacıyla incelenemez veya işlenemez.</li>
+      </ul>
+
+      <h2>5. Kesinlikle Toplanmayan Veriler (Sıfır İhlal İlkesi)</h2>
+      <ul>
+        <li><strong>Konum Bilgisi:</strong> GPS veya hassas konum sağlayıcıları asla çağrılmaz. (Android Bluetooth taraması için işletim sisteminin istediği izinler yalnızca yerel BLE cihaz bulma için kullanılır).</li>
+        <li><strong>Kişisel Dosyalar ve Medya:</strong> Telefonunuzdaki veya bilgisayarınızdaki fotoğraflar, videolar veya belgelere erişilmez.</li>
+        <li><strong>Kişiler ve Rehber:</strong> Adres defteri veya kişi listelerine erişilmez.</li>
+        <li><strong>Kalıcı Donanım Kimlikleri:</strong> IMEI, MAC adresi veya donanım seri numarası toplanmaz; bunun yerine sentetik rastgele UUID'ler kullanılır.</li>
+      </ul>
+
+      <h2>6. Veri Saklama ve Silme Politikası</h2>
+      <ul>
+        <li><strong>Hesap ve Lisans Verileri:</strong> Ayarlar > Hesap > "Hesabımı Sil" adımıyla veya web sitemizdeki Hesap Silme sayfası üzerinden talep edildiğinde derhal ve kalıcı olarak silinir.</li>
+        <li><strong>Telemetri Verileri:</strong> Ayarlar > Gizlilik ekranından onay kaldırıldığı anda mevcut telemetri kaydı Firestore'dan derhal silinir. Aktif kayıtlar ise en geç 180 gün içinde otomatik imha edilir (TTL).</li>
+        <li><strong>Sunucu İstek Günlükleri:</strong> Altyapı güvenlik günlükleri maksimum 30 gün sonra sistemden otomatik silinir.</li>
+      </ul>
+
+      <h2>7. Kullanıcı Hakları (KVKK ve GDPR)</h2>
+      <p>KVKK'nın 11. maddesi ve GDPR uyarınca kullanıcılarımız:</p>
+      <ul>
+        <li>Kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+        <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+        <li>Verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+        <li>Verilerin düzeltilmesini, güncellenmesini veya tamamen silinmesini isteme haklarına sahiptir.</li>
+      </ul>
+      <p>Bu haklarınızı kullanmak için nahideck.app@gmail.com adresi üzerinden bizimle iletişime geçebilirsiniz.</p>
+    </main>
+
+    <footer>
+      <div>&copy; 2026 NahiDeck. Tüm hakları saklıdır.</div>
+      <div>
+        <a href="privacy.html">Gizlilik Politikası</a> | 
+        <a href="delete-account.html">Hesap ve Veri Silme</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

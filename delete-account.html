@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hesap ve Veri Silme Talebi — NahiDeck</title>
+  <meta name="description" content="NahiDeck hesabınızı ve ilişkili tüm verilerinizi kalıcı olarak silme yönergeleri.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <a href="index.html" class="brand">NahiDeck</a>
+        <nav>
+          <a href="index.html">Ana Sayfa</a>
+          <a href="privacy.html">Gizlilik Politikası</a>
+          <a href="delete-account.html" class="active">Hesap Silme</a>
+          <div class="lang-switch">
+            <span>[TR]</span>
+            <a href="delete-account-en.html">[EN]</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Hesap ve Veri Silme Talebi</h1>
+      <p>NahiDeck olarak kullanıcılarımızın gizliliğine ve kişisel verilerinin korunmasına saygı duyuyoruz. NahiDeck hesabınızı ve hesabınıza bağlı tüm verileri kalıcı olarak silmek istiyorsanız aşağıdaki yöntemlerden birini uygulayabilirsiniz.</p>
+
+      <h2>Yöntem 1: Uygulama İçinden Doğrudan Silme (Önerilen)</h2>
+      <p>Hesabınızı ve verilerinizi anında ve otomatik silmenin en hızlı yolu mobil uygulamayı kullanmaktır:</p>
+      <ol>
+        <li>Android cihazınızda <strong>NahiDeck</strong> uygulamasını açın.</li>
+        <li>Sol navigasyon dock'undan (veya sağ üst menüden) <strong>Ayarlar</strong> sekmesine gidin.</li>
+        <li><strong>Hesap</strong> bölümünü açın.</li>
+        <li>Sayfanın en altındaki <strong>"Hesabımı Sil"</strong> seçeneğine dokunun.</li>
+        <li>Açılan onay penceresinde işlemi onaylayın.</li>
+        <li>İşlem tamamlandığında Firebase kullanıcı kaydınız, aktif cihaz eşleşmeleriniz ve bulut lisans kayıtlarınız derhal ve kalıcı olarak silinecektir.</li>
+      </ol>
+      <p><em>Not: Hesabınızı silseniz bile Google Drive'daki uygulama yedeğiniz silinmez. Yedeği Google Drive ayarlarından (Google Drive &gt; Ayarlar &gt; Uygulamaları Yönet) kendiniz silmeniz gerekir.</em></p>
+
+      <h2>Yöntem 2: Web / E-Posta Üzerinden Silme Talebi</h2>
+      <p>Uygulamaya erişiminiz yoksa veya uygulamayı cihazınızdan kaldırdıysanız, hesap silme talebinizi e-posta yoluyla bize iletebilirsiniz:</p>
+      <div class="card">
+        <p><strong>Destek E-Posta Adresi:</strong> nahideck.app@gmail.com</p>
+        <p><strong>E-Posta Konusu:</strong> <code>NahiDeck Hesap ve Veri Silme Talebi</code></p>
+        <p><strong>Gerekli Bilgiler:</strong></p>
+        <ul>
+          <li>NahiDeck hesabınıza giriş yaparken kullandığınız <strong>Google Hesabı E-Posta Adresi</strong>.</li>
+          <li><em>(İsteğe bağlı)</em> Varsa Google Play sipariş numarası veya RevenueCat abonelik referansı.</li>
+        </ul>
+      </div>
+      <p>Talebiniz bize ulaştıktan sonra kimlik doğrulama adımları tamamlanacak ve <strong>en geç 7 iş günü içinde</strong> hesabınız ve ilişkili verileriniz kalıcı olarak silinecektir.</p>
+
+      <h2>Hangi Veriler Kalıcı Olarak Silinir?</h2>
+      <ul>
+        <li>Firebase Authentication kullanıcı kaydı, e-posta adresi ve profil bilgileri.</li>
+        <li>Firebase Firestore <code>entitlements</code> koleksiyonundaki Pro lisans sahiplik dokümanı.</li>
+        <li>Firebase Firestore <code>devices</code> koleksiyonundaki eşleşmiş telefon ve PC donanım kayıtları.</li>
+        <li>RevenueCat abonelik platformundaki kullanıcı profili (<code>app_user_id</code>).</li>
+        <li>Cihazınızdaki yerel güvenli depoda saklanan lisans anahtarları ve oturum kayıtları.</li>
+      </ul>
+
+      <h2>Hangi Veriler Saklanır?</h2>
+      <ul>
+        <li><strong>Google Play Fatura Kayıtları:</strong> Google Play üzerinden yapılan satın alımlara ait fatura ve işlem geçmişi, vergi ve tüketici mevzuatı gereği doğrudan Google Inc. tarafından saklanır ve NahiDeck sunucularında tutulmaz.</li>
+        <li><strong>Sistem Güvenlik Günlükleri:</strong> Kişisel kimlikle ilişkisi olmayan altyapı denetim kayıtları en geç 90 gün içinde sistemden otomatik olarak imha edilir.</li>
+      </ul>
+
+      <div class="card card-danger">
+        <h3>Önemli Not: Aktif Aboneliğinizi İptal Etmeyi Unutmayın</h3>
+        <p>Hesabınızı silmek, Google Play Store üzerinden başlattığınız aktif bir aboneliği <strong>otomatik olarak iptal etmez</strong> (Google mağaza kuralları gereği geliştiriciler kullanıcıların aboneliklerini doğrudan sonlandıramaz).</p>
+        <p>Gelecek dönem ödemelerinin önüne geçmek için lütfen hesap silme işleminden önce:</p>
+        <ol>
+          <li>Android cihazınızda <strong>Google Play Store</strong>'u açın.</li>
+          <li>Profil simgenize dokunun > <strong>Ödemeler ve Abonelikler</strong> > <strong>Abonelikler</strong> bölümüne gidin.</li>
+          <li><strong>NahiDeck</strong> aboneliğini seçerek <strong>"Aboneliği İptal Et"</strong> seçeneğini işaretleyin.</li>
+        </ol>
+      </div>
+    </main>
+
+    <footer>
+      <div>&copy; 2026 NahiDeck. Tüm hakları saklıdır.</div>
+      <div>
+        <a href="privacy.html">Gizlilik Politikası</a> | 
+        <a href="delete-account.html">Hesap ve Veri Silme</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

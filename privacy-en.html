@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — NahiDeck</title>
+  <meta name="description" content="Privacy Policy for NahiDeck Android Mobile App, Windows Desktop Client, and Browser Extension.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <a href="index-en.html" class="brand">NahiDeck</a>
+        <nav>
+          <a href="index-en.html">Home</a>
+          <a href="privacy-en.html" class="active">Privacy Policy</a>
+          <a href="delete-account-en.html">Delete Account</a>
+          <div class="lang-switch">
+            <a href="privacy.html">[TR]</a>
+            <span>[EN]</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>NahiDeck Privacy Policy</h1>
+      <p><strong>Last Updated:</strong> October 25, 2026</p>
+      
+      <p>NahiDeck ("we", "us", or "the app") values the privacy of its users and the security of personal data. This Privacy Policy covers the entire NahiDeck ecosystem, including the <strong>NahiDeck Android Mobile Application</strong>, the <strong>NahiDeck Windows Desktop Client</strong>, and the <strong>NahiDeck Web Browser Extension (NahiDeck Connect)</strong>.</p>
+
+      <h2>1. Data Controller and Contact Information</h2>
+      <p>Under the General Data Protection Regulation (GDPR) and applicable data protection legislation, the data controller is:</p>
+      <div class="card">
+        <p><strong>Data Controller:</strong> [PLACEHOLDER FOR DEVELOPER / LEGAL ENTITY NAME]</p>
+        <p><strong>Contact Email:</strong> nahideck.app@gmail.com</p>
+        <p><strong>Website:</strong> https://nahideck.github.io</p>
+      </div>
+
+      <h2>2. Architecture & Local Communication (Zero Cloud Dependency)</h2>
+      <p>NahiDeck operates primarily via direct peer-to-peer communication between your Android phone and Windows computer over local Wi-Fi, direct USB cable, or Bluetooth Low Energy (BLE):</p>
+      <ul>
+        <li><strong>Media & Audio Controls:</strong> Key presses, volume adjustments, and media control commands are exchanged strictly across your local network and never sent to cloud servers.</li>
+        <li><strong>Desktop Macros & Scripts:</strong> Custom hotkeys and actions executed on your PC are processed locally by the desktop client.</li>
+        <li><strong>Encryption:</strong> Local communication is protected end-to-end using ephemeral or self-signed TLS certificates with TOFU (Trust On First Use) certificate fingerprint pinning.</li>
+      </ul>
+
+      <h2>3. Information We Collect and How It Is Used</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Collected Information</th>
+            <th>Service Provider / Destination</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>User Account</strong></td>
+            <td>Email address, display name, Firebase UID</td>
+            <td>Google Firebase Authentication</td>
+            <td>User authentication and Pro license entitlement tracking (optional; Free tier can be used anonymously).</td>
+          </tr>
+          <tr>
+            <td><strong>Licensing & Pairing</strong></td>
+            <td>Randomly generated mobile device UUID, PC UUID, UID</td>
+            <td>Google Cloud Firestore & Cloud KMS</td>
+            <td>Enforcing 1 Phone + 1 PC fair use policy and cryptographic token signing.</td>
+          </tr>
+          <tr>
+            <td><strong>In-App Purchases</strong></td>
+            <td>Google Play order/purchase token, RevenueCat App User ID, entitlement status</td>
+            <td>Google Play Billing & RevenueCat</td>
+            <td>Processing and verifying Pro subscriptions and renewals.</td>
+          </tr>
+          <tr>
+            <td><strong>Usage & Layout Telemetry (Optional)</strong></td>
+            <td>Random install ID, structural grid layouts (widget kinds, positions, sizes), theme preferences, plan tier</td>
+            <td>Google Cloud Firestore (anonymous_layouts)</td>
+            <td>Analyzing popular layouts and widget usage to improve user experience. <strong>Contains ZERO personal data, text, or account details.</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Local Extension Data</strong></td>
+            <td>Active media state from browser tabs (track title, artist, playback state)</td>
+            <td>Local browser and PC app only</td>
+            <td>Displaying currently playing web media on the phone and PC. Never sent to cloud servers.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Cloud Backup (Google Drive — Independent Section)</h2>
+      <p>NahiDeck offers an optional cloud backup feature for screen layouts, profiles, and custom user preferences:</p>
+      <ul>
+        <li><strong>Storage Location:</strong> Cloud backups are stored <strong>exclusively in the user's private Google Drive AppData folder (drive.appdata)</strong>. Backup files are never uploaded to, hosted on, or accessed by NahiDeck servers or third parties.</li>
+        <li><strong>Backup Contents:</strong> Screen placements, user profiles, theme options, and optional PC action scripts. Device secrets, authentication passwords, and network tokens are strictly excluded.</li>
+        <li><strong>Separation from Telemetry:</strong> Cloud backup is completely segregated from telemetry. Backup content is never read or aggregated for analytic purposes.</li>
+      </ul>
+
+      <h2>5. Data We Never Collect (Zero Violation Policy)</h2>
+      <ul>
+        <li><strong>Location Data:</strong> GPS or coarse/fine location services are never accessed. (Android BLE scan permissions are strictly utilized for local peer discovery).</li>
+        <li><strong>Personal Files:</strong> Photos, videos, local documents, or voice recordings are never accessed.</li>
+        <li><strong>Contacts:</strong> Phonebook and contact lists are never accessed.</li>
+        <li><strong>Hardware Identifiers:</strong> IMEI, MAC addresses, or persistent hardware serials are never collected; ephemeral synthetic UUIDs are used instead.</li>
+      </ul>
+
+      <h2>6. Retention and Deletion</h2>
+      <ul>
+        <li><strong>Account & License Data:</strong> Deleted permanently upon request via Settings > Account > "Delete Account" in the mobile app, or via our online Account Deletion page.</li>
+        <li><strong>Telemetry Records:</strong> Revoking consent in Settings > Privacy immediately triggers cloud deletion of the telemetry record. Active records automatically expire after 180 days (TTL).</li>
+        <li><strong>Technical Server Logs:</strong> Retained for a maximum of 30 days for operational integrity and security auditing.</li>
+      </ul>
+
+      <h2>7. Your Rights (GDPR & Data Protection)</h2>
+      <p>Under GDPR and applicable privacy legislation, you have the right to access, rectify, port, or erase your personal data held in our authentication and licensing systems. To exercise these rights, please contact our support desk at nahideck.app@gmail.com.</p>
+    </main>
+
+    <footer>
+      <div>&copy; 2026 NahiDeck. All rights reserved.</div>
+      <div>
+        <a href="privacy-en.html">Privacy Policy</a> | 
+        <a href="delete-account-en.html">Delete Account</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
