@@ -426,6 +426,65 @@ select.lang {
   .ext-split { grid-template-columns: 1fr; }
 }
 
+/* ============================================================
+   RTL — Arapça (ar) ve Farsça (fa) için sağdan sola metin yönü.
+   site.js, <html dir="rtl"> yerine <html data-rtl="true"> set eder;
+   böylece tarayıcının flex layout'ları otomatik mirror etmesi engellenir.
+   Düzen (header, butonlar, vitrin sırası, alt bilgi) aynı kalır;
+   yalnızca metin içerikleri (başlıklar, açıklamalar, listeler)
+   sağdan sola doğal akışına kavuşur.
+   ============================================================ */
+
+/* Hero metinleri: ortalı kalır ama bidi yönü rtl olur */
+[data-rtl="true"] .hero h1,
+[data-rtl="true"] .hero p,
+[data-rtl="true"] .soon {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+/* Özellik kartları: metin sağdan sola akar ve sağa hizalanır */
+[data-rtl="true"] .feature {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Vitrin yazı bloğu: metin sağdan sola akar ve sağ kenardan soldaki görsel gibi 24px boşluk bırakır */
+[data-rtl="true"] .showcase-text {
+  direction: rtl;
+  text-align: right;
+  margin-right: 24px;
+}
+
+/* Yasal sayfalar: metin gövdesi sağdan sola */
+[data-rtl="true"] .legal {
+  direction: rtl;
+  text-align: right;
+}
+[data-rtl="true"] .legal ul,
+[data-rtl="true"] .legal ol {
+  padding-left: 0;
+  padding-right: 22px;
+}
+[data-rtl="true"] .legal th,
+[data-rtl="true"] .legal td {
+  text-align: right;
+}
+
+/* Eklenti sayfası metinleri */
+[data-rtl="true"] .ext-card p {
+  direction: rtl;
+  text-align: right;
+}
+[data-rtl="true"] .ext-notes {
+  direction: rtl;
+  text-align: right;
+}
+[data-rtl="true"] .ext-notes ul {
+  padding-left: 0;
+  padding-right: 22px;
+}
+
 /* Telefon */
 @media (max-width: 880px) {
   .feature { flex: 1 1 calc(50% - 8px); }
@@ -446,6 +505,7 @@ select.lang {
   .showcase-media { margin: 0 auto; }
   .showcase-text { text-align: center; }
   .showcase-text p { margin-left: auto; margin-right: auto; }
+  [data-rtl="true"] .showcase-text { margin-right: 0; text-align: center; }
   .feature { text-align: center; }
   .nav { gap: 12px; font-size: 13px; }
   .nav .hide-sm { display: none; }

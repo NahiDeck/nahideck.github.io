@@ -1051,5 +1051,1397 @@ window.NAHI_LEGAL = {
         ]]
       ]
     }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  "pt-PT": {
+    privacy: {
+      title: "Política de Privacidade do NahiDeck",
+      updated: "25 de outubro de 2026",
+      blocks: [
+        ["p", "O NahiDeck («nós», «aplicação» ou «serviço») valoriza a privacidade dos seus utilizadores e a proteção dos dados pessoais. Esta política abrange a <strong>aplicação NahiDeck para Android</strong>, o <strong>cliente NahiDeck para Windows</strong> e a <strong>extensão de navegador web (NahiDeck Connect)</strong>."],
+        ["h", "Em resumo"],
+        ["ul", [
+          "<strong>O que recolhemos:</strong> Detalhes da conta (opcional), registos de licença Pro e de emparelhamento de dispositivos, dados de utilização anónimos opcionais e relatórios de falhas que decida enviar.",
+          "<strong>Onde é processado:</strong> Na Europa (Firestore, Cloud Functions). O início de sessão (Firebase Authentication) e a verificação de compras (RevenueCat) são processados nos Estados Unidos; a base para esta transferência está descrita abaixo.",
+          "<strong>Durante quanto tempo conservamos:</strong> Registos técnicos durante 30 dias, registos de auditoria e relatórios de falhas durante 90 dias, registos anónimos de esquemas durante 180 dias. Eliminar a sua conta remove os dados da sua conta.",
+          "<strong>Os seus direitos:</strong> Pode solicitar acesso, retificação e eliminação. Pode eliminar a sua conta na aplicação ou na página de Eliminação de Conta.",
+          "<strong>Relatórios de falhas:</strong> Enviados apenas mediante a sua confirmação. A sua nota e o seu e-mail de contacto opcionais são incluídos; a nota é guardada tal como foi escrita, e os endereços de e-mail e de IP são mascarados."
+        ]],
+        ["h", "1. Responsável pelo tratamento e contacto"],
+        ["p", "Nos termos do RGPD e da legislação aplicável de proteção de dados, o responsável pelo tratamento dos dados é:"],
+        ["h", "2. Comunicação local (sem dependência da nuvem)"],
+        ["p", "O NahiDeck funciona diretamente entre o seu telemóvel Android e o seu computador Windows através de Wi-Fi local, cabo USB ou Bluetooth Low Energy (BLE):"],
+        ["ul", [
+          "<strong>Comandos multimédia e de áudio:</strong> As teclas premidas, os ajustes de volume e os comandos multimédia circulam na sua rede local. Não são enviados para servidores externos.",
+          "<strong>Macros de computador:</strong> Os atalhos e as ações personalizadas são executados e processados no seu computador.",
+          "<strong>Encriptação:</strong> A ligação local é protegida por certificados TLS gerados localmente e fixação de impressões digitais TOFU (Trust On First Use)."
+        ]],
+        ["h", "3. O que recolhemos e como utilizamos"],
+        ["p", "As categorias de dados, os prestadores de serviços e as finalidades estão detalhados na tabela do Anexo A no final desta página."],
+        ["h", "4. Cópia de segurança na nuvem (Google Drive)"],
+        ["p", "Uma cópia de segurança opcional no Google Drive permite guardar os seus esquemas de ecrã, perfis e preferências:"],
+        ["ul", [
+          "<strong>Onde é guardada:</strong> Apenas na pasta privada da aplicação no seu próprio Google Drive (drive.appdata). Nunca é enviada nem alojada nos servidores do NahiDeck ou de terceiros.",
+          "<strong>O que contém:</strong> Esquemas de ecrã, perfis, preferências visuais e definições opcionais de ações no computador. Chaves secretas do dispositivo, chaves de emparelhamento e palavras-passe de contas nunca são incluídas.",
+          "<strong>Separada da telemetria:</strong> Os dados da cópia de segurança nunca são lidos nem utilizados para fins de análise."
+        ]],
+        ["h", "5. Dados que nunca recolhemos"],
+        ["ul", [
+          "<strong>Localização:</strong> Nunca utilizamos GPS ou serviços de localização. A permissão de procura por Bluetooth do Android é utilizada apenas para encontrar dispositivos próximos.",
+          "<strong>Ficheiros pessoais:</strong> Não acedemos a fotografias, vídeos, documentos ou gravações de voz.",
+          "<strong>Contactos:</strong> Não acedemos à sua lista de contactos.",
+          "<strong>Identificadores de hardware:</strong> Não recolhemos IMEI, endereços MAC ou números de série de hardware. São utilizados identificadores aleatórios."
+        ]],
+        ["h", "6. Conservação e eliminação"],
+        ["ul", [
+          "<strong>Dados de conta e de licença:</strong> Eliminados permanentemente a pedido, através de Definições > Conta > «Eliminar conta» na aplicação, ou na página de eliminação de conta no nosso website.",
+          "<strong>Telemetria:</strong> Retirar o consentimento em Definições > Privacidade elimina o seu registo existente de imediato. Os registos ativos expiram automaticamente no prazo de 180 dias (TTL).",
+          "<strong>Registos técnicos do servidor:</strong> Os registos de pedidos da infraestrutura são conservados durante um máximo de 30 dias.",
+          "<strong>Registos de licença e de auditoria:</strong> Os registos das operações de conta e de licença contêm uma versão com hash (unidirecional) do identificador de utilizador e são conservados durante um máximo de 90 dias.",
+          "<strong>Relatórios de falhas:</strong> Incluem a versão da aplicação, o hash do dispositivo, o tipo e texto do erro, o rastreio da pilha e linhas de registo. Os endereços de e-mail, os endereços IP e os nomes de pastas de utilizador em caminhos de ficheiros são mascarados antes do armazenamento. Conservados durante um máximo de 90 dias.",
+          "<strong>Transferências internacionais:</strong> O Firebase Authentication é operado pela Google a partir de centros de dados nos Estados Unidos. Para verificação de compras, a RevenueCat processa os seus dados nos Estados Unidos (AWS); esta transferência está coberta por Cláusulas Contratuais-Tipo. Os dados do Firestore, Cloud Functions e Cloud KMS são processados em servidores na Europa (europe-west1). Base legal para transferências a partir da Turquia ao abrigo do artigo 9.º da KVKK: [BASE LEGAL: A PREENCHER POR ADVOGADO].",
+          "<strong>E-mail de apoio:</strong> Processado através do Google Groups (grupo de consumidores) e sujeito à <a href='https://policies.google.com/privacy?hl=en'>Política de Privacidade</a> e aos <a href='https://policies.google.com/terms?hl=en'>Termos</a> da Google. As mensagens são conservadas no arquivo do grupo."
+        ]],
+        ["h", "7. Os seus direitos (RGPD e KVKK)"],
+        ["p", "Nos termos do RGPD e da legislação aplicável, tem o direito de saber se tratamos os seus dados, de aceder aos mesmos, de os retificar e de solicitar a sua eliminação. Para exercer estes direitos, envie um e-mail para nahideck-support@googlegroups.com."],
+        ["h", "Anexo A: Categorias de dados e prestadores de serviços (detalhe técnico)"],
+        ["table", ["Categoria de dados", "Informação recolhida", "Prestador de serviços", "Finalidade"], [
+          ["<strong>Conta de utilizador</strong>", "Endereço de e-mail, nome de apresentação, ID de utilizador do Firebase (UID)", "Google Firebase Authentication", "Iniciar sessão e verificar a titularidade da licença Pro. Opcional; o plano gratuito pode ser utilizado sem iniciar sessão."],
+          ["<strong>Licença e emparelhamento</strong>", "ID de telemóvel gerado aleatoriamente, ID de computador, UID", "Google Cloud Firestore e Cloud KMS", "Aplicação da regra de utilização razoável de 1 telemóvel + 1 computador e assinatura de tokens de licença."],
+          ["<strong>Compras e subscrições</strong>", "Token de encomenda/compra do Google Play, ID de utilizador do RevenueCat, estado dos direitos", "Google Play Billing e RevenueCat", "Processamento e verificação de compras e renovações Pro."],
+          ["<strong>Telemetria de utilização e esquemas (opcional)</strong>", "ID de instalação aleatório, esquema de grelha (tipos de widget, posições, tamanhos), escolha de tema, plano", "Google Cloud Firestore (anonymous_layouts)", "Compreender os widgets e esquemas populares para melhorar a interface. <strong>Não contém dados pessoais, texto ou detalhes de conta.</strong>"],
+          ["<strong>Dados locais da extensão</strong>", "Estado multimédia do separador ativo no navegador (título da faixa, artista, estado de reprodução)", "Apenas navegador local e aplicação de computador", "Apresentar multimédia da web no telemóvel e computador. Nunca é enviado para a nuvem."],
+          ["<strong>Verificação da aplicação</strong>", "Nome do pacote, certificado de assinatura da aplicação e resultado de integridade do dispositivo", "Google Play Integrity (Google)", "Verificar se a aplicação foi instalada a partir do Google Play e se é executada num dispositivo fidedigno; prevenção de abusos. A Google não partilha estes dados com terceiros."],
+          ["<strong>Relatórios de falhas (opcional)</strong>", "Versão da aplicação, hash do dispositivo, tipo e texto do erro, rastreio de pilha e linhas de registo (endereços de e-mail e de IP mascarados)", "Google Cloud Functions e Firestore (Europa); e-mail de apoio via Google Groups", "Análise e correção de falhas. Enviado apenas mediante a sua confirmação."]
+        ]],
+        ["card", [["p", "<strong>Responsável pelo tratamento:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail de contacto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Website:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "Pedido de eliminação de conta e de dados",
+      blocks: [
+        ["p", "Se pretender eliminar permanentemente a sua conta NahiDeck e todos os dados associados, pode utilizar um dos métodos abaixo."],
+        ["h", "Método 1: Eliminar na aplicação (recomendado)"],
+        ["ol", [
+          "Abra a aplicação <strong>NahiDeck</strong> no seu dispositivo Android.",
+          "Aceda a <strong>Definições</strong> a partir da barra lateral (ou menu superior).",
+          "Abra a secção <strong>Conta</strong>.",
+          "Desloque até ao fundo e toque em <strong>«Eliminar a minha conta»</strong>.",
+          "Confirme na janela de diálogo.",
+          "O seu registo de utilizador no Firebase, os dispositivos emparelhados e os registos de licença na nuvem são permanentemente eliminados."
+        ]],
+        ["p", "<em>A eliminação de conta requer um início de sessão nos últimos 5 minutos por motivos de segurança. Se surgir um erro, termine a sessão, volte a iniciar sessão e tente novamente.</em>"],
+        ["p", "<em>Nota: Eliminar a sua conta não remove a cópia de segurança da aplicação no Google Drive. Deve eliminá-la diretamente nas definições do Google Drive (Google Drive > Definições > Gerir aplicações).</em>"],
+        ["h", "Método 2: Solicitar eliminação por e-mail"],
+        ["p", "Se não conseguir aceder à aplicação ou se a tiver desinstalado, envie o seu pedido por e-mail:"],
+        ["card", [
+          ["p", "<strong>E-mail de apoio:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Assunto:</strong> <code>Pedido de Eliminação de Conta e Dados NahiDeck</code>"],
+          ["p", "<strong>Informações necessárias:</strong>"],
+          ["ul", ["O endereço de e-mail da conta Google que utiliza para iniciar sessão no NahiDeck.", "<em>(Opcional)</em> Número de encomenda do Google Play ou referência de subscrição do RevenueCat."]]
+        ]],
+        ["p", "Após a verificação da sua identidade, a sua conta e os registos na nuvem associados serão permanentemente eliminados no prazo de <strong>7 dias úteis</strong>."],
+        ["h", "O que é permanentemente eliminado?"],
+        ["ul", [
+          "Registo de utilizador no Firebase Authentication, endereço de e-mail e dados de perfil.",
+          "Registo de licença Pro na coleção <code>entitlements</code> do Firestore.",
+          "Registos de telemóveis e computadores emparelhados na coleção <code>devices</code> do Firestore.",
+          "Perfil de subscritor no RevenueCat (<code>app_user_id</code>); eliminado onde for tecnicamente viável. Se não puder ser eliminado, comunique-nos por e-mail.",
+          "Chaves de licença e registos de sessão no armazenamento seguro do seu dispositivo."
+        ]],
+        ["h", "O que é conservado?"],
+        ["ul", [
+          "<strong>Registos de faturação do Google Play:</strong> A Google conserva estes registos por requisitos fiscais e de legislação do consumidor. O NahiDeck não armazena detalhes de pagamento.",
+          "<strong>Registos de auditoria:</strong> Os registos de operações de conta e licença contêm um identificador com hash que não pode ser associado diretamente à sua identidade e são eliminados automaticamente no prazo de 90 dias.",
+          "<strong>Relatórios de falhas:</strong> Eliminados automaticamente no prazo de 90 dias."
+        ]],
+        ["danger", [
+          ["h3", "Importante: cancele a sua subscrição ativa"],
+          ["p", "Eliminar a sua conta <strong>não cancela</strong> uma subscrição iniciada através do Google Play. Para evitar cobranças futuras, cancele-a antes de eliminar a sua conta:"],
+          ["ol", [
+            "Abra a <strong>Google Play Store</strong> no seu dispositivo Android.",
+            "Toque no ícone do perfil > <strong>Pagamentos e subscrições</strong> > <strong>Subscrições</strong>.",
+            "Selecione <strong>NahiDeck</strong> e toque em <strong>«Cancelar subscrição»</strong>."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  it: {
+    privacy: {
+      title: "Informativa sulla privacy di NahiDeck",
+      updated: "25 ottobre 2026",
+      blocks: [
+        ["p", "NahiDeck (\"noi\", \"l'applicazione\" o \"il servizio\") attribuisce grande valore alla privacy dei propri utenti e alla protezione dei dati personali. La presente informativa copre l'<strong>applicazione Android NahiDeck</strong>, il <strong>client desktop Windows NahiDeck</strong> e l'<strong>estensione per browser web (NahiDeck Connect)</strong>."],
+        ["h", "In breve"],
+        ["ul", [
+          "<strong>Cosa raccogliamo:</strong> Dettagli dell'account (facoltativo), record di licenza Pro e associazione dispositivi, dati anonimi di utilizzo facoltativi e segnalazioni di arresto anomalo che scegli di inviare.",
+          "<strong>Dove vengono elaborati:</strong> In Europa (Firestore, Cloud Functions). L'accesso (Firebase Authentication) e la verifica degli acquisti (RevenueCat) vengono elaborati negli Stati Uniti; la base per tale trasferimento è descritta di seguito.",
+          "<strong>Per quanto tempo li conserviamo:</strong> Log tecnici per 30 giorni, registri di audit e arresti anomali per 90 giorni, record anonimi di layout per 180 giorni. L'eliminazione dell'account rimuove tutti i dati dell'account.",
+          "<strong>I tuoi diritti:</strong> Puoi richiedere l'accesso, la rettifica e la cancellazione. Puoi eliminare il tuo account nell'app o nella pagina di eliminazione dell'account.",
+          "<strong>Segnalazioni di arresto anomalo:</strong> Inviate solo previa tua conferma. La nota facoltativa e l'email di contatto sono incluse; la nota viene conservata così come scritta, mentre gli indirizzi email e IP vengono mascherati."
+        ]],
+        ["h", "1. Titolare del trattamento e contatti"],
+        ["p", "Ai sensi del GDPR e della normativa applicabile sulla protezione dei dati, il titolare del trattamento è:"],
+        ["h", "2. Comunicazione locale (nessuna dipendenza dal cloud)"],
+        ["p", "NahiDeck funziona direttamente tra il tuo smartphone Android e il tuo computer Windows tramite Wi-Fi locale, cavo USB o Bluetooth Low Energy (BLE):"],
+        ["ul", [
+          "<strong>Comandi multimediali e audio:</strong> Pressioni di tasti, regolazioni del volume e comandi multimediali viaggiano sulla tua rete locale. Non vengono inviati a server esterni.",
+          "<strong>Macro del computer:</strong> Scorciatoie e azioni personalizzate vengono eseguite ed elaborate sul tuo computer.",
+          "<strong>Crittografia:</strong> La connessione locale è protetta da certificati TLS generati localmente e blocco dell'impronta digitale TOFU (Trust On First Use)."
+        ]],
+        ["h", "3. Quali dati raccogliamo e come li utilizziamo"],
+        ["p", "Le categorie di dati, i fornitori di servizi e le finalità sono descritti in dettaglio nella tabella dell'Allegato A in fondo a questa pagina."],
+        ["h", "4. Backup su cloud (Google Drive)"],
+        ["p", "Un backup facoltativo su Google Drive ti consente di salvare i tuoi layout di schermata, profili e preferenze:"],
+        ["ul", [
+          "<strong>Dove viene memorizzato:</strong> Esclusivamente nella cartella privata dell'app nel tuo Google Drive personale (drive.appdata). Non viene mai inviato né ospitato sui server di NahiDeck o di terze parti.",
+          "<strong>Cosa contiene:</strong> Layout dello schermo, profili, preferenze visive e definizioni facoltative di azioni PC. Segreti del dispositivo, chiavi di associazione e password dell'account non vengono mai inclusi.",
+          "<strong>Separato dalla telemetria:</strong> I dati di backup non vengono mai letti o utilizzati per analisi statistiche."
+        ]],
+        ["h", "5. Dati che non raccogliamo mai"],
+        ["ul", [
+          "<strong>Posizione:</strong> Il GPS e i servizi di geolocalizzazione non vengono mai utilizzati. L'autorizzazione di scansione Bluetooth di Android serve unicamente a trovare i dispositivi vicini.",
+          "<strong>File personali:</strong> Non accediamo a foto, video, documenti o registrazioni vocali.",
+          "<strong>Contatti:</strong> Non accediamo alla tua rubrica.",
+          "<strong>Identificatori hardware:</strong> Non raccogliamo IMEI, indirizzi MAC o numeri di serie hardware. Vengono usati invece identificatori generati casualmente."
+        ]],
+        ["h", "6. Conservazione e cancellazione"],
+        ["ul", [
+          "<strong>Dati di account e licenza:</strong> Eliminati definitivamente su richiesta, tramite Impostazioni > Account > \"Elimina account\" nell'app, oppure dalla pagina di eliminazione account sul nostro sito web.",
+          "<strong>Telemetria:</strong> La revoca del consenso in Impostazioni > Privacy elimina immediatamente il record esistente. I record attivi scadono automaticamente entro 180 giorni (TTL).",
+          "<strong>Log tecnici del server:</strong> I log delle richieste di infrastruttura sono conservati per un massimo di 30 giorni.",
+          "<strong>Record di licenza e di audit:</strong> I record delle operazioni di account e licenza contengono una forma con hash unidirezionale dell'ID utente e sono conservati per un massimo di 90 giorni.",
+          "<strong>Segnalazioni di arresto anomalo:</strong> Includono versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log. Gli indirizzi email, gli indirizzi IP e i nomi di cartelle utente nei percorsi dei file vengono mascherati prima della memorizzazione. Conservati per un massimo di 90 giorni.",
+          "<strong>Trasferimenti internazionali:</strong> Firebase Authentication è gestito da Google dai data center negli Stati Uniti. Per la verifica degli acquisti, RevenueCat elabora i tuoi dati negli Stati Uniti (AWS); questo trasferimento è disciplinato dalle Clausole Contrattuali Standard. I dati di Firestore, Cloud Functions e Cloud KMS vengono elaborati su server in Europa (europe-west1). Base giuridica per i trasferimenti dalla Turchia ai sensi dell'art. 9 della legge KVKK: [BASE GIURIDICA: DA COMPILARE A CURA DELL'AVVOCATO].",
+          "<strong>Email di assistenza:</strong> Elaborata tramite Google Groups (gruppo utenti) ed è soggetta alle <a href='https://policies.google.com/privacy?hl=en'>Norme sulla privacy</a> e ai <a href='https://policies.google.com/terms?hl=en'>Termini</a> di Google. I messaggi sono conservati nell'archivio del gruppo."
+        ]],
+        ["h", "7. I tuoi diritti (GDPR e KVKK)"],
+        ["p", "Ai sensi del GDPR e della normativa applicabile hai il diritto di sapere se trattiamo i tuoi dati, di accedervi, di rettificarli e di richiederne la cancellazione. Per esercitare tali diritti, scrivi a nahideck-support@googlegroups.com."],
+        ["h", "Allegato A: Categorie di dati e fornitori di servizi (dettagli tecnici)"],
+        ["table", ["Categoria di dati", "Informazioni raccolte", "Fornitore del servizio", "Finalità"], [
+          ["<strong>Account utente</strong>", "Indirizzo email, nome visualizzato, ID utente Firebase (UID)", "Google Firebase Authentication", "Accesso e verifica della titolarità della licenza Pro. Facoltativo; il piano gratuito può essere utilizzato senza accedere."],
+          ["<strong>Licenza e associazione</strong>", "ID smartphone generato casualmente, ID PC, UID", "Google Cloud Firestore e Cloud KMS", "Applicazione della regola di utilizzo corretto (1 smartphone + 1 PC) e firma dei token di licenza."],
+          ["<strong>Acquisti e abbonamenti</strong>", "Token di ordine/acquisto di Google Play, App User ID di RevenueCat, stato dei diritti", "Google Play Billing e RevenueCat", "Elaborazione e verifica di acquisti e rinnovi Pro."],
+          ["<strong>Telemetria di utilizzo e layout (facoltativa)</strong>", "ID di installazione casuale, layout della griglia (tipi di widget, posizioni, dimensioni), preferenza del tema, livello del piano", "Google Cloud Firestore (anonymous_layouts)", "Comprensione dei widget e layout più diffusi per migliorare l'interfaccia. <strong>Non contiene dati personali, testo o dettagli dell'account.</strong>"],
+          ["<strong>Dati locali dell'estensione</strong>", "Stato multimediale della scheda attiva del browser (titolo del brano, artista, stato di riproduzione)", "Esclusivamente browser locale e applicazione PC", "Visualizzazione dei file multimediali web su smartphone e PC. Mai inviati al cloud."],
+          ["<strong>Verifica dell'applicazione</strong>", "Nome del pacchetto, certificato di firma dell'app e risultato di integrità del dispositivo", "Google Play Integrity (Google)", "Verifica che l'applicazione sia stata installata da Google Play e sia in esecuzione su un dispositivo affidabile; prevenzione di abusi. Google non condivide questi dati con terze parti."],
+          ["<strong>Segnalazioni di arresto anomalo (facoltative)</strong>", "Versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log (indirizzi email e IP mascherati)", "Google Cloud Functions e Firestore (Europa); email di supporto tramite Google Groups", "Analisi e risoluzione degli arresti anomali. Inviate solo previa tua conferma."]
+        ]],
+        ["card", [["p", "<strong>Titolare del trattamento:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email di contatto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Sito web:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "Richiesta di cancellazione di account e dati",
+      blocks: [
+        ["p", "Se desideri eliminare definitivamente il tuo account NahiDeck e tutti i dati a esso associati, puoi utilizzare uno dei metodi seguenti."],
+        ["h", "Metodo 1: Eliminazione dall'app (consigliato)"],
+        ["ol", [
+          "Apri l'app <strong>NahiDeck</strong> sul tuo dispositivo Android.",
+          "Accedi a <strong>Impostazioni</strong> dal dock laterale (o dal menu in alto).",
+          "Apri la sezione <strong>Account</strong>.",
+          "Scorri fino in fondo e tocca <strong>\"Elimina il mio account\"</strong>.",
+          "Conferma nella finestra di dialogo.",
+          "Il tuo record utente su Firebase, i dispositivi associati e i record di licenza sul cloud vengono eliminati in modo permanente."
+        ]],
+        ["p", "<em>L'eliminazione dell'account richiede per motivi di sicurezza un accesso effettuato negli ultimi 5 minuti. Se si verifica un errore, esegui il logout, accedi nuovamente e riprova.</em>"],
+        ["p", "<em>Nota: L'eliminazione dell'account non rimuove il backup dell'applicazione su Google Drive. Eliminalo personalmente dalle impostazioni di Google Drive (Google Drive > Impostazioni > Gestisci app).</em>"],
+        ["h", "Metodo 2: Richiesta di eliminazione via email"],
+        ["p", "Se non riesci ad accedere all'applicazione o l'hai disinstallata, invia la tua richiesta via email:"],
+        ["card", [
+          ["p", "<strong>Email di supporto:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Oggetto:</strong> <code>Richiesta di cancellazione account e dati NahiDeck</code>"],
+          ["p", "<strong>Informazioni richieste:</strong>"],
+          ["ul", ["L'indirizzo email dell'account Google utilizzato per accedere a NahiDeck.", "<em>(Facoltativo)</em> Numero d'ordine Google Play o riferimento dell'abbonamento RevenueCat."]]
+        ]],
+        ["p", "Dopo aver verificato la tua identità, il tuo account e i record cloud associati verranno eliminati in modo definitivo entro <strong>7 giorni lavorativi</strong>."],
+        ["h", "Cosa viene eliminato definitivamente?"],
+        ["ul", [
+          "Record utente di Firebase Authentication, indirizzo email e dettagli del profilo.",
+          "Record di licenza Pro nella raccolta <code>entitlements</code> di Firestore.",
+          "Record di smartphone e PC associati nella raccolta <code>devices</code> di Firestore.",
+          "Profilo abbonato RevenueCat (<code>app_user_id</code>); eliminato ove tecnicamente possibile. Se non è possibile eliminarlo, segnalacelo via email.",
+          "Chiavi di licenza e record di sessione nell'archivio sicuro del dispositivo."
+        ]],
+        ["h", "Cosa viene conservato?"],
+        ["ul", [
+          "<strong>Record di fatturazione di Google Play:</strong> Google li conserva per obblighi fiscali e di tutela dei consumatori. NahiDeck non memorizza i dettagli di pagamento.",
+          "<strong>Record di audit:</strong> I record delle operazioni di account e licenza contengono un identificatore con hash che non può essere collegato direttamente alla tua identità e vengono eliminati automaticamente entro 90 giorni.",
+          "<strong>Segnalazioni di arresto anomalo:</strong> Vengono eliminate automaticamente entro 90 giorni."
+        ]],
+        ["danger", [
+          ["h3", "Importante: annulla l'abbonamento attivo"],
+          ["p", "L'eliminazione dell'account <strong>non annulla automaticamente</strong> un abbonamento sottoscritto tramite Google Play. Per evitare addebiti futuri, annullalo prima di eliminare il tuo account:"],
+          ["ol", [
+            "Apri <strong>Google Play Store</strong> sul tuo dispositivo Android.",
+            "Tocca l'icona del profilo > <strong>Pagamenti e abbonamenti</strong> > <strong>Abbonamenti</strong>.",
+            "Seleziona <strong>NahiDeck</strong> e tocca <strong>\"Annulla abbonamento\"</strong>."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  pl: {
+    privacy: {
+      title: "Polityka prywatności NahiDeck",
+      updated: "25 października 2026",
+      blocks: [
+        ["p", "NahiDeck („my”, „nasz” lub „usługa”) przykłada dużą wagę do ochrony prywatności swoich użytkowników i bezpieczeństwa danych osobowych. Niniejsza polityka obejmuje <strong>aplikację NahiDeck na system Android</strong>, <strong>klienta NahiDeck na system Windows</strong> oraz <strong>rozszerzenie przeglądarki internetowej (NahiDeck Connect)</strong>."],
+        ["h", "W skrócie"],
+        ["ul", [
+          "<strong>Co zbieramy:</strong> Szczegóły konta (opcjonalnie), rekordy licencji Pro i parowania urządzeń, opcjonalne anonimowe dane o użytkowaniu oraz raporty o awariach, które zdecydujesz się przesłać.",
+          "<strong>Gdzie są przetwarzane:</strong> W Europie (Firestore, Cloud Functions). Logowanie (Firebase Authentication) i weryfikacja zakupów (RevenueCat) są przetwarzane w Stanach Zjednoczonych; podstawa tego transferu została opisana poniżej.",
+          "<strong>Jak długo przechowujemy:</strong> Dzienniki techniczne przez 30 dni, rejestry audytu i awarii przez 90 dni, anonimowe rejestry układów przez 180 dni. Usunięcie konta usuwa dane konta.",
+          "<strong>Twoje prawa:</strong> Możesz zażądać dostępu, sprostowania i usunięcia. Możesz usunąć swoje konto w aplikacji lub na stronie usuwania konta.",
+          "<strong>Raporty o awariach:</strong> Wysyłane tylko za Twoim potwierdzeniem. Twoja opcjonalna notatka i e-mail kontaktowy są dołączane; notatka jest zapisywana w pierwotnej formie, a adresy e-mail i IP są maskowane."
+        ]],
+        ["h", "1. Administrator danych i kontakt"],
+        ["p", "Zgodnie z RODO i obowiązującymi przepisami o ochronie danych administratorem danych jest:"],
+        ["h", "2. Komunikacja lokalna (brak zależności od chmury)"],
+        ["p", "NahiDeck działa bezpośrednio między Twoim telefonem z systemem Android a komputerem z systemem Windows przez lokalne Wi-Fi, kabel USB lub Bluetooth Low Energy (BLE):"],
+        ["ul", [
+          "<strong>Polecenia multimedialne i audio:</strong> Naciśnięcia klawiszy, zmiany głośności i polecenia multimedialne są przesyłane w sieci lokalnej. Nie są wysyłane do serwerów zewnętrznych.",
+          "<strong>Makra komputerowe:</strong> Skróty i niestandardowe akcje są uruchamiane i przetwarzane na Twoim komputerze.",
+          "<strong>Szyfrowanie:</strong> Połączenie lokalne jest chronione przez lokalnie generowane certyfikaty TLS i mechanizm TOFU (Trust On First Use) z przypinaniem odcisków palców."
+        ]],
+        ["h", "3. Co zbieramy i jak to wykorzystujemy"],
+        ["p", "Kategorie danych, dostawcy usług oraz cele zostały szczegółowo opisane w tabeli w Załączniku A na końcu tej strony."],
+        ["h", "4. Kopia zapasowa w chmurze (Dysk Google)"],
+        ["p", "Opcjonalna kopia zapasowa na Dysku Google pozwala zapisać układy ekranu, profile i preferencje:"],
+        ["ul", [
+          "<strong>Gdzie jest przechowywana:</strong> Wyłącznie w prywatnym folderze danych aplikacji na Twoim Dysku Google (drive.appdata). Nigdy nie jest przesyłana ani hostowana na serwerach NahiDeck lub stron trzecich.",
+          "<strong>Co zawiera:</strong> Układy ekranu, profile, preferencje wizualne i opcjonalne definicje akcji PC. Klucze tajne urządzenia, klucze parowania i hasła do kont nigdy nie są dołączane.",
+          "<strong>Całkowicie odseparowane od telemetrii:</strong> Dane kopii zapasowej nigdy nie są odczytywane ani używane do analiz."
+        ]],
+        ["h", "5. Dane, których nigdy nie zbieramy"],
+        ["ul", [
+          "<strong>Lokalizacja:</strong> Usługi GPS i lokalizacyjne nie są nigdy używane. Uprawnienie skanowania Bluetooth w systemie Android służy wyłącznie do wykrywania urządzeń w pobliżu.",
+          "<strong>Pliki osobiste:</strong> Nie uzyskujemy dostępu do zdjęć, filmów, dokumentów ani nagrań głosowych.",
+          "<strong>Kontakty:</strong> Nie uzyskujemy dostępu do listy kontaktów.",
+          "<strong>Identyfikatory sprzętowe:</strong> Nie zbieramy numerów IMEI, adresów MAC ani numerów seryjnych sprzętu. Zamiast nich używane są losowo generowane identyfikatory."
+        ]],
+        ["h", "6. Przechowywanie i usuwanie"],
+        ["ul", [
+          "<strong>Dane konta i licencji:</strong> Usuwane trwale na żądanie, w aplikacji przez Ustawienia > Konto > \"Usuń konto\" lub na stronie usuwania konta w naszej witrynie.",
+          "<strong>Telemetria:</strong> Wycofanie zgody w Ustawienia > Prywatność powoduje natychmiastowe usunięcie dotychczasowego rekordu. Aktywne rekordy wygasają automatycznie w ciągu maksymalnie 180 dni (TTL).",
+          "<strong>Dzienniki techniczne serwera:</strong> Dzienniki żądań infrastruktury są przechowywane przez maksymalnie 30 dni.",
+          "<strong>Rejestry licencji i audytu:</strong> Rejestry operacji na koncie i licencji zawierają jednokierunkowy skrót (hash) Twojego identyfikatora użytkownika i są przechowywane przez maksymalnie 90 dni.",
+          "<strong>Raporty o awariach:</strong> Zawierają wersję aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu oraz wiersze dziennika. Adresy e-mail, adresy IP i nazwy folderów użytkownika w ścieżkach plików są maskowane przed zapisaniem. Przechowywane przez maksymalnie 90 dni.",
+          "<strong>Transfery międzynarodowe:</strong> Usługa Firebase Authentication jest prowadzona przez firmę Google w centrach danych w Stanach Zjednoczonych. W celu weryfikacji zakupów RevenueCat przetwarza dane w Stanach Zjednoczonych (AWS); transfer ten opiera się na Standardowych Klauzulach Umownych. Dane Firestore, Cloud Functions i Cloud KMS są przetwarzane na serwerach w Europie (europe-west1). Podstawa prawna transferu z Turcji na mocy art. 9 KVKK: [PODSTAWA PRAWNA: DO UZUPEŁNIENIA PRZEZ PRAWNIKA].",
+          "<strong>E-mail wsparcia:</strong> Przetwarzany za pośrednictwem Google Groups (grupa konsumencka) i podlega <a href='https://policies.google.com/privacy?hl=en'>Polityce prywatności</a> oraz <a href='https://policies.google.com/terms?hl=en'>Warunkom korzystania z usług</a> firmy Google. Wiadomości są przechowywane w archiwum grupy."
+        ]],
+        ["h", "7. Twoje prawa (RODO i KVKK)"],
+        ["p", "Zgodnie z RODO i obowiązującym prawem masz prawo do uzyskania informacji, czy przetwarzamy Twoje dane, dostępu do nich, ich sprostowania oraz żądania ich usunięcia. Aby skorzystać z tych praw, napisz na adres nahideck-support@googlegroups.com."],
+        ["h", "Załącznik A: Kategorie danych i dostawcy usług (szczegóły techniczne)"],
+        ["table", ["Kategoria danych", "Zbierane informacje", "Dostawca usługi", "Cel"], [
+          ["<strong>Konto użytkownika</strong>", "Adres e-mail, nazwa wyświetlana, identyfikator użytkownika Firebase (UID)", "Google Firebase Authentication", "Logowanie i weryfikacja posiadania licencji Pro. Opcjonalne; z planu bezpłatnego można korzystać bez logowania."],
+          ["<strong>Licencja i parowanie</strong>", "Losowo wygenerowany identyfikator telefonu, identyfikator PC, UID", "Google Cloud Firestore i Cloud KMS", "Egzekwowanie zasady dozwolonego użytku (1 telefon + 1 PC) i podpisywanie tokenów licencyjnych."],
+          ["<strong>Zakupy i subskrypcje</strong>", "Token zamówienia/zakupu Google Play, identyfikator użytkownika RevenueCat (App User ID), stan uprawnień", "Google Play Billing i RevenueCat", "Przetwarzanie i weryfikacja zakupów oraz odnowień licencji Pro."],
+          ["<strong>Telemetria użytkowania i układów (opcjonalnie)</strong>", "Losowy identyfikator instalacji, układ siatki (typy widżetów, pozycje, rozmiary), wybór motywu, poziom planu", "Google Cloud Firestore (anonymous_layouts)", "Analiza popularnych widżetów i układów w celu ulepszania interfejsu. <strong>Nie zawiera danych osobowych, tekstu ani danych konta.</strong>"],
+          ["<strong>Lokalne dane rozszerzenia</strong>", "Stan multimediów aktywnej karty przeglądarki (tytuł utworu, wykonawca, stan odtwarzania)", "Tylko lokalna przeglądarka i aplikacja PC", "Wyświetlanie multimediów internetowych na telefonie i komputerze. Nigdy nie są wysyłane do chmury."],
+          ["<strong>Weryfikacja aplikacji</strong>", "Nazwa pakietu, certyfikat podpisu aplikacji i wynik integralności urządzenia", "Google Play Integrity (Google)", "Weryfikacja, czy aplikacja została zainstalowana z Google Play i działa na zaufanym urządzeniu; zapobieganie nadużyciom. Google nie udostępnia tych danych stronom trzecim."],
+          ["<strong>Raporty o awariach (opcjonalnie)</strong>", "Wersja aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu i wiersze dziennika (adresy e-mail i IP są maskowane)", "Google Cloud Functions i Firestore (Europa); e-mail wsparcia przez Google Groups", "Analizowanie i naprawianie awarii. Wysyłane wyłącznie za Twoim potwierdzeniem."]
+        ]],
+        ["card", [["p", "<strong>Administrator danych:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail kontaktowy:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Strona internetowa:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "Wniosek o usunięcie konta i danych",
+      blocks: [
+        ["p", "Jeśli chcesz trwale usunąć swoje konto NahiDeck i wszystkie powiązane z nim dane, możesz skorzystać z jednej z poniższych metod."],
+        ["h", "Metoda 1: Usunięcie w aplikacji (zalecane)"],
+        ["ol", [
+          "Otwórz aplikację <strong>NahiDeck</strong> na urządzeniu z systemem Android.",
+          "Przejdź do <strong>Ustawień</strong> z bocznego docka (lub górnego menu).",
+          "Otwórz sekcję <strong>Konto</strong>.",
+          "Przewiń na sam dół i dotknij <strong>\"Usuń moje konto\"</strong>.",
+          "Potwierdź operację w oknie dialogowym.",
+          "Twój rekord użytkownika w usłudze Firebase, sparowane urządzenia i rekordy licencji w chmurze zostaną trwale usunięte."
+        ]],
+        ["p", "<em>Ze względów bezpieczeństwa usunięcie konta wymaga zalogowania w ciągu ostatnich 5 minut. W przypadku błędu wyloguj się, zaloguj ponownie i spróbuj jeszcze raz.</em>"],
+        ["p", "<em>Uwaga: Usunięcie konta nie powoduje automatycznego usunięcia kopii zapasowej aplikacji z Dysku Google. Musisz usunąć ją samodzielnie w ustawieniach Dysku Google (Dysk Google > Ustawienia > Zarządzaj aplikacjami).</em>"],
+        ["h", "Metoda 2: Wniosek o usunięcie drogą mailową"],
+        ["p", "Jeśli nie masz dostępu do aplikacji lub została ona odinstalowana, prześlij swój wniosek pocztą elektroniczną:"],
+        ["card", [
+          ["p", "<strong>E-mail wsparcia:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Temat:</strong> <code>Wniosek o usunięcie konta i danych NahiDeck</code>"],
+          ["p", "<strong>Wymagane informacje:</strong>"],
+          ["ul", ["Adres e-mail konta Google używanego do logowania w NahiDeck.", "<em>(Opcjonalnie)</em> Numer zamówienia Google Play lub identyfikator subskrypcji RevenueCat."]]
+        ]],
+        ["p", "Po zweryfikowaniu Twojej tożsamości Twoje konto i powiązane rekordy w chmurze zostaną trwale usunięte w ciągu <strong>7 dni roboczych</strong>."],
+        ["h", "Co zostaje trwale usunięte?"],
+        ["ul", [
+          "Rekord użytkownika w Firebase Authentication, adres e-mail i dane profilu.",
+          "Rekord licencji Pro w kolekcji <code>entitlements</code> w usłudze Firestore.",
+          "Rekordy sparowanych telefonów i komputerów w kolekcji <code>devices</code> w usłudze Firestore.",
+          "Profil subskrybenta w RevenueCat (<code>app_user_id</code>); usuwany tam, gdzie jest to technicznie możliwe. Jeśli usunięcie nie jest możliwe, poinformuj nas o tym mailowo.",
+          "Klucze licencyjne i rekordy sesji w bezpiecznej pamięci urządzenia."
+        ]],
+        ["h", "Co zostaje zachowane?"],
+        ["ul", [
+          "<strong>Rekordy rozliczeniowe Google Play:</strong> Firma Google przechowuje je ze względów podatkowych i przepisów konsumenckich. NahiDeck nie przechowuje danych dotyczących płatności.",
+          "<strong>Rejestry audytu:</strong> Rejestry operacji na koncie i licencji zawierają zhaszowany identyfikator, którego nie można bezpośrednio powiązać z Twoją tożsamością, i są usuwane automatycznie w ciągu 90 dni.",
+          "<strong>Raporty o awariach:</strong> Są usuwane automatycznie w ciągu 90 dni."
+        ]],
+        ["danger", [
+          ["h3", "Ważne: anuluj aktywną subskrypcję"],
+          ["p", "Usunięcie konta <strong>nie powoduje automatycznego anulowania</strong> subskrypcji rozpoczętej przez Google Play. Aby uniknąć opłat w przyszłości, anuluj ją przed usunięciem konta:"],
+          ["ol", [
+            "Otwórz <strong>Sklep Google Play</strong> na urządzeniu z systemem Android.",
+            "Dotknij ikony profilu > <strong>Płatności i subskrypcje</strong> > <strong>Subskrypcje</strong>.",
+            "Wybierz <strong>NahiDeck</strong> i dotknij <strong>\"Anuluj subskrypcję\"</strong>."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  ru: {
+    privacy: {
+      title: "Политика конфиденциальности NahiDeck",
+      updated: "25 октября 2026 г.",
+      blocks: [
+        ["p", "NahiDeck («мы», «приложение» или «сервис») уделяет особое внимание защите конфиденциальности пользователей и безопасности персональных данных. Настоящая политика распространяется на <strong>Android-приложение NahiDeck</strong>, <strong>десктопный клиент NahiDeck для Windows</strong> и <strong>расширение для веб-браузеров (NahiDeck Connect)</strong>."],
+        ["h", "Кратко"],
+        ["ul", [
+          "<strong>Что мы собираем:</strong> Данные аккаунта (необязательно), записи лицензии Pro и сопряжения устройств, необязательные анонимные данные об использовании и отчеты о сбоях, которые вы решите отправить.",
+          "<strong>Где обрабатываются данные:</strong> В Европе (Firestore, Cloud Functions). Вход в систему (Firebase Authentication) и проверка покупок (RevenueCat) обрабатываются в США; основания для передачи описаны ниже.",
+          "<strong>Сроки хранения:</strong> Технические журналы — 30 дней, записи аудита и отчеты о сбоях — 90 дней, анонимные записи макетов — 180 дней. При удалении аккаунта все его данные удаляются.",
+          "<strong>Ваши права:</strong> Вы можете запросить доступ, исправление и удаление данных. Удалить аккаунт можно в приложении или на странице удаления аккаунта.",
+          "<strong>Отчеты о сбоях:</strong> Отправляются только с вашего подтверждения. Необязательный комментарий и контактный адрес эл. почты включаются в отчет; комментарий сохраняется как есть, а адреса эл. почты и IP-адреса маскируются."
+        ]],
+        ["h", "1. Оператор данных и контакты"],
+        ["p", "В соответствии с GDPR и применимым законодательством о защите персональных данных оператором данных является:"],
+        ["h", "2. Локальное взаимодействие (без зависимости от облака)"],
+        ["p", "NahiDeck работает напрямую между вашим Android-телефоном и компьютером с Windows по локальной сети Wi-Fi, через USB-кабель или Bluetooth Low Energy (BLE):"],
+        ["ul", [
+          "<strong>Медиа- и аудиокоманды:</strong> Нажатия клавиш, регулировка громкости и медиакоманды передаются внутри локальной сети и не отправляются на внешние серверы.",
+          "<strong>Макросы для ПК:</strong> Горячие клавиши и пользовательские действия выполняются и обрабатываются на вашем компьютере.",
+          "<strong>Шифрование:</strong> Локальное соединение защищено локально сгенерированными TLS-сертификатами и фиксацией отпечатков TOFU (доверие при первом использовании)."
+        ]],
+        ["h", "3. Какие данные мы собираем и как их используем"],
+        ["p", "Категории данных, поставщики услуг и цели подробно приведены в таблице в Приложении А в конце этой страницы."],
+        ["h", "4. Резервное копирование в облако (Google Диск)"],
+        ["p", "Необязательное резервное копирование на Google Диск позволяет сохранять макеты экранов, профили и настройки:"],
+        ["ul", [
+          "<strong>Где хранится:</strong> Исключительно в скрытой папке данных приложения на вашем личном Google Диске (drive.appdata). Данные никогда не передаются и не хранятся на серверах NahiDeck или третьих лиц.",
+          "<strong>Содержимое копии:</strong> Макеты экранов, профили, визуальные настройки и параметры действий для ПК. Секретные ключи устройств, ключи сопряжения и пароли учетных записей никогда не включаются в копию.",
+          "<strong>Полная изоляция от телеметрии:</strong> Данные резервной копии никогда не считываются и не используются в аналитических целях."
+        ]],
+        ["h", "5. Данные, которые мы никогда не собираем"],
+        ["ul", [
+          "<strong>Местоположение:</strong> GPS и службы геолокации никогда не используются. Разрешение Android на сканирование Bluetooth необходимо исключительно для поиска устройств поблизости.",
+          "<strong>Личные файлы:</strong> Мы не получаем доступ к фотографиям, видеозаписям, документам или голосовым записям.",
+          "<strong>Контакты:</strong> Мы не запрашиваем доступ к списку контактов.",
+          "<strong>Аппаратные идентификаторы:</strong> Мы не собираем IMEI, MAC-адреса или серийные номера оборудования. Вместо них используются случайно сгенерированные идентификаторы."
+        ]],
+        ["h", "6. Хранение и удаление данных"],
+        ["ul", [
+          "<strong>Данные аккаунта и лицензии:</strong> Безвозвратно удаляются по запросу через «Настройки > Аккаунт > Удалить аккаунт» в приложении или на странице удаления аккаунта на нашем сайте.",
+          "<strong>Телеметрия:</strong> При отзыве согласия в «Настройки > Конфиденциальность» текущая запись немедленно удаляется. Активные записи автоматически удаляются по истечении 180 дней (TTL).",
+          "<strong>Технические журналы серверов:</strong> Журналы запросов инфраструктуры хранятся не более 30 дней.",
+          "<strong>Записи о лицензиях и аудите:</strong> Записи операций с аккаунтом и лицензиями содержат необратимый хеш идентификатора пользователя и хранятся не более 90 дней.",
+          "<strong>Отчеты о сбоях:</strong> Содержат версию приложения, хеш устройства, тип и текст ошибки, трассировку стека и строки журнала. Адреса эл. почты, IP-адреса и имена пользовательских папок в путях к файлам маскируются перед сохранением. Хранятся не более 90 дней.",
+          "<strong>Международная передача данных:</strong> Сервис Firebase Authentication обслуживается компанией Google в дата-центрах США. Для проверки покупок RevenueCat обрабатывает данные в США (AWS); передача защищена Стандартными договорными условиями. Данные Firestore, Cloud Functions и Cloud KMS обрабатываются на серверах в Европе (europe-west1). Правовые основания для передачи из Турции согласно ст. 9 KVKK: [ПРАВОВОЕ ОСНОВАНИЕ: ЗАПОЛНЯЕТСЯ ЮРИСТОМ].",
+          "<strong>Электронная почта поддержки:</strong> Обрабатывается через Google Groups (пользовательская группа) в соответствии с <a href='https://policies.google.com/privacy?hl=en'>Политикой конфиденциальности</a> и <a href='https://policies.google.com/terms?hl=en'>Условиями использования</a> Google. Сообщения сохраняются в архиве группы."
+        ]],
+        ["h", "7. Ваши права (GDPR и KVKK)"],
+        ["p", "В соответствии с GDPR и применимым законодательством вы имеете право узнать, обрабатываем ли мы ваши данные, запросить доступ к ним, их исправление или удаление. Для реализации этих прав свяжитесь с нами по адресу nahideck-support@googlegroups.com."],
+        ["h", "Приложение А: Категории данных и поставщики услуг (технические подробности)"],
+        ["table", ["Категория данных", "Собираемая информация", "Поставщик услуг", "Цель"], [
+          ["<strong>Учетная запись пользователя</strong>", "Адрес эл. почты, отображаемое имя, идентификатор пользователя Firebase (UID)", "Google Firebase Authentication", "Вход в систему и проверка наличия лицензии Pro. Необязательно; бесплатный тариф доступен без входа."],
+          ["<strong>Лицензия и сопряжение</strong>", "Случайно сгенерированный идентификатор телефона, идентификатор ПК, UID", "Google Cloud Firestore и Cloud KMS", "Обеспечение правила добросовестного использования (1 телефон + 1 ПК) и подписание токенов лицензии."],
+          ["<strong>Покупки и подписки</strong>", "Токен заказа/покупки Google Play, App User ID в RevenueCat, статус прав доступа", "Google Play Billing и RevenueCat", "Обработка и проверка покупок и продлений лицензии Pro."],
+          ["<strong>Телеметрия использования и макетов (необязательно)</strong>", "Случайный идентификатор установки, структура сетки (типы виджетов, позиции, размеры), тема оформления, тариф", "Google Cloud Firestore (anonymous_layouts)", "Анализ популярных виджетов и макетов для улучшения интерфейса. <strong>Не содержит персональных данных, текста или информации об аккаунте.</strong>"],
+          ["<strong>Локальные данные расширения</strong>", "Состояние медиа в активной вкладке браузера (название трека, исполнитель, статус воспроизведения)", "Только локальный браузер и приложение для ПК", "Отображение воспроизводимого контента на телефоне и ПК. Никогда не отправляется в облако."],
+          ["<strong>Проверка подлинности приложения</strong>", "Имя пакета, сертификат подписи приложения и результат проверки целостности устройства", "Google Play Integrity (Google)", "Подтверждение того, что приложение установлено из Google Play и запущено на надежном устройстве; предотвращение злоупотреблений. Google не передает эти данные третьим лицам."],
+          ["<strong>Отчеты о сбоях (необязательно)</strong>", "Версия приложения, хеш устройства, тип и текст ошибки, трассировка стека и строки журнала (эл. почта и IP маскируются)", "Google Cloud Functions и Firestore (Европа); поддержка через Google Groups", "Анализ и устранение сбоев. Отправляется только с вашего согласия."]
+        ]],
+        ["card", [["p", "<strong>Оператор данных:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Контактный адрес:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Веб-сайт:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "Запрос на удаление аккаунта и данных",
+      blocks: [
+        ["p", "Если вы хотите безвозвратно удалить свой аккаунт NahiDeck и все связанные с ним данные, воспользуйтесь одним из следующих способов."],
+        ["h", "Способ 1: Удаление в приложении (рекомендуется)"],
+        ["ol", [
+          "Откройте приложение <strong>NahiDeck</strong> на устройстве Android.",
+          "Перейдите в <strong>Настройки</strong> из бокового меню (или верхнего меню).",
+          "Откройте раздел <strong>Аккаунт</strong>.",
+          "Прокрутите страницу вниз и нажмите <strong>«Удалить мой аккаунт»</strong>.",
+          "Подтвердите действие в открывшемся окне.",
+          "Ваша учетная запись Firebase, сопряженные устройства и записи лицензий в облаке будут удалены безвозвратно."
+        ]],
+        ["p", "<em>В целях безопасности удаление аккаунта возможно только при условии входа в систему в течение последних 5 минут. При возникновении ошибки выйдите из аккаунта, войдите снова и повторите попытку.</em>"],
+        ["p", "<em>Примечание: Удаление аккаунта не удаляет резервную копию приложения на Google Диске. Удалите ее самостоятельно в настройках Google Диска (Google Диск > Настройки > Управление приложениями).</em>"],
+        ["h", "Способ 2: Запрос на удаление по электронной почте"],
+        ["p", "Если у вас нет доступа к приложению или вы его удалили, направьте запрос по электронной почте:"],
+        ["card", [
+          ["p", "<strong>Электронная почта поддержки:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Тема:</strong> <code>Запрос на удаление аккаунта и данных NahiDeck</code>"],
+          ["p", "<strong>Необходимые данные:</strong>"],
+          ["ul", ["Адрес эл. почты аккаунта Google, использованный для входа в NahiDeck.", "<em>(Необязательно)</em> Номер заказа в Google Play или идентификатор подписки в RevenueCat."]]
+        ]],
+        ["p", "После подтверждения вашей личности аккаунт и связанные облачные записи будут безвозвратно удалены в течение <strong>7 рабочих дней</strong>."],
+        ["h", "Что удаляется безвозвратно?"],
+        ["ul", [
+          "Учетная запись Firebase Authentication, адрес электронной почты и данные профиля.",
+          "Запись лицензии Pro в коллекции <code>entitlements</code> в Firestore.",
+          "Записи сопряженных телефонов и ПК в коллекции <code>devices</code> в Firestore.",
+          "Профиль подписчика в RevenueCat (<code>app_user_id</code>); удаляется при наличии технической возможности. Если удаление невозможно, сообщите нам об этом по эл. почте.",
+          "Лицензионные ключи и записи сессий в защищенном хранилище устройства."
+        ]],
+        ["h", "Что сохраняется?"],
+        ["ul", [
+          "<strong>Платежные записи Google Play:</strong> Сохраняются Google в соответствии с налоговым и потребительским законодательством. NahiDeck не хранит платежные реквизиты.",
+          "<strong>Записи аудита:</strong> Записи операций с аккаунтом и лицензиями содержат хешированный идентификатор, который нельзя напрямую связать с вами, и автоматически удаляются в течение 90 дней.",
+          "<strong>Отчеты о сбоях:</strong> Автоматически удаляются в течение 90 дней."
+        ]],
+        ["danger", [
+          ["h3", "Важно: отмените действующую подписку"],
+          ["p", "Удаление аккаунта <strong>не отменяет автоматически</strong> подписку, оформленную через Google Play. Во избежание дальнейших списаний отмените ее перед удалением аккаунта:"],
+          ["ol", [
+            "Откройте <strong>Google Play Маркет</strong> на устройстве Android.",
+            "Нажмите на значок профиля > <strong>Платежи и подписки</strong> > <strong>Подписки</strong>.",
+            "Выберите <strong>NahiDeck</strong> и нажмите <strong>«Отменить подписку»</strong>."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  id: {
+    privacy: {
+      title: "Kebijakan Privasi NahiDeck",
+      updated: "25 Oktober 2026",
+      blocks: [
+        ["p", "NahiDeck (\"kami\", \"aplikasi\", atau \"layanan\") menghargai privasi penggunanya dan perlindungan data pribadi. Kebijakan ini mencakup <strong>aplikasi Android NahiDeck</strong>, <strong>klien desktop Windows NahiDeck</strong>, dan <strong>ekstensi browser web (NahiDeck Connect)</strong>."],
+        ["h", "Secara singkat"],
+        ["ul", [
+          "<strong>Apa yang kami kumpulkan:</strong> Detail akun (opsional), catatan lisensi Pro dan pemasangan perangkat, data penggunaan anonim opsional, serta laporan kerusakan yang Anda pilih untuk dikirim.",
+          "<strong>Di mana data diproses:</strong> Di Eropa (Firestore, Cloud Functions). Masuk akun (Firebase Authentication) dan verifikasi pembelian (RevenueCat) diproses di Amerika Serikat; dasar transfer dijelaskan di bawah.",
+          "<strong>Berapa lama kami menyimpannya:</strong> Log teknis selama 30 hari, catatan audit dan laporan kerusakan selama 90 hari, catatan tata letak anonim selama 180 hari. Menghapus akun Anda akan menghapus seluruh data akun.",
+          "<strong>Hak-hak Anda:</strong> Anda dapat meminta akses, perbaikan, dan penghapusan data. Anda dapat menghapus akun Anda di aplikasi atau di halaman Penghapusan Akun.",
+          "<strong>Laporan kerusakan:</strong> Hanya dikirim jika Anda mengonfirmasi. Catatan opsional dan email kontak Anda disertakan; catatan disimpan apa adanya, sedangkan alamat email dan IP disamarkan."
+        ]],
+        ["h", "1. Pengendali data dan kontak"],
+        ["p", "Berdasarkan GDPR dan peraturan perlindungan data yang berlaku, pengendali data adalah:"],
+        ["h", "2. Komunikasi lokal (tanpa ketergantungan cloud)"],
+        ["p", "NahiDeck bekerja langsung antara ponsel Android dan komputer Windows Anda melalui Wi-Fi lokal, kabel USB, atau Bluetooth Low Energy (BLE):"],
+        ["ul", [
+          "<strong>Perintah media dan audio:</strong> Penekanan tombol, perubahan volume, dan perintah media berjalan di jaringan lokal Anda. Tidak dikirim ke server luar.",
+          "<strong>Makro komputer:</strong> Pintasan dan tindakan kustom dijalankan serta diproses di komputer Anda.",
+          "<strong>Enkripsi:</strong> Koneksi lokal dilindungi oleh sertifikat TLS yang dibuat secara lokal dan penyematan sidik jari TOFU (Trust On First Use)."
+        ]],
+        ["h", "3. Data apa yang kami kumpulkan dan bagaimana kami menggunakannya"],
+        ["p", "Kategori data, penyedia layanan, dan tujuan penggunaan dirinci dalam tabel di Lampiran A di bagian bawah halaman ini."],
+        ["h", "4. Pencadangan cloud (Google Drive)"],
+        ["p", "Pencadangan Google Drive opsional memungkinkan Anda menyimpan tata letak layar, profil, dan preferensi:"],
+        ["ul", [
+          "<strong>Tempat penyimpanan:</strong> Hanya di folder data aplikasi pribadi di Google Drive Anda sendiri (drive.appdata). Tidak pernah dikirim atau dihosting di server NahiDeck maupun pihak ketiga.",
+          "<strong>Isi cadangan:</strong> Tata letak layar, profil, preferensi visual, dan definisi tindakan PC opsional. Rahasia perangkat, kunci pemasangan, dan kata sandi akun tidak pernah disertakan.",
+          "<strong>Terpisah dari telemetri:</strong> Data cadangan tidak pernah dibaca atau digunakan untuk analitik."
+        ]],
+        ["h", "5. Data yang tidak pernah kami kumpulkan"],
+        ["ul", [
+          "<strong>Lokasi:</strong> Layanan GPS dan lokasi tidak pernah digunakan. Izin pemindaian Bluetooth Android hanya digunakan untuk menemukan perangkat di sekitar.",
+          "<strong>Berkas pribadi:</strong> Kami tidak mengakses foto, video, dokumen, atau rekaman suara.",
+          "<strong>Kontak:</strong> Kami tidak mengakses daftar kontak Anda.",
+          "<strong>Pengenal perangkat keras:</strong> Kami tidak mengumpulkan IMEI, alamat MAC, atau nomor seri perangkat keras. Pengenal acak digunakan sebagai gantinya."
+        ]],
+        ["h", "6. Retensi dan penghapusan"],
+        ["ul", [
+          "<strong>Data akun dan lisensi:</strong> Dihapus secara permanen atas permintaan, melalui Pengaturan > Akun > \"Hapus Akun\" di aplikasi, atau halaman penghapusan akun di situs web kami.",
+          "<strong>Telemetri:</strong> Menarik persetujuan di Pengaturan > Privasi akan segera menghapus catatan yang ada. Catatan aktif kedaluwarsa secara otomatis dalam 180 hari (TTL).",
+          "<strong>Log server teknis:</strong> Log permintaan infrastruktur disimpan hingga 30 hari.",
+          "<strong>Catatan lisensi dan audit:</strong> Catatan operasi akun dan lisensi berisi hash satu arah dari pengenal pengguna Anda dan disimpan hingga 90 hari.",
+          "<strong>Laporan kerusakan:</strong> Berisi versi aplikasi, hash perangkat, jenis dan teks kesalahan, pelacakan tumpukan, dan baris log. Alamat email, alamat IP, dan nama folder pengguna dalam jalur berkas disamarkan sebelum disimpan. Disimpan hingga 90 hari.",
+          "<strong>Transfer internasional:</strong> Firebase Authentication dioperasikan oleh Google dari pusat data di Amerika Serikat. Untuk verifikasi pembelian, RevenueCat memproses data Anda di Amerika Serikat (AWS); transfer ini dilindungi oleh Klausul Kontrak Standar. Data Firestore, Cloud Functions, dan Cloud KMS diproses di server di Eropa (europe-west1). Dasar hukum transfer dari Turki berdasarkan Pasal 9 KVKK: [DASAR HUKUM: AKAN DIISI OLEH PENGACARA].",
+          "<strong>Email dukungan:</strong> Diproses melalui Google Groups (grup konsumen) dan tunduk pada <a href='https://policies.google.com/privacy?hl=en'>Kebijakan Privasi</a> serta <a href='https://policies.google.com/terms?hl=en'>Persyaratan Layanan</a> Google. Pesan disimpan dalam arsip grup."
+        ]],
+        ["h", "7. Hak Anda (GDPR dan KVKK)"],
+        ["p", "Berdasarkan GDPR dan hukum yang berlaku, Anda berhak mengetahui apakah kami memproses data Anda, mengaksesnya, memperbaikinya, dan meminta penghapusannya. Untuk menggunakan hak-hak ini, hubungi kami di nahideck-support@googlegroups.com."],
+        ["h", "Lampiran A: Kategori data dan penyedia layanan (detail teknis)"],
+        ["table", ["Kategori data", "Informasi yang dikumpulkan", "Penyedia layanan", "Tujuan"], [
+          ["<strong>Akun pengguna</strong>", "Alamat email, nama tampilan, ID pengguna Firebase (UID)", "Google Firebase Authentication", "Masuk akun dan memeriksa kepemilikan lisensi Pro. Opsional; paket gratis dapat digunakan tanpa masuk."],
+          ["<strong>Lisensi dan pemasangan</strong>", "ID perangkat ponsel acak, ID PC, UID", "Google Cloud Firestore dan Cloud KMS", "Menegakkan aturan penggunaan wajar 1 ponsel + 1 PC dan menandatangani token lisensi."],
+          ["<strong>Pembelian dan langganan</strong>", "Token pesanan/pembelian Google Play, App User ID RevenueCat, status hak", "Google Play Billing dan RevenueCat", "Memproses dan memverifikasi pembelian serta pembaruan Pro."],
+          ["<strong>Telemetri penggunaan dan tata letak (opsional)</strong>", "ID instalasi acak, tata letak kisi (jenis widget, posisi, ukuran), pilihan tema, tingkat paket", "Google Cloud Firestore (anonymous_layouts)", "Memahami widget dan tata letak populer untuk meningkatkan antarmuka. <strong>Tidak memuat data pribadi, teks, atau detail akun.</strong>"],
+          ["<strong>Data ekstensi lokal</strong>", "Status media dari tab browser yang aktif (judul trek, artis, status pemutaran)", "Hanya browser lokal dan aplikasi PC", "Menampilkan media web di ponsel dan PC Anda. Tidak pernah dikirim ke cloud."],
+          ["<strong>Verifikasi aplikasi</strong>", "Nama paket, sertifikat penandatanganan aplikasi, dan hasil integritas perangkat", "Google Play Integrity (Google)", "Memverifikasi bahwa aplikasi dipasang dari Google Play dan berjalan di perangkat tepercaya; mencegah penyalahgunaan. Google tidak membagikan data ini kepada pihak ketiga."],
+          ["<strong>Laporan kerusakan (opsional)</strong>", "Versi aplikasi, hash perangkat, jenis dan teks kesalahan, stack trace, dan baris log (email dan IP disamarkan)", "Google Cloud Functions dan Firestore (Eropa); email dukungan melalui Google Groups", "Menganalisis dan memperbaiki kerusakan. Hanya dikirim dengan persetujuan Anda."]
+        ]],
+        ["card", [["p", "<strong>Pengendali data:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email kontak:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Situs web:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "Permintaan penghapusan akun dan data",
+      blocks: [
+        ["p", "Jika Anda ingin menghapus akun NahiDeck dan semua data terkait secara permanen, Anda dapat menggunakan salah satu metode di bawah ini."],
+        ["h", "Metode 1: Hapus di dalam aplikasi (disarankan)"],
+        ["ol", [
+          "Buka aplikasi <strong>NahiDeck</strong> di perangkat Android Anda.",
+          "Buka <strong>Pengaturan</strong> dari dock samping (atau menu atas).",
+          "Buka bagian <strong>Akun</strong>.",
+          "Gulir ke bawah dan ketuk <strong>\"Hapus Akun Saya\"</strong>.",
+          "Konfirmasi pada dialog yang muncul.",
+          "Catatan pengguna Firebase, perangkat yang dipasangkan, dan catatan lisensi cloud Anda akan dihapus secara permanen."
+        ]],
+        ["p", "<em>Penghapusan akun memerlukan masuk dalam 5 menit terakhir untuk alasan keamanan. Jika terjadi kesalahan, keluar, masuk kembali, dan coba lagi.</em>"],
+        ["p", "<em>Catatan: Menghapus akun Anda tidak menghapus cadangan aplikasi di Google Drive. Hapus secara mandiri dari pengaturan Google Drive (Google Drive > Pengaturan > Kelola aplikasi).</em>"],
+        ["h", "Metode 2: Minta penghapusan melalui email"],
+        ["p", "Jika Anda tidak dapat mengakses aplikasi atau telah mencopot pemasangannya, kirimkan permintaan Anda melalui email:"],
+        ["card", [
+          ["p", "<strong>Email dukungan:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Subjek:</strong> <code>Permintaan Penghapusan Akun dan Data NahiDeck</code>"],
+          ["p", "<strong>Informasi yang diperlukan:</strong>"],
+          ["ul", ["Alamat email akun Google yang Anda gunakan untuk masuk ke NahiDeck.", "<em>(Opsional)</em> Nomor pesanan Google Play atau referensi langganan RevenueCat."]]
+        ]],
+        ["p", "Setelah kami memverifikasi identitas Anda, akun dan catatan cloud terkait akan dihapus secara permanen dalam waktu <strong>7 hari kerja</strong>."],
+        ["h", "Apa yang dihapus secara permanen?"],
+        ["ul", [
+          "Catatan pengguna Firebase Authentication, alamat email, dan detail profil.",
+          "Catatan lisensi Pro di koleksi <code>entitlements</code> Firestore.",
+          "Catatan ponsel dan PC yang dipasangkan di koleksi <code>devices</code> Firestore.",
+          "Profil pelanggan RevenueCat (<code>app_user_id</code>); dihapus jika memungkinkan secara teknis. Jika tidak dapat dihapus, laporkan kepada kami melalui email.",
+          "Kunci lisensi dan catatan sesi di penyimpanan aman perangkat Anda."
+        ]],
+        ["h", "Apa yang disimpan?"],
+        ["ul", [
+          "<strong>Catatan penagihan Google Play:</strong> Google menyimpannya karena alasan pajak dan hukum konsumen. NahiDeck tidak menyimpan detail pembayaran.",
+          "<strong>Catatan audit:</strong> Catatan operasi akun dan lisensi berisi pengenal yang di-hash yang tidak dapat dikaitkan langsung dengan identitas Anda, dan dihapus otomatis dalam 90 hari.",
+          "<strong>Laporan kerusakan:</strong> Dihapus otomatis dalam 90 hari."
+        ]],
+        ["danger", [
+          ["h3", "Penting: batalkan langganan aktif Anda"],
+          ["p", "Menghapus akun Anda <strong>tidak membatalkan secara otomatis</strong> langganan yang Anda mulai melalui Google Play. Untuk menghindari tagihan di masa mendatang, batalkan sebelum menghapus akun Anda:"],
+          ["ol", [
+            "Buka <strong>Google Play Store</strong> di perangkat Android Anda.",
+            "Ketuk ikon profil Anda > <strong>Pembayaran & langganan</strong> > <strong>Langganan</strong>.",
+            "Pilih <strong>NahiDeck</strong> dan ketuk <strong>\"Batalkan langganan\"</strong>."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  vi: {
+    privacy: {
+      title: "Chính sách quyền riêng tư của NahiDeck",
+      updated: "25 tháng 10 năm 2026",
+      blocks: [
+        ["p", "NahiDeck (\"chúng tôi\", \"ứng dụng\", hoặc \"dịch vụ\") coi trọng quyền riêng tư của người dùng và bảo vệ dữ liệu cá nhân. Chính sách này áp dụng cho <strong>ứng dụng Android NahiDeck</strong>, <strong>ứng dụng máy tính Windows NahiDeck</strong> và <strong>tiện ích mở rộng trình duyệt web (NahiDeck Connect)</strong>."],
+        ["h", "Tóm tắt"],
+        ["ul", [
+          "<strong>Những gì chúng tôi thu thập:</strong> Thông tin tài khoản (tùy chọn), dữ liệu bản quyền Pro và ghép nối thiết bị, dữ liệu sử dụng ẩn danh tùy chọn và báo cáo sự cố bạn chọn gửi.",
+          "<strong>Nơi xử lý dữ liệu:</strong> Tại Châu Âu (Firestore, Cloud Functions). Đăng nhập (Firebase Authentication) và xác minh mua hàng (RevenueCat) được xử lý tại Hoa Kỳ; căn cứ pháp lý chuyển giao dữ liệu được nêu bên dưới.",
+          "<strong>Thời gian lưu giữ:</strong> Nhật ký kỹ thuật 30 ngày, dữ liệu kiểm toán và sự cố 90 ngày, dữ liệu bố cục ẩn danh 180 ngày. Khi xóa tài khoản, toàn bộ dữ liệu tài khoản sẽ bị xóa.",
+          "<strong>Quyền của bạn:</strong> Bạn có quyền yêu cầu truy cập, chỉnh sửa và xóa dữ liệu. Bạn có thể xóa tài khoản trong ứng dụng hoặc tại trang Xóa tài khoản.",
+          "<strong>Báo cáo sự cố:</strong> Chỉ được gửi khi bạn xác nhận. Ghi chú và email liên hệ tùy chọn sẽ được gửi kèm; ghi chú được lưu nguyên văn, còn email và địa chỉ IP sẽ được che dấu."
+        ]],
+        ["h", "1. Bên kiểm soát dữ liệu và liên hệ"],
+        ["p", "Theo GDPR và luật bảo vệ dữ liệu hiện hành, bên kiểm soát dữ liệu là:"],
+        ["h", "2. Giao tiếp cục bộ (không phụ thuộc đám mây)"],
+        ["p", "NahiDeck hoạt động trực tiếp giữa điện thoại Android và máy tính Windows của bạn qua Wi-Fi cục bộ, cáp USB hoặc Bluetooth Low Energy (BLE):"],
+        ["ul", [
+          "<strong>Lệnh điều khiển đa phương tiện và âm thanh:</strong> Các thao tác phím, chỉnh âm lượng và lệnh phát nhạc chỉ truyền trong mạng nội bộ của bạn. Không gửi đến máy chủ bên ngoài.",
+          "<strong>Macro trên máy tính:</strong> Phím tắt và hành động tùy chỉnh được chạy và xử lý trực tiếp trên máy tính của bạn.",
+          "<strong>Mã hóa:</strong> Kết nối cục bộ được bảo vệ bằng chứng chỉ TLS tạo cục bộ và ghim dấu vân tay chứng chỉ TOFU (Trust On First Use)."
+        ]],
+        ["h", "3. Dữ liệu chúng tôi thu thập và mục đích sử dụng"],
+        ["p", "Các danh mục dữ liệu, nhà cung cấp dịch vụ và mục đích được liệt kê chi tiết trong bảng tại Phụ lục A ở cuối trang này."],
+        ["h", "4. Sao lưu đám mây (Google Drive)"],
+        ["p", "Tính năng sao lưu Google Drive tùy chọn cho phép bạn lưu bố cục màn hình, cấu hình và tùy chọn:"],
+        ["ul", [
+          "<strong>Nơi lưu trữ:</strong> Chỉ lưu trong thư mục dữ liệu ứng dụng riêng tư trên Google Drive của chính bạn (drive.appdata). Không bao giờ được gửi hay lưu trữ trên máy chủ NahiDeck hoặc bên thứ ba.",
+          "<strong>Nội dung sao lưu:</strong> Bố cục màn hình, hồ sơ cấu hình, tùy chọn giao diện và định nghĩa hành động PC tùy chọn. Mã bảo mật thiết bị, khóa ghép nối và mật khẩu tài khoản không bao giờ được đưa vào bản sao lưu.",
+          "<strong>Tách biệt hoàn toàn với đo lường từ xa:</strong> Dữ liệu sao lưu không bao giờ được đọc hoặc sử dụng cho mục đích phân tích."
+        ]],
+        ["h", "5. Dữ liệu chúng tôi không bao giờ thu thập"],
+        ["ul", [
+          "<strong>Vị trí:</strong> GPS và dịch vụ vị trí không bao giờ được sử dụng. Quyền quét Bluetooth của Android chỉ dùng để tìm các thiết bị lân cận.",
+          "<strong>Tệp cá nhân:</strong> Chúng tôi không truy cập ảnh, video, tài liệu hoặc bản ghi âm.",
+          "<strong>Danh bạ:</strong> Chúng tôi không truy cập danh bạ của bạn.",
+          "<strong>Mã nhận dạng phần cứng:</strong> Không thu thập IMEI, địa chỉ MAC hay số sê-ri phần cứng. Mã định danh ngẫu nhiên được sử dụng thay thế."
+        ]],
+        ["h", "6. Lưu giữ và xóa dữ liệu"],
+        ["ul", [
+          "<strong>Dữ liệu tài khoản và bản quyền:</strong> Được xóa vĩnh viễn theo yêu cầu, qua Cài đặt > Tài khoản > \"Xóa tài khoản\" trong ứng dụng, hoặc tại trang xóa tài khoản trên trang web của chúng tôi.",
+          "<strong>Dữ liệu đo lường từ xa:</strong> Rút lại sự đồng ý trong Cài đặt > Quyền riêng tư sẽ xóa bản ghi hiện có ngay lập tức. Các bản ghi đang hoạt động sẽ tự động hết hạn trong vòng 180 ngày (TTL).",
+          "<strong>Nhật ký máy chủ kỹ thuật:</strong> Nhật ký yêu cầu hạ tầng được lưu giữ tối đa 30 ngày.",
+          "<strong>Dữ liệu bản quyền và kiểm toán:</strong> Bản ghi hoạt động tài khoản và bản quyền chứa mã băm một chiều của mã định danh người dùng và được lưu tối đa 90 ngày.",
+          "<strong>Báo cáo sự cố:</strong> Bao gồm phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và các dòng nhật ký. Địa chỉ email, địa chỉ IP và tên thư mục người dùng trong đường dẫn tệp được che dấu trước khi lưu. Được giữ tối đa 90 ngày.",
+          "<strong>Chuyển giao quốc tế:</strong> Firebase Authentication được Google vận hành từ các trung tâm dữ liệu tại Hoa Kỳ. Để xác minh giao dịch mua hàng, RevenueCat xử lý dữ liệu của bạn tại Hoa Kỳ (AWS); việc chuyển giao này tuân thủ các Điều khoản hợp đồng tiêu chuẩn. Dữ liệu Firestore, Cloud Functions và Cloud KMS được xử lý trên máy chủ tại Châu Âu (europe-west1). Căn cứ pháp lý chuyển giao từ Thổ Nhĩ Kỳ theo Điều 9 KVKK: [CĂN CỨ PHÁP LÝ: DO LUẬT SƯ ĐIỀN].",
+          "<strong>Email hỗ trợ:</strong> Được xử lý qua Google Groups (nhóm người dùng) và tuân theo <a href='https://policies.google.com/privacy?hl=en'>Chính sách quyền riêng tư</a> cùng <a href='https://policies.google.com/terms?hl=en'>Điều khoản dịch vụ</a> của Google. Thư được lưu trong kho lưu trữ nhóm."
+        ]],
+        ["h", "7. Quyền của bạn (GDPR và KVKK)"],
+        ["p", "Theo GDPR và luật hiện hành, bạn có quyền biết liệu chúng tôi có xử lý dữ liệu của bạn hay không, truy cập, chỉnh sửa và yêu cầu xóa dữ liệu. Để thực hiện các quyền này, vui lòng gửi email tới nahideck-support@googlegroups.com."],
+        ["h", "Phụ lục A: Danh mục dữ liệu và nhà cung cấp dịch vụ (chi tiết kỹ thuật)"],
+        ["table", ["Danh mục dữ liệu", "Thông tin thu thập", "Nhà cung cấp dịch vụ", "Mục đích"], [
+          ["<strong>Tài khoản người dùng</strong>", "Địa chỉ email, tên hiển thị, ID người dùng Firebase (UID)", "Google Firebase Authentication", "Đăng nhập và kiểm tra quyền sở hữu bản quyền Pro. Tùy chọn; gói miễn phí có thể sử dụng mà không cần đăng nhập."],
+          ["<strong>Bản quyền và ghép nối</strong>", "ID thiết bị điện thoại ngẫu nhiên, ID máy tính, UID", "Google Cloud Firestore và Cloud KMS", "Thực thi quy định sử dụng hợp lý 1 điện thoại + 1 máy tính và ký mã xác thực bản quyền."],
+          ["<strong>Giao dịch mua và đăng ký</strong>", "Mã đơn hàng/mua hàng Google Play, ID người dùng ứng dụng RevenueCat, trạng thái quyền lợi", "Google Play Billing và RevenueCat", "Xử lý và xác minh các giao dịch mua và gia hạn Pro."],
+          ["<strong>Đo lường sử dụng và bố cục (tùy chọn)</strong>", "Mã cài đặt ngẫu nhiên, bố cục lưới (loại widget, vị trí, kích thước), lựa chọn chủ đề, gói dịch vụ", "Google Cloud Firestore (anonymous_layouts)", "Tìm hiểu các widget và bố cục phổ biến để cải thiện giao diện. <strong>Không chứa dữ liệu cá nhân, văn bản hay chi tiết tài khoản.</strong>"],
+          ["<strong>Dữ liệu tiện ích cục bộ</strong>", "Trạng thái đa phương tiện của tab trình duyệt đang hoạt động (tên bài hát, nghệ sĩ, trạng thái phát)", "Chỉ trên trình duyệt cục bộ và ứng dụng máy tính", "Hiển thị nội dung phát đa phương tiện trên điện thoại và máy tính. Không bao giờ gửi lên đám mây."],
+          ["<strong>Xác minh ứng dụng</strong>", "Tên gói, chứng chỉ ký ứng dụng và kết quả tính toàn vẹn của thiết bị", "Google Play Integrity (Google)", "Xác minh ứng dụng được cài đặt từ Google Play và chạy trên thiết bị đáng tin cậy; ngăn chặn hành vi lạm dụng. Google không chia sẻ dữ liệu này cho bên thứ ba."],
+          ["<strong>Báo cáo sự cố (tùy chọn)</strong>", "Phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và dòng nhật ký (email và IP được che dấu)", "Google Cloud Functions và Firestore (Châu Âu); hỗ trợ email qua Google Groups", "Phân tích và khắc phục sự cố. Chỉ gửi khi có sự đồng ý của bạn."]
+        ]],
+        ["card", [["p", "<strong>Bên kiểm soát dữ liệu:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email liên hệ:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Trang web:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "Yêu cầu xóa tài khoản và dữ liệu",
+      blocks: [
+        ["p", "Nếu bạn muốn xóa vĩnh viễn tài khoản NahiDeck và tất cả dữ liệu liên quan, bạn có thể sử dụng một trong các phương thức dưới đây."],
+        ["h", "Phương thức 1: Xóa trong ứng dụng (khuyến nghị)"],
+        ["ol", [
+          "Mở ứng dụng <strong>NahiDeck</strong> trên thiết bị Android của bạn.",
+          "Vào <strong>Cài đặt</strong> từ thanh dock bên cạnh (hoặc menu trên cùng).",
+          "Mở mục <strong>Tài khoản</strong>.",
+          "Cuộn xuống cuối và nhấn vào <strong>\"Xóa tài khoản của tôi\"</strong>.",
+          "Xác nhận trong hộp thoại hiển thị.",
+          "Bản ghi người dùng Firebase, các thiết bị đã ghép nối và dữ liệu bản quyền đám mây sẽ bị xóa vĩnh viễn."
+        ]],
+        ["p", "<em>Vì lý do bảo mật, việc xóa tài khoản yêu cầu bạn đã đăng nhập trong vòng 5 phút gần nhất. Nếu gặp lỗi, hãy đăng xuất, đăng nhập lại và thử lại.</em>"],
+        ["p", "<em>Lưu ý: Xóa tài khoản không xóa bản sao lưu ứng dụng trên Google Drive. Bạn cần tự xóa trong phần cài đặt Google Drive (Google Drive > Cài đặt > Quản lý ứng dụng).</em>"],
+        ["h", "Phương thức 2: Yêu cầu xóa qua email"],
+        ["p", "Nếu bạn không thể truy cập ứng dụng hoặc đã gỡ cài đặt, vui lòng gửi yêu cầu qua email:"],
+        ["card", [
+          ["p", "<strong>Email hỗ trợ:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Tiêu đề:</strong> <code>Yêu cầu xóa tài khoản và dữ liệu NahiDeck</code>"],
+          ["p", "<strong>Thông tin cần thiết:</strong>"],
+          ["ul", ["Địa chỉ email tài khoản Google bạn dùng để đăng nhập vào NahiDeck.", "<em>(Tùy chọn)</em> Mã đơn hàng Google Play hoặc mã đăng ký gói RevenueCat."]]
+        ]],
+        ["p", "Sau khi chúng tôi xác minh danh tính của bạn, tài khoản và các bản ghi đám mây liên quan sẽ được xóa vĩnh viễn trong vòng <strong>7 ngày làm việc</strong>."],
+        ["h", "Những gì sẽ bị xóa vĩnh viễn?"],
+        ["ul", [
+          "Hồ sơ người dùng Firebase Authentication, địa chỉ email và thông tin hồ sơ.",
+          "Bản ghi bản quyền Pro trong bộ sưu tập <code>entitlements</code> của Firestore.",
+          "Bản ghi các thiết bị điện thoại và máy tính đã ghép nối trong bộ sưu tập <code>devices</code> của Firestore.",
+          "Hồ sơ người đăng ký RevenueCat (<code>app_user_id</code>); được xóa nếu khả thi về mặt kỹ thuật. Nếu không thể xóa, vui lòng thông báo cho chúng tôi qua email.",
+          "Khóa bản quyền và bản ghi phiên làm việc trong bộ lưu trữ an toàn của thiết bị."
+        ]],
+        ["h", "Những gì được giữ lại?"],
+        ["ul", [
+          "<strong>Dữ liệu thanh toán Google Play:</strong> Được Google lưu giữ vì nghĩa vụ thuế và luật người tiêu dùng. NahiDeck không lưu trữ thông tin thanh toán.",
+          "<strong>Dữ liệu kiểm toán:</strong> Các bản ghi hoạt động tài khoản và bản quyền chứa mã định danh đã băm không thể liên kết trực tiếp với bạn, và sẽ tự động xóa sau 90 ngày.",
+          "<strong>Báo cáo sự cố:</strong> Tự động xóa sau 90 ngày."
+        ]],
+        ["danger", [
+          ["h3", "Quan trọng: hủy gói đăng ký đang hoạt động"],
+          ["p", "Xóa tài khoản <strong>không tự động hủy</strong> gói đăng ký bạn đã kích hoạt qua Google Play. Để tránh bị trừ tiền trong tương lai, hãy hủy gói đăng ký trước khi xóa tài khoản:"],
+          ["ol", [
+            "Mở <strong>Google Play Store</strong> trên thiết bị Android.",
+            "Nhấn vào biểu tượng hồ sơ của bạn > <strong>Thanh toán và gói thuê bao</strong> > <strong>Gói thuê bao</strong>.",
+            "Chọn <strong>NahiDeck</strong> và nhấn <strong>\"Hủy gói thuê bao\"</strong>."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  ja: {
+    privacy: {
+      title: "NahiDeck プライバシーポリシー",
+      updated: "2026年10月25日",
+      blocks: [
+        ["p", "NahiDeck（以下「当社」、「本アプリ」または「本サービス」）は、ユーザーのプライバシー保護および個人データの保護を重視しています。本ポリシーは、<strong>NahiDeck Androidアプリ</strong>、<strong>NahiDeck Windowsデスクトップクライアント</strong>、および<strong>Webブラウザ拡張機能（NahiDeck Connect）</strong>に適用されます。"],
+        ["h", "概要"],
+        ["ul", [
+          "<strong>収集する情報：</strong>アカウント情報（任意）、Proライセンスおよびデバイスペアリング記録、匿名の利用状況データ（任意）、および送信を選択したクラッシュレポート。",
+          "<strong>処理場所：</strong>ヨーロッパ（Firestore、Cloud Functions）。サインイン（Firebase Authentication）および購入検証（RevenueCat）は米国で処理されます。この転送の根拠は下記に記載されています。",
+          "<strong>保管期間：</strong>技術ログは30日間、監査およびクラッシュ記録は90日間、匿名レイアウト記録は180日間。アカウントを削除すると、アカウントデータは削除されます。",
+          "<strong>お客様の権利：</strong>アクセス、訂正、および削除を要求できます。アカウントはアプリ内またはアカウント削除ページから削除できます。",
+          "<strong>クラッシュレポート：</strong>お客様が確認した場合にのみ送信されます。任意のメモおよび連絡先メールアドレスが含まれます。メモは入力された通りに保存され、メールアドレスおよびIPアドレスはマスキングされます。"
+        ]],
+        ["h", "1. データ管理者および連絡先"],
+        ["p", "GDPRおよび適用されるデータ保護法に基づき、データ管理者は以下の通りです："],
+        ["h", "2. ローカル通信（クラウド非依存）"],
+        ["p", "NahiDeckは、ローカルWi-Fi、USBケーブル、またはBluetooth Low Energy（BLE）を介して、AndroidスマートフォンとWindows PC間で直接動作します："],
+        ["ul", [
+          "<strong>メディアおよびオーディオコマンド：</strong>キー入力、音量変更、メディアコマンドはローカルネットワーク内を送信され、外部サーバーに送信されることはありません。",
+          "<strong>PCマクロ：</strong>ショートカットやカスタムアクションは、お客様のPC上で実行および処理されます。",
+          "<strong>暗号化：</strong>ローカル接続は、ローカルで生成されたTLS証明書およびTOFU（初回使用時の信頼）フィンガープリント固定によって保護されます。"
+        ]],
+        ["h", "3. 収集する情報とその利用目的"],
+        ["p", "データカテゴリ、サービスプロバイダー、および利用目的の詳細は、本ページ末尾の別紙Aの表に記載されています。"],
+        ["h", "4. クラウドバックアップ（Google ドライブ）"],
+        ["p", "オプションのGoogle ドライブバックアップにより、画面レイアウト、プロファイル、設定を保存できます："],
+        ["ul", [
+          "<strong>保存場所：</strong>お客様ご自身のGoogle ドライブ内にあるアプリ専用フォルダ（drive.appdata）にのみ保存されます。NahiDeckや第三者のサーバーに送信または保存されることはありません。",
+          "<strong>バックアップ内容：</strong>画面レイアウト、プロファイル、視覚設定、および任意のPCアクション定義。デバイスシークレット、ペアリングキー、アカウントパスワードが含まれることはありません。",
+          "<strong>テレメトリとの完全な分離：</strong>バックアップデータが分析目的で読み取られたり使用されたりすることはありません。"
+        ]],
+        ["h", "5. 決して収集しない情報"],
+        ["ul", [
+          "<strong>位置情報：</strong>GPSや位置情報サービスを使用することはありません。AndroidのBluetoothスキャン権限は、近くのデバイスを検出するためにのみ使用されます。",
+          "<strong>個人ファイル：</strong>写真、動画、ドキュメント、音声録音にはアクセスしません。",
+          "<strong>連絡先：</strong>連絡先リストにはアクセスしません。",
+          "<strong>ハードウェア識別子：</strong>IMEI、MACアドレス、ハードウェアシリアル番号は収集しません。代わりにランダムに生成された識別子が使用されます。"
+        ]],
+        ["h", "6. 保持と削除"],
+        ["ul", [
+          "<strong>アカウントおよびライセンスデータ：</strong>アプリ内の「設定 > アカウント > アカウントを削除」、または当サイトのアカウント削除ページからのリクエストにより、永久に削除されます。",
+          "<strong>テレメトリ：</strong>「設定 > プライバシー」で同意を撤回すると、既存の記録は即座に削除されます。有効な記録は最大180日以内に自動的に有効期限切れ（TTL）となります。",
+          "<strong>技術サーバーログ：</strong>インフラストラクチャのリクエストログは最大30日間保持されます。",
+          "<strong>ライセンスおよび監査記録：</strong>アカウントおよびライセンス操作の記録には、不可逆ハッシュ化されたユーザーIDが含まれ、最大90日間保持されます。",
+          "<strong>クラッシュレポート：</strong>アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行が含まれます。ファイルパス内のメールアドレス、IPアドレス、ユーザーフォルダ名は保存前にマスキングされます。最大90日間保持されます。",
+          "<strong>国際転送：</strong>Firebase Authenticationは米国のデータセンターからGoogleによって運営されています。購入検証のため、RevenueCatはお客様のデータを米国（AWS）で処理します。この転送は標準契約条項（SCC）によって保護されています。Firestore、Cloud Functions、Cloud KMSのデータはヨーロッパ（europe-west1）のサーバーで処理されます。KVKK第9条に基づくトルコからのデータ転送の法的根拠：[法的根拠：弁護士が記入]。",
+          "<strong>サポートメール：</strong>Google Groups（一般消費者向けグループ）を通じて処理され、Googleの<a href='https://policies.google.com/privacy?hl=ja'>プライバシーポリシー</a>および<a href='https://policies.google.com/terms?hl=ja'>利用規約</a>に従います。メッセージはグループのアーカイブに保存されます。"
+        ]],
+        ["h", "7. お客様の権利（GDPRおよびKVKK）"],
+        ["p", "GDPRおよび適用法に基づき、お客様は当社がデータを処理しているかを確認し、アクセスし、訂正し、削除を求める権利を有します。これらの権利を行使するには、nahideck-support@googlegroups.com までお問い合わせください。"],
+        ["h", "別紙A：データカテゴリとサービスプロバイダー（技術詳細）"],
+        ["table", ["データカテゴリ", "収集する情報", "サービスプロバイダー", "利用目的"], [
+          ["<strong>ユーザーアカウント</strong>", "メールアドレス、表示名、FirebaseユーザーID（UID）", "Google Firebase Authentication", "サインインおよびProライセンス所有権の確認。任意であり、無料プランはサインインなしで使用可能です。"],
+          ["<strong>ライセンスおよびペアリング</strong>", "ランダム生成されたスマートフォン端末ID、PC ID、UID", "Google Cloud Firestore および Cloud KMS", "「1台のスマホ + 1台のPC」の公平利用ルールの適用およびライセンス署名。"],
+          ["<strong>購入およびサブスクリプション</strong>", "Google Play注文/購入トークン、RevenueCat App User ID、エンタイトルメント状態", "Google Play Billing および RevenueCat", "Pro購入および更新の処理と検証。"],
+          ["<strong>利用状況およびレイアウトテレメトリ（任意）</strong>", "ランダムなインストールID、グリッドレイアウト（ウィジェット種類、配置、サイズ）、テーマ選択、プラン種別", "Google Cloud Firestore（anonymous_layouts）", "人気のあるウィジェットやレイアウトを分析してUIを改善するため。<strong>個人データ、テキスト、アカウント情報は一切含みません。</strong>"],
+          ["<strong>ローカル拡張機能データ</strong>", "アクティブなブラウザタブのメディア状態（曲名、アーティスト、再生状態）", "ローカルブラウザおよびPCアプリのみ", "スマートフォンおよびPC上でウェブメディアを表示するため。クラウドには送信されません。"],
+          ["<strong>アプリ検証</strong>", "パッケージ名、アプリ署名証明書、デバイス完全性結果", "Google Play Integrity（Google）", "アプリがGoogle Playからインストールされ、信頼できるデバイスで動作していることを検証し、不正利用を防止するため。Googleはこのデータを第三者と共有しません。"],
+          ["<strong>クラッシュレポート（任意）</strong>", "アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行（メールアドレスとIPはマスキング）", "Google Cloud Functions および Firestore（ヨーロッパ）；Google Groups経由のサポートメール", "クラッシュの分析と修正。お客様の確認がある場合にのみ送信。"]
+        ]],
+        ["card", [["p", "<strong>データ管理者：</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>連絡先メールアドレス：</strong> nahideck-support@googlegroups.com"], ["p", "<strong>ウェブサイト：</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "アカウントおよびデータ削除のリクエスト",
+      blocks: [
+        ["p", "NahiDeckアカウントおよび関連するすべてのデータを永久に削除したい場合は、以下のいずれかの方法をご利用いただけます。"],
+        ["h", "方法1：アプリ内で削除（推奨）"],
+        ["ol", [
+          "Android端末で <strong>NahiDeck</strong> アプリを開きます。",
+          "サイドドック（または上部メニュー）から <strong>設定</strong> に移動します。",
+          "<strong>アカウント</strong> セクションを開きます。",
+          "最下部までスクロールし、<strong>「アカウントを削除」</strong> をタップします。",
+          "確認ダイアログで操作を承認します。",
+          "Firebaseユーザーレコード、ペアリングされたデバイス、クラウドライセンスレコードが永久に削除されます。"
+        ]],
+        ["p", "<em>セキュリティ上の理由から、アカウント削除には直近5分以内のサインインが必要です。エラーが発生した場合は、一度サインアウトして再サインイン後、再度お試しください。</em>"],
+        ["p", "<em>注：アカウントを削除しても、Google ドライブ内のアプリバックアップは自動削除されません。Google ドライブの設定（Google ドライブ > 設定 > アプリの管理）から手動で削除してください。</em>"],
+        ["h", "方法2：メールによる削除リクエスト"],
+        ["p", "アプリにアクセスできない場合や既にアンインストールした場合は、メールでリクエストを送信できます："],
+        ["card", [
+          ["p", "<strong>サポートメール：</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>件名：</strong> <code>NahiDeck アカウントおよびデータ削除リクエスト</code>"],
+          ["p", "<strong>必要な情報：</strong>"],
+          ["ul", ["NahiDeckのサインインに使用したGoogleアカウントのメールアドレス。", "<em>（任意）</em> Google Play注文番号またはRevenueCatサブスクリプション参照ID。"]]
+        ]],
+        ["p", "本人確認の完了後、アカウントおよび関連するクラウド記録は <strong>7営業日以内</strong> に永久削除されます。"],
+        ["h", "何が永久に削除されますか？"],
+        ["ul", [
+          "Firebase Authenticationユーザーレコード、メールアドレス、プロフィール情報。",
+          "Firestoreの <code>entitlements</code> コレクション内のProライセンスレコード。",
+          "Firestoreの <code>devices</code> コレクション内のペアリングされたスマートフォンおよびPCレコード。",
+          "RevenueCat加入者プロファイル（<code>app_user_id</code>）；技術的に可能な場合に削除されます。削除できない場合はメールでお知らせください。",
+          "デバイスのセキュアストレージにあるライセンスキーおよびセッション記録。"
+        ]],
+        ["h", "何が保持されますか？"],
+        ["ul", [
+          "<strong>Google Play請求記録：</strong>税務および消費者保護法上の要件によりGoogleによって保持されます。NahiDeckは支払い情報を保存しません。",
+          "<strong>監査記録：</strong>アカウントおよびライセンス操作の記録には個人を直接特定できないハッシュ化識別子が含まれ、90日以内に自動削除されます。",
+          "<strong>クラッシュレポート：</strong>90日以内に自動削除されます。"
+        ]],
+        ["danger", [
+          ["h3", "重要：有効なサブスクリプションを解約してください"],
+          ["p", "アカウントを削除しても、Google Playを通じて開始されたサブスクリプションは<strong>自動的に解約されません</strong>。今後の請求を停止するため、アカウント削除前に解約してください："],
+          ["ol", [
+            "Android端末で <strong>Google Play ストア</strong> を開きます。",
+            "プロフィールアイコン > <strong>お支払いと定期購入</strong> > <strong>定期購入</strong> をタップします。",
+            "<strong>NahiDeck</strong> を選択し、<strong>「定期購入を解約」</strong> をタップします。"
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  ko: {
+    privacy: {
+      title: "NahiDeck 개인정보 처리방침",
+      updated: "2026년 10월 25일",
+      blocks: [
+        ["p", "NahiDeck(\"당사\", \"앱\" 또는 \"서비스\")은 이용자의 개인정보 보호 및 권리 보호를 매우 중요하게 여깁니다. 본 방침은 <strong>NahiDeck Android 앱</strong>, <strong>NahiDeck Windows 데스크톱 클라이언트</strong> 및 <strong>웹 브라우저 확장 프로그램(NahiDeck Connect)</strong>에 적용됩니다."],
+        ["h", "요약"],
+        ["ul", [
+          "<strong>수집 항목:</strong> 계정 정보(선택), Pro 라이선스 및 기기 페어링 기록, 선택적 익명 사용 통계, 사용자가 전송을 선택한 오류 보고서.",
+          "<strong>처리 위치:</strong> 유럽(Firestore, Cloud Functions). 로그인(Firebase Authentication) 및 결제 확인(RevenueCat)은 미국에서 처리되며, 해당 국외 이전 근거는 아래에 명시되어 있습니다.",
+          "<strong>보관 기간:</strong> 기술 로그 30일, 감사 및 오류 기록 90일, 익명 레이아웃 기록 180일. 계정 삭제 시 계정 데이터는 완전히 삭제됩니다.",
+          "<strong>이용자의 권리:</strong> 데이터 열람, 정정 및 삭제를 요청할 수 있습니다. 앱 내 또는 계정 삭제 페이지에서 계정을 직접 삭제할 수 있습니다.",
+          "<strong>오류 보고서:</strong> 이용자가 전송을 확인한 경우에만 전달됩니다. 선택적 메모와 연락처 이메일이 포함되며 메모는 작성된 그대로 저장되고 이메일과 IP 주소는 마스킹 처리됩니다."
+        ]],
+        ["h", "1. 개인정보 처리자 및 연락처"],
+        ["p", "GDPR 및 관련 개인정보 보호 법령에 따른 개인정보 처리자는 다음과 같습니다:"],
+        ["h", "2. 로컬 통신(클라우드 비의존)"],
+        ["p", "NahiDeck은 로컬 Wi-Fi, USB 케이블 또는 저전력 블루투스(BLE)를 통해 Android 스마트폰과 Windows 컴퓨터 간에 직접 작동합니다:"],
+        ["ul", [
+          "<strong>미디어 및 오디오 명령:</strong> 키 입력, 볼륨 조절 및 미디어 명령은 로컬 네트워크 내에서만 전송되며 외부 서버로 전송되지 않습니다.",
+          "<strong>PC 매크로:</strong> 바로가기 및 사용자 지정 동작은 컴퓨터에서 직접 실행 및 처리됩니다.",
+          "<strong>암호화:</strong> 로컬 연결은 로컬에서 생성된 TLS 인증서 및 TOFU(Trust On First Use) 지문 고정 방식을 통해 안전하게 보호됩니다."
+        ]],
+        ["h", "3. 수집하는 정보 및 이용 목적"],
+        ["p", "데이터 항목, 서비스 제공자 및 이용 목적은 본 페이지 하단의 부록 A 표에 상세히 설명되어 있습니다."],
+        ["h", "4. 클라우드 백업(Google 드라이브)"],
+        ["p", "선택적 Google 드라이브 백업 기능을 통해 화면 레이아웃, 프로필 및 환경설정을 저장할 수 있습니다:"],
+        ["ul", [
+          "<strong>저장 위치:</strong> 이용자 본인의 Google 드라이브 내 앱 전용 비공개 폴더(drive.appdata)에만 저장됩니다. NahiDeck 또는 제3자 서버로 전송되거나 저장되지 않습니다.",
+          "<strong>백업 내용:</strong> 화면 레이아웃, 프로필, 시각적 환경설정 및 선택적 PC 동작 정의. 기기 보안 키, 페어링 키 및 계정 비밀번호는 절대 포함되지 않습니다.",
+          "<strong>원격 분석과 완전 분리:</strong> 백업 데이터는 분석 목적으로 열람되거나 활용되지 않습니다."
+        ]],
+        ["h", "5. 절대로 수집하지 않는 정보"],
+        ["ul", [
+          "<strong>위치 정보:</strong> GPS 및 위치 기반 서비스를 일체 사용하지 않습니다. Android 블루투스 검색 권한은 근처 기기를 탐색하기 위한 용도로만 사용됩니다.",
+          "<strong>개인 파일:</strong> 사진, 동영상, 문서 또는 음성 녹음에 접근하지 않습니다.",
+          "<strong>연락처:</strong> 주소록 목록에 접근하지 않습니다.",
+          "<strong>하드웨어 고유 식별자:</strong> IMEI, MAC 주소 또는 기기 일련번호를 수집하지 않으며, 임의로 생성된 난수 식별자를 사용합니다."
+        ]],
+        ["h", "6. 보유 및 삭제"],
+        ["ul", [
+          "<strong>계정 및 라이선스 데이터:</strong> 앱 내 '설정 > 계정 > 계정 삭제' 또는 웹사이트 계정 삭제 페이지의 요청을 통해 영구 삭제됩니다.",
+          "<strong>원격 분석 데이터:</strong> '설정 > 개인정보'에서 동의를 철회하면 기존 기록이 즉시 삭제됩니다. 활성 기록은 최대 180일 이내에 자동 만료(TTL)되어 삭제됩니다.",
+          "<strong>서버 기술 로그:</strong> 인프라 요청 로그는 최대 30일간 보관됩니다.",
+          "<strong>라이선스 및 감사 기록:</strong> 계정 및 라이선스 작업 기록은 일방향 해시 처리된 식별자를 포함하며 최대 90일간 보관됩니다.",
+          "<strong>오류 보고서:</strong> 앱 버전, 기기 해시, 오류 유형 및 내용, 스택 추적, 로그 행을 포함합니다. 파일 경로의 이메일 주소, IP 주소 및 사용자 폴더 이름은 저장 전에 마스킹됩니다. 최대 90일간 보관됩니다.",
+          "<strong>국외 이전:</strong> Firebase Authentication은 미국 데이터 센터에서 Google에 의해 운영됩니다. 결제 확인을 위해 RevenueCat이 미국(AWS)에서 데이터를 처리하며, 표준계약조항(SCC)을 통해 보호됩니다. Firestore, Cloud Functions 및 Cloud KMS 데이터는 유럽(europe-west1) 서버에서 처리됩니다. KVKK 제9조에 따른 튀르키예 국외 이전 근거: [법적 근거: 법률 대리인 작성 예정].",
+          "<strong>지원 이메일:</strong> Google Groups(소비자 그룹)를 통해 처리되며 Google의 <a href='https://policies.google.com/privacy?hl=ko'>개인정보 처리방침</a> 및 <a href='https://policies.google.com/terms?hl=ko'>서비스 약관</a>을 따릅니다. 메시지는 그룹 보관함에 저장됩니다."
+        ]],
+        ["h", "7. 정보주체의 권리(GDPR 및 KVKK)"],
+        ["p", "GDPR 및 관계 법령에 따라 이용자는 개인정보 처리 여부 확인, 열람, 정정 및 삭제를 요구할 권리가 있습니다. 이러한 권리를 행사하려면 nahideck-support@googlegroups.com으로 문의해 주십시오."],
+        ["h", "부록 A: 데이터 범주 및 서비스 제공자(기술 세부사항)"],
+        ["table", ["데이터 범주", "수집 정보", "서비스 제공자", "이용 목적"], [
+          ["<strong>사용자 계정</strong>", "이메일 주소, 표시 이름, Firebase 사용자 ID(UID)", "Google Firebase Authentication", "로그인 및 Pro 라이선스 소유 여부 확인. 선택 사항이며 무료 플랜은 로그인 없이 이용 가능합니다."],
+          ["<strong>라이선스 및 페어링</strong>", "임의 생성된 스마트폰 기기 ID, PC ID, UID", "Google Cloud Firestore 및 Cloud KMS", "'스마트폰 1대 + PC 1대' 공정 이용 정책 적용 및 라이선스 토큰 서명."],
+          ["<strong>구매 및 구독</strong>", "Google Play 주문/구매 토큰, RevenueCat App User ID, 권한 상태", "Google Play Billing 및 RevenueCat", "Pro 결제 및 구독 갱신 처리와 검증."],
+          ["<strong>사용 통계 및 레이아웃(선택)</strong>", "임의 설치 ID, 그리드 레이아웃(위젯 유형, 위치, 크기), 테마 선택, 플랜 등급", "Google Cloud Firestore(anonymous_layouts)", "인기 있는 위젯과 레이아웃을 파악하여 UI 개선. <strong>개인정보, 텍스트 또는 계정 정보는 일체 포함되지 않습니다.</strong>"],
+          ["<strong>로컬 확장 프로그램 데이터</strong>", "현재 활성 브라우저 탭의 미디어 재생 정보(곡 제목, 아티스트, 재생 상태)", "로컬 브라우저 및 PC 앱 전용", "스마트폰과 PC에서 웹 미디어를 표시. 클라우드로 절대 전송되지 않습니다."],
+          ["<strong>앱 무결성 검증</strong>", "패키지 이름, 앱 서명 인증서 및 기기 무결성 판정 결과", "Google Play Integrity (Google)", "앱이 Google Play에서 정상 설치되었으며 신뢰할 수 있는 기기에서 실행 중인지 검증하고 악용을 방지. Google은 이 데이터를 제3자와 공유하지 않습니다."],
+          ["<strong>오류 보고서(선택)</strong>", "앱 버전, 기기 해시, 오류 유형 및 텍스트, 스택 추적 및 로그 행(이메일 및 IP 마스킹)", "Google Cloud Functions 및 Firestore(유럽); Google Groups 지원 이메일", "앱 오류 분석 및 수정. 사용자 동의 시에만 전송됩니다."]
+        ]],
+        ["card", [["p", "<strong>개인정보 처리자:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>문의 이메일:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>웹사이트:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "계정 및 데이터 삭제 요청",
+      blocks: [
+        ["p", "NahiDeck 계정 및 관련된 모든 데이터를 영구적으로 삭제하려면 아래 방법 중 하나를 이용할 수 있습니다."],
+        ["h", "방법 1: 앱 내에서 삭제(권장)"],
+        ["ol", [
+          "Android 기기에서 <strong>NahiDeck</strong> 앱을 엽니다.",
+          "사이드 독(또는 상단 메뉴)에서 <strong>설정</strong>으로 이동합니다.",
+          "<strong>계정</strong> 항목을 엽니다.",
+          "화면 맨 아래로 스크롤하여 <strong>\"내 계정 삭제\"</strong>를 누릅니다.",
+          "표시되는 확인 창에서 삭제를 승인합니다.",
+          "Firebase 사용자 기록, 페어링된 기기 및 클라우드 라이선스 기록이 영구적으로 삭제됩니다."
+        ]],
+        ["p", "<em>보안을 위해 계정 삭제는 최근 5분 이내에 로그인한 상태여야 합니다. 오류가 발생하면 로그아웃 후 다시 로그인하여 시도해 주십시오.</em>"],
+        ["p", "<em>참고: 계정을 삭제하더라도 Google 드라이브의 앱 백업은 자동 삭제되지 않습니다. Google 드라이브 설정(Google 드라이브 > 설정 > 앱 관리)에서 직접 삭제해 주셔야 합니다.</em>"],
+        ["h", "방법 2: 이메일을 통한 삭제 요청"],
+        ["p", "앱에 접근할 수 없거나 앱을 이미 삭제한 경우 이메일로 요청할 수 있습니다:"],
+        ["card", [
+          ["p", "<strong>지원 이메일:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>제목:</strong> <code>NahiDeck 계정 및 데이터 삭제 요청</code>"],
+          ["p", "<strong>필수 정보:</strong>"],
+          ["ul", ["NahiDeck 로그인에 사용한 Google 계정 이메일 주소.", "<em>(선택)</em> Google Play 주문 번호 또는 RevenueCat 구독 참조 번호."]]
+        ]],
+        ["p", "본인 확인이 완료되면 계정 및 관련 클라우드 기록은 영업일 기준 <strong>7일 이내</strong>에 영구적으로 삭제됩니다."],
+        ["h", "영구 삭제되는 항목은 무엇인가요?"],
+        ["ul", [
+          "Firebase Authentication 사용자 기록, 이메일 주소 및 프로필 세부정보.",
+          "Firestore <code>entitlements</code> 컬렉션의 Pro 라이선스 기록.",
+          "Firestore <code>devices</code> 컬렉션의 페어링된 스마트폰 및 PC 기록.",
+          "RevenueCat 구독자 프로필(<code>app_user_id</code>); 기술적으로 가능한 경우 삭제됩니다. 삭제가 불가능한 경우 이메일로 안내해 드립니다.",
+          "기기 보안 저장소에 보관된 라이선스 키 및 세션 기록."
+        ]],
+        ["h", "보관되는 항목은 무엇인가요?"],
+        ["ul", [
+          "<strong>Google Play 결제 기록:</strong> 세법 및 소비자 보호 법령상의 의무로 인해 Google에서 보관합니다. NahiDeck은 결제 세부정보를 저장하지 않습니다.",
+          "<strong>감사 기록:</strong> 계정 및 라이선스 작업 기록은 이용자의 신원과 직접 연결할 수 없는 해시 식별자를 포함하며 90일 이내에 자동 삭제됩니다.",
+          "<strong>오류 보고서:</strong> 90일 이내에 자동 삭제됩니다."
+        ]],
+        ["danger", [
+          ["h3", "중요: 활성 구독을 먼저 취소하세요"],
+          ["p", "계정을 삭제하더라도 Google Play를 통해 결제된 구독은 <strong>자동으로 취소되지 않습니다</strong>. 향후 요금 청구를 방지하려면 계정을 삭제하기 전에 먼저 구독을 취소하세요:"],
+          ["ol", [
+            "Android 기기에서 <strong>Google Play 스토어</strong>를 엽니다.",
+            "프로필 아이콘 > <strong>결제 및 정기 결제</strong> > <strong>정기 결제</strong>를 누릅니다.",
+            "<strong>NahiDeck</strong>을 선택하고 <strong>\"정기 결제 취소\"</strong>를 누릅니다."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  hi: {
+    privacy: {
+      title: "NahiDeck गोपनीयता नीति",
+      updated: "25 अक्टूबर 2026",
+      blocks: [
+        ["p", "NahiDeck (\"हम\", \"हमारा\" या \"ऐप\") अपने उपयोगकर्ताओं की गोपनीयता और व्यक्तिगत डेटा की सुरक्षा को अत्यधिक महत्व देता है। यह नीति <strong>NahiDeck Android ऐप</strong>, <strong>NahiDeck Windows डेस्कटॉप क्लाइंट</strong> और <strong>वेब ब्राउज़र एक्सटेंशन (NahiDeck Connect)</strong> को कवर करती है।"],
+        ["h", "संक्षेप में"],
+        ["ul", [
+          "<strong>हम क्या एकत्र करते हैं:</strong> खाता विवरण (वैकल्पिक), Pro लाइसेंस और डिवाइस पेयरिंग रिकॉर्ड, वैकल्पिक अनाम उपयोग डेटा, और क्रैश रिपोर्ट जो आप भेजने का विकल्प चुनते हैं।",
+          "<strong>इसे कहाँ प्रोसेस किया जाता है:</strong> यूरोप में (Firestore, Cloud Functions)। साइन-इन (Firebase Authentication) और खरीदारी सत्यापन (RevenueCat) संयुक्त राज्य अमेरिका में प्रोसेस किए जाते हैं; इस स्थानांतरण का आधार नीचे दिया गया है।",
+          "<strong>हम इसे कब तक रखते हैं:</strong> तकनीकी लॉग 30 दिन, ऑडिट और क्रैश रिकॉर्ड 90 दिन, अनाम लेआउट रिकॉर्ड 180 दिन। अपना खाता हटाने से आपका खाता डेटा हट जाता है।",
+          "<strong>आपके अधिकार:</strong> आप डेटा एक्सेस, सुधार और हटाने का अनुरोध कर सकते हैं। आप ऐप में या खाता हटाने वाले पेज पर अपना खाता हटा सकते हैं।",
+          "<strong>क्रैश रिपोर्ट:</strong> केवल आपकी पुष्टि के बाद ही भेजी जाती हैं। आपका वैकल्पिक नोट और संपर्क ईमेल शामिल हैं; नोट को वैसे ही संग्रहीत किया जाता है जैसे लिखा गया है, और ईमेल और आईपी पते छुपा दिए जाते हैं।"
+        ]],
+        ["h", "1. डेटा नियंत्रक और संपर्क"],
+        ["p", "GDPR और लागू डेटा सुरक्षा कानूनों के तहत, डेटा नियंत्रक है:"],
+        ["h", "2. स्थानीय संचार (क्लाउड पर कोई निर्भरता नहीं)"],
+        ["p", "NahiDeck स्थानीय वाई-फ़ाई, यूएसबी केबल या ब्लूटूथ लो एनर्जी (BLE) के माध्यम से आपके एंड्रॉइड फ़ोन और विंडोज कंप्यूटर के बीच सीधे काम करता है:"],
+        ["ul", [
+          "<strong>मीडिया और ऑडियो कमांड:</strong> की-प्रेस, वॉल्यूम परिवर्तन और मीडिया कमांड आपके स्थानीय नेटवर्क पर चलते हैं। वे बाहरी सर्वर पर नहीं भेजे जाते हैं।",
+          "<strong>कंप्यूटर मैक्रोज़:</strong> शॉर्टकट और कस्टम क्रियाएं आपके कंप्यूटर पर निष्पादित और संसाधित की जाती हैं।",
+          "<strong>एन्क्रिप्शन:</strong> स्थानीय कनेक्शन स्थानीय रूप से उत्पन्न टीएलएस प्रमाणपत्रों और टीओएफयू (Trust On First Use) फ़िंगरप्रिंट पिनिंग द्वारा सुरक्षित है।"
+        ]],
+        ["h", "3. हम क्या एकत्र करते हैं और इसका उपयोग कैसे करते हैं"],
+        ["p", "डेटा श्रेणियां, सेवा प्रदाता और उद्देश्य इस पृष्ठ के अंत में अनुलग्नक A में दी गई तालिका में विस्तार से सूचीबद्ध हैं।"],
+        ["h", "4. क्लाउड बैकअप (Google Drive)"],
+        ["p", "एक वैकल्पिक Google Drive बैकअप आपको अपने स्क्रीन लेआउट, प्रोफाइल और प्राथमिकताएं सहेजने की सुविधा देता है:"],
+        ["ul", [
+          "<strong>इसे कहाँ संग्रहीत किया जाता है:</strong> केवल आपके अपने Google Drive ऐप डेटा फ़ोल्डर (drive.appdata) में। इसे कभी भी NahiDeck सर्वर या तृतीय-पक्ष सर्वर पर नहीं भेजा या होस्ट नहीं किया जाता है।",
+          "<strong>इसमें क्या शामिल है:</strong> स्क्रीन लेआउट, प्रोफाइल, दृश्य प्राथमिकताएं और वैकल्पिक पीसी एक्शन परिभाषाएं। डिवाइस सीक्रेट्स, पेयरिंग कुंजियां और खाता पासवर्ड कभी भी शामिल नहीं होते हैं।",
+          "<strong>टेलीमेट्री से पूरी तरह अलग:</strong> बैकअप डेटा को कभी भी विश्लेषण के लिए पढ़ा या उपयोग नहीं किया जाता है।"
+        ]],
+        ["h", "5. डेटा जो हम कभी एकत्र नहीं करते"],
+        ["ul", [
+          "<strong>स्थान:</strong> जीपीएस और स्थान सेवाओं का कभी भी उपयोग नहीं किया जाता है। एंड्रॉइड ब्लूटूथ स्कैन अनुमति का उपयोग केवल आस-पास के उपकरणों को खोजने के लिए किया जाता है।",
+          "<strong>व्यक्तिगत फ़ाइलें:</strong> हम फ़ोटो, वीडियो, दस्तावेज़ या वॉयस रिकॉर्डिंग तक नहीं पहुंचते हैं।",
+          "<strong>संपर्क:</strong> हम आपकी संपर्क सूची तक नहीं पहुंचते हैं।",
+          "<strong>हार्डवेयर पहचानकर्ता:</strong> हम IMEI, MAC पते या हार्डवेयर सीरियल नंबर एकत्र नहीं करते हैं। इसके बजाय यादृच्छिक पहचानकर्ताओं का उपयोग किया जाता है।"
+        ]],
+        ["h", "6. डेटा प्रतिधारण और हटाना"],
+        ["ul", [
+          "<strong>खाता और लाइसेंस डेटा:</strong> ऐप में सेटिंग्स > खाता > \"खाता हटाएं\" के माध्यम से या हमारी वेबसाइट पर खाता हटाने वाले पेज से अनुरोध पर स्थायी रूप से हटा दिया जाता है।",
+          "<strong>टेलीमेट्री:</strong> सेटिंग्स > गोपनीयता में सहमति वापस लेने से आपका मौजूदा रिकॉर्ड तुरंत हट जाता है। सक्रिय रिकॉर्ड अधिकतम 180 दिनों (TTL) के भीतर स्वतः समाप्त हो जाते हैं।",
+          "<strong>तकनीकी सर्वर लॉग:</strong> अवसंरचना अनुरोध लॉग अधिकतम 30 दिनों तक रखे जाते हैं।",
+          "<strong>लाइसेंस और ऑडिट रिकॉर्ड:</strong> खाता और लाइसेंस संचालन के रिकॉर्ड में आपके उपयोगकर्ता पहचानकर्ता का एकतरफा हैश रूप होता है और इसे अधिकतम 90 दिनों तक रखा जाता है।",
+          "<strong>क्रैश रिपोर्ट:</strong> इसमें ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें शामिल हैं। फ़ाइल पथों में ईमेल पते, आईपी पते और उपयोगकर्ता फ़ोल्डर नाम संग्रहीत करने से पहले छुपा दिए जाते हैं। अधिकतम 90 दिनों तक रखे जाते हैं।",
+          "<strong>अंतर्राष्ट्रीय स्थानांतरण:</strong> Firebase Authentication को Google द्वारा संयुक्त राज्य अमेरिका के डेटा केंद्रों से संचालित किया जाता है। खरीदारी सत्यापन के लिए, RevenueCat संयुक्त राज्य अमेरिका (AWS) में आपके डेटा को प्रोसेस करता है; यह स्थानांतरण मानक संविदात्मक खंडों द्वारा कवर किया गया है। Firestore, Cloud Functions और Cloud KMS डेटा यूरोप (europe-west1) के सर्वरों पर प्रोसेस किया जाता है। KVKK अनुच्छेद 9 के तहत तुर्की से स्थानांतरण का कानूनी आधार: [कानूनी आधार: वकील द्वारा भरा जाएगा]।",
+          "<strong>सहायता ईमेल:</strong> Google Groups (उपभोक्ता समूह) के माध्यम से संसाधित किया जाता है और Google की <a href='https://policies.google.com/privacy?hl=hi'>गोपनीयता नीति</a> और <a href='https://policies.google.com/terms?hl=hi'>सेवा की शर्तों</a> के अधीन है। संदेश समूह के संग्रह में रखे जाते हैं।"
+        ]],
+        ["h", "7. आपके अधिकार (GDPR और KVKK)"],
+        ["p", "GDPR और लागू कानून के तहत आपको यह जानने का अधिकार है कि क्या हम आपके डेटा को प्रोसेस करते हैं, इसे एक्सेस करने, इसे ठीक करने और इसे हटाने का अनुरोध करने का अधिकार है। इन अधिकारों का प्रयोग करने के लिए, nahideck-support@googlegroups.com पर ईमेल करें।"],
+        ["h", "अनुलग्नक A: डेटा श्रेणियां और सेवा प्रदाता (तकनीकी विवरण)"],
+        ["table", ["डेटा श्रेणी", "एकत्रित जानकारी", "सेवा प्रदाता", "उद्देश्य"], [
+          ["<strong>उपयोगकर्ता खाता</strong>", "ईमेल पता, नाम, Firebase उपयोगकर्ता आईडी (UID)", "Google Firebase Authentication", "साइन-इन और Pro लाइसेंस स्वामित्व की पुष्टि। वैकल्पिक; मुफ़्त योजना बिना साइन-इन के उपयोग की जा सकती है।"],
+          ["<strong>लाइसेंस और पेयरिंग</strong>", "यादृच्छिक रूप से उत्पन्न फ़ोन डिवाइस आईडी, पीसी आईडी, UID", "Google Cloud Firestore और Cloud KMS", "1 फ़ोन + 1 पीसी के उचित उपयोग नियम को लागू करना और लाइसेंस टोकन पर हस्ताक्षर करना।"],
+          ["<strong>खरीदारी और सदस्यता</strong>", "Google Play ऑर्डर/खरीद टोकन, RevenueCat App User ID, पात्रता स्थिति", "Google Play Billing और RevenueCat", "Pro खरीदारी और नवीनीकरण का प्रसंस्करण और सत्यापन।"],
+          ["<strong>उपयोग और लेआउट टेलीमेट्री (वैकल्पिक)</strong>", "यादृच्छिक इंस्टॉल आईडी, ग्रिड लेआउट (विजेट प्रकार, स्थिति, आकार), थीम विकल्प, योजना स्तर", "Google Cloud Firestore (anonymous_layouts)", "इंटरफ़ेस को बेहतर बनाने के लिए लोकप्रिय विजेट और लेआउट को समझना। <strong>इसमें कोई व्यक्तिगत डेटा, टेक्स्ट या खाता विवरण नहीं है।</strong>"],
+          ["<strong>स्थानीय एक्सटेंशन डेटा</strong>", "सक्रिय ब्राउज़र टैब की मीडिया स्थिति (ट्रैक शीर्षक, कलाकार, प्लेबैक स्थिति)", "केवल स्थानीय ब्राउज़र और पीसी ऐप", "फ़ोन और पीसी पर वेब मीडिया दिखाना। कभी भी क्लाउड पर नहीं भेजा जाता।"],
+          ["<strong>ऐप सत्यापन</strong>", "पैकेज नाम, ऐप हस्ताक्षर प्रमाणपत्र और डिवाइस अखंडता परिणाम", "Google Play Integrity (Google)", "यह सत्यापित करना कि ऐप Google Play से इंस्टॉल किया गया है और विश्वसनीय डिवाइस पर चल रहा है; दुरुपयोग को रोकना। Google इस डेटा को तीसरे पक्ष के साथ साझा नहीं करता है।"],
+          ["<strong>क्रैश रिपोर्ट (वैकल्पिक)</strong>", "ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें (ईमेल और आईपी छुपाए गए हैं)", "Google Cloud Functions और Firestore (यूरोप); Google Groups के माध्यम से सहायता ईमेल", "क्रैश का विश्लेषण करना और उन्हें ठीक करना। केवल आपकी पुष्टि के साथ भेजा जाता है।"]
+        ]],
+        ["card", [["p", "<strong>डेटा नियंत्रक:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>संपर्क ईमेल:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>वेबसाइट:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "खाता और डेटा हटाने का अनुरोध",
+      blocks: [
+        ["p", "यदि आप अपना NahiDeck खाता और सभी संबंधित डेटा स्थायी रूप से हटाना चाहते हैं, तो आप नीचे दिए गए तरीकों में से एक का उपयोग कर सकते हैं।"],
+        ["h", "विधि 1: ऐप में हटाएं (अनुशंसित)"],
+        ["ol", [
+          "अपने एंड्रॉइड डिवाइस पर <strong>NahiDeck</strong> ऐप खोलें।",
+          "साइड डॉक (या शीर्ष मेनू) से <strong>सेटिंग्स</strong> पर जाएं।",
+          "<strong>खाता</strong> अनुभाग खोलें।",
+          "नीचे स्क्रॉल करें और <strong>\"मेरा खाता हटाएं\"</strong> पर टैप करें।",
+          "संवाद बॉक्स में पुष्टि करें।",
+          "आपका Firebase उपयोगकर्ता रिकॉर्ड, पेयर किए गए डिवाइस और क्लाउड लाइसेंस रिकॉर्ड स्थायी रूप से हटा दिए जाते हैं।"
+        ]],
+        ["p", "<em>सुरक्षा कारणों से खाता हटाने के लिए पिछले 5 मिनट के भीतर साइन-इन होना आवश्यक है। यदि कोई त्रुटि आती है, तो साइन आउट करें, पुनः साइन इन करें और पुनः प्रयास करें।</em>"],
+        ["p", "<em>नोट: अपना खाता हटाने से Google Drive में मौजूद आपका ऐप बैकअप स्वतः नहीं हटता है। इसे Google Drive सेटिंग्स (Google Drive > सेटिंग्स > ऐप्स प्रबंधित करें) से स्वयं हटाएं।</em>"],
+        ["h", "विधि 2: ईमेल द्वारा हटाने का अनुरोध करें"],
+        ["p", "यदि आप ऐप तक नहीं पहुंच सकते हैं या इसे अनइंस्टॉल कर दिया है, तो अपना अनुरोध ईमेल द्वारा भेजें:"],
+        ["card", [
+          ["p", "<strong>सहायता ईमेल:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>विषय:</strong> <code>NahiDeck खाता और डेटा हटाने का अनुरोध</code>"],
+          ["p", "<strong>आवश्यक जानकारी:</strong>"],
+          ["ul", ["NahiDeck में साइन इन करने के लिए उपयोग किया जाने वाला Google खाता ईमेल पता।", "<em>(वैकल्पिक)</em> Google Play ऑर्डर नंबर या RevenueCat सदस्यता संदर्भ।"]]
+        ]],
+        ["p", "आपकी पहचान सत्यापित करने के बाद, आपका खाता और संबंधित क्लाउड रिकॉर्ड <strong>7 कार्य दिवसों</strong> के भीतर स्थायी रूप से हटा दिए जाते हैं।"],
+        ["h", "स्थायी रूप से क्या हटाया जाता है?"],
+        ["ul", [
+          "Firebase Authentication उपयोगकर्ता रिकॉर्ड, ईमेल पता और प्रोफ़ाइल विवरण।",
+          "Firestore <code>entitlements</code> संग्रह में Pro लाइसेंस रिकॉर्ड।",
+          "Firestore <code>devices</code> संग्रह में पेयर किए गए फ़ोन और पीसी रिकॉर्ड।",
+          "RevenueCat ग्राहक प्रोफ़ाइल (<code>app_user_id</code>); जहाँ तकनीकी रूप से संभव हो हटा दिया जाता है। यदि इसे हटाया नहीं जा सकता है, तो हमें ईमेल द्वारा सूचित करें।",
+          "आपके डिवाइस के सुरक्षित संग्रहण में लाइसेंस कुंजियां और सत्र रिकॉर्ड।"
+        ]],
+        ["h", "क्या रखा जाता है?"],
+        ["ul", [
+          "<strong>Google Play बिलिंग रिकॉर्ड:</strong> कर और उपभोक्ता कानून कारणों से Google इन्हें रखता है। NahiDeck भुगतान विवरण संग्रहीत नहीं करता है।",
+          "<strong>ऑडिट रिकॉर्ड:</strong> खाता और लाइसेंस संचालन के रिकॉर्ड में एक हैश किया गया पहचानकर्ता होता है जिसे सीधे आपकी पहचान से नहीं जोड़ा जा सकता है, और यह 90 दिनों के भीतर स्वतः हटा दिया जाता है।",
+          "<strong>क्रैश रिपोर्ट:</strong> 90 दिनों के भीतर स्वतः हटा दी जाती हैं।"
+        ]],
+        ["danger", [
+          ["h3", "महत्वपूर्ण: अपनी सक्रिय सदस्यता रद्द करें"],
+          ["p", "अपना खाता हटाने से Google Play के माध्यम से शुरू की गई सदस्यता <strong>स्वतः रद्द नहीं होती है</strong>। भविष्य के शुल्कों को रोकने के लिए, अपना खाता हटाने से पहले इसे रद्द करें:"],
+          ["ol", [
+            "अपने एंड्रॉइड डिवाइस पर <strong>Google Play Store</strong> खोलें।",
+            "अपने प्रोफ़ाइल आइकन > <strong>भुगतान और सदस्यताएं</strong> > <strong>सदस्यताएं</strong> पर टैप करें।",
+            "<strong>NahiDeck</strong> चुनें और <strong>\"सदस्यता रद्द करें\"</strong> पर टैप करें।"
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  my: {
+    privacy: {
+      title: "NahiDeck ကိုယ်ရေးအချက်အလက် လုံခြုံမှုမူဝါဒ",
+      updated: "၂၀၂၆ အောက်တိုဘာ ၂၅",
+      blocks: [
+        ["p", "NahiDeck (\"ကျွန်ုပ်တို့\" သို့မဟုတ် \"အက်ပ်\") သည် အသုံးပြုသူများ၏ ကိုယ်ရေးကိုယ်တာလုံခြုံမှုနှင့် ကိုယ်ရေးအချက်အလက် ကာကွယ်ရေးကို အလွန်အလေးထားပါသည်။ ဤမူဝါဒသည် <strong>NahiDeck Android အက်ပ်</strong>၊ <strong>NahiDeck Windows ဒက်စ်တော့ခ်အက်ပ်</strong> နှင့် <strong>ဝဘ်ဘရောက်ဆာ extension (NahiDeck Connect)</strong> တို့နှင့် သက်ဆိုင်ပါသည်။"],
+        ["h", "အကျဉ်းချုပ်"],
+        ["ul", [
+          "<strong>ကျွန်ုပ်တို့ စုဆောင်းသောအချက်အလက်များ -</strong> အကောင့်အချက်အလက် (ရွေးချယ်နိုင်သည်)၊ Pro လိုင်စင်နှင့် စက်တွဲချိတ်မှုမှတ်တမ်းများ၊ အမည်မဖော်ပြသော အသုံးပြုမှုဒေတာ (ရွေးချယ်နိုင်သည်) နှင့် သင်ပေးပို့ရန် ရွေးချယ်သော ချွတ်ယွင်းမှုအစီရင်ခံစာများ။",
+          "<strong>မည်သည့်နေရာတွင် လုပ်ဆောင်သနည်း -</strong> ဥရောပတွင် (Firestore, Cloud Functions)။ အကောင့်ဝင်ရောက်ခြင်း (Firebase Authentication) နှင့် ဝယ်ယူမှုစစ်ဆေးခြင်း (RevenueCat) တို့ကို အမေရိကန်ပြည်ထောင်စုတွင် လုပ်ဆောင်ပြီး ဤလွှဲပြောင်းမှု၏ အခြေခံကို အောက်တွင် ဖော်ပြထားပါသည်။",
+          "<strong>မည်မျှကြာကြာ သိမ်းဆည်းသနည်း -</strong> နည်းပညာမှတ်တမ်းများကို ၃၀ ရက်၊ စာရင်းစစ်နှင့် ချွတ်ယွင်းမှုမှတ်တမ်းများကို ၉၀ ရက်၊ အမည်မဖော်ပြသော အပြင်အဆင်မှတ်တမ်းများကို ၁၈၀ ရက် သိမ်းဆည်းပါသည်။ သင့်အကောင့်ကို ဖျက်လိုက်ပါက အကောင့်ဒေတာများအားလုံး ပျက်ပြယ်သွားမည်ဖြစ်ပါသည်။",
+          "<strong>သင့်အခွင့်အရေးများ -</strong> သင်၏ဒေတာကို ကြည့်ရှုခွင့်၊ ပြင်ဆင်ခွင့်နှင့် ဖျက်ပစ်ခွင့်တို့ကို တောင်းဆိုနိုင်ပါသည်။ အက်ပ်အတွင်း သို့မဟုတ် အကောင့်ဖျက်ခြင်းစာမျက်နှာမှတစ်ဆင့် သင့်အကောင့်ကို ဖျက်နိုင်ပါသည်။",
+          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> သင်အတည်ပြုမှသာ ပေးပို့ပါသည်။ သင်ထည့်သွင်းလိုပါက မှတ်ချက်နှင့် အီးမေးလ်လိပ်စာတို့ ပါဝင်မည်ဖြစ်ပြီး မှတ်ချက်ကို ရေးထားသည့်အတိုင်း သိမ်းဆည်းကာ အီးမေးလ်နှင့် IP လိပ်စာများကို ဖုံးကွယ်ထားမည်ဖြစ်ပါသည်။"
+        ]],
+        ["h", "1. ဒေတာထိန်းချုပ်သူနှင့် ဆက်သွယ်ရန်"],
+        ["p", "GDPR နှင့် သက်ဆိုင်ရာ ဒေတာကာကွယ်ရေးဥပဒေများအရ ဒေတာထိန်းချုပ်သူမှာ -"],
+        ["h", "2. ဒေသတွင်းချိတ်ဆက်မှု (Cloud ပေါ်တွင် မှီခိုမှုမရှိပါ)"],
+        ["p", "NahiDeck သည် ဒေသတွင်း Wi-Fi၊ USB ကြိုး သို့မဟုတ် Bluetooth Low Energy (BLE) မှတစ်ဆင့် သင့် Android ဖုန်းနှင့် Windows ကွန်ပျူတာကြား တိုက်ရိုက်လုပ်ဆောင်ပါသည် -"],
+        ["ul", [
+          "<strong>မီဒီယာနှင့် အသံထိန်းချုပ်မှုများ -</strong> ခလုတ်နှိပ်ခြင်း၊ အသံအတိုးအကျယ်ပြောင်းလဲခြင်းနှင့် မီဒီယာအမိန့်များသည် သင့်ဒေသတွင်းကွန်ရက်ပေါ်တွင်သာ ရွေ့လျားပါသည်။ ပြင်ပဆာဗာများသို့ မရောက်ရှိပါ။",
+          "<strong>ကွန်ပျူတာဖြတ်လမ်းညွှန်ချက်များ -</strong> ဖြတ်လမ်းများနှင့် စိတ်ကြိုက်လုပ်ဆောင်ချက်များကို သင့်ကွန်ပျူတာပေါ်တွင်သာ စီမံလုပ်ဆောင်ပါသည်။",
+          "<strong>ဒေတာကုဒ်ဝှက်ခြင်း -</strong> ဒေသတွင်းချိတ်ဆက်မှုကို စက်တွင်းထုတ်လုပ်သော TLS လက်မှတ်များနှင့် TOFU (ပထမဆုံးအသုံးပြုမှုတွင် ယုံကြည်မှု) လက်ဗွေတွဲချိတ်မှုတို့ဖြင့် ကာကွယ်ထားပါသည်။"
+        ]],
+        ["h", "3. ကျွန်ုပ်တို့ မည်သည့်ဒေတာကို စုဆောင်းပြီး မည်သို့အသုံးပြုသနည်း"],
+        ["p", "ဒေတာအမျိုးအစားများ၊ ဝန်ဆောင်မှုပေးသူများနှင့် ရည်ရွယ်ချက်များကို ဤစာမျက်နှာ၏အဆုံး နောက်ဆက်တွဲ A ရှိ ဇယားတွင် အသေးစိတ်ဖော်ပြထားပါသည်။"],
+        ["h", "4. Cloud အရန်သိမ်းဆည်းမှု (Google Drive)"],
+        ["p", "ရွေးချယ်နိုင်သော Google Drive အရန်သိမ်းဆည်းမှုစနစ်သည် သင့်စခရင်အပြင်အဆင်များ၊ ပရိုဖိုင်များနှင့် စိတ်ကြိုက်ရွေးချယ်မှုများကို သိမ်းဆည်းပေးပါသည် -"],
+        ["ul", [
+          "<strong>သိမ်းဆည်းသည့်နေရာ -</strong> သင့်ကိုယ်ပိုင် Google Drive အက်ပ်ဒေတာဖိုဒါ (drive.appdata) တွင်သာ သိမ်းဆည်းပါသည်။ NahiDeck ဆာဗာများ သို့မဟုတ် ပြင်ပဆာဗာများသို့ မည်သည့်အခါမျှ မပို့ဆောင်ပါ။",
+          "<strong>ပါဝင်သောအကြောင်းအရာများ -</strong> စခရင်အပြင်အဆင်များ၊ ပရိုဖိုင်များ၊ အသွင်အပြင်စိတ်ကြိုက်ရွေးချယ်မှုများနှင့် ကွန်ပျူတာလုပ်ဆောင်ချက်သတ်မှတ်ချက်များ။ စက်လျှို့ဝှက်ကုဒ်များ၊ တွဲချိတ်မှုကုဒ်များနှင့် အကောင့်စကားဝှက်များကို လုံးဝမထည့်သွင်းပါ။",
+          "<strong>အဝေးတိုင်းတာမှုဒေတာနှင့် လုံးဝသီးခြားဖြစ်ခြင်း -</strong> အရန်သိမ်းဆည်းမှုဒေတာများကို ခွဲခြမ်းစိတ်ဖြာခြင်းအတွက် လုံးဝဖတ်ရှုခြင်း သို့မဟုတ် အသုံးမပြုပါ။"
+        ]],
+        ["h", "5. ကျွန်ုပ်တို့ မည်သည့်အခါမျှ မစုဆောင်းသောဒေတာများ"],
+        ["ul", [
+          "<strong>တည်နေရာ -</strong> GPS နှင့် တည်နေရာဝန်ဆောင်မှုများကို လုံးဝအသုံးမပြုပါ။ Android Bluetooth စကင်ဖတ်ခွင့်ပြုချက်သည် အနီးရှိစက်ပစ္စည်းများကို ရှာဖွေရန်အတွက်သာ ဖြစ်ပါသည်။",
+          "<strong>ကိုယ်ပိုင်ဖိုင်များ -</strong> ဓာတ်ပုံများ၊ ဗီဒီယိုများ၊ စာရွက်စာတမ်းများနှင့် အသံဖမ်းယူမှုများကို ကျွန်ုပ်တို့ ဝင်ရောက်ရယူခြင်း မရှိပါ။",
+          "<strong>အဆက်အသွယ်များ -</strong> သင့်ဖုန်းစာအုပ်စာရင်းကို ကျွန်ုပ်တို့ ရယူခြင်း မရှိပါ။",
+          "<strong>စက်ပစ္စည်းသတ်မှတ်ချက်အမှတ်အသားများ -</strong> IMEI၊ MAC လိပ်စာ သို့မဟုတ် စက်ပစ္စည်းနံပါတ်များကို မစုဆောင်းပါ။ ၎င်းတို့အစား ကျပန်းထုတ်လုပ်ထားသော အမှတ်အသားများကို အသုံးပြုပါသည်။"
+        ]],
+        ["h", "6. ထိန်းသိမ်းခြင်းနှင့် ဖျက်ပစ်ခြင်း"],
+        ["ul", [
+          "<strong>အကောင့်နှင့် လိုင်စင်ဒေတာ -</strong> အက်ပ်ရှိ ဆက်တင်များ > အကောင့် > \"အကောင့်ဖျက်ရန်\" မှတစ်ဆင့် သို့မဟုတ် ဝဘ်ဆိုက်ရှိ အကောင့်ဖျက်ခြင်းစာမျက်နှာမှ တောင်းဆိုမှုအရ အပြီးတိုင် ဖျက်ပစ်ပါသည်။",
+          "<strong>အဝေးတိုင်းတာမှုဒေတာ -</strong> ဆက်တင်များ > ကိုယ်ရေးလုံခြုံမှု မှ သဘောတူညီချက်ကို ရုပ်သိမ်းပါက ရှိပြီးသားမှတ်တမ်းကို ချက်ချင်း ဖျက်ပစ်ပါသည်။ လက်ရှိမှတ်တမ်းများသည် ရက်ပေါင်း ၁၈၀ (TTL) အတွင်း အလိုအလျောက် သက်တမ်းကုန်ဆုံးပါသည်။",
+          "<strong>နည်းပညာဆာဗာမှတ်တမ်းများ -</strong> အခြေခံအဆောက်အအုံတောင်းဆိုမှုမှတ်တမ်းများကို အများဆုံး ၃၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
+          "<strong>လိုင်စင်နှင့် စာရင်းစစ်မှတ်တမ်းများ -</strong> အကောင့်နှင့် လိုင်စင်လုပ်ဆောင်မှုမှတ်တမ်းများတွင် ပြန်ပြောင်း၍မရသော hash ကုဒ်ပါဝင်ပြီး အများဆုံး ၉၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
+          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ ပါဝင်ပါသည်။ သိမ်းဆည်းခြင်းမပြုမီ အီးမေးလ်လိပ်စာများ၊ IP လိပ်စာများနှင့် ဖိုင်လမ်းကြောင်းရှိ အသုံးပြုသူဖိုဒါအမည်များကို ဖုံးကွယ်ထားပါသည်။ အများဆုံး ၉၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
+          "<strong>နိုင်ငံတကာသို့ လွှဲပြောင်းမှုများ -</strong> Firebase Authentication ကို အမေရိကန်ပြည်ထောင်စုရှိ ဒေတာစင်တာများမှတစ်ဆင့် Google က လည်ပတ်ပါသည်။ ဝယ်ယူမှုစစ်ဆေးရန်အတွက် RevenueCat သည် အမေရိကန်ပြည်ထောင်စု (AWS) တွင် သင့်ဒေတာကို လုပ်ဆောင်ပြီး ဤလွှဲပြောင်းမှုကို စံသတ်မှတ်ချက်ဆိုင်ရာ စာချုပ်စာတမ်းများဖြင့် အကာအကွယ်ပေးထားပါသည်။ Firestore, Cloud Functions နှင့် Cloud KMS ဒေတာများကို ဥရောပ (europe-west1) ရှိ ဆာဗာများတွင် လုပ်ဆောင်ပါသည်။ KVKK ပုဒ်မ ၉ အရ တူရကီမှ လွှဲပြောင်းမှုများအတွက် ဥပဒေဆိုင်ရာ အခြေခံ - [ဥပဒေဆိုင်ရာ အခြေခံ - ရှေ့နေမှ ဖြည့်စွက်ရန်]။",
+          "<strong>အကူအညီပေးရေး အီးမေးလ် -</strong> Google Groups မှတစ်ဆင့် စီမံလုပ်ဆောင်ပြီး Google ၏ <a href='https://policies.google.com/privacy?hl=my'>ကိုယ်ရေးလုံခြုံမှုမူဝါဒ</a> နှင့် <a href='https://policies.google.com/terms?hl=my'>ဝန်ဆောင်မှုစည်းမျဉ်းများ</a> နှင့် သက်ဆိုင်ပါသည်။ မက်ဆေ့ဂျ်များကို အဖွဲ့၏ မော်ကွန်းတိုက်တွင် သိမ်းဆည်းထားပါသည်။"
+        ]],
+        ["h", "7. သင့်အခွင့်အရေးများ (GDPR နှင့် KVKK)"],
+        ["p", "GDPR နှင့် သက်ဆိုင်ရာ ဥပဒေများအရ ကျွန်ုပ်တို့သည် သင့်ဒေတာကို စီမံဆောင်ရွက်ခြင်းရှိမရှိ သိရှိခွင့်၊ ဝင်ရောက်ကြည့်ရှုခွင့်၊ ပြင်ဆင်ခွင့်နှင့် ဖျက်ပစ်ခွင့်တို့ကို တောင်းဆိုပိုင်ခွင့်ရှိပါသည်။ ဤအခွင့်အရေးများကို ကျင့်သုံးရန် nahideck-support@googlegroups.com သို့ အီးမေးလ်ပေးပို့ပါ။"],
+        ["h", "နောက်ဆက်တွဲ A: ဒေတာအမျိုးအစားများနှင့် ဝန်ဆောင်မှုပေးသူများ (နည်းပညာအသေးစိတ်)"],
+        ["table", ["ဒေတာအမျိုးအစား", "စုဆောင်းသောအချက်အလက်", "ဝန်ဆောင်မှုပေးသူ", "ရည်ရွယ်ချက်"], [
+          ["<strong>အသုံးပြုသူအကောင့်</strong>", "အီးမေးလ်လိပ်စာ၊ အမည်၊ Firebase အသုံးပြုသူ ID (UID)", "Google Firebase Authentication", "အကောင့်ဝင်ရောက်ခြင်းနှင့် Pro လိုင်စင်ပိုင်ဆိုင်မှုကို စစ်ဆေးခြင်း။ ရွေးချယ်နိုင်သည်၊ အခမဲ့အစီအစဉ်ကို အကောင့်မဝင်ဘဲ သုံးနိုင်ပါသည်။"],
+          ["<strong>လိုင်စင်နှင့် တွဲချိတ်မှု</strong>", "ကျပန်းထုတ်လုပ်ထားသော ဖုန်း ID၊ PC ID၊ UID", "Google Cloud Firestore နှင့် Cloud KMS", "ဖုန်း ၁ လုံး + PC ၁ လုံး သာတူညီမျှအသုံးပြုမှုစည်းမျဉ်းကို ကျင့်သုံးခြင်းနှင့် လိုင်စင်တိုကင်များ လက်မှတ်ရေးထိုးခြင်း။"],
+          ["<strong>ဝယ်ယူမှုများနှင့် စာရင်းသွင်းမှုများ</strong>", "Google Play အမှာစာ/ဝယ်ယူမှုတိုကင်၊ RevenueCat App User ID၊ ရပိုင်ခွင့်အခြေအနေ", "Google Play Billing နှင့် RevenueCat", "Pro ဝယ်ယူမှုများနှင့် သက်တမ်းတိုးမှုများကို စစ်ဆေးလုပ်ဆောင်ခြင်း။"],
+          ["<strong>အသုံးပြုမှုနှင့် အပြင်အဆင်အဝေးတိုင်းတာမှု (ရွေးချယ်နိုင်သည်)</strong>", "ကျပန်းတပ်ဆင်မှု ID၊ ဇယားကွက်အပြင်အဆင် (ဝစ်ဂျက်အမျိုးအစား၊ နေရာ၊ အရွယ်အစား)၊ သီးသန့်ပုံစံရွေးချယ်မှု၊ အစီအစဉ်အဆင့်", "Google Cloud Firestore (anonymous_layouts)", "မျက်နှာပြင်ဒီဇိုင်းကို မြှင့်တင်ရန် လူကြိုက်များသော ဝစ်ဂျက်များနှင့် အပြင်အဆင်များကို လေ့လာခြင်း။ <strong>ကိုယ်ရေးကိုယ်တာဒေတာ၊ စာသား သို့မဟုတ် အကောင့်အချက်အလက်များ လုံးဝမပါဝင်ပါ။</strong>"],
+          ["<strong>ဒေသတွင်း extension ဒေတာ</strong>", "ဖွင့်ထားသော ဘရောက်ဆာ tab ၏ မီဒီယာအခြေအနေ (သီချင်းအမည်၊ အဆိုတော်၊ ဖွင့်လက်စအခြေအနေ)", "ဒေသတွင်း ဘရောက်ဆာနှင့် PC အက်ပ်တွင်သာ", "ဝဘ်မီဒီယာကို ဖုန်းနှင့် PC တွင် ပြသရန်။ Cloud သို့ မည်သည့်အခါမျှ မပို့ဆောင်ပါ။"],
+          ["<strong>အက်ပ်စစ်မှန်ကြောင်း အတည်ပြုခြင်း</strong>", "ပက်ကေ့ဂျ်အမည်၊ အက်ပ်လက်မှတ်နှင့် စက်ပစ္စည်းစစ်မှန်မှုရလဒ်", "Google Play Integrity (Google)", "အက်ပ်ကို Google Play မှ တပ်ဆင်ထားကြောင်းနှင့် စိတ်ချရသောစက်တွင် အလုပ်လုပ်နေကြောင်း အတည်ပြုခြင်း၊ အလွဲသုံးစားလုပ်မှုကို တားဆီးခြင်း။ Google သည် ဤဒေတာကို အခြားသူများနှင့် မျှဝေခြင်းမရှိပါ။"],
+          ["<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာ (ရွေးချယ်နိုင်သည်)</strong>", "အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ (အီးမေးလ်နှင့် IP ကို ဖုံးကွယ်ထားသည်)", "Google Cloud Functions နှင့် Firestore (ဥရောပ); Google Groups မှတစ်ဆင့် အကူအညီပေးရေး အီးမေးလ်", "ချွတ်ယွင်းမှုများကို လေ့လာဆန်းစစ်ပြီး ပြုပြင်ရန်။ သင်အတည်ပြုမှသာ ပေးပို့ပါသည်။"]
+        ]],
+        ["card", [["p", "<strong>ဒေတာထိန်းချုပ်သူ -</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>ဆက်သွယ်ရန် အီးမေးလ် -</strong> nahideck-support@googlegroups.com"], ["p", "<strong>ဝဘ်ဆိုက် -</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "အကောင့်နှင့် ဒေတာဖျက်ပစ်ရန် တောင်းဆိုချက်",
+      blocks: [
+        ["p", "သင့် NahiDeck အကောင့်နှင့် သက်ဆိုင်ရာ ဒေတာအားလုံးကို အပြီးတိုင် ဖျက်ပစ်လိုပါက အောက်ပါနည်းလမ်းများထဲမှ တစ်ခုကို အသုံးပြုနိုင်ပါသည်။"],
+        ["h", "နည်းလမ်း ၁ - အက်ပ်အတွင်းမှ ဖျက်ပစ်ခြင်း (အကြံပြုထားသည်)"],
+        ["ol", [
+          "သင့် Android စက်တွင် <strong>NahiDeck</strong> အက်ပ်ကို ဖွင့်ပါ။",
+          "ဘေးဘက်ဒေါ့ခ် (သို့မဟုတ် ထိပ်တန်းမီနူး) မှတစ်ဆင့် <strong>ဆက်တင်များ</strong> သို့ သွားပါ။",
+          "<strong>အကောင့်</strong> ကဏ္ဍကို ဖွင့်ပါ။",
+          "အောက်ဆုံးသို့ ဆွဲချပြီး <strong>\"ကျွန်ုပ်၏အကောင့်ကို ဖျက်ရန်\"</strong> ကို နှိပ်ပါ။",
+          "ပေါ်လာသော အတည်ပြုချက်ဝင်းဒိုးတွင် အတည်ပြုပါ။",
+          "သင့် Firebase အသုံးပြုသူမှတ်တမ်း၊ ချိတ်ဆက်ထားသော စက်များနှင့် cloud လိုင်စင်မှတ်တမ်းများကို အပြီးတိုင် ဖျက်ပစ်ပါမည်။"
+        ]],
+        ["p", "<em>လုံခြုံရေးအရ အကောင့်ဖျက်ခြင်းအတွက် လွန်ခဲ့သော ၅ မိနစ်အတွင်း အကောင့်ဝင်ရောက်ထားရန် လိုအပ်ပါသည်။ အမှားတစ်ခုခုပြပါက အကောင့်ထွက်ပြီး ပြန်ဝင်ကာ ထပ်မံကြိုးစားပါ။</em>"],
+        ["p", "<em>မှတ်ချက် - အကောင့်ဖျက်လိုက်သော်လည်း Google Drive ပေါ်ရှိ အက်ပ်အရန်ဒေတာများ အလိုအလျောက် ပျက်ပြယ်မည်မဟုတ်ပါ။ Google Drive ဆက်တင်များ (Google Drive > ဆက်တင်များ > အက်ပ်များကို စီမံခန့်ခွဲရန်) မှတစ်ဆင့် ကိုယ်တိုင် ဖျက်ပစ်ရပါမည်။</em>"],
+        ["h", "နည်းလမ်း ၂ - အီးမေးလ်ဖြင့် ဖျက်ရန်တောင်းဆိုခြင်း"],
+        ["p", "အက်ပ်ကို ဝင်ရောက်၍မရတော့ပါက သို့မဟုတ် အက်ပ်ကို ဖျက်လိုက်ပါက အီးမေးလ်ဖြင့် တောင်းဆိုနိုင်ပါသည် -"],
+        ["card", [
+          ["p", "<strong>အကူအညီပေးရေး အီးမေးလ် -</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>အကြောင်းအရာ -</strong> <code>NahiDeck အကောင့်နှင့် ဒေတာဖျက်ပစ်ရန် တောင်းဆိုချက်</code>"],
+          ["p", "<strong>လိုအပ်သောအချက်အလက်များ -</strong>"],
+          ["ul", ["NahiDeck သို့ ဝင်ရောက်ရန် အသုံးပြုခဲ့သော Google အကောင့် အီးမေးလ်လိပ်စာ။", "<em>(ရွေးချယ်နိုင်သည်)</em> Google Play အမှာစာနံပါတ် သို့မဟုတ် RevenueCat စာရင်းသွင်းမှုအညွှန်း။"]]
+        ]],
+        ["p", "သင့်မည်သူမည်ဝါဖြစ်ကြောင်း အတည်ပြုပြီးနောက် သင့်အကောင့်နှင့် ဆက်စပ် cloud မှတ်တမ်းများကို ရုံးဖွင့်ရက် <strong>၇ ရက်အတွင်း</strong> အပြီးတိုင် ဖျက်ပစ်ပါမည်။"],
+        ["h", "မည်သည့်အရာများကို အပြီးတိုင် ဖျက်ပစ်မည်နည်း။"],
+        ["ul", [
+          "Firebase Authentication အသုံးပြုသူမှတ်တမ်း၊ အီးမေးလ်လိပ်စာနှင့် ပရိုဖိုင်အချက်အလက်များ။",
+          "Firestore <code>entitlements</code> ကဏ္ဍရှိ Pro လိုင်စင်မှတ်တမ်း။",
+          "Firestore <code>devices</code> ကဏ္ဍရှိ တွဲချိတ်ထားသော ဖုန်းနှင့် PC မှတ်တမ်းများ။",
+          "RevenueCat စာရင်းသွင်းသူပရိုဖိုင် (<code>app_user_id</code>)၊ နည်းပညာအရ ဖြစ်နိုင်ပါက ဖျက်ပစ်ပါမည်။ ဖျက်၍မရပါက ကျွန်ုပ်တို့ထံ အီးမေးလ်ဖြင့် ဆက်သွယ်ပါ။",
+          "စက်ပစ္စည်း၏ လုံခြုံသောသိုလှောင်မှုအတွင်းရှိ လိုင်စင်ကုဒ်များနှင့် အသုံးပြုမှုမှတ်တမ်းများ။"
+        ]],
+        ["h", "မည်သည့်အရာများကို ထိန်းသိမ်းထားမည်နည်း။"],
+        ["ul", [
+          "<strong>Google Play ငွေတောင်းခံလွှာမှတ်တမ်းများ -</strong> အခွန်နှင့် စားသုံးသူဥပဒေအရ Google က ထိန်းသိမ်းထားပါသည်။ NahiDeck သည် ငွေပေးချေမှုအချက်အလက်များကို သိမ်းဆည်းခြင်းမရှိပါ။",
+          "<strong>စာရင်းစစ်မှတ်တမ်းများ -</strong> အကောင့်နှင့် လိုင်စင်လုပ်ဆောင်မှုမှတ်တမ်းများတွင် သင့်အား တိုက်ရိုက်ဖော်ပြခြင်းမပြုနိုင်သော hash အမှတ်အသားပါဝင်ပြီး ရက်ပေါင်း ၉၀ အတွင်း အလိုအလျောက် ပျက်ပြယ်ပါသည်။",
+          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> ရက်ပေါင်း ၉၀ အတွင်း အလိုအလျောက် ပျက်ပြယ်ပါသည်။"
+        ]],
+        ["danger", [
+          ["h3", "အရေးကြီးသည် - သင့်စာရင်းသွင်းမှုကို ပယ်ဖျက်ပါ"],
+          ["p", "သင့်အကောင့်ကို ဖျက်လိုက်ရုံဖြင့် Google Play မှတစ်ဆင့် စတင်ခဲ့သော စာရင်းသွင်းမှုမှာ <strong>အလိုအလျောက် ပယ်ဖျက်သွားမည် မဟုတ်ပါ</strong>။ နောင်တွင် ငွေဖြတ်တောက်မှု မဖြစ်စေရန် အကောင့်မဖျက်မီ ၎င်းကို ဦးစွာ ပယ်ဖျက်ပါ -"],
+          ["ol", [
+            "သင့် Android စက်တွင် <strong>Google Play Store</strong> ကို ဖွင့်ပါ။",
+            "ပရိုဖိုင်အိုင်ကွန် > <strong>ငွေပေးချေမှုများနှင့် စာရင်းသွင်းမှုများ</strong> > <strong>စာရင်းသွင်းမှုများ</strong> ကို နှိပ်ပါ။",
+            "<strong>NahiDeck</strong> ကို ရွေးချယ်ပြီး <strong>\"စာရင်းသွင်းမှု ပယ်ဖျက်ရန်\"</strong> ကို နှိပ်ပါ။"
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  ar: {
+    privacy: {
+      title: "سياسة خصوصية NahiDeck",
+      updated: "٢٥ أكتوبر ٢٠٢٦",
+      blocks: [
+        ["p", "يولي NahiDeck (\"نحن\" أو \"التطبيق\" أو \"الخدمة\") أهمية قصوى لخصوصية مستخدميه وحماية البيانات الشخصية. تنطبق هذه السياسة على <strong>تطبيق NahiDeck لنظام Android</strong> و<strong>عميل NahiDeck لنظام Windows</strong> و<strong>إضافة متصفح الويب (NahiDeck Connect)</strong>."],
+        ["h", "باختصار"],
+        ["ul", [
+          "<strong>ما نجمعه:</strong> معلومات الحساب (اختياري)، وسجلات ترخيص Pro واقتران الأجهزة، وبيانات الاستخدام المجهولة الاختيارية، وتقارير الأعطال التي تختار إرسالها.",
+          "<strong>أين تتم معالجة البيانات:</strong> في أوروبا (Firestore و Cloud Functions). تتم معالجة تسجيل الدخول (Firebase Authentication) والتحقق من عمليات الشراء (RevenueCat) في الولايات المتحدة؛ الأساس القانوني لهذا النقل موضح أدناه.",
+          "<strong>مدة الاحتفاظ بالبيانات:</strong> السجلات التقنية لمدة 30 يومًا، وسجلات التدقيق والأعطال لمدة 90 يومًا، وسجلات التخطيط المجهولة لمدة 180 يومًا. يؤدي حذف حسابك إلى إزالة كافة بيانات حسابك.",
+          "<strong>حقوقك:</strong> يمكنك طلب الوصول إلى بياناتك وتصحيحها وحذفها. يمكنك حذف حسابك من داخل التطبيق أو من صفحة حذف الحساب.",
+          "<strong>تقارير الأعطال:</strong> لا تُرسل إلا بعد تأكيدك. يتم تضمين ملاحظتك الاختيارية والبريد الإلكتروني للتواصل؛ وتُحفظ الملاحظة كما هي، بينما يتم حجب عناوين البريد الإلكتروني و IP."
+        ]],
+        ["h", "1. مراقب البيانات والتواصل"],
+        ["p", "وفقًا للائحة العامة لحماية البيانات (GDPR) وقوانين حماية البيانات المعمول بها، فإن مراقب البيانات هو:"],
+        ["h", "2. الاتصال المحلي (لا يوجد اعتماد على السحابة)"],
+        ["p", "يعمل NahiDeck مباشرة بين هاتف Android وجهاز الكمبيوتر بنظام Windows عبر شبكة Wi-Fi المحلية أو كابل USB أو تقنية Bluetooth Low Energy (BLE):"],
+        ["ul", [
+          "<strong>أوامر الوسائط والصوت:</strong> يتم نقل ضغطات المفاتيح وتعديلات الصوت وأوامر الوسائط عبر شبكتك المحلية فقط، ولا تُرسل إلى خوادم خارجية.",
+          "<strong>وحدات ماكرو الكمبيوتر:</strong> يتم تنفيذ ومعالجة الاختصارات والإجراءات المخصصة على جهاز الكمبيوتر الخاص بك.",
+          "<strong>التشفير:</strong> الاتصال المحلي محمي بشهادات TLS يتم إنشاؤها محليًا وتثبيت بصمة شهادة TOFU (الثقة عند الاستخدام الأول)."
+        ]],
+        ["h", "3. ما نجمعه وكيف نستخدمه"],
+        ["p", "فئات البيانات وموفرو الخدمات وأغراض الاستخدام مفصلة في الجدول الوارد في الملحق (أ) في أسفل هذه الصفحة."],
+        ["h", "4. النسخ الاحتياطي السحابي (Google Drive)"],
+        ["p", "يتيح لك النسخ الاحتياطي الاختياري على Google Drive حفظ تخطيطات الشاشة وملفات التعريف والتفضيلات:"],
+        ["ul", [
+          "<strong>مكان التخزين:</strong> في مجلد بيانات التطبيق الخاص على Google Drive الخاص بك فقط (drive.appdata). ولا يتم إرساله أو استضافته مطلقًا على خوادم NahiDeck أو خوادم جهات خارجية.",
+          "<strong>محتويات النسخة الاحتياطية:</strong> تخطيطات الشاشة وملفات التعريف والتفضيلات المرئية وتعريفات إجراءات الكمبيوتر الاختيارية. لا يتم تضمين أسرار الأجهزة ومفاتيح الاقتران وكلمات مرور الحسابات إطلاقًا.",
+          "<strong>منفصل تمامًا عن بيانات القياس عن بُعد:</strong> لا تتم قراءة بيانات النسخ الاحتياطي أو استخدامها لأغراض التحليلات أبدًا."
+        ]],
+        ["h", "5. بيانات لا نجمعها إطلاقًا"],
+        ["ul", [
+          "<strong>الموقع الجغرافي:</strong> لا يتم استخدام خدمات GPS أو الموقع أبدًا. يتم استخدام إذن فحص البلوتوث في Android فقط للعثور على الأجهزة المجاورة.",
+          "<strong>الملفات الشخصية:</strong> لا نصل إلى الصور أو مقاطع الفيديو أو المستندات أو التسجيلات الصوتية.",
+          "<strong>جهات الاتصال:</strong> لا نصل إلى قائمة جهات الاتصال الخاصة بك.",
+          "<strong>معرفات العتاد:</strong> لا نجمع أرقام IMEI أو عناوين MAC أو الأرقام التسلسلية للأجهزة، بل تُستخدم معرفات يتم إنشاؤها عشوائيًا."
+        ]],
+        ["h", "6. الاحتفاظ بالبيانات وحذفها"],
+        ["ul", [
+          "<strong>بيانات الحساب والترخيص:</strong> تُحذف نهائيًا بناءً على طلبك، عبر الإعدادات > الحساب > \"حذف حسابي\" في التطبيق، أو عبر صفحة حذف الحساب على موقعنا الإلكتروني.",
+          "<strong>بيانات القياس عن بُعد:</strong> يؤدي سحب الموافقة في الإعدادات > الخصوصية إلى حذف السجل الحالي فورًا. تنتهي صلاحية السجلات النشطة تلقائيًا في غضون 180 يومًا (TTL).",
+          "<strong>سجلات الخادم التقنية:</strong> يتم الاحتفاظ بسجلات طلبات البنية التحتية لمدة تصل إلى 30 يومًا.",
+          "<strong>سجلات الترخيص والتدقيق:</strong> تحتوي سجلات عمليات الحساب والترخيص على صيغة تجزئة أحادية الاتجاه لمعرف المستخدم الخاص بك، ويتم الاحتفاظ بها لمدة تصل إلى 90 يومًا.",
+          "<strong>تقارير الأعطال:</strong> تتضمن إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي، وأسطر السجل. يتم حجب عناوين البريد الإلكتروني وعناوين IP وأسماء مجلدات المستخدمين في مسارات الملفات قبل الحفظ. يتم الاحتفاظ بها لمدة تصل إلى 90 يومًا.",
+          "<strong>عمليات النقل الدولي:</strong> تُدار خدمة Firebase Authentication بواسطة Google من مراكز بيانات داخل الولايات المتحدة. وللتحقق من المشتريات، تعالج RevenueCat بياناتك في الولايات المتحدة (AWS)؛ وهذا النقل مغطى بالبنود التعاقدية القياسية. وتتم معالجة بيانات Firestore و Cloud Functions و Cloud KMS على خوادم في أوروبا (europe-west1). الأساس القانوني للنقل من تركيا بموجب المادة 9 من قانون KVKK: [الأساس القانوني: سيتم تعبئته بواسطة المستشار القانوني].",
+          "<strong>البريد الإلكتروني للدعم:</strong> تتم معالجته عبر مجموعات Google Groups (مجموعة مستهلكين) ويخضع لـ <a href='https://policies.google.com/privacy?hl=ar'>سياسة خصوصية Google</a> و<a href='https://policies.google.com/terms?hl=ar'>شروط الخدمة</a>. وتُحفظ الرسائل في أرشيف المجموعة."
+        ]],
+        ["h", "7. حقوقك (GDPR و KVKK)"],
+        ["p", "بموجب اللائحة العامة لحماية البيانات (GDPR) والقوانين المعمول بها، يحق لك معرفة ما إذا كنا نعالج بياناتك، والوصول إليها، وتصحيحها، والمطالبة بحذفها. لممارسة هذه الحقوق، تواصل معنا عبر البريد الإلكتروني nahideck-support@googlegroups.com."],
+        ["h", "الملحق (أ): فئات البيانات وموفرو الخدمات (تفاصيل تقنية)"],
+        ["table", ["فئة البيانات", "المعلومات المجمعة", "موفر الخدمة", "الغرض من الاستخدام"], [
+          ["<strong>حساب المستخدم</strong>", "عنوان البريد الإلكتروني، الاسم المعروض، معرف مستخدم Firebase (UID)", "Google Firebase Authentication", "تسجيل الدخول والتحقق من ملكية ترخيص Pro. اختياري؛ يمكن استخدام الخطة المجانية دون تسجيل الدخول."],
+          ["<strong>الترخيص والاقتران</strong>", "معرف الهاتف العشوائي، معرف الكمبيوتر، UID", "Google Cloud Firestore و Cloud KMS", "تطبيق سياسة الاستخدام العادل (هاتف واحد + جهاز كمبيوتر واحد) وتوقيع رموز الترخيص."],
+          ["<strong>المشتريات والاشتراكات</strong>", "رمز طلب/شراء Google Play، معرف مستخدم RevenueCat App User ID، حالة الاستحقاق", "Google Play Billing و RevenueCat", "معالجة مشتريات وتجديدات Pro والتحقق منها."],
+          ["<strong>القياس عن بُعد للاستخدام والتخطيط (اختياري)</strong>", "معرف تثبيت عشوائي، تخطيط الشبكة (أنواع الأدوات، المواضع، الأحجام)، السمة المختارة، فئة الخطة", "Google Cloud Firestore (anonymous_layouts)", "فهم الأدوات والتخطيطات الشائعة لتحسين الواجهة. <strong>لا يحتوي على أي بيانات شخصية أو نصوص أو تفاصيل حساب.</strong>"],
+          ["<strong>بيانات الإضافة المحلية</strong>", "حالة الوسائط في علامة تبويب المتصفح النشطة (اسم المقطع، الفنان، حالة التشغيل)", "المتصفح المحلي وتطبيق الكمبيوتر فقط", "عرض وسائط الويب على الهاتف والكمبيوتر. لا تُرسل إلى السحابة مطلقًا."],
+          ["<strong>التحقق من سلامة التطبيق</strong>", "اسم الحزمة، وشهادة توقيع التطبيق، ونتيجة سلامة الجهاز", "Google Play Integrity (Google)", "التحقق من تثبيت التطبيق عبر Google Play وتشغيله على جهاز موثوق لمنع إساءة الاستخدام. لا تشارك Google هذه البيانات مع جهات خارجية."],
+          ["<strong>تقارير الأعطال (اختياري)</strong>", "إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي وأسطر السجل (تُحجب عناوين البريد الإلكتروني و IP)", "Google Cloud Functions و Firestore (أوروبا)؛ بريد الدعم عبر Google Groups", "تحليل الأعطال وإصلاحها. لا يُرسل إلا بموافقتك."]
+        ]],
+        ["card", [["p", "<strong>مراقب البيانات:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>البريد الإلكتروني للتواصل:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>الموقع الإلكتروني:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "طلب حذف الحساب والبيانات",
+      blocks: [
+        ["p", "إذا كنت ترغب في حذف حسابك في NahiDeck وجميع البيانات المرتبطة به نهائيًا، يمكنك استخدام إحدى الطرق التالية."],
+        ["h", "الطريقة 1: الحذف من داخل التطبيق (موصى بها)"],
+        ["ol", [
+          "افتح تطبيق <strong>NahiDeck</strong> على جهاز Android الخاص بك.",
+          "انتقل إلى <strong>الإعدادات</strong> من الشريط الجانبي (أو القائمة العلوية).",
+          "افتح قسم <strong>الحساب</strong>.",
+          "مرر إلى أسفل الشاشة واضغط على <strong>\"حذف حسابي\"</strong>.",
+          "قم بتأكيد الإجراء في نافذة الحوار.",
+          "سيتم حذف سجل مستخدم Firebase والأجهزة المقترنة وسجلات الترخيص السحابية نهائيًا."
+        ]],
+        ["p", "<em>لأسباب أمنية، يتطلب حذف الحساب أن تكون قد قمت بتسجيل الدخول خلال آخر 5 دقائق. إذا ظهر خطأ، سجّل الخروج ثم سجّل الدخول مرة أخرى وأعد المحاولة.</em>"],
+        ["p", "<em>ملاحظة: حذف حسابك لا يؤدي إلى إزالة النسخة الاحتياطية للتطبيق من Google Drive تلقائيًا. يجب حذفها يدويًا من إعدادات Google Drive (Google Drive > الإعدادات > إدارة التطبيقات).</em>"],
+        ["h", "الطريقة 2: طلب الحذف عبر البريد الإلكتروني"],
+        ["p", "إذا لم تتمكن من الوصول إلى التطبيق أو قمت بإلغاء تثبيته، يمكنك إرسال طلبك عبر البريد الإلكتروني:"],
+        ["card", [
+          ["p", "<strong>البريد الإلكتروني للدعم:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>الموضوع:</strong> <code>NahiDeck طلب حذف الحساب والبيانات</code>"],
+          ["p", "<strong>المعلومات المطلوبة:</strong>"],
+          ["ul", ["عنوان البريد الإلكتروني لحساب Google المستخدم لتسجيل الدخول إلى NahiDeck.", "<em>(اختياري)</em> رقم طلب Google Play أو مرجع اشتراك RevenueCat."]]
+        ]],
+        ["p", "بعد التحقق من هويتك، سيتم حذف حسابك والسجلات السحابية المرتبطة به نهائيًا في غضون <strong>7 أيام عمل</strong>."],
+        ["h", "ما الذي يتم حذفه نهائيًا؟"],
+        ["ul", [
+          "سجل مستخدم Firebase Authentication وعنوان البريد الإلكتروني وتفاصيل الملف الشخصي.",
+          "سجل ترخيص Pro في مجموعة <code>entitlements</code> على Firestore.",
+          "سجلات الهواتف وأجهزة الكمبيوتر المقترنة في مجموعة <code>devices</code> على Firestore.",
+          "الملف الشخصي للمشترك في RevenueCat (<code>app_user_id</code>)؛ يُحذف حيثما كان ذلك ممكنًا تقنيًا. إذا تعذر حذفه، يرجى إبلاغنا عبر البريد الإلكتروني.",
+          "مفاتيح الترخيص وسجلات الجلسات المخزنة بأمان على جهازك."
+        ]],
+        ["h", "ما الذي يتم الاحتفاظ به؟"],
+        ["ul", [
+          "<strong>سجلات فواتير Google Play:</strong> تحتفظ بها Google لأسباب ضريبية وامتثالًا لقوانين حماية المستهلك. لا يخزن NahiDeck تفاصيل الدفع.",
+          "<strong>سجلات التدقيق:</strong> تحتوي سجلات عمليات الحساب والترخيص على معرف مجزأ لا يمكن ربطه مباشرة بهويتك، وتُحذف تلقائيًا في غضون 90 يومًا.",
+          "<strong>تقارير الأعطال:</strong> تُحذف تلقائيًا في غضون 90 يومًا."
+        ]],
+        ["danger", [
+          ["h3", "هام: قم بإلغاء اشتراكك النشط"],
+          ["p", "حذف حسابك <strong>لا يؤدي تلقائيًا إلى إلغاء</strong> الاشتراك الذي بدأته عبر Google Play. لتجنب أي رسوم مستقبلية، قم بإلغاء الاشتراك قبل حذف حسابك:"],
+          ["ol", [
+            "افتح <strong>متجر Google Play</strong> على جهاز Android الخاص بك.",
+            "اضغط على أيقونة ملفك الشخصي > <strong>الدفعات والاشتراكات</strong> > <strong>الاشتراكات</strong>.",
+            "حدد <strong>NahiDeck</strong> ثم اضغط على <strong>\"إلغاء الاشتراك\"</strong>."
+          ]]
+        ]]
+      ]
+    }
+  },
+
+  // AWAITING_NATIVE_SPEAKER_REVIEW
+  fa: {
+    privacy: {
+      title: "سیاست حفظ حریم خصوصی NahiDeck",
+      updated: "۲۵ اکتبر ۲۰۲۶",
+      blocks: [
+        ["p", "برنامه NahiDeck («ما»، «برنامه» یا «سرویس») به حفظ حریم خصوصی کاربران و حفاظت از داده‌های شخصی اهمیت ویژه‌ای می‌دهد. این سیاست‌نامه شامل <strong>برنامه Android برنامه NahiDeck</strong>، <strong>کلاینت دسکتاپ Windows برنامه NahiDeck</strong> و <strong>افزونه مرورگر وب (NahiDeck Connect)</strong> می‌باشد."],
+        ["h", "به طور خلاصه"],
+        ["ul", [
+          "<strong>آنچه جمع‌آوری می‌کنیم:</strong> اطلاعات حساب کاربری (اختیاری)، سوابق مجوز Pro و جفت‌سازی دستگاه‌ها، داده‌های اختیاری و ناشناس استفاده از برنامه، و گزارش‌های خرابی که خودتان ارسال می‌کنید.",
+          "<strong>محل پردازش داده‌ها:</strong> در اروپا (Firestore و Cloud Functions). ورود به سیستم (Firebase Authentication) و تأیید خرید (RevenueCat) در ایالات متحده پردازش می‌شوند؛ مبنای قانونی این انتقال در ادامه توضیح داده شده است.",
+          "<strong>مدت زمان نگهداری:</strong> لاگ‌های فنی به مدت ۳۰ روز، سوابق حسابرسی و خرابی‌ها به مدت ۹۰ روز، و سوابق ناشناس چیدمان به مدت ۱۸۰ روز. با حذف حساب کاربری، تمام داده‌های حساب شما حذف خواهند شد.",
+          "<strong>حقوق شما:</strong> شما می‌توانید درخواست دسترسی، تصحیح و حذف داده‌های خود را داشته باشید. می‌توانید حساب خود را از داخل برنامه یا از طریق صفحه حذف حساب کاربری پاک کنید.",
+          "<strong>گزارش‌های خرابی:</strong> تنها پس از تأیید شما ارسال می‌شوند. یادداشت اختیاری و ایمیل تماس شما ارسال می‌شود؛ یادداشت همان‌گونه که نوشته شده ذخیره شده و ایمیل و آدرس‌های IP ماسک می‌شوند."
+        ]],
+        ["h", "1. کنترل‌کننده داده و اطلاعات تماس"],
+        ["p", "بر اساس مقررات عمومی حفاظت از داده‌ها (GDPR) و قوانین جاری، کنترل‌کننده داده‌ها عبارت است از:"],
+        ["h", "2. ارتباط محلی (بدون وابستگی به فضای ابری)"],
+        ["p", "برنامه NahiDeck مستقیماً بین گوشی Android و رایانه Windows شما از طریق شبکه محلی Wi-Fi، کابل USB یا بلوتوث کم‌مصرف (BLE) ارتباط برقرار می‌کند:"],
+        ["ul", [
+          "<strong>دستورات رسانه و صدا:</strong> فشردن کلیدها، تغییرات صدا و دستورات پخش رسانه فقط در شبکه محلی شما منتقل می‌شوند و به هیچ سرور خارجی ارسال نمی‌گردند.",
+          "<strong>ماکروهای رایانه:</strong> میانبرها و اقدامات سفارشی مستقیماً روی رایانه شما اجرا و پردازش می‌شوند.",
+          "<strong>رمزگذاری:</strong> اتصال محلی با گواهی‌های TLS تولیدشده به صورت محلی و پین‌کردن اثر انگشت گواهی بر پایه TOFU (اعتماد در اولین استفاده) محافظت می‌شود."
+        ]],
+        ["h", "3. چه داده‌هایی را جمع‌آوری می‌کنیم و چگونه استفاده می‌کنیم"],
+        ["p", "دسته‌بندی‌های داده، ارائه‌دهندگان سرویس و اهداف استفاده به صورت دقیق در جدول پیوست الف در انتهای این صفحه آمده است."],
+        ["h", "4. پشتیبان‌گیری ابری (Google Drive)"],
+        ["p", "پشتیبان‌گیری اختیاری در Google Drive به شما اجازه می‌دهد چیدمان صفحات، نمایه‌ها و تنظیمات برگزیده خود را ذخیره کنید:"],
+        ["ul", [
+          "<strong>محل ذخیره‌سازی:</strong> تنها در پوشه خصوصی برنامه در حساب Google Drive خودتان (drive.appdata). این داده‌ها هرگز به سرورهای NahiDeck یا شخص ثالث ارسال یا میزبانی نمی‌شوند.",
+          "<strong>محتوای نسخه پشتیبان:</strong> چیدمان صفحات، نمایه‌ها، تنظیمات ظاهری و تعریف اختیاری دستورات رایانه. کلیدهای امنیتی دستگاه، کدهای جفت‌سازی و رمز عبور حساب کاربری هرگز در نسخه پشتیبان قرار نمی‌گیرند.",
+          "<strong>کاملاً مجزا از داده‌های تله‌متری:</strong> داده‌های پشتیبان هرگز خوانده نشده و برای مقاصد آماری استفاده نمی‌شوند."
+        ]],
+        ["h", "5. داده‌هایی که هرگز جمع‌آوری نمی‌کنیم"],
+        ["ul", [
+          "<strong>موقعیت مکانی:</strong> سرویس‌های موقعیت مکانی و GPS هرگز استفاده نمی‌شوند. مجوز اسکن بلوتوث در Android صرفاً جهت شناسایی دستگاه‌های نزدیک است.",
+          "<strong>فایل‌های شخصی:</strong> ما به عکس‌ها، ویدیوها، اسناد یا صداهای ضبط‌شده دسترسی نداریم.",
+          "<strong>مخاطبین:</strong> ما به فهرست مخاطبین شما دسترسی نداریم.",
+          "<strong>شناسه‌های سخت‌افزاری:</strong> ما کد IMEI، آدرس‌های MAC یا شماره سریال دستگاه را جمع‌آوری نمی‌کنیم؛ به جای آن از شناسه‌های تصادفی استفاده می‌شود."
+        ]],
+        ["h", "6. نگهداری و حذف داده‌ها"],
+        ["ul", [
+          "<strong>داده‌های حساب و مجوز:</strong> بر اساس درخواست شما، از طریق «تنظیمات > حساب کاربری > حذف حساب کاربری من» در برنامه یا از طریق صفحه حذف حساب در وب‌سایت به صورت دائمی حذف می‌شوند.",
+          "<strong>داده‌های تله‌متری:</strong> با لغو موافقت در «تنظیمات > حریم خصوصی»، سوابق موجود بلافاصله حذف می‌شوند. سوابق فعال حداکثر ظرف مدت ۱۸۰ روز (TTL) به صورت خودکار منقضی و حذف می‌گردند.",
+          "<strong>لاگ‌های فنی سرور:</strong> سوابق درخواست‌های زیرساختی حداکثر تا ۳۰ روز نگهداری می‌شوند.",
+          "<strong>سوابق مجوز و حسابرسی:</strong> سوابق عملیات حساب و مجوز حاوی شناسه کاربری هش‌شده شما هستند و حداکثر تا ۹۰ روز نگهداری می‌شوند.",
+          "<strong>گزارش‌های خرابی:</strong> شامل نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ هستند. ایمیل، آدرس‌های IP و نام پوشه کاربری در مسیر فایل‌ها پیش از ذخیره ماسک می‌شوند. حداکثر تا ۹۰ روز نگهداری می‌شوند.",
+          "<strong>انتقال‌های بین‌المللی:</strong> سرویس Firebase Authentication توسط Google از مراکز داده در ایالات متحده مدیریت می‌شود. جهت بررسی خرید، RevenueCat داده‌های شما را در ایالات متحده (AWS) پردازش می‌کند؛ این انتقال بر اساس بندهای استاندارد قراردادی محافظت می‌شود. داده‌های Firestore، Cloud Functions و Cloud KMS بر روی سرورهایی در اروپا (europe-west1) پردازش می‌شوند. مبنای قانونی انتقال از ترکیه طبق ماده ۹ قانون KVKK: [مبنای قانونی: توسط وکیل تکمیل خواهد شد].",
+          "<strong>ایمیل پشتیبانی:</strong> از طریق Google Groups پردازش شده و مشمول <a href='https://policies.google.com/privacy?hl=fa'>سیاست حفظ حریم خصوصی</a> و <a href='https://policies.google.com/terms?hl=fa'>شرایط خدمات</a> Google است. پیام‌ها در آرشیو گروه باقی می‌مانند."
+        ]],
+        ["h", "7. حقوق شما (GDPR و KVKK)"],
+        ["p", "طبق GDPR و قوانین حاکم، شما حق دارید بدانید داده‌های شما پردازش می‌شوند یا خیر، به آنها دسترسی داشته باشید، تصحیح کنید و درخواست حذف نمایید. برای اعمال این حقوق، به nahideck-support@googlegroups.com ایمیل بزنید."],
+        ["h", "پیوست الف: دسته‌بندی داده‌ها و ارائه‌دهندگان سرویس (جزئیات فنی)"],
+        ["table", ["دسته‌بندی داده‌ها", "اطلاعات جمع‌آوری‌شده", "ارائه‌دهنده سرویس", "هدف استفاده"], [
+          ["<strong>حساب کاربری</strong>", "آدرس ایمیل، نام نمایشی، شناسه کاربری Firebase (UID)", "Google Firebase Authentication", "ورود به سیستم و بررسی مالکیت مجوز Pro. اختیاری؛ نسخه رایگان بدون ورود قابل استفاده است."],
+          ["<strong>مجوز و جفت‌سازی</strong>", "شناسه تصادفی گوشی، شناسه رایانه، UID", "Google Cloud Firestore و Cloud KMS", "اجرای قانون استفاده منصفانه (۱ گوشی + ۱ رایانه) و امضای توکن‌های مجوز."],
+          ["<strong>خریدها و اشتراک‌ها</strong>", "توکن سفارش/خرید Google Play، شناسه کاربر RevenueCat App User ID، وضعیت دسترسی", "Google Play Billing و RevenueCat", "پردازش و اعتبارسنجی خریدها و تمدید اشتراک Pro."],
+          ["<strong>تله‌متری استفاده و چیدمان (اختیاری)</strong>", "شناسه نصب تصادفی، چیدمان شبکه (نوع ویجت‌ها، موقعیت، ابعاد)، انتخاب پوسته، نوع پلن", "Google Cloud Firestore (anonymous_layouts)", "شناسایی ویجت‌ها و چیدمان‌های پرطرفدار برای بهبود رابط کاربری. <strong>حاوی هیچ داده شخصی، متن یا اطلاعات حساب کاربری نیست.</strong>"],
+          ["<strong>داده‌های افزونه محلی</strong>", "وضعیت رسانه در تب فعال مرورگر (نام قطعه، هنرمند، وضعیت پخش)", "فقط مرورگر محلی و برنامه رایانه", "نمایش رسانه‌های وب روی گوشی و رایانه. هرگز به فضای ابری ارسال نمی‌شود."],
+          ["<strong>بررسی اصالت برنامه</strong>", "نام بسته، گواهی امضای برنامه و نتیجه بررسی سلامت دستگاه", "Google Play Integrity (Google)", "بررسی نصب قانونی برنامه از طریق Google Play و اجرا بر روی دستگاه قابل اعتماد؛ پیشگیری از سوءاستفاده. Google این داده‌ها را با اشخاص ثالث به اشتراک نمی‌گذارد."],
+          ["<strong>گزارش‌های خرابی (اختیاری)</strong>", "نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ (ایمیل‌ها و IPها ماسک می‌شوند)", "Google Cloud Functions و Firestore (اروپا)؛ ایمیل پشتیبانی از طریق Google Groups", "تحلیل و رفع خرابی‌ها. تنها با تأیید شما ارسال می‌شود."]
+        ]],
+        ["card", [["p", "<strong>کنترل‌کننده داده:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>ایمیل تماس:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>وب‌سایت:</strong> https://nahideck.github.io"]]],
+      ]
+    },
+    delete: {
+      title: "درخواست حذف حساب کاربری و داده‌ها",
+      blocks: [
+        ["p", "اگر مایل هستید حساب کاربری NahiDeck و تمام داده‌های مربوط به آن را برای همیشه حذف کنید، می‌توانید از یکی از روش‌های زیر استفاده نمایید."],
+        ["h", "روش ۱: حذف از داخل برنامه (پیشنهادی)"],
+        ["ol", [
+          "برنامه <strong>NahiDeck</strong> را روی دستگاه Android خود باز کنید.",
+          "از طریق داک کناری (یا منوی بالا) به بخش <strong>تنظیمات</strong> بروید.",
+          "بخش <strong>حساب کاربری</strong> را باز کنید.",
+          "به پایین صفحه رفته و گزینه <strong>«حذف حساب کاربری من»</strong> را لمس کنید.",
+          "عملیات را در پنجره بازشده تأیید کنید.",
+          "سوابق کاربری Firebase، دستگاه‌های جفت‌شده و سوابق مجوز ابری شما برای همیشه حذف خواهند شد."
+        ]],
+        ["p", "<em>به دلایل امنیتی، حذف حساب کاربری مستلزم آن است که طی ۵ دقیقه گذشته وارد حساب شده باشید. در صورت بروز خطا، از حساب خارج شده، دوباره وارد شوید و مجدداً تلاش کنید.</em>"],
+        ["p", "<em>نکته: حذف حساب کاربری باعث حذف خودکار نسخه پشتیبان برنامه در Google Drive نمی‌شود. باید خودتان آن را از طریق تنظیمات Google Drive (Google Drive > تنظیمات > مدیریت برنامه‌ها) حذف کنید.</em>"],
+        ["h", "روش ۲: درخواست حذف از طریق ایمیل"],
+        ["p", "اگر به برنامه دسترسی ندارید یا آن را حذف کرده‌اید، درخواست خود را از طریق ایمیل ارسال کنید:"],
+        ["card", [
+          ["p", "<strong>ایمیل پشتیبانی:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>موضوع:</strong> <code>درخواست حذف حساب کاربری و داده‌های NahiDeck</code>"],
+          ["p", "<strong>اطلاعات لازم:</strong>"],
+          ["ul", ["آدرس ایمیل حساب Google که با آن وارد NahiDeck شده‌اید.", "<em>(اختیاری)</em> شماره سفارش Google Play یا شناسه اشتراک RevenueCat."]]
+        ]],
+        ["p", "پس از تأیید هویت شما، حساب کاربری و تمام سوابق ابری مرتبط ظرف مدت <strong>۷ روز کاری</strong> به صورت دائمی حذف خواهند شد."],
+        ["h", "چه مواردی برای همیشه حذف می‌شوند؟"],
+        ["ul", [
+          "سوابق کاربری در Firebase Authentication، آدرس ایمیل و اطلاعات نمایه کاربری.",
+          "سوابق مجوز Pro در کالکشن <code>entitlements</code> در Firestore.",
+          "سوابق گوشی و رایانه‌های جفت‌شده در کالکشن <code>devices</code> در Firestore.",
+          "نمایه مشترک در RevenueCat (<code>app_user_id</code>)؛ در صورت امکان فنی حذف می‌شود. اگر امکان حذف نبود، از طریق ایمیل به ما اطلاع دهید.",
+          "کلیدهای مجوز و سوابق نشست‌های ذخیره‌شده در حافظه امن دستگاه شما."
+        ]],
+        ["h", "چه مواردی نگهداری می‌شوند؟"],
+        ["ul", [
+          "<strong>سوابق مالی Google Play:</strong> به دلایل مالیاتی و قوانین مصرف‌کننده توسط Google نگهداری می‌شوند. NahiDeck هیچ اطلاعات پرداختی را ذخیره نمی‌کند.",
+          "<strong>سوابق حسابرسی:</strong> سوابق عملیات حساب و مجوز حاوی شناسه‌های هش‌شده هستند که امکان اتصال مستقیم به هویت شما را ندارند و ظرف ۹۰ روز به صورت خودکار حذف می‌شوند.",
+          "<strong>گزارش‌های خرابی:</strong> ظرف ۹۰ روز به صورت خودکار حذف می‌شوند."
+        ]],
+        ["danger", [
+          ["h3", "مهم: اشتراک فعال خود را لغو کنید"],
+          ["p", "حذف حساب کاربری باعث <strong>لغو خودکار</strong> اشتراک خریداری‌شده از طریق Google Play نمی‌شود. جهت جلوگیری از کسر هزینه در دوره‌های بعدی، پیش از حذف حساب کاربری اشتراک خود را لغو کنید:"],
+          ["ol", [
+            "برنامه <strong>Google Play Store</strong> را در دستگاه Android خود باز کنید.",
+            "روی نماد نمایه خود ضربه بزنید > <strong>پرداخت‌ها و اشتراک‌ها</strong> > <strong>اشتراک‌ها</strong>.",
+            "برنامه <strong>NahiDeck</strong> را انتخاب کرده و <strong>«لغو اشتراک»</strong> را لمس کنید."
+          ]]
+        ]]
+      ]
+    }
   }
 };

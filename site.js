@@ -22,10 +22,23 @@
     if (c === "tr" || c.indexOf("tr-") === 0) return "tr";
     if (c === "en" || c.indexOf("en-") === 0) return "en";
     if (c === "es" || c.indexOf("es-") === 0) return "es";
+    // pt-PT önce kontrol edilmeli; pt veya pt-BR → pt-BR
+    if (c === "pt-pt") return "pt-PT";
     if (c === "pt" || c.indexOf("pt-") === 0) return "pt-BR";
     if (c === "de" || c.indexOf("de-") === 0) return "de";
     if (c === "fr" || c.indexOf("fr-") === 0) return "fr";
     if (c === "az" || c.indexOf("az-") === 0) return "az";
+    if (c === "it" || c.indexOf("it-") === 0) return "it";
+    if (c === "pl" || c.indexOf("pl-") === 0) return "pl";
+    if (c === "ru" || c.indexOf("ru-") === 0) return "ru";
+    if (c === "hi" || c.indexOf("hi-") === 0) return "hi";
+    if (c === "ar" || c.indexOf("ar-") === 0) return "ar";
+    if (c === "fa" || c.indexOf("fa-") === 0) return "fa";
+    if (c === "my" || c.indexOf("my-") === 0) return "my";
+    if (c === "ja" || c.indexOf("ja-") === 0) return "ja";
+    if (c === "ko" || c.indexOf("ko-") === 0) return "ko";
+    if (c === "id" || c.indexOf("id-") === 0) return "id";
+    if (c === "vi" || c.indexOf("vi-") === 0) return "vi";
     if (c.indexOf("zh") === 0) {
       return /(tw|hk|mo|hant)/.test(c) ? "zh-TW" : "zh-CN";
     }
@@ -179,8 +192,19 @@
     root.appendChild(renderBlocks(doc.blocks));
   }
 
+  var RTL_LANGS = { ar: true, fa: true };
+
   function applyText(lang) {
     document.documentElement.lang = lang;
+    // RTL: set data-rtl on <html> for CSS targeting, but do NOT set dir="rtl"
+    // on the document element — that causes browsers to automatically reverse
+    // all flex layouts. Instead, CSS [data-rtl="true"] selectors apply
+    // direction:rtl and text-align:right only on text content elements.
+    if (RTL_LANGS[lang]) {
+      document.documentElement.setAttribute("data-rtl", "true");
+    } else {
+      document.documentElement.removeAttribute("data-rtl");
+    }
     document.querySelectorAll("[data-i18n]").forEach(function (node) {
       node.textContent = t(lang, node.getAttribute("data-i18n"));
     });
