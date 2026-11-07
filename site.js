@@ -5,10 +5,10 @@
 (function () {
   "use strict";
 
-  // Gerçek indirme bağlantıları hazır olduğunda buraya yazılır.
+  // Gerçek indirme bağlantıları: Android için Play Store, Windows için doğrudan en güncel release kurulum paketi.
   var DOWNLOADS = {
-    android: "#",
-    windows: "#"
+    android: "https://play.google.com/store/apps/details?id=app.nahideck.mobile",
+    windows: "https://github.com/NahiDeck/nahideck-releases/releases/latest/download/NahiDeck_1.0.0_x64-setup.exe"
   };
 
   var STORAGE_KEY = "nahideck_site_lang";

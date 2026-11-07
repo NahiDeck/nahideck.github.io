@@ -21,7 +21,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Ne topluyoruz:</strong> Hesap bilgisi (isteğe bağlı), Pro lisans ve cihaz eşleşme kayıtları, isteğe bağlı anonim kullanım verisi ve göndermeyi seçtiğiniz çökme raporları.",
           "<strong>Nerede işlenir:</strong> Avrupa'da (Firestore, Cloud Functions). Kimlik doğrulama (Firebase Authentication) ve satın alma doğrulaması (RevenueCat) ABD'de işlenir; bu aktarımın dayanağı aşağıda belirtilmiştir.",
-          "<strong>Ne kadar tutuluyoruz:</strong> Teknik günlükler 30 gün, denetim ve çökme raporları 90 gün, anonim düzen kayıtları 180 gün. Hesabınızı sildiğinizde hesap verileri silinir.",
+          "<strong>Ne kadar tutuluyoruz:</strong> Teknik günlükler 30 gün, çökme raporları 30 gün, denetim kayıtları 90 gün, anonim düzen kayıtları 180 gün. Hesabınızı sildiğinizde hesap verileri silinir.",
           "<strong>Haklarınız:</strong> Verilerinize erişim, düzeltme ve silme talep edebilirsiniz. Hesabınızı uygulamadan veya Hesap Silme sayfasından silebilirsiniz.",
           "<strong>Çökme raporu:</strong> Yalnızca siz gönderirseniz iletilir. Notunuz ve iletişim e-postanız isteğe bağlıdır; not olduğu gibi saklanabilir, e-posta ve IP adresleri maskelenir."
         ]],
@@ -56,7 +56,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetri:</strong> Ayarlar > Gizlilik bölümünden onay kaldırıldığında mevcut kayıt hemen silinir. Aktif kayıtlar en geç 180 gün içinde otomatik silinir (TTL).",
           "<strong>Teknik sunucu günlükleri:</strong> Altyapı istek günlükleri en fazla 30 gün tutulur.",
           "<strong>Lisans ve denetim kayıtları:</strong> Hesap ve lisans işlemlerine ait kayıtlar, kullanıcı kimliğinin karma (hash) hâlini içerir ve en fazla 90 gün tutulur.",
-          "<strong>Çökme raporları:</strong> Uygulama sürümü, cihaz hash'i, hata türü ve metni, stack trace ile günlük satırlarını içerir. E-posta adresleri, IP adresleri ve dosya yollarındaki kullanıcı klasör adları gönderilmeden önce maskelenir. En fazla 90 gün tutulur.",
+          "<strong>Çökme raporları:</strong> Uygulama sürümü, cihaz hash'i, hata türü ve metni, stack trace ile günlük satırlarını içerir. E-posta adresleri, IP adresleri ve dosya yollarındaki kullanıcı klasör adları gönderilmeden önce maskelenir. En fazla 30 gün tutulur. Rapor gönderdiğinizde kötüye kullanımı önlemek için bir Firebase anonim kimliği oluşturulur; isteğin IP adresi ise yalnızca geri döndürülemez bir karma (hash) olarak ve en fazla 24 saat saklanır.",
           "<strong>Yurt dışı aktarım:</strong> Firebase Authentication hizmetini Google, ABD veri merkezlerinde işletir. Satın alma doğrulaması için RevenueCat verilerinizi ABD'de (AWS) işler; bu aktarım Standart Sözleşme Hükümleri ile güvence altındadır. Firestore, Cloud Functions ve Cloud KMS verileri Avrupa'daki (europe-west1) sunucularda işlenir. Türkiye'den yapılan aktarımların KVKK m.9 dayanağı: [HUKUKİ DAYANAK: AVUKAT TARAFINDAN DOLDURULACAK].",
           "<strong>Destek e-postası:</strong> Google Groups (tüketici grubu) üzerinden işlenir ve Google'ın <a href='https://policies.google.com/privacy?hl=en'>Gizlilik Politikası</a> ile <a href='https://policies.google.com/terms?hl=en'>Şartlarına</a> tabidir. Mesajlar grubun arşivinde tutulur."
         ]],
@@ -70,7 +70,8 @@ window.NAHI_LEGAL = {
           ["<strong>Kullanım ve düzen telemetrisi (isteğe bağlı)</strong>", "Rastgele kurulum kimliği (installId), ızgara düzeni (widget türleri, konumları), tema tercihi, plan türü", "Google Cloud Firestore (anonymous_layouts)", "Popüler widget ve ekran düzenlerini analiz ederek arayüzü geliştirmek. <strong>Kişisel veri, metin veya hesap bilgisi içermez.</strong>"],
           ["<strong>Yerel eklenti verileri</strong>", "Aktif sekmedeki medya durumu (parça adı, sanatçı, oynatma durumu)", "Yalnızca yerel tarayıcı ve PC uygulaması", "Desteklenen tarayıcılardaki medyayı PC ve telefonda göstermek. Buluta gönderilmez."],
           ["<strong>Uygulama doğrulama</strong>", "Paket adı, uygulama imza sertifikası ve cihaz bütünlük sonucu", "Google Play Integrity (Google)", "Uygulamanın Google Play üzerinden yüklenip yüklenmediğini ve güvenilir bir cihazda çalışıp çalışmadığını doğrulamak; kötüye kullanımı önlemek. Google bu verileri üçüncü taraflarla paylaşmaz."],
-          ["<strong>Hata raporu (isteğe bağlı)</strong>", "Uygulama sürümü, cihaz hash'i, hata türü ve metni, stack trace ve günlük satırları (e-posta ve IP adresleri maskelenir)", "Google Cloud Functions ve Firestore (Avrupa); destek e-postası Google Groups üzerinden", "Çökmeleri analiz edip düzeltmek. Gönderim kullanıcı onayıyla yapılır."]
+          ["<strong>Hata raporu (isteğe bağlı)</strong>", "Uygulama sürümü, cihaz hash'i, hata türü ve metni, stack trace ve günlük satırları (e-posta ve IP adresleri maskelenir)", "Google Cloud Functions ve Firestore (Avrupa); destek e-postası Google Groups üzerinden", "Çökmeleri analiz edip düzeltmek. Gönderim kullanıcı onayıyla yapılır."],
+          ["<strong>Reklam ve cihaz tanımlayıcıları (yalnızca Ücretsiz plan)</strong>", "Google Reklam Kimliği (Android AD_ID), yaklaşık coğrafi konum (IP adresi), cihaz modeli, reklam gösterim ve etkileşim metrikleri.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Reklam Politikası</a>", "Ücretsiz planda 2x1 yerel reklam gösterimi ve geçersiz/sahte trafiğin önlenmesi. Pro plana geçildiğinde reklam kimliği toplanmaz ve AdMob tamamen devre dışı bırakılır. Kullanıcılar Android Ayarları > Gizlilik > Reklamlar menüsünden reklam kimliğini diledikleri zaman sıfırlayabilir veya kişiselleştirmeyi kapatabilir."]
         ]],
         ["card", [["p", "<strong>Veri sorumlusu:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-posta:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Web sitesi:</strong> https://nahideck.github.io"]]],
       ]
@@ -111,7 +112,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play fatura kayıtları:</strong> Vergi ve tüketici mevzuatı gereği Google tarafından saklanır; NahiDeck sunucularında tutulmaz.",
           "<strong>Denetim kayıtları:</strong> Hesap ve lisans işlemlerine ait kayıtlar, doğrudan kimliğinizle ilişkilendirilemeyen karma (hash) bir tanımlayıcı içerir ve en geç 90 gün içinde otomatik silinir.",
-          "<strong>Çökme raporları:</strong> En geç 90 gün içinde otomatik silinir."
+          "<strong>Çökme raporları:</strong> En geç 30 gün içinde otomatik silinir."
         ]],
         ["danger", [
           ["h3", "Önemli: Aktif aboneliğinizi iptal edin"],
@@ -136,7 +137,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>What we collect:</strong> Account details (optional), Pro licence and device pairing records, optional anonymous usage data, and crash reports you choose to send.",
           "<strong>Where it is processed:</strong> In Europe (Firestore, Cloud Functions). Sign-in (Firebase Authentication) and purchase checks (RevenueCat) are processed in the United States; the basis for this transfer is described below.",
-          "<strong>How long we keep it:</strong> Technical logs 30 days, audit and crash records 90 days, anonymous layout records 180 days. Deleting your account removes your account data.",
+          "<strong>How long we keep it:</strong> Technical logs 30 days, crash reports 30 days, audit records 90 days, anonymous layout records 180 days. Deleting your account removes your account data.",
           "<strong>Your rights:</strong> You can request access, correction and deletion. You can delete your account in the app or on the Account Deletion page.",
           "<strong>Crash reports:</strong> Sent only when you confirm. Your optional note and contact email are included; the note is stored as written, and email and IP addresses are masked."
         ]],
@@ -171,7 +172,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetry:</strong> Withdrawing consent in Settings > Privacy deletes your existing record immediately. Active records expire automatically within 180 days (TTL).",
           "<strong>Technical server logs:</strong> Infrastructure request logs are kept for up to 30 days.",
           "<strong>Licence and audit records:</strong> Records of account and licence operations contain a hashed (one-way) form of your user identifier and are kept for up to 90 days.",
-          "<strong>Crash reports:</strong> Include the app version, a device hash, the error type and text, the stack trace and log lines. Email addresses, IP addresses and user folder names in file paths are masked before storage. Kept for up to 90 days.",
+          "<strong>Crash reports:</strong> Include the app version, a device hash, the error type and text, the stack trace and log lines. Email addresses, IP addresses and user folder names in file paths are masked before storage. Kept for up to 30 days. When you send a report, a Firebase anonymous identifier is created to prevent abuse; the request's IP address is kept only as a one-way hash and for at most 24 hours.",
           "<strong>International transfers:</strong> Firebase Authentication is operated by Google from United States data centres. For purchase verification, RevenueCat processes your data in the United States (AWS); this transfer is covered by Standard Contractual Clauses. Firestore, Cloud Functions and Cloud KMS data are processed on servers in Europe (europe-west1). Legal basis for transfers from Turkey under KVKK article 9: [LEGAL BASIS: TO BE COMPLETED BY LAWYER].",
           "<strong>Support email:</strong> Processed through Google Groups (a consumer group) and subject to Google's <a href='https://policies.google.com/privacy?hl=en'>Privacy Policy</a> and <a href='https://policies.google.com/terms?hl=en'>Terms</a>. Messages are kept in the group archive."
         ]],
@@ -185,7 +186,8 @@ window.NAHI_LEGAL = {
           ["<strong>Usage and layout telemetry (optional)</strong>", "Random install ID, grid layout (widget types, positions, sizes), theme choice, plan tier", "Google Cloud Firestore (anonymous_layouts)", "Understanding popular widgets and layouts to improve the interface. <strong>Contains no personal data, text or account details.</strong>"],
           ["<strong>Local extension data</strong>", "Media state of the active browser tab (track title, artist, playback state)", "Local browser and PC app only", "Showing web media on your phone and PC. Never sent to the cloud."],
           ["<strong>App verification</strong>", "Package name, app signing certificate and device integrity result", "Google Play Integrity (Google)", "Verifying that the app was installed from Google Play and runs on a trusted device; preventing abuse. Google does not share this data with third parties."],
-          ["<strong>Crash reports (optional)</strong>", "App version, device hash, error type and text, stack trace and log lines (email and IP addresses are masked)", "Google Cloud Functions and Firestore (Europe); support email via Google Groups", "Analysing and fixing crashes. Sent only with your confirmation."]
+          ["<strong>Crash reports (optional)</strong>", "App version, device hash, error type and text, stack trace and log lines (email and IP addresses are masked)", "Google Cloud Functions and Firestore (Europe); support email via Google Groups", "Analysing and fixing crashes. Sent only with your confirmation."],
+          ["<strong>Advertising and device identifiers (Free plan only)</strong>", "Google Advertising ID (Android AD_ID), approximate location (derived from IP address), device model, ad impression and interaction metrics.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Ads Policy</a>", "Serving 2x1 native ads in the Free plan and preventing invalid traffic. In the Pro plan, advertising identifiers are never collected and AdMob is entirely disabled. Users can reset their Advertising ID or opt out of personalized ads under Android Settings > Privacy > Ads."]
         ]],
         ["card", [["p", "<strong>Data controller:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Contact email:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Website:</strong> https://nahideck.github.io"]]],
       ]
@@ -226,7 +228,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play billing records:</strong> Google keeps these for tax and consumer law reasons. NahiDeck does not store payment details.",
           "<strong>Audit records:</strong> Records of account and licence operations contain a hashed identifier that cannot be directly tied to your identity, and are deleted automatically within 90 days.",
-          "<strong>Crash reports:</strong> Deleted automatically within 90 days."
+          "<strong>Crash reports:</strong> Deleted automatically within 30 days."
         ]],
         ["danger", [
           ["h3", "Important: cancel your active subscription"],
@@ -252,7 +254,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Qué recopilamos:</strong> Datos de cuenta (opcional), registros de licencia Pro y de emparejamiento de dispositivos, datos de uso anónimos opcionales e informes de fallos que decidas enviar.",
           "<strong>Dónde se procesan:</strong> En Europa (Firestore, Cloud Functions). El inicio de sesión (Firebase Authentication) y la verificación de compras (RevenueCat) se procesan en Estados Unidos; la base de esta transferencia se describe más abajo.",
-          "<strong>Cuánto tiempo los conservamos:</strong> Registros técnicos 30 días, registros de auditoría e informes de fallos 90 días, registros anónimos de diseño 180 días. Al eliminar tu cuenta se borran tus datos de cuenta.",
+          "<strong>Cuánto tiempo los conservamos:</strong> Registros técnicos 30 días, informes de fallos 30 días, registros de auditoría 90 días, registros anónimos de diseño 180 días. Al eliminar tu cuenta se borran tus datos de cuenta.",
           "<strong>Tus derechos:</strong> Puedes solicitar acceso, corrección y eliminación. Puedes eliminar tu cuenta desde la app o en la página de eliminación de cuenta.",
           "<strong>Informes de fallos:</strong> Solo se envían si lo confirmas. Tu nota y tu correo de contacto (opcionales) se incluyen; la nota se guarda tal cual, y las direcciones de correo e IP se ocultan."
         ]],
@@ -287,7 +289,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetría:</strong> si retiras el consentimiento en Ajustes > Privacidad, tu registro se elimina de inmediato. Los registros activos caducan automáticamente en un plazo de 180 días (TTL).",
           "<strong>Registros técnicos del servidor:</strong> los registros de solicitudes de la infraestructura se conservan hasta 30 días.",
           "<strong>Registros de licencia y auditoría:</strong> contienen una forma cifrada de un solo sentido (hash) de tu identificador de usuario y se conservan hasta 90 días.",
-          "<strong>Informes de fallos:</strong> incluyen la versión de la app, un hash del dispositivo, el tipo y el texto del error, la traza de la pila y líneas de registro. Las direcciones de correo, las IP y los nombres de carpeta de usuario en las rutas se ocultan antes de guardarse. Se conservan hasta 90 días.",
+          "<strong>Informes de fallos:</strong> incluyen la versión de la app, un hash del dispositivo, el tipo y el texto del error, la traza de la pila y líneas de registro. Las direcciones de correo, las IP y los nombres de carpeta de usuario en las rutas se ocultan antes de guardarse. Se conservan hasta 30 días. Al enviar un informe se crea un identificador anónimo de Firebase para evitar abusos; la dirección IP de la solicitud se conserva solo como hash irreversible y durante un máximo de 24 horas.",
           "<strong>Transferencias internacionales:</strong> Google opera Firebase Authentication desde centros de datos de Estados Unidos. Para verificar compras, RevenueCat procesa tus datos en Estados Unidos (AWS); esta transferencia se rige por Cláusulas Contractuales Tipo. Los datos de Firestore, Cloud Functions y Cloud KMS se procesan en servidores de Europa (europe-west1). Base jurídica de las transferencias desde Turquía según el artículo 9 de la KVKK: [BASE JURÍDICA: LA COMPLETARÁ EL ABOGADO].",
           "<strong>Correo de soporte:</strong> Se procesa a través de Google Groups (grupo de consumidor) y está sujeto a la <a href='https://policies.google.com/privacy?hl=en'>Política de privacidad</a> y a las <a href='https://policies.google.com/terms?hl=en'>Condiciones</a> de Google. Los mensajes se conservan en el archivo del grupo."
         ]],
@@ -301,7 +303,8 @@ window.NAHI_LEGAL = {
           ["<strong>Telemetría de uso y diseño (opcional)</strong>", "ID de instalación aleatorio, diseño de cuadrícula (tipos de widget, posiciones, tamaños), tema y tipo de plan", "Google Cloud Firestore (anonymous_layouts)", "Analizar los widgets y diseños más usados para mejorar la interfaz. <strong>No contiene datos personales, texto ni datos de cuenta.</strong>"],
           ["<strong>Datos locales de la extensión</strong>", "Estado del medio de la pestaña activa (título, artista, estado de reproducción)", "Solo el navegador local y la app del PC", "Mostrar el medio web en el teléfono y el PC. Nunca se envía a la nube."],
           ["<strong>Verificación de la app</strong>", "Nombre del paquete, certificado de firma de la app y resultado de integridad del dispositivo", "Google Play Integrity (Google)", "Comprobar que la app se instaló desde Google Play y se ejecuta en un dispositivo de confianza; evitar abusos. Google no comparte estos datos con terceros."],
-          ["<strong>Informe de fallos (opcional)</strong>", "Versión de la app, hash del dispositivo, tipo y texto del error, traza de la pila y líneas de registro (las direcciones de correo e IP se ocultan)", "Google Cloud Functions y Firestore (Europa); correo de soporte mediante Google Groups", "Analizar y corregir fallos. Se envía solo con tu confirmación."]
+          ["<strong>Informe de fallos (opcional)</strong>", "Versión de la app, hash del dispositivo, tipo y texto del error, traza de la pila y líneas de registro (las direcciones de correo e IP se ocultan)", "Google Cloud Functions y Firestore (Europa); correo de soporte mediante Google Groups", "Analizar y corregir fallos. Se envía solo con tu confirmación."],
+          ["<strong>Publicidad e identificadores de dispositivo (solo plan Gratuito)</strong>", "ID de publicidad de Google (Android AD_ID), ubicación aproximada (a través de la dirección IP), modelo de dispositivo, métricas de impresión e interacción con anuncios.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de publicidad de Google</a>", "Mostrar anuncios nativos 2x1 en el plan Gratuito y prevenir tráfico no válido. En el plan Pro, no se recopilan identificadores publicitarios y AdMob se desactiva por completo. Los usuarios pueden restablecer su ID de publicidad en Ajustes de Android > Privacidad > Anuncios."]
         ]],
         ["card", [["p", "<strong>Responsable:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Correo de contacto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Sitio web:</strong> https://nahideck.github.io"]]],
       ]
@@ -342,7 +345,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Registros de facturación de Google Play:</strong> Google los conserva por motivos fiscales y de consumo. NahiDeck no guarda datos de pago.",
           "<strong>Registros de auditoría:</strong> los registros de operaciones de cuenta y licencia contienen un identificador con hash que no puede vincularse directamente con tu identidad, y se eliminan automáticamente en un plazo de 90 días.",
-          "<strong>Informes de fallos:</strong> se eliminan automáticamente en un plazo de 90 días."
+          "<strong>Informes de fallos:</strong> se eliminan automáticamente en un plazo de 30 días."
         ]],
         ["danger", [
           ["h3", "Importante: cancela tu suscripción activa"],
@@ -368,7 +371,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>O que coletamos:</strong> Dados da conta (opcional), registros de licença Pro e de pareamento de dispositivos, dados de uso anônimos opcionais e relatórios de falhas que você decidir enviar.",
           "<strong>Onde são processados:</strong> Na Europa (Firestore, Cloud Functions). O login (Firebase Authentication) e a verificação de compras (RevenueCat) são processados nos Estados Unidos; a base dessa transferência está descrita abaixo.",
-          "<strong>Por quanto tempo guardamos:</strong> Registros técnicos por 30 dias, registros de auditoria e relatórios de falhas por 90 dias, registros anônimos de layout por 180 dias. Ao excluir sua conta, seus dados de conta são apagados.",
+          "<strong>Por quanto tempo guardamos:</strong> Registros técnicos por 30 dias, relatórios de falhas por 30 dias, registros de auditoria por 90 dias, registros anônimos de layout por 180 dias. Ao excluir sua conta, seus dados de conta são apagados.",
           "<strong>Seus direitos:</strong> Você pode pedir acesso, correção e exclusão. Pode excluir sua conta pelo app ou na página de exclusão de conta.",
           "<strong>Relatórios de falhas:</strong> Enviados somente se você confirmar. Sua nota e seu e-mail de contato (opcionais) são incluídos; a nota é guardada como foi escrita, e e-mails e IPs são ocultados."
         ]],
@@ -403,7 +406,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> ao retirar o consentimento em Configurações > Privacidade, seu registro é excluído imediatamente. Registros ativos expiram automaticamente em até 180 dias (TTL).",
           "<strong>Registros técnicos do servidor:</strong> os registros de solicitações da infraestrutura são mantidos por até 30 dias.",
           "<strong>Registros de licença e auditoria:</strong> contêm uma forma criptografada de sentido único (hash) do seu identificador de usuário e são mantidos por até 90 dias.",
-          "<strong>Relatórios de falhas:</strong> incluem a versão do app, um hash do dispositivo, o tipo e o texto do erro, o rastreamento de pilha e linhas de log. Endereços de e-mail, IPs e nomes de pasta de usuário em caminhos são ocultados antes de serem armazenados. Mantidos por até 90 dias.",
+          "<strong>Relatórios de falhas:</strong> incluem a versão do app, um hash do dispositivo, o tipo e o texto do erro, o rastreamento de pilha e linhas de log. Endereços de e-mail, IPs e nomes de pasta de usuário em caminhos são ocultados antes de serem armazenados. Mantidos por até 30 dias. Ao enviar um relatório, um identificador anônimo do Firebase é criado para evitar abusos; o endereço IP da solicitação é mantido apenas como hash irreversível e por no máximo 24 horas.",
           "<strong>Transferências internacionais:</strong> O Google opera o Firebase Authentication a partir de data centers nos Estados Unidos. Para verificar compras, a RevenueCat processa seus dados nos Estados Unidos (AWS); essa transferência é coberta por Cláusulas Contratuais Padrão. Os dados do Firestore, Cloud Functions e Cloud KMS são processados em servidores na Europa (europe-west1). Base legal para transferências a partir da Turquia (KVKK, art. 9): [BASE LEGAL: A SER PREENCHIDA PELO ADVOGADO].",
           "<strong>E-mail de suporte:</strong> Processado pelo Google Groups (grupo de consumidor) e sujeito à <a href='https://policies.google.com/privacy?hl=en'>Política de Privacidade</a> e aos <a href='https://policies.google.com/terms?hl=en'>Termos</a> do Google. As mensagens ficam guardadas no arquivo do grupo."
         ]],
@@ -417,7 +420,8 @@ window.NAHI_LEGAL = {
           ["<strong>Telemetria de uso e layout (opcional)</strong>", "ID de instalação aleatório, layout da grade (tipos de widget, posições, tamanhos), escolha de tema, tipo de plano", "Google Cloud Firestore (anonymous_layouts)", "Entender widgets e layouts populares para melhorar a interface. <strong>Não contém dados pessoais, textos nem dados de conta.</strong>"],
           ["<strong>Dados locais da extensão</strong>", "Estado da mídia na aba ativa (título, artista, reprodução)", "Somente navegador local e app do PC", "Mostrar a mídia da web no celular e no PC. Nunca é enviada à nuvem."],
           ["<strong>Verificação do app</strong>", "Nome do pacote, certificado de assinatura do app e resultado de integridade do dispositivo", "Google Play Integrity (Google)", "Verificar se o app foi instalado pelo Google Play e roda em um dispositivo confiável; prevenir abusos. O Google não compartilha esses dados com terceiros."],
-          ["<strong>Relatório de falhas (opcional)</strong>", "Versão do app, hash do dispositivo, tipo e texto do erro, rastreamento de pilha e linhas de log (e-mails e IPs são ocultados)", "Google Cloud Functions e Firestore (Europa); e-mail de suporte via Google Groups", "Analisar e corrigir falhas. Enviado somente com sua confirmação."]
+          ["<strong>Relatório de falhas (opcional)</strong>", "Versão do app, hash do dispositivo, tipo e texto do erro, rastreamento de pilha e linhas de log (e-mails e IPs são ocultados)", "Google Cloud Functions e Firestore (Europa); e-mail de suporte via Google Groups", "Analisar e corrigir falhas. Enviado somente com sua confirmação."],
+          ["<strong>Publicidade e identificadores de dispositivo (apenas plano Gratuito)</strong>", "ID de publicidade do Google (Android AD_ID), localização aproximada (via endereço IP), modelo do dispositivo, métricas de impressão e interação com anúncios.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de Anúncios do Google</a>", "Exibição de anúncios nativos 2x1 no plano Gratuito e prevenção de tráfego inválido. No plano Pro, identificadores de publicidade não são coletados e o AdMob é totalmente desativado. Os usuários podem redefinir o ID de publicidade em Configurações do Android > Privacidade > Anúncios."]
         ]],
         ["card", [["p", "<strong>Controlador:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail de contato:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Site:</strong> https://nahideck.github.io"]]],
       ]
@@ -458,7 +462,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Registros de cobrança do Google Play:</strong> o Google os mantém por obrigações fiscais e de defesa do consumidor. O NahiDeck não armazena dados de pagamento.",
           "<strong>Registros de auditoria:</strong> registros de operações de conta e licença contêm um identificador com hash que não pode ser vinculado diretamente à sua identidade e são excluídos automaticamente em até 90 dias.",
-          "<strong>Relatórios de falhas:</strong> excluídos automaticamente em até 90 dias."
+          "<strong>Relatórios de falhas:</strong> excluídos automaticamente em até 30 dias."
         ]],
         ["danger", [
           ["h3", "Importante: cancele sua assinatura ativa"],
@@ -484,7 +488,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Was wir erfassen:</strong> Kontodaten (optional), Pro-Lizenz- und Geräte-Kopplungsdaten, optionale anonyme Nutzungsdaten und Absturzberichte, die Sie senden.",
           "<strong>Wo sie verarbeitet werden:</strong> In Europa (Firestore, Cloud Functions). Anmeldung (Firebase Authentication) und Kaufprüfung (RevenueCat) finden in den USA statt; die Grundlage dieser Übermittlung ist unten beschrieben.",
-          "<strong>Wie lange wir sie aufbewahren:</strong> Technische Protokolle 30 Tage, Prüf- und Absturzprotokolle 90 Tage, anonyme Layoutdaten 180 Tage. Mit der Löschung Ihres Kontos werden Ihre Kontodaten entfernt.",
+          "<strong>Wie lange wir sie aufbewahren:</strong> Technische Protokolle 30 Tage, Absturzberichte 30 Tage, Prüfprotokolle 90 Tage, anonyme Layoutdaten 180 Tage. Mit der Löschung Ihres Kontos werden Ihre Kontodaten entfernt.",
           "<strong>Ihre Rechte:</strong> Sie können Auskunft, Berichtigung und Löschung verlangen. Ihr Konto können Sie in der App oder auf der Seite zur Kontolöschung entfernen.",
           "<strong>Absturzberichte:</strong> Werden nur nach Ihrer Bestätigung gesendet. Ihre optionale Notiz und E-Mail-Adresse werden mitgesendet; die Notiz wird unverändert gespeichert, E-Mail- und IP-Adressen werden unkenntlich gemacht."
         ]],
@@ -519,7 +523,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetrie:</strong> Wenn Sie die Einwilligung unter Einstellungen > Datenschutz widerrufen, wird Ihr Datensatz sofort gelöscht. Aktive Datensätze laufen automatisch nach spätestens 180 Tagen ab (TTL).",
           "<strong>Technische Server-Protokolle:</strong> Anfrage-Protokolle der Infrastruktur werden höchstens 30 Tage aufbewahrt.",
           "<strong>Lizenz- und Prüfprotokolle:</strong> enthalten eine nicht umkehrbare Prüfsumme (Hash) Ihrer Benutzerkennung und werden höchstens 90 Tage aufbewahrt.",
-          "<strong>Absturzberichte:</strong> enthalten App-Version, einen Geräte-Hash, Fehlertyp und Fehlertext, Stack-Trace und Protokollzeilen. E-Mail-Adressen, IP-Adressen und Benutzerordnernamen in Dateipfaden werden vor der Speicherung unkenntlich gemacht. Werden höchstens 90 Tage aufbewahrt.",
+          "<strong>Absturzberichte:</strong> enthalten App-Version, einen Geräte-Hash, Fehlertyp und Fehlertext, Stack-Trace und Protokollzeilen. E-Mail-Adressen, IP-Adressen und Benutzerordnernamen in Dateipfaden werden vor der Speicherung unkenntlich gemacht. Werden höchstens 30 Tage aufbewahrt. Beim Senden eines Berichts wird zur Missbrauchsvermeidung eine anonyme Firebase-Kennung erstellt; die IP-Adresse der Anfrage wird nur als nicht umkehrbarer Hash und höchstens 24 Stunden gespeichert.",
           "<strong>Übermittlung in Drittländer:</strong> Google betreibt Firebase Authentication in Rechenzentren in den Vereinigten Staaten. Zur Kaufprüfung verarbeitet RevenueCat Ihre Daten in den USA (AWS); diese Übermittlung erfolgt auf Grundlage der Standardvertragsklauseln. Daten von Firestore, Cloud Functions und Cloud KMS werden auf Servern in Europa (europe-west1) verarbeitet. Rechtsgrundlage für Übermittlungen aus der Türkei nach KVKK Art. 9: [RECHTSGRUNDLAGE: DURCH RECHTSANWALT ZU ERGÄNZEN].",
           "<strong>Support-E-Mail:</strong> Wird über Google Groups (Verbrauchergruppe) verarbeitet und unterliegt der <a href='https://policies.google.com/privacy?hl=en'>Datenschutzerklärung</a> und den <a href='https://policies.google.com/terms?hl=en'>Nutzungsbedingungen</a> von Google. Nachrichten werden im Gruppenarchiv gespeichert."
         ]],
@@ -533,7 +537,8 @@ window.NAHI_LEGAL = {
           ["<strong>Nutzungs- und Layout-Telemetrie (optional)</strong>", "Zufällige Installations-ID, Rasterlayout (Widget-Typen, Positionen, Größen), Designwahl, Tarif", "Google Cloud Firestore (anonymous_layouts)", "Beliebte Widgets und Layouts auswerten, um die Oberfläche zu verbessern. <strong>Enthält keine personenbezogenen Daten, Texte oder Kontodaten.</strong>"],
           ["<strong>Lokale Erweiterungsdaten</strong>", "Medienstatus des aktiven Browser-Tabs (Titel, Interpret, Wiedergabestatus)", "Nur lokaler Browser und PC-App", "Anzeige der Web-Medien auf Handy und PC. Wird nie in die Cloud gesendet."],
           ["<strong>App-Überprüfung</strong>", "Paketname, App-Signaturzertifikat und Ergebnis der Geräteintegrität", "Google Play Integrity (Google)", "Prüfung, ob die App über Google Play installiert wurde und auf einem vertrauenswürdigen Gerät läuft; Missbrauch verhindern. Google gibt diese Daten nicht an Dritte weiter."],
-          ["<strong>Absturzbericht (optional)</strong>", "App-Version, Geräte-Hash, Fehlertyp und Fehlertext, Stack-Trace und Protokollzeilen (E-Mail- und IP-Adressen werden unkenntlich gemacht)", "Google Cloud Functions und Firestore (Europa); Support-E-Mail über Google Groups", "Analyse und Behebung von Abstürzen. Wird nur nach Ihrer Bestätigung gesendet."]
+          ["<strong>Absturzbericht (optional)</strong>", "App-Version, Geräte-Hash, Fehlertyp und Fehlertext, Stack-Trace und Protokollzeilen (E-Mail- und IP-Adressen werden unkenntlich gemacht)", "Google Cloud Functions und Firestore (Europa); Support-E-Mail über Google Groups", "Analyse und Behebung von Abstürzen. Wird nur nach Ihrer Bestätigung gesendet."],
+          ["<strong>Werbung und Gerätekennungen (nur kostenloser Plan)</strong>", "Google-Werbe-ID (Android AD_ID), ungefähre Standortdaten (über IP-Adresse), Gerätemodell, Anzeigenimpressionen und Interaktionsmetriken.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google-Werberichtlinie</a>", "Bereitstellung von 2x1 nativen Werbeanzeigen im kostenlosen Plan und Verhinderung von ungültigem Datenverkehr. Im Pro-Plan werden keine Werbekennungen erfasst und AdMob ist vollständig deaktiviert. Nutzer können ihre Werbe-ID unter Android-Einstellungen > Datenschutz > Werbung zurücksetzen."]
         ]],
         ["card", [["p", "<strong>Verantwortlich:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-Mail:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Website:</strong> https://nahideck.github.io"]]],
       ]
@@ -574,7 +579,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google-Play-Abrechnungsdaten:</strong> Google bewahrt diese aus steuer- und verbraucherrechtlichen Gründen auf. NahiDeck speichert keine Zahlungsdaten.",
           "<strong>Prüfprotokolle:</strong> Protokolle zu Konto- und Lizenzvorgängen enthalten eine Prüfsumme (Hash), die nicht direkt Ihrer Identität zugeordnet werden kann, und werden automatisch innerhalb von 90 Tagen gelöscht.",
-          "<strong>Absturzberichte:</strong> werden automatisch innerhalb von 90 Tagen gelöscht."
+          "<strong>Absturzberichte:</strong> werden automatisch innerhalb von 30 Tagen gelöscht."
         ]],
         ["danger", [
           ["h3", "Wichtig: Aktives Abo kündigen"],
@@ -600,7 +605,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Ce que nous collectons :</strong> Données de compte (facultatif), enregistrements de licence Pro et d’appairage d’appareils, données d’usage anonymes facultatives et rapports de plantage que vous choisissez d’envoyer.",
           "<strong>Où elles sont traitées :</strong> En Europe (Firestore, Cloud Functions). La connexion (Firebase Authentication) et la vérification des achats (RevenueCat) sont traitées aux États-Unis ; la base de ce transfert est décrite ci-dessous.",
-          "<strong>Durée de conservation :</strong> Journaux techniques 30 jours, journaux d’audit et rapports de plantage 90 jours, enregistrements anonymes de disposition 180 jours. La suppression de votre compte efface vos données de compte.",
+          "<strong>Durée de conservation :</strong> Journaux techniques 30 jours, rapports de plantage 30 jours, journaux d’audit 90 jours, enregistrements anonymes de disposition 180 jours. La suppression de votre compte efface vos données de compte.",
           "<strong>Vos droits :</strong> Vous pouvez demander l’accès, la rectification et la suppression. Vous pouvez supprimer votre compte depuis l’application ou la page de suppression de compte.",
           "<strong>Rapports de plantage :</strong> Envoyés uniquement après votre confirmation. Votre note et votre e-mail de contact (facultatifs) sont inclus ; la note est conservée telle quelle, les adresses e-mail et IP sont masquées."
         ]],
@@ -635,7 +640,7 @@ window.NAHI_LEGAL = {
           "<strong>Télémétrie :</strong> si vous retirez votre consentement dans Paramètres > Confidentialité, votre enregistrement est supprimé immédiatement. Les enregistrements actifs expirent automatiquement sous 180 jours (TTL).",
           "<strong>Journaux techniques du serveur :</strong> les journaux de requêtes de l’infrastructure sont conservés 30 jours au maximum.",
           "<strong>Journaux de licence et d’audit :</strong> contiennent une forme condensée à sens unique (hash) de votre identifiant utilisateur et sont conservés 90 jours au maximum.",
-          "<strong>Rapports de plantage :</strong> contiennent la version de l’application, un hash de l’appareil, le type et le texte de l’erreur, la trace de pile et des lignes de journal. Les adresses e-mail, adresses IP et noms de dossier utilisateur dans les chemins sont masqués avant stockage. Conservés 90 jours au maximum.",
+          "<strong>Rapports de plantage :</strong> contiennent la version de l’application, un hash de l’appareil, le type et le texte de l’erreur, la trace de pile et des lignes de journal. Les adresses e-mail, adresses IP et noms de dossier utilisateur dans les chemins sont masqués avant stockage. Conservés 30 jours au maximum. Lors de l’envoi d’un rapport, un identifiant anonyme Firebase est créé pour prévenir les abus ; l’adresse IP de la requête n’est conservée que sous forme de hash irréversible, pendant 24 heures au maximum.",
           "<strong>Transferts internationaux :</strong> Google exploite Firebase Authentication depuis des centres de données situés aux États-Unis. Pour la vérification des achats, RevenueCat traite vos données aux États-Unis (AWS) ; ce transfert est encadré par des clauses contractuelles types. Les données Firestore, Cloud Functions et Cloud KMS sont traitées sur des serveurs situés en Europe (europe-west1). Base juridique des transferts depuis la Turquie au titre de l’article 9 de la loi KVKK : [BASE JURIDIQUE : À COMPLÉTER PAR L’AVOCAT].",
           "<strong>E-mail d’assistance :</strong> Traité via Google Groups (groupe grand public) et soumis à la <a href='https://policies.google.com/privacy?hl=en'>Politique de confidentialité</a> et aux <a href='https://policies.google.com/terms?hl=en'>Conditions</a> de Google. Les messages sont conservés dans l’archive du groupe."
         ]],
@@ -649,7 +654,8 @@ window.NAHI_LEGAL = {
           ["<strong>Télémétrie d’usage et de disposition (facultative)</strong>", "Identifiant d’installation aléatoire, disposition de la grille (types de widgets, positions, tailles), choix du thème, type de plan", "Google Cloud Firestore (anonymous_layouts)", "Analyser les widgets et dispositions populaires pour améliorer l’interface. <strong>Ne contient aucune donnée personnelle, aucun texte ni information de compte.</strong>"],
           ["<strong>Données locales de l’extension</strong>", "État du média de l’onglet actif (titre, artiste, lecture)", "Uniquement le navigateur local et l’application PC", "Afficher le média web sur le téléphone et le PC. Jamais envoyé dans le cloud."],
           ["<strong>Vérification de l’application</strong>", "Nom du paquet, certificat de signature de l’application et résultat d’intégrité de l’appareil", "Google Play Integrity (Google)", "Vérifier que l’application a été installée depuis Google Play et s’exécute sur un appareil de confiance ; prévenir les abus. Google ne partage pas ces données avec des tiers."],
-          ["<strong>Rapport de plantage (facultatif)</strong>", "Version de l’application, hash de l’appareil, type et texte de l’erreur, trace de pile et lignes de journal (adresses e-mail et IP masquées)", "Google Cloud Functions et Firestore (Europe) ; e-mail d’assistance via Google Groups", "Analyser et corriger les plantages. Envoyé uniquement avec votre confirmation."]
+          ["<strong>Rapport de plantage (facultatif)</strong>", "Version de l’application, hash de l’appareil, type et texte de l’erreur, trace de pile et lignes de journal (adresses e-mail et IP masquées)", "Google Cloud Functions et Firestore (Europe) ; e-mail d’assistance via Google Groups", "Analyser et corriger les plantages. Envoyé uniquement avec votre confirmation."],
+          ["<strong>Publicité et identifiants d'appareil (forfait Gratuit uniquement)</strong>", "Identifiant publicitaire Google (Android AD_ID), localisation approximative (via adresse IP), modèle d'appareil, métriques d'impression et d'interaction publicitaire.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Règles relatives aux annonces Google</a>", "Diffusion d'annonces natives 2x1 dans le forfait Gratuit et prévention du trafic incorrect. Dans le forfait Pro, aucun identifiant publicitaire n'est collecté et AdMob est totalement désactivé. Les utilisateurs peuvent réinitialiser leur identifiant publicitaire dans Paramètres Android > Confidentialité > Annonces."]
         ]],
         ["card", [["p", "<strong>Responsable :</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail :</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Site web :</strong> https://nahideck.github.io"]]],
       ]
@@ -690,7 +696,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Historique de facturation Google Play :</strong> conservé par Google pour des raisons fiscales et de droit de la consommation. NahiDeck ne stocke pas de données de paiement.",
           "<strong>Journaux d’audit :</strong> les journaux liés aux opérations de compte et de licence contiennent un identifiant condensé (hash) qui ne peut pas être directement relié à votre identité ; ils sont supprimés automatiquement sous 90 jours.",
-          "<strong>Rapports de plantage :</strong> supprimés automatiquement sous 90 jours."
+          "<strong>Rapports de plantage :</strong> supprimés automatiquement sous 30 jours."
         ]],
         ["danger", [
           ["h3", "Important : résiliez votre abonnement"],
@@ -716,7 +722,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Nəyi toplayırıq:</strong> Hesab məlumatları (könüllü), Pro lisenziya və cihaz qoşulma qeydləri, könüllü anonim istifadə məlumatları və göndərmək qərarına gəldiyiniz çökmə hesabatları.",
           "<strong>Harada emal olunur:</strong> Avropada (Firestore, Cloud Functions). Giriş (Firebase Authentication) və alış yoxlanışı (RevenueCat) ABŞ-da emal olunur; bu ötürmənin əsası aşağıda göstərilib.",
-          "<strong>Nə qədər saxlanılır:</strong> Texniki jurnallar 30 gün, audit və çökmə qeydləri 90 gün, anonim tərtibat qeydləri 180 gün. Hesabı sildikdə hesab məlumatlarınız silinir.",
+          "<strong>Nə qədər saxlanılır:</strong> Texniki jurnallar 30 gün, çökmə hesabatları 30 gün, audit qeydləri 90 gün, anonim tərtibat qeydləri 180 gün. Hesabı sildikdə hesab məlumatlarınız silinir.",
           "<strong>Hüquqlarınız:</strong> Məlumatlarınıza giriş, düzəliş və silinmə tələb edə bilərsiniz. Hesabı tətbiqdən və ya hesab silmə səhifəsindən silə bilərsiniz.",
           "<strong>Çökmə hesabatları:</strong> Yalnız siz təsdiq etdikdə göndərilir. Könüllü qeydiniz və əlaqə e-poçtunuz daxil edilir; qeyd olduğu kimi saxlanılır, e-poçt və IP ünvanları gizlədilir."
         ]],
@@ -751,7 +757,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetriya:</strong> Ayarlar > Məxfilik bölməsində razılığı geri götürdükdə mövcud qeyd dərhal silinir. Aktiv qeydlər ən geci 180 gün ərzində avtomatik silinir (TTL).",
           "<strong>Texniki server jurnalları:</strong> infrastruktur sorğu jurnalları ən çox 30 gün saxlanılır.",
           "<strong>Lisenziya və audit qeydləri:</strong> hesab və lisenziya əməliyyatlarına aid qeydlər istifadəçi identifikatorunun hash (geri döndərilməz) formasını ehtiva edir və ən çox 90 gün saxlanılır.",
-          "<strong>Çökmə hesabatları:</strong> tətbiq versiyası, cihaz hash-i, xəta növü və mətni, stack trace və jurnal sətirlərini ehtiva edir. E-poçt ünvanları, IP ünvanları və fayl yollarındakı istifadəçi qovluq adları saxlanılmazdan əvvəl gizlədilir. Ən çox 90 gün saxlanılır.",
+          "<strong>Çökmə hesabatları:</strong> tətbiq versiyası, cihaz hash-i, xəta növü və mətni, stack trace və jurnal sətirlərini ehtiva edir. E-poçt ünvanları, IP ünvanları və fayl yollarındakı istifadəçi qovluq adları saxlanılmazdan əvvəl gizlədilir. Ən çox 30 gün saxlanılır. Hesabat göndərdiyiniz zaman sui-istifadənin qarşısını almaq üçün anonim Firebase identifikatoru yaradılır; sorğunun IP ünvanı yalnız geri döndərilməz hash şəklində və ən çox 24 saat saxlanılır.",
           "<strong>Xarici ölkələrə ötürmə:</strong> Firebase Authentication xidmətini Google ABŞ-dakı data mərkəzlərindən işlədir. Satın alma yoxlanışı üçün RevenueCat məlumatlarınızı ABŞ-da (AWS) emal edir; bu ötürmə Standart Müqavilə Bəndləri ilə təmin olunur. Firestore, Cloud Functions və Cloud KMS məlumatları Avropadakı (europe-west1) serverlərdə emal olunur. Türkiyədən ötürmələr üçün KVKK m.9 əsası: [HÜQUQİ ƏSAS: VƏKİL TƏRƏFİNDƏN DOLDURULACAQ].",
           "<strong>Dəstək e-poçtu:</strong> Google Groups (istehlakçı qrupu) vasitəsilə emal olunur və Google-un <a href='https://policies.google.com/privacy?hl=en'>Məxfilik Siyasəti</a> və <a href='https://policies.google.com/terms?hl=en'>Şərtlərinə</a> tabedir. Mesajlar qrupun arxivində saxlanılır."
         ]],
@@ -765,7 +771,8 @@ window.NAHI_LEGAL = {
           ["<strong>İstifadə və tərtibat telemetriyası (isteğe bağlı)</strong>", "Təsadüfi quraşdırma ID-si, şəbəkə tərtibatı (vidcet növləri, yerləri, ölçüləri), mövzu seçimi, plan növü", "Google Cloud Firestore (anonymous_layouts)", "Populyar vidcet və tərtibatları təhlil edərək interfeysi təkmilləşdirmək. <strong>Şəxsi məlumat, mətn və ya hesab məlumatı ehtiva etmir.</strong>"],
           ["<strong>Yerli genişlənmə məlumatları</strong>", "Aktiv vərəqdəki media statusu (mahnı adı, ifaçı, oxutma vəziyyəti)", "Yalnız yerli brauzer və PC tətbiqi", "Veb mediasını telefon və PC-də göstərmək. Heç vaxt buluda göndərilmir."],
           ["<strong>Tətbiqin yoxlanılması</strong>", "Paket adı, tətbiq imza sertifikatı və cihazın bütövlük nəticəsi", "Google Play Integrity (Google)", "Tətbiqin Google Play vasitəsilə quraşdırılıb-quraşdırılmadığını və etibarlı cihazda işləyib-işləmədiyini yoxlamaq; sui-istifadənin qarşısını almaq. Google bu məlumatları üçüncü tərəflərlə paylaşmır."],
-          ["<strong>Xəta hesabatı (könüllü)</strong>", "Tətbiq versiyası, cihaz hash-i, xəta növü və mətni, stack trace və jurnal sətirləri (e-poçt və IP ünvanları gizlədilir)", "Google Cloud Functions və Firestore (Avropa); dəstək e-poçtu Google Groups vasitəsilə", "Çökmələri təhlil edib düzəltmək. Yalnız siz təsdiq etdikdə göndərilir."]
+          ["<strong>Xəta hesabatı (könüllü)</strong>", "Tətbiq versiyası, cihaz hash-i, xəta növü və mətni, stack trace və jurnal sətirləri (e-poçt və IP ünvanları gizlədilir)", "Google Cloud Functions və Firestore (Avropa); dəstək e-poçtu Google Groups vasitəsilə", "Çökmələri təhlil edib düzəltmək. Yalnız siz təsdiq etdikdə göndərilir."],
+          ["<strong>Reklam və cihaz identifikatorları (yalnız Pulsuz plan)</strong>", "Google Reklam İdentifikatoru (Android AD_ID), təxmini coğrafi məkan (IP ünvanı vasitəsilə), cihaz modeli, reklam nümayişi və qarşılıqlı əlaqə göstəriciləri.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Reklam Siyasəti</a>", "Pulsuz planda 2x1 yerli reklam nümayişi və saxta/etibarsız trafikin qarşısının alınması. Pro plana keçdikdə reklam identifikatorları toplanmır və AdMob tamamilə söndürülür. İstifadəçilər Android Parametrləri > Məxfilik > Reklamlar bölməsindən reklam identifikatorunu sıfırlaya bilərlər."]
         ]],
         ["card", [["p", "<strong>Nəzarətçi:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-poçt:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Veb sayt:</strong> https://nahideck.github.io"]]],
       ]
@@ -806,7 +813,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play ödəniş qeydləri:</strong> vergi və istehlakçı qanunvericiliyi səbəbindən Google tərəfindən saxlanılır. NahiDeck ödəniş məlumatlarını saxlamır.",
           "<strong>Audit qeydləri:</strong> hesab və lisenziya əməliyyatlarına aid qeydlər şəxsiyyətinizlə birbaşa əlaqələndirilə bilməyən hash tanımlayıcı ehtiva edir və 90 gün ərzində avtomatik silinir.",
-          "<strong>Çökmə hesabatları:</strong> 90 gün ərzində avtomatik silinir."
+          "<strong>Çökmə hesabatları:</strong> 30 gün ərzində avtomatik silinir."
         ]],
         ["danger", [
           ["h3", "Vacib: aktiv abunəliyinizi ləğv edin"],
@@ -832,7 +839,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>我們收集的資料：</strong>帳號資訊（選填）、Pro 授權與裝置配對紀錄、選填的匿名使用資料，以及您選擇傳送的當機報告。",
           "<strong>處理地點：</strong>歐洲（Firestore、Cloud Functions）。登入（Firebase Authentication）與購買驗證（RevenueCat）於美國處理；此傳輸的依據見下文。",
-          "<strong>保存期限：</strong>技術紀錄 30 天，稽核與當機報告 90 天，匿名版面紀錄 180 天。刪除帳號後，帳號資料會被刪除。",
+          "<strong>保存期限：</strong>技術紀錄 30 天，當機報告 30 天，稽核紀錄 90 天，匿名版面紀錄 180 天。刪除帳號後，帳號資料會被刪除。",
           "<strong>您的權利：</strong>您可以要求查閱、更正與刪除。您可以在 App 內或帳號刪除頁面刪除帳號。",
           "<strong>當機報告：</strong>僅在您確認後傳送。選填的備註與聯絡電子郵件會一併傳送；備註將照原樣保存，電子郵件與 IP 位址會被遮蔽。"
         ]],
@@ -867,7 +874,7 @@ window.NAHI_LEGAL = {
           "<strong>遙測資料：</strong>在「設定 > 隱私權」撤回同意後，現有紀錄會立即刪除。有效紀錄會在最長 180 天內自動刪除（TTL）。",
           "<strong>技術伺服器紀錄：</strong>基礎設施請求紀錄最多保留 30 天。",
           "<strong>授權與稽核紀錄：</strong>包含您使用者 ID 的單向雜湊（hash）值，最多保留 90 天。",
-          "<strong>當機報告：</strong>包含 App 版本、裝置雜湊值、錯誤類型與訊息、堆疊追蹤及日誌行。電子郵件、IP 位址及檔案路徑中的使用者資料夾名稱會在儲存前遮蔽。最多保留 90 天。",
+          "<strong>當機報告：</strong>包含 App 版本、裝置雜湊值、錯誤類型與訊息、堆疊追蹤及日誌行。電子郵件、IP 位址及檔案路徑中的使用者資料夾名稱會在儲存前遮蔽。最多保留 30 天。傳送報告時，會建立 Firebase 匿名識別碼以防止濫用；請求的 IP 位址僅以不可還原的雜湊值保存，且最多 24 小時。",
           "<strong>跨境傳輸：</strong>Firebase Authentication 由 Google 於美國資料中心營運。為驗證購買，RevenueCat 於美國（AWS）處理您的資料，此傳輸以標準契約條款為依據。Firestore、Cloud Functions 與 Cloud KMS 資料於歐洲（europe-west1）伺服器處理。依 KVKK 第 9 條，從土耳其傳輸的法律依據：[法律依據：由律師填寫]。",
           "<strong>支援電子郵件：</strong>透過 Google Groups（消費者群組）處理，並適用 Google 的<a href='https://policies.google.com/privacy?hl=en'>隱私權政策</a>與<a href='https://policies.google.com/terms?hl=en'>服務條款</a>。郵件會保存在群組封存中。"
         ]],
@@ -881,7 +888,8 @@ window.NAHI_LEGAL = {
           ["<strong>使用與版面遙測（選填）</strong>", "隨機安裝 ID、格線版面（小工具類型、位置、大小）、主題選擇、方案類型", "Google Cloud Firestore（anonymous_layouts）", "分析熱門的小工具與版面，以改善介面。<strong>不包含個人資料、文字或帳號資訊。</strong>"],
           ["<strong>本機擴充功能資料</strong>", "目前分頁的媒體狀態（歌曲名稱、演出者、播放狀態）", "僅限本機瀏覽器與電腦應用程式", "在手機與電腦上顯示網頁媒體。絕不傳送到雲端。"],
           ["<strong>應用程式驗證</strong>", "套件名稱、應用程式簽章憑證與裝置完整性結果", "Google Play Integrity（Google）", "驗證應用程式是否透過 Google Play 安裝並在可信任的裝置上執行；防止濫用。Google 不會將這些資料分享給第三方。"],
-          ["<strong>當機報告（選填）</strong>", "App 版本、裝置雜湊值、錯誤類型與訊息、堆疊追蹤及日誌行（電子郵件與 IP 位址會被遮蔽）", "Google Cloud Functions 與 Firestore（歐洲）；支援電子郵件透過 Google Groups", "分析並修正當機問題。僅在您確認後傳送。"]
+          ["<strong>當機報告（選填）</strong>", "App 版本、裝置雜湊值、錯誤類型與訊息、堆疊追蹤及日誌行（電子郵件與 IP 位址會被遮蔽）", "Google Cloud Functions 與 Firestore（歐洲）；支援電子郵件透過 Google Groups", "分析並修正當機問題。僅在您確認後傳送。"],
+          ["<strong>廣告與裝置識別碼（僅限免費版）</strong>", "Google 廣告 ID（Android AD_ID）、約略地理位置（透過 IP 位址）、裝置型號、廣告曝光與互動指標。", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 廣告政策</a>", "於免費版中投放 2x1 原生廣告並防範無效流量。升級至 Pro 專業版後，絕不收集廣告識別碼且 AdMob 完全停用。使用者可隨時至 Android「設定」>「隱私權」>「廣告」重設廣告 ID 或關閉個人化廣告。"]
         ]],
         ["card", [["p", "<strong>資料控制者：</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>聯絡信箱：</strong>nahideck-support@googlegroups.com"], ["p", "<strong>網站：</strong>https://nahideck.github.io"]]],
       ]
@@ -922,7 +930,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play 帳務紀錄：</strong>因稅務及消費者法規，由 Google 保存。NahiDeck 不保存付款資訊。",
           "<strong>稽核紀錄：</strong>帳號與授權操作的紀錄包含無法直接與您身分連結的雜湊識別碼，會於 90 天內自動刪除。",
-          "<strong>當機報告：</strong>會於 90 天內自動刪除。"
+          "<strong>當機報告：</strong>會於 30 天內自動刪除。"
         ]],
         ["danger", [
           ["h3", "重要：請取消有效訂閱"],
@@ -948,7 +956,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>我们收集的数据：</strong>账号信息（可选）、Pro 授权与设备配对记录、可选的匿名使用数据，以及您选择发送的崩溃报告。",
           "<strong>处理地点：</strong>欧洲（Firestore、Cloud Functions）。登录（Firebase Authentication）与购买验证（RevenueCat）在美国处理；该传输的依据见下文。",
-          "<strong>保存期限：</strong>技术日志 30 天，审计与崩溃报告 90 天，匿名布局记录 180 天。删除账号后，账号数据会被删除。",
+          "<strong>保存期限：</strong>技术日志 30 天，崩溃报告 30 天，审计记录 90 天，匿名布局记录 180 天。删除账号后，账号数据会被删除。",
           "<strong>您的权利：</strong>您可以请求访问、更正与删除。您可以在应用内或账号删除页面删除账号。",
           "<strong>崩溃报告：</strong>仅在您确认后发送。可选的备注与联系邮箱会一并发送；备注将按原样保存，邮箱与 IP 地址会被遮蔽。"
         ]],
@@ -983,7 +991,7 @@ window.NAHI_LEGAL = {
           "<strong>遥测：</strong>在“设置 > 隐私”中撤回同意后，现有记录会立即删除。有效记录会在最长 180 天内自动过期删除（TTL）。",
           "<strong>技术服务器日志：</strong>基础设施请求日志最长保留 30 天。",
           "<strong>授权与审计记录：</strong>包含您用户 ID 的单向哈希（hash）值，最长保留 90 天。",
-          "<strong>崩溃报告：</strong>包含应用版本、设备哈希值、错误类型与信息、堆栈跟踪及日志行。电子邮件、IP 地址及文件路径中的用户文件夹名称会在存储前被遮蔽。最长保留 90 天。",
+          "<strong>崩溃报告：</strong>包含应用版本、设备哈希值、错误类型与信息、堆栈跟踪及日志行。电子邮件、IP 地址及文件路径中的用户文件夹名称会在存储前被遮蔽。最长保留 30 天。发送报告时，会创建 Firebase 匿名标识符以防止滥用；请求的 IP 地址仅以不可逆哈希值保存，且最长 24 小时。",
           "<strong>跨境传输：</strong>Firebase Authentication 由 Google 在美国数据中心运营。为验证购买，RevenueCat 在美国（AWS）处理您的数据，该传输以标准合同条款为依据。Firestore、Cloud Functions 与 Cloud KMS 数据在欧洲（europe-west1）服务器上处理。依据 KVKK 第 9 条，从土耳其传输的法律依据：[法律依据：由律师填写]。",
           "<strong>支持邮件：</strong>通过 Google Groups（消费者群组）处理，适用 Google 的<a href='https://policies.google.com/privacy?hl=en'>隐私权政策</a>和<a href='https://policies.google.com/terms?hl=en'>服务条款</a>。邮件会保存在群组存档中。"
         ]],
@@ -997,7 +1005,8 @@ window.NAHI_LEGAL = {
           ["<strong>使用与布局遥测（可选）</strong>", "随机安装 ID、网格布局（组件类型、位置、大小）、主题选择、套餐类型", "Google Cloud Firestore（anonymous_layouts）", "分析热门组件和布局，以改进界面。<strong>不包含个人信息、文本或账号信息。</strong>"],
           ["<strong>本地扩展数据</strong>", "当前标签页的媒体状态（歌曲名、艺术家、播放状态）", "仅限本地浏览器和电脑应用", "在手机和电脑上显示网页媒体。绝不发送到云端。"],
           ["<strong>应用验证</strong>", "包名、应用签名证书及设备完整性结果", "Google Play Integrity（Google）", "验证应用是否通过 Google Play 安装并在可信设备上运行；防止滥用。Google 不会将这些数据分享给第三方。"],
-          ["<strong>崩溃报告（可选）</strong>", "应用版本、设备哈希值、错误类型与信息、堆栈跟踪及日志行（电子邮件和 IP 地址会被遮蔽）", "Google Cloud Functions 与 Firestore（欧洲）；支持邮箱通过 Google Groups", "分析并修复崩溃问题。仅在您确认后发送。"]
+          ["<strong>崩溃报告（可选）</strong>", "应用版本、设备哈希值、错误类型与信息、堆栈跟踪及日志行（电子邮件和 IP 地址会被遮蔽）", "Google Cloud Functions 与 Firestore（欧洲）；支持邮箱通过 Google Groups", "分析并修复崩溃问题。仅在您确认后发送。"],
+          ["<strong>广告与设备标识符（仅限免费版）</strong>", "Google 广告 ID（Android AD_ID）、大致地理位置（通过 IP 地址）、设备型号、广告展示与互动指标。", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 广告政策</a>", "在免费版中展示 2x1 原生广告并防止无效流量。升级至 Pro 专业版后，绝不收集广告标识符且 AdMob 完全禁用。用户可随时在 Android“设置”>“隐私”>“广告”中重置广告 ID 或关闭个性化广告。"]
         ]],
         ["card", [["p", "<strong>数据控制者：</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>联系邮箱：</strong>nahideck-support@googlegroups.com"], ["p", "<strong>网站：</strong>https://nahideck.github.io"]]],
       ]
@@ -1038,7 +1047,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play 账单记录：</strong>出于税务和消费者法律要求，由 Google 保存。NahiDeck 不保存支付信息。",
           "<strong>审计记录：</strong>账号与授权操作记录包含无法直接与您身份关联的哈希标识符，会在 90 天内自动删除。",
-          "<strong>崩溃报告：</strong>会在 90 天内自动删除。"
+          "<strong>崩溃报告：</strong>会在 30 天内自动删除。"
         ]],
         ["danger", [
           ["h3", "重要：请取消有效订阅"],
@@ -1064,7 +1073,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>O que recolhemos:</strong> Detalhes da conta (opcional), registos de licença Pro e de emparelhamento de dispositivos, dados de utilização anónimos opcionais e relatórios de falhas que decida enviar.",
           "<strong>Onde é processado:</strong> Na Europa (Firestore, Cloud Functions). O início de sessão (Firebase Authentication) e a verificação de compras (RevenueCat) são processados nos Estados Unidos; a base para esta transferência está descrita abaixo.",
-          "<strong>Durante quanto tempo conservamos:</strong> Registos técnicos durante 30 dias, registos de auditoria e relatórios de falhas durante 90 dias, registos anónimos de esquemas durante 180 dias. Eliminar a sua conta remove os dados da sua conta.",
+          "<strong>Durante quanto tempo conservamos:</strong> Registos técnicos durante 30 dias, relatórios de falhas durante 30 dias, registos de auditoria durante 90 dias, registos anónimos de esquemas durante 180 dias. Eliminar a sua conta remove os dados da sua conta.",
           "<strong>Os seus direitos:</strong> Pode solicitar acesso, retificação e eliminação. Pode eliminar a sua conta na aplicação ou na página de Eliminação de Conta.",
           "<strong>Relatórios de falhas:</strong> Enviados apenas mediante a sua confirmação. A sua nota e o seu e-mail de contacto opcionais são incluídos; a nota é guardada tal como foi escrita, e os endereços de e-mail e de IP são mascarados."
         ]],
@@ -1099,7 +1108,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> Retirar o consentimento em Definições > Privacidade elimina o seu registo existente de imediato. Os registos ativos expiram automaticamente no prazo de 180 dias (TTL).",
           "<strong>Registos técnicos do servidor:</strong> Os registos de pedidos da infraestrutura são conservados durante um máximo de 30 dias.",
           "<strong>Registos de licença e de auditoria:</strong> Os registos das operações de conta e de licença contêm uma versão com hash (unidirecional) do identificador de utilizador e são conservados durante um máximo de 90 dias.",
-          "<strong>Relatórios de falhas:</strong> Incluem a versão da aplicação, o hash do dispositivo, o tipo e texto do erro, o rastreio da pilha e linhas de registo. Os endereços de e-mail, os endereços IP e os nomes de pastas de utilizador em caminhos de ficheiros são mascarados antes do armazenamento. Conservados durante um máximo de 90 dias.",
+          "<strong>Relatórios de falhas:</strong> Incluem a versão da aplicação, o hash do dispositivo, o tipo e texto do erro, o rastreio da pilha e linhas de registo. Os endereços de e-mail, os endereços IP e os nomes de pastas de utilizador em caminhos de ficheiros são mascarados antes do armazenamento. Conservados durante um máximo de 30 dias. Ao enviar um relatório, é criado um identificador anónimo do Firebase para prevenir abusos; o endereço IP do pedido é conservado apenas como hash irreversível e durante um máximo de 24 horas.",
           "<strong>Transferências internacionais:</strong> O Firebase Authentication é operado pela Google a partir de centros de dados nos Estados Unidos. Para verificação de compras, a RevenueCat processa os seus dados nos Estados Unidos (AWS); esta transferência está coberta por Cláusulas Contratuais-Tipo. Os dados do Firestore, Cloud Functions e Cloud KMS são processados em servidores na Europa (europe-west1). Base legal para transferências a partir da Turquia ao abrigo do artigo 9.º da KVKK: [BASE LEGAL: A PREENCHER POR ADVOGADO].",
           "<strong>E-mail de apoio:</strong> Processado através do Google Groups (grupo de consumidores) e sujeito à <a href='https://policies.google.com/privacy?hl=en'>Política de Privacidade</a> e aos <a href='https://policies.google.com/terms?hl=en'>Termos</a> da Google. As mensagens são conservadas no arquivo do grupo."
         ]],
@@ -1113,7 +1122,8 @@ window.NAHI_LEGAL = {
           ["<strong>Telemetria de utilização e esquemas (opcional)</strong>", "ID de instalação aleatório, esquema de grelha (tipos de widget, posições, tamanhos), escolha de tema, plano", "Google Cloud Firestore (anonymous_layouts)", "Compreender os widgets e esquemas populares para melhorar a interface. <strong>Não contém dados pessoais, texto ou detalhes de conta.</strong>"],
           ["<strong>Dados locais da extensão</strong>", "Estado multimédia do separador ativo no navegador (título da faixa, artista, estado de reprodução)", "Apenas navegador local e aplicação de computador", "Apresentar multimédia da web no telemóvel e computador. Nunca é enviado para a nuvem."],
           ["<strong>Verificação da aplicação</strong>", "Nome do pacote, certificado de assinatura da aplicação e resultado de integridade do dispositivo", "Google Play Integrity (Google)", "Verificar se a aplicação foi instalada a partir do Google Play e se é executada num dispositivo fidedigno; prevenção de abusos. A Google não partilha estes dados com terceiros."],
-          ["<strong>Relatórios de falhas (opcional)</strong>", "Versão da aplicação, hash do dispositivo, tipo e texto do erro, rastreio de pilha e linhas de registo (endereços de e-mail e de IP mascarados)", "Google Cloud Functions e Firestore (Europa); e-mail de apoio via Google Groups", "Análise e correção de falhas. Enviado apenas mediante a sua confirmação."]
+          ["<strong>Relatórios de falhas (opcional)</strong>", "Versão da aplicação, hash do dispositivo, tipo e texto do erro, rastreio de pilha e linhas de registo (endereços de e-mail e de IP mascarados)", "Google Cloud Functions e Firestore (Europa); e-mail de apoio via Google Groups", "Análise e correção de falhas. Enviado apenas mediante a sua confirmação."],
+          ["<strong>Publicidade e identificadores de dispositivo (apenas plano Gratuito)</strong>", "ID de publicidade da Google (Android AD_ID), localização aproximada (através do endereço IP), modelo do dispositivo, métricas de impressão e interação com anúncios.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de Anúncios da Google</a>", "Apresentação de anúncios nativos 2x1 no plano Gratuito e prevenção de tráfego inválido. No plano Pro, os identificadores de publicidade não são recolhidos e o AdMob é totalmente desativado. Os utilizadores podem repor o ID de publicidade nas Definições do Android > Privacidade > Anúncios."]
         ]],
         ["card", [["p", "<strong>Responsável pelo tratamento:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail de contacto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Website:</strong> https://nahideck.github.io"]]],
       ]
@@ -1154,7 +1164,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Registos de faturação do Google Play:</strong> A Google conserva estes registos por requisitos fiscais e de legislação do consumidor. O NahiDeck não armazena detalhes de pagamento.",
           "<strong>Registos de auditoria:</strong> Os registos de operações de conta e licença contêm um identificador com hash que não pode ser associado diretamente à sua identidade e são eliminados automaticamente no prazo de 90 dias.",
-          "<strong>Relatórios de falhas:</strong> Eliminados automaticamente no prazo de 90 dias."
+          "<strong>Relatórios de falhas:</strong> Eliminados automaticamente no prazo de 30 dias."
         ]],
         ["danger", [
           ["h3", "Importante: cancele a sua subscrição ativa"],
@@ -1180,7 +1190,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Cosa raccogliamo:</strong> Dettagli dell'account (facoltativo), record di licenza Pro e associazione dispositivi, dati anonimi di utilizzo facoltativi e segnalazioni di arresto anomalo che scegli di inviare.",
           "<strong>Dove vengono elaborati:</strong> In Europa (Firestore, Cloud Functions). L'accesso (Firebase Authentication) e la verifica degli acquisti (RevenueCat) vengono elaborati negli Stati Uniti; la base per tale trasferimento è descritta di seguito.",
-          "<strong>Per quanto tempo li conserviamo:</strong> Log tecnici per 30 giorni, registri di audit e arresti anomali per 90 giorni, record anonimi di layout per 180 giorni. L'eliminazione dell'account rimuove tutti i dati dell'account.",
+          "<strong>Per quanto tempo li conserviamo:</strong> Log tecnici per 30 giorni, segnalazioni di arresto anomalo per 30 giorni, registri di audit per 90 giorni, record anonimi di layout per 180 giorni. L'eliminazione dell'account rimuove tutti i dati dell'account.",
           "<strong>I tuoi diritti:</strong> Puoi richiedere l'accesso, la rettifica e la cancellazione. Puoi eliminare il tuo account nell'app o nella pagina di eliminazione dell'account.",
           "<strong>Segnalazioni di arresto anomalo:</strong> Inviate solo previa tua conferma. La nota facoltativa e l'email di contatto sono incluse; la nota viene conservata così come scritta, mentre gli indirizzi email e IP vengono mascherati."
         ]],
@@ -1215,7 +1225,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> La revoca del consenso in Impostazioni > Privacy elimina immediatamente il record esistente. I record attivi scadono automaticamente entro 180 giorni (TTL).",
           "<strong>Log tecnici del server:</strong> I log delle richieste di infrastruttura sono conservati per un massimo di 30 giorni.",
           "<strong>Record di licenza e di audit:</strong> I record delle operazioni di account e licenza contengono una forma con hash unidirezionale dell'ID utente e sono conservati per un massimo di 90 giorni.",
-          "<strong>Segnalazioni di arresto anomalo:</strong> Includono versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log. Gli indirizzi email, gli indirizzi IP e i nomi di cartelle utente nei percorsi dei file vengono mascherati prima della memorizzazione. Conservati per un massimo di 90 giorni.",
+          "<strong>Segnalazioni di arresto anomalo:</strong> Includono versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log. Gli indirizzi email, gli indirizzi IP e i nomi di cartelle utente nei percorsi dei file vengono mascherati prima della memorizzazione. Conservati per un massimo di 30 giorni. Quando invii una segnalazione, viene creato un identificatore anonimo Firebase per prevenire abusi; l'indirizzo IP della richiesta viene conservato solo come hash irreversibile e per al massimo 24 ore.",
           "<strong>Trasferimenti internazionali:</strong> Firebase Authentication è gestito da Google dai data center negli Stati Uniti. Per la verifica degli acquisti, RevenueCat elabora i tuoi dati negli Stati Uniti (AWS); questo trasferimento è disciplinato dalle Clausole Contrattuali Standard. I dati di Firestore, Cloud Functions e Cloud KMS vengono elaborati su server in Europa (europe-west1). Base giuridica per i trasferimenti dalla Turchia ai sensi dell'art. 9 della legge KVKK: [BASE GIURIDICA: DA COMPILARE A CURA DELL'AVVOCATO].",
           "<strong>Email di assistenza:</strong> Elaborata tramite Google Groups (gruppo utenti) ed è soggetta alle <a href='https://policies.google.com/privacy?hl=en'>Norme sulla privacy</a> e ai <a href='https://policies.google.com/terms?hl=en'>Termini</a> di Google. I messaggi sono conservati nell'archivio del gruppo."
         ]],
@@ -1229,7 +1239,8 @@ window.NAHI_LEGAL = {
           ["<strong>Telemetria di utilizzo e layout (facoltativa)</strong>", "ID di installazione casuale, layout della griglia (tipi di widget, posizioni, dimensioni), preferenza del tema, livello del piano", "Google Cloud Firestore (anonymous_layouts)", "Comprensione dei widget e layout più diffusi per migliorare l'interfaccia. <strong>Non contiene dati personali, testo o dettagli dell'account.</strong>"],
           ["<strong>Dati locali dell'estensione</strong>", "Stato multimediale della scheda attiva del browser (titolo del brano, artista, stato di riproduzione)", "Esclusivamente browser locale e applicazione PC", "Visualizzazione dei file multimediali web su smartphone e PC. Mai inviati al cloud."],
           ["<strong>Verifica dell'applicazione</strong>", "Nome del pacchetto, certificato di firma dell'app e risultato di integrità del dispositivo", "Google Play Integrity (Google)", "Verifica che l'applicazione sia stata installata da Google Play e sia in esecuzione su un dispositivo affidabile; prevenzione di abusi. Google non condivide questi dati con terze parti."],
-          ["<strong>Segnalazioni di arresto anomalo (facoltative)</strong>", "Versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log (indirizzi email e IP mascherati)", "Google Cloud Functions e Firestore (Europa); email di supporto tramite Google Groups", "Analisi e risoluzione degli arresti anomali. Inviate solo previa tua conferma."]
+          ["<strong>Segnalazioni di arresto anomalo (facoltative)</strong>", "Versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log (indirizzi email e IP mascherati)", "Google Cloud Functions e Firestore (Europa); email di supporto tramite Google Groups", "Analisi e risoluzione degli arresti anomali. Inviate solo previa tua conferma."],
+          ["<strong>Pubblicità e identificatori del dispositivo (solo piano Gratuito)</strong>", "ID pubblicità di Google (Android AD_ID), posizione approssimativa (tramite indirizzo IP), modello di dispositivo, metriche di impressione e interazione pubblicitaria.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Norme sugli annunci di Google</a>", "Erogazione di annunci nativi 2x1 nel piano Gratuito e prevenzione del traffico non valido. Nel piano Pro, non vengono raccolti identificatori pubblicitari e AdMob è completamente disattivato. Gli utenti possono reimpostare il proprio ID pubblicità in Impostazioni Android > Privacy > Annunci."]
         ]],
         ["card", [["p", "<strong>Titolare del trattamento:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email di contatto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Sito web:</strong> https://nahideck.github.io"]]],
       ]
@@ -1270,7 +1281,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Record di fatturazione di Google Play:</strong> Google li conserva per obblighi fiscali e di tutela dei consumatori. NahiDeck non memorizza i dettagli di pagamento.",
           "<strong>Record di audit:</strong> I record delle operazioni di account e licenza contengono un identificatore con hash che non può essere collegato direttamente alla tua identità e vengono eliminati automaticamente entro 90 giorni.",
-          "<strong>Segnalazioni di arresto anomalo:</strong> Vengono eliminate automaticamente entro 90 giorni."
+          "<strong>Segnalazioni di arresto anomalo:</strong> Vengono eliminate automaticamente entro 30 giorni."
         ]],
         ["danger", [
           ["h3", "Importante: annulla l'abbonamento attivo"],
@@ -1296,7 +1307,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Co zbieramy:</strong> Szczegóły konta (opcjonalnie), rekordy licencji Pro i parowania urządzeń, opcjonalne anonimowe dane o użytkowaniu oraz raporty o awariach, które zdecydujesz się przesłać.",
           "<strong>Gdzie są przetwarzane:</strong> W Europie (Firestore, Cloud Functions). Logowanie (Firebase Authentication) i weryfikacja zakupów (RevenueCat) są przetwarzane w Stanach Zjednoczonych; podstawa tego transferu została opisana poniżej.",
-          "<strong>Jak długo przechowujemy:</strong> Dzienniki techniczne przez 30 dni, rejestry audytu i awarii przez 90 dni, anonimowe rejestry układów przez 180 dni. Usunięcie konta usuwa dane konta.",
+          "<strong>Jak długo przechowujemy:</strong> Dzienniki techniczne przez 30 dni, raporty o awariach przez 30 dni, rejestry audytu przez 90 dni, anonimowe rejestry układów przez 180 dni. Usunięcie konta usuwa dane konta.",
           "<strong>Twoje prawa:</strong> Możesz zażądać dostępu, sprostowania i usunięcia. Możesz usunąć swoje konto w aplikacji lub na stronie usuwania konta.",
           "<strong>Raporty o awariach:</strong> Wysyłane tylko za Twoim potwierdzeniem. Twoja opcjonalna notatka i e-mail kontaktowy są dołączane; notatka jest zapisywana w pierwotnej formie, a adresy e-mail i IP są maskowane."
         ]],
@@ -1331,7 +1342,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> Wycofanie zgody w Ustawienia > Prywatność powoduje natychmiastowe usunięcie dotychczasowego rekordu. Aktywne rekordy wygasają automatycznie w ciągu maksymalnie 180 dni (TTL).",
           "<strong>Dzienniki techniczne serwera:</strong> Dzienniki żądań infrastruktury są przechowywane przez maksymalnie 30 dni.",
           "<strong>Rejestry licencji i audytu:</strong> Rejestry operacji na koncie i licencji zawierają jednokierunkowy skrót (hash) Twojego identyfikatora użytkownika i są przechowywane przez maksymalnie 90 dni.",
-          "<strong>Raporty o awariach:</strong> Zawierają wersję aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu oraz wiersze dziennika. Adresy e-mail, adresy IP i nazwy folderów użytkownika w ścieżkach plików są maskowane przed zapisaniem. Przechowywane przez maksymalnie 90 dni.",
+          "<strong>Raporty o awariach:</strong> Zawierają wersję aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu oraz wiersze dziennika. Adresy e-mail, adresy IP i nazwy folderów użytkownika w ścieżkach plików są maskowane przed zapisaniem. Przechowywane przez maksymalnie 30 dni. Podczas wysyłania raportu tworzony jest anonimowy identyfikator Firebase w celu zapobiegania nadużyciom; adres IP żądania jest przechowywany wyłącznie jako nieodwracalny skrót i przez maksymalnie 24 godziny.",
           "<strong>Transfery międzynarodowe:</strong> Usługa Firebase Authentication jest prowadzona przez firmę Google w centrach danych w Stanach Zjednoczonych. W celu weryfikacji zakupów RevenueCat przetwarza dane w Stanach Zjednoczonych (AWS); transfer ten opiera się na Standardowych Klauzulach Umownych. Dane Firestore, Cloud Functions i Cloud KMS są przetwarzane na serwerach w Europie (europe-west1). Podstawa prawna transferu z Turcji na mocy art. 9 KVKK: [PODSTAWA PRAWNA: DO UZUPEŁNIENIA PRZEZ PRAWNIKA].",
           "<strong>E-mail wsparcia:</strong> Przetwarzany za pośrednictwem Google Groups (grupa konsumencka) i podlega <a href='https://policies.google.com/privacy?hl=en'>Polityce prywatności</a> oraz <a href='https://policies.google.com/terms?hl=en'>Warunkom korzystania z usług</a> firmy Google. Wiadomości są przechowywane w archiwum grupy."
         ]],
@@ -1345,7 +1356,8 @@ window.NAHI_LEGAL = {
           ["<strong>Telemetria użytkowania i układów (opcjonalnie)</strong>", "Losowy identyfikator instalacji, układ siatki (typy widżetów, pozycje, rozmiary), wybór motywu, poziom planu", "Google Cloud Firestore (anonymous_layouts)", "Analiza popularnych widżetów i układów w celu ulepszania interfejsu. <strong>Nie zawiera danych osobowych, tekstu ani danych konta.</strong>"],
           ["<strong>Lokalne dane rozszerzenia</strong>", "Stan multimediów aktywnej karty przeglądarki (tytuł utworu, wykonawca, stan odtwarzania)", "Tylko lokalna przeglądarka i aplikacja PC", "Wyświetlanie multimediów internetowych na telefonie i komputerze. Nigdy nie są wysyłane do chmury."],
           ["<strong>Weryfikacja aplikacji</strong>", "Nazwa pakietu, certyfikat podpisu aplikacji i wynik integralności urządzenia", "Google Play Integrity (Google)", "Weryfikacja, czy aplikacja została zainstalowana z Google Play i działa na zaufanym urządzeniu; zapobieganie nadużyciom. Google nie udostępnia tych danych stronom trzecim."],
-          ["<strong>Raporty o awariach (opcjonalnie)</strong>", "Wersja aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu i wiersze dziennika (adresy e-mail i IP są maskowane)", "Google Cloud Functions i Firestore (Europa); e-mail wsparcia przez Google Groups", "Analizowanie i naprawianie awarii. Wysyłane wyłącznie za Twoim potwierdzeniem."]
+          ["<strong>Raporty o awariach (opcjonalnie)</strong>", "Wersja aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu i wiersze dziennika (adresy e-mail i IP są maskowane)", "Google Cloud Functions i Firestore (Europa); e-mail wsparcia przez Google Groups", "Analizowanie i naprawianie awarii. Wysyłane wyłącznie za Twoim potwierdzeniem."],
+          ["<strong>Reklamy i identyfikatory urządzeń (tylko plan Bezpłatny)</strong>", "Identyfikator reklamowy Google (Android AD_ID), przybliżona lokalizacja (na podstawie adresu IP), model urządzenia, wskaźniki wyświetleń i interakcji z reklamami.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Zasady Google dotyczące reklam</a>", "Wyświetlanie natywnych reklam 2x1 w planie Bezpłatnym oraz zapobieganie nieprawidłowemu ruchowi. W planie Pro identyfikatory reklamowe nie są gromadzone, a usługa AdMob jest całkowicie wyłączona. Użytkownicy mogą zresetować identyfikator reklamowy w menu Ustawienia Androida > Prywatność > Reklamy."]
         ]],
         ["card", [["p", "<strong>Administrator danych:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail kontaktowy:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Strona internetowa:</strong> https://nahideck.github.io"]]],
       ]
@@ -1386,7 +1398,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Rekordy rozliczeniowe Google Play:</strong> Firma Google przechowuje je ze względów podatkowych i przepisów konsumenckich. NahiDeck nie przechowuje danych dotyczących płatności.",
           "<strong>Rejestry audytu:</strong> Rejestry operacji na koncie i licencji zawierają zhaszowany identyfikator, którego nie można bezpośrednio powiązać z Twoją tożsamością, i są usuwane automatycznie w ciągu 90 dni.",
-          "<strong>Raporty o awariach:</strong> Są usuwane automatycznie w ciągu 90 dni."
+          "<strong>Raporty o awariach:</strong> Są usuwane automatycznie w ciągu 30 dni."
         ]],
         ["danger", [
           ["h3", "Ważne: anuluj aktywną subskrypcję"],
@@ -1412,7 +1424,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Что мы собираем:</strong> Данные аккаунта (необязательно), записи лицензии Pro и сопряжения устройств, необязательные анонимные данные об использовании и отчеты о сбоях, которые вы решите отправить.",
           "<strong>Где обрабатываются данные:</strong> В Европе (Firestore, Cloud Functions). Вход в систему (Firebase Authentication) и проверка покупок (RevenueCat) обрабатываются в США; основания для передачи описаны ниже.",
-          "<strong>Сроки хранения:</strong> Технические журналы — 30 дней, записи аудита и отчеты о сбоях — 90 дней, анонимные записи макетов — 180 дней. При удалении аккаунта все его данные удаляются.",
+          "<strong>Сроки хранения:</strong> Технические журналы — 30 дней, отчеты о сбоях — 30 дней, записи аудита — 90 дней, анонимные записи макетов — 180 дней. При удалении аккаунта все его данные удаляются.",
           "<strong>Ваши права:</strong> Вы можете запросить доступ, исправление и удаление данных. Удалить аккаунт можно в приложении или на странице удаления аккаунта.",
           "<strong>Отчеты о сбоях:</strong> Отправляются только с вашего подтверждения. Необязательный комментарий и контактный адрес эл. почты включаются в отчет; комментарий сохраняется как есть, а адреса эл. почты и IP-адреса маскируются."
         ]],
@@ -1447,7 +1459,7 @@ window.NAHI_LEGAL = {
           "<strong>Телеметрия:</strong> При отзыве согласия в «Настройки > Конфиденциальность» текущая запись немедленно удаляется. Активные записи автоматически удаляются по истечении 180 дней (TTL).",
           "<strong>Технические журналы серверов:</strong> Журналы запросов инфраструктуры хранятся не более 30 дней.",
           "<strong>Записи о лицензиях и аудите:</strong> Записи операций с аккаунтом и лицензиями содержат необратимый хеш идентификатора пользователя и хранятся не более 90 дней.",
-          "<strong>Отчеты о сбоях:</strong> Содержат версию приложения, хеш устройства, тип и текст ошибки, трассировку стека и строки журнала. Адреса эл. почты, IP-адреса и имена пользовательских папок в путях к файлам маскируются перед сохранением. Хранятся не более 90 дней.",
+          "<strong>Отчеты о сбоях:</strong> Содержат версию приложения, хеш устройства, тип и текст ошибки, трассировку стека и строки журнала. Адреса эл. почты, IP-адреса и имена пользовательских папок в путях к файлам маскируются перед сохранением. Хранятся не более 30 дней. При отправке отчета создается анонимный идентификатор Firebase для предотвращения злоупотреблений; IP-адрес запроса хранится только в виде необратимого хеша и не более 24 часов.",
           "<strong>Международная передача данных:</strong> Сервис Firebase Authentication обслуживается компанией Google в дата-центрах США. Для проверки покупок RevenueCat обрабатывает данные в США (AWS); передача защищена Стандартными договорными условиями. Данные Firestore, Cloud Functions и Cloud KMS обрабатываются на серверах в Европе (europe-west1). Правовые основания для передачи из Турции согласно ст. 9 KVKK: [ПРАВОВОЕ ОСНОВАНИЕ: ЗАПОЛНЯЕТСЯ ЮРИСТОМ].",
           "<strong>Электронная почта поддержки:</strong> Обрабатывается через Google Groups (пользовательская группа) в соответствии с <a href='https://policies.google.com/privacy?hl=en'>Политикой конфиденциальности</a> и <a href='https://policies.google.com/terms?hl=en'>Условиями использования</a> Google. Сообщения сохраняются в архиве группы."
         ]],
@@ -1461,7 +1473,8 @@ window.NAHI_LEGAL = {
           ["<strong>Телеметрия использования и макетов (необязательно)</strong>", "Случайный идентификатор установки, структура сетки (типы виджетов, позиции, размеры), тема оформления, тариф", "Google Cloud Firestore (anonymous_layouts)", "Анализ популярных виджетов и макетов для улучшения интерфейса. <strong>Не содержит персональных данных, текста или информации об аккаунте.</strong>"],
           ["<strong>Локальные данные расширения</strong>", "Состояние медиа в активной вкладке браузера (название трека, исполнитель, статус воспроизведения)", "Только локальный браузер и приложение для ПК", "Отображение воспроизводимого контента на телефоне и ПК. Никогда не отправляется в облако."],
           ["<strong>Проверка подлинности приложения</strong>", "Имя пакета, сертификат подписи приложения и результат проверки целостности устройства", "Google Play Integrity (Google)", "Подтверждение того, что приложение установлено из Google Play и запущено на надежном устройстве; предотвращение злоупотреблений. Google не передает эти данные третьим лицам."],
-          ["<strong>Отчеты о сбоях (необязательно)</strong>", "Версия приложения, хеш устройства, тип и текст ошибки, трассировка стека и строки журнала (эл. почта и IP маскируются)", "Google Cloud Functions и Firestore (Европа); поддержка через Google Groups", "Анализ и устранение сбоев. Отправляется только с вашего согласия."]
+          ["<strong>Отчеты о сбоях (необязательно)</strong>", "Версия приложения, хеш устройства, тип и текст ошибки, трассировка стека и строки журнала (эл. почта и IP маскируются)", "Google Cloud Functions и Firestore (Европа); поддержка через Google Groups", "Анализ и устранение сбоев. Отправляется только с вашего согласия."],
+          ["<strong>Реклама и идентификаторы устройства (только бесплатный план)</strong>", "Рекламный идентификатор Google (Android AD_ID), приблизительное местоположение (по IP-адресу), модель устройства, показатели показов и взаимодействия с рекламой.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Политика рекламы Google</a>", "Показ нативной рекламы 2x1 в бесплатном плане и предотвращение недействительного трафика. В плане Pro рекламные идентификаторы не собираются, а AdMob полностью отключается. Пользователи могут сбросить рекламный идентификатор в разделе «Настройки Android» > «Конфиденциальность» > «Реклама»."]
         ]],
         ["card", [["p", "<strong>Оператор данных:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Контактный адрес:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Веб-сайт:</strong> https://nahideck.github.io"]]],
       ]
@@ -1502,7 +1515,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Платежные записи Google Play:</strong> Сохраняются Google в соответствии с налоговым и потребительским законодательством. NahiDeck не хранит платежные реквизиты.",
           "<strong>Записи аудита:</strong> Записи операций с аккаунтом и лицензиями содержат хешированный идентификатор, который нельзя напрямую связать с вами, и автоматически удаляются в течение 90 дней.",
-          "<strong>Отчеты о сбоях:</strong> Автоматически удаляются в течение 90 дней."
+          "<strong>Отчеты о сбоях:</strong> Автоматически удаляются в течение 30 дней."
         ]],
         ["danger", [
           ["h3", "Важно: отмените действующую подписку"],
@@ -1528,7 +1541,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Apa yang kami kumpulkan:</strong> Detail akun (opsional), catatan lisensi Pro dan pemasangan perangkat, data penggunaan anonim opsional, serta laporan kerusakan yang Anda pilih untuk dikirim.",
           "<strong>Di mana data diproses:</strong> Di Eropa (Firestore, Cloud Functions). Masuk akun (Firebase Authentication) dan verifikasi pembelian (RevenueCat) diproses di Amerika Serikat; dasar transfer dijelaskan di bawah.",
-          "<strong>Berapa lama kami menyimpannya:</strong> Log teknis selama 30 hari, catatan audit dan laporan kerusakan selama 90 hari, catatan tata letak anonim selama 180 hari. Menghapus akun Anda akan menghapus seluruh data akun.",
+          "<strong>Berapa lama kami menyimpannya:</strong> Log teknis selama 30 hari, laporan kerusakan selama 30 hari, catatan audit selama 90 hari, catatan tata letak anonim selama 180 hari. Menghapus akun Anda akan menghapus seluruh data akun.",
           "<strong>Hak-hak Anda:</strong> Anda dapat meminta akses, perbaikan, dan penghapusan data. Anda dapat menghapus akun Anda di aplikasi atau di halaman Penghapusan Akun.",
           "<strong>Laporan kerusakan:</strong> Hanya dikirim jika Anda mengonfirmasi. Catatan opsional dan email kontak Anda disertakan; catatan disimpan apa adanya, sedangkan alamat email dan IP disamarkan."
         ]],
@@ -1563,7 +1576,7 @@ window.NAHI_LEGAL = {
           "<strong>Telemetri:</strong> Menarik persetujuan di Pengaturan > Privasi akan segera menghapus catatan yang ada. Catatan aktif kedaluwarsa secara otomatis dalam 180 hari (TTL).",
           "<strong>Log server teknis:</strong> Log permintaan infrastruktur disimpan hingga 30 hari.",
           "<strong>Catatan lisensi dan audit:</strong> Catatan operasi akun dan lisensi berisi hash satu arah dari pengenal pengguna Anda dan disimpan hingga 90 hari.",
-          "<strong>Laporan kerusakan:</strong> Berisi versi aplikasi, hash perangkat, jenis dan teks kesalahan, pelacakan tumpukan, dan baris log. Alamat email, alamat IP, dan nama folder pengguna dalam jalur berkas disamarkan sebelum disimpan. Disimpan hingga 90 hari.",
+          "<strong>Laporan kerusakan:</strong> Berisi versi aplikasi, hash perangkat, jenis dan teks kesalahan, pelacakan tumpukan, dan baris log. Alamat email, alamat IP, dan nama folder pengguna dalam jalur berkas disamarkan sebelum disimpan. Disimpan hingga 30 hari. Saat Anda mengirim laporan, pengenal anonim Firebase dibuat untuk mencegah penyalahgunaan; alamat IP permintaan hanya disimpan sebagai hash satu arah dan paling lama 24 jam.",
           "<strong>Transfer internasional:</strong> Firebase Authentication dioperasikan oleh Google dari pusat data di Amerika Serikat. Untuk verifikasi pembelian, RevenueCat memproses data Anda di Amerika Serikat (AWS); transfer ini dilindungi oleh Klausul Kontrak Standar. Data Firestore, Cloud Functions, dan Cloud KMS diproses di server di Eropa (europe-west1). Dasar hukum transfer dari Turki berdasarkan Pasal 9 KVKK: [DASAR HUKUM: AKAN DIISI OLEH PENGACARA].",
           "<strong>Email dukungan:</strong> Diproses melalui Google Groups (grup konsumen) dan tunduk pada <a href='https://policies.google.com/privacy?hl=en'>Kebijakan Privasi</a> serta <a href='https://policies.google.com/terms?hl=en'>Persyaratan Layanan</a> Google. Pesan disimpan dalam arsip grup."
         ]],
@@ -1577,7 +1590,8 @@ window.NAHI_LEGAL = {
           ["<strong>Telemetri penggunaan dan tata letak (opsional)</strong>", "ID instalasi acak, tata letak kisi (jenis widget, posisi, ukuran), pilihan tema, tingkat paket", "Google Cloud Firestore (anonymous_layouts)", "Memahami widget dan tata letak populer untuk meningkatkan antarmuka. <strong>Tidak memuat data pribadi, teks, atau detail akun.</strong>"],
           ["<strong>Data ekstensi lokal</strong>", "Status media dari tab browser yang aktif (judul trek, artis, status pemutaran)", "Hanya browser lokal dan aplikasi PC", "Menampilkan media web di ponsel dan PC Anda. Tidak pernah dikirim ke cloud."],
           ["<strong>Verifikasi aplikasi</strong>", "Nama paket, sertifikat penandatanganan aplikasi, dan hasil integritas perangkat", "Google Play Integrity (Google)", "Memverifikasi bahwa aplikasi dipasang dari Google Play dan berjalan di perangkat tepercaya; mencegah penyalahgunaan. Google tidak membagikan data ini kepada pihak ketiga."],
-          ["<strong>Laporan kerusakan (opsional)</strong>", "Versi aplikasi, hash perangkat, jenis dan teks kesalahan, stack trace, dan baris log (email dan IP disamarkan)", "Google Cloud Functions dan Firestore (Eropa); email dukungan melalui Google Groups", "Menganalisis dan memperbaiki kerusakan. Hanya dikirim dengan persetujuan Anda."]
+          ["<strong>Laporan kerusakan (opsional)</strong>", "Versi aplikasi, hash perangkat, jenis dan teks kesalahan, stack trace, dan baris log (email dan IP disamarkan)", "Google Cloud Functions dan Firestore (Eropa); email dukungan melalui Google Groups", "Menganalisis dan memperbaiki kerusakan. Hanya dikirim dengan persetujuan Anda."],
+          ["<strong>Iklan dan pengidentifikasi perangkat (hanya paket Gratis)</strong>", "ID Iklan Google (Android AD_ID), perkiraan lokasi (melalui alamat IP), model perangkat, metrik tayangan dan interaksi iklan.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Kebijakan Iklan Google</a>", "Menayangkan iklan native 2x1 pada paket Gratis dan mencegah lalu lintas tidak valid. Pada paket Pro, pengidentifikasi iklan tidak dikumpulkan dan AdMob dinonaktifkan sepenuhnya. Pengguna dapat menyetel ulang ID Iklan di Pengaturan Android > Privasi > Iklan."]
         ]],
         ["card", [["p", "<strong>Pengendali data:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email kontak:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Situs web:</strong> https://nahideck.github.io"]]],
       ]
@@ -1618,7 +1632,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Catatan penagihan Google Play:</strong> Google menyimpannya karena alasan pajak dan hukum konsumen. NahiDeck tidak menyimpan detail pembayaran.",
           "<strong>Catatan audit:</strong> Catatan operasi akun dan lisensi berisi pengenal yang di-hash yang tidak dapat dikaitkan langsung dengan identitas Anda, dan dihapus otomatis dalam 90 hari.",
-          "<strong>Laporan kerusakan:</strong> Dihapus otomatis dalam 90 hari."
+          "<strong>Laporan kerusakan:</strong> Dihapus otomatis dalam 30 hari."
         ]],
         ["danger", [
           ["h3", "Penting: batalkan langganan aktif Anda"],
@@ -1644,7 +1658,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Những gì chúng tôi thu thập:</strong> Thông tin tài khoản (tùy chọn), dữ liệu bản quyền Pro và ghép nối thiết bị, dữ liệu sử dụng ẩn danh tùy chọn và báo cáo sự cố bạn chọn gửi.",
           "<strong>Nơi xử lý dữ liệu:</strong> Tại Châu Âu (Firestore, Cloud Functions). Đăng nhập (Firebase Authentication) và xác minh mua hàng (RevenueCat) được xử lý tại Hoa Kỳ; căn cứ pháp lý chuyển giao dữ liệu được nêu bên dưới.",
-          "<strong>Thời gian lưu giữ:</strong> Nhật ký kỹ thuật 30 ngày, dữ liệu kiểm toán và sự cố 90 ngày, dữ liệu bố cục ẩn danh 180 ngày. Khi xóa tài khoản, toàn bộ dữ liệu tài khoản sẽ bị xóa.",
+          "<strong>Thời gian lưu giữ:</strong> Nhật ký kỹ thuật 30 ngày, báo cáo sự cố 30 ngày, dữ liệu kiểm toán 90 ngày, dữ liệu bố cục ẩn danh 180 ngày. Khi xóa tài khoản, toàn bộ dữ liệu tài khoản sẽ bị xóa.",
           "<strong>Quyền của bạn:</strong> Bạn có quyền yêu cầu truy cập, chỉnh sửa và xóa dữ liệu. Bạn có thể xóa tài khoản trong ứng dụng hoặc tại trang Xóa tài khoản.",
           "<strong>Báo cáo sự cố:</strong> Chỉ được gửi khi bạn xác nhận. Ghi chú và email liên hệ tùy chọn sẽ được gửi kèm; ghi chú được lưu nguyên văn, còn email và địa chỉ IP sẽ được che dấu."
         ]],
@@ -1679,7 +1693,7 @@ window.NAHI_LEGAL = {
           "<strong>Dữ liệu đo lường từ xa:</strong> Rút lại sự đồng ý trong Cài đặt > Quyền riêng tư sẽ xóa bản ghi hiện có ngay lập tức. Các bản ghi đang hoạt động sẽ tự động hết hạn trong vòng 180 ngày (TTL).",
           "<strong>Nhật ký máy chủ kỹ thuật:</strong> Nhật ký yêu cầu hạ tầng được lưu giữ tối đa 30 ngày.",
           "<strong>Dữ liệu bản quyền và kiểm toán:</strong> Bản ghi hoạt động tài khoản và bản quyền chứa mã băm một chiều của mã định danh người dùng và được lưu tối đa 90 ngày.",
-          "<strong>Báo cáo sự cố:</strong> Bao gồm phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và các dòng nhật ký. Địa chỉ email, địa chỉ IP và tên thư mục người dùng trong đường dẫn tệp được che dấu trước khi lưu. Được giữ tối đa 90 ngày.",
+          "<strong>Báo cáo sự cố:</strong> Bao gồm phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và các dòng nhật ký. Địa chỉ email, địa chỉ IP và tên thư mục người dùng trong đường dẫn tệp được che dấu trước khi lưu. Được giữ tối đa 30 ngày. Khi bạn gửi báo cáo, một mã định danh ẩn danh của Firebase được tạo để ngăn chặn lạm dụng; địa chỉ IP của yêu cầu chỉ được lưu dưới dạng hash một chiều và tối đa 24 giờ.",
           "<strong>Chuyển giao quốc tế:</strong> Firebase Authentication được Google vận hành từ các trung tâm dữ liệu tại Hoa Kỳ. Để xác minh giao dịch mua hàng, RevenueCat xử lý dữ liệu của bạn tại Hoa Kỳ (AWS); việc chuyển giao này tuân thủ các Điều khoản hợp đồng tiêu chuẩn. Dữ liệu Firestore, Cloud Functions và Cloud KMS được xử lý trên máy chủ tại Châu Âu (europe-west1). Căn cứ pháp lý chuyển giao từ Thổ Nhĩ Kỳ theo Điều 9 KVKK: [CĂN CỨ PHÁP LÝ: DO LUẬT SƯ ĐIỀN].",
           "<strong>Email hỗ trợ:</strong> Được xử lý qua Google Groups (nhóm người dùng) và tuân theo <a href='https://policies.google.com/privacy?hl=en'>Chính sách quyền riêng tư</a> cùng <a href='https://policies.google.com/terms?hl=en'>Điều khoản dịch vụ</a> của Google. Thư được lưu trong kho lưu trữ nhóm."
         ]],
@@ -1693,7 +1707,8 @@ window.NAHI_LEGAL = {
           ["<strong>Đo lường sử dụng và bố cục (tùy chọn)</strong>", "Mã cài đặt ngẫu nhiên, bố cục lưới (loại widget, vị trí, kích thước), lựa chọn chủ đề, gói dịch vụ", "Google Cloud Firestore (anonymous_layouts)", "Tìm hiểu các widget và bố cục phổ biến để cải thiện giao diện. <strong>Không chứa dữ liệu cá nhân, văn bản hay chi tiết tài khoản.</strong>"],
           ["<strong>Dữ liệu tiện ích cục bộ</strong>", "Trạng thái đa phương tiện của tab trình duyệt đang hoạt động (tên bài hát, nghệ sĩ, trạng thái phát)", "Chỉ trên trình duyệt cục bộ và ứng dụng máy tính", "Hiển thị nội dung phát đa phương tiện trên điện thoại và máy tính. Không bao giờ gửi lên đám mây."],
           ["<strong>Xác minh ứng dụng</strong>", "Tên gói, chứng chỉ ký ứng dụng và kết quả tính toàn vẹn của thiết bị", "Google Play Integrity (Google)", "Xác minh ứng dụng được cài đặt từ Google Play và chạy trên thiết bị đáng tin cậy; ngăn chặn hành vi lạm dụng. Google không chia sẻ dữ liệu này cho bên thứ ba."],
-          ["<strong>Báo cáo sự cố (tùy chọn)</strong>", "Phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và dòng nhật ký (email và IP được che dấu)", "Google Cloud Functions và Firestore (Châu Âu); hỗ trợ email qua Google Groups", "Phân tích và khắc phục sự cố. Chỉ gửi khi có sự đồng ý của bạn."]
+          ["<strong>Báo cáo sự cố (tùy chọn)</strong>", "Phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và dòng nhật ký (email và IP được che dấu)", "Google Cloud Functions và Firestore (Châu Âu); hỗ trợ email qua Google Groups", "Phân tích và khắc phục sự cố. Chỉ gửi khi có sự đồng ý của bạn."],
+          ["<strong>Quảng cáo và mã nhận dạng thiết bị (chỉ dành cho gói Miễn phí)</strong>", "Mã nhận dạng quảng cáo Google (Android AD_ID), vị trí ước tính (qua địa chỉ IP), kiểu thiết bị, số liệu hiển thị và tương tác với quảng cáo.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Chính sách quảng cáo của Google</a>", "Hiển thị quảng cáo gốc 2x1 trong gói Miễn phí và ngăn chặn lưu lượng truy cập không hợp lệ. Trong gói Pro, không thu thập mã nhận dạng quảng cáo và AdMob bị tắt hoàn toàn. Người dùng có thể đặt lại Mã nhận dạng quảng cáo trong Cài đặt Android > Quyền riêng tư > Quảng cáo."]
         ]],
         ["card", [["p", "<strong>Bên kiểm soát dữ liệu:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email liên hệ:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Trang web:</strong> https://nahideck.github.io"]]],
       ]
@@ -1734,7 +1749,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Dữ liệu thanh toán Google Play:</strong> Được Google lưu giữ vì nghĩa vụ thuế và luật người tiêu dùng. NahiDeck không lưu trữ thông tin thanh toán.",
           "<strong>Dữ liệu kiểm toán:</strong> Các bản ghi hoạt động tài khoản và bản quyền chứa mã định danh đã băm không thể liên kết trực tiếp với bạn, và sẽ tự động xóa sau 90 ngày.",
-          "<strong>Báo cáo sự cố:</strong> Tự động xóa sau 90 ngày."
+          "<strong>Báo cáo sự cố:</strong> Tự động xóa sau 30 ngày."
         ]],
         ["danger", [
           ["h3", "Quan trọng: hủy gói đăng ký đang hoạt động"],
@@ -1760,7 +1775,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>収集する情報：</strong>アカウント情報（任意）、Proライセンスおよびデバイスペアリング記録、匿名の利用状況データ（任意）、および送信を選択したクラッシュレポート。",
           "<strong>処理場所：</strong>ヨーロッパ（Firestore、Cloud Functions）。サインイン（Firebase Authentication）および購入検証（RevenueCat）は米国で処理されます。この転送の根拠は下記に記載されています。",
-          "<strong>保管期間：</strong>技術ログは30日間、監査およびクラッシュ記録は90日間、匿名レイアウト記録は180日間。アカウントを削除すると、アカウントデータは削除されます。",
+          "<strong>保管期間：</strong>技術ログは30日間、クラッシュレポートは30日間、監査記録は90日間、匿名レイアウト記録は180日間。アカウントを削除すると、アカウントデータは削除されます。",
           "<strong>お客様の権利：</strong>アクセス、訂正、および削除を要求できます。アカウントはアプリ内またはアカウント削除ページから削除できます。",
           "<strong>クラッシュレポート：</strong>お客様が確認した場合にのみ送信されます。任意のメモおよび連絡先メールアドレスが含まれます。メモは入力された通りに保存され、メールアドレスおよびIPアドレスはマスキングされます。"
         ]],
@@ -1795,7 +1810,7 @@ window.NAHI_LEGAL = {
           "<strong>テレメトリ：</strong>「設定 > プライバシー」で同意を撤回すると、既存の記録は即座に削除されます。有効な記録は最大180日以内に自動的に有効期限切れ（TTL）となります。",
           "<strong>技術サーバーログ：</strong>インフラストラクチャのリクエストログは最大30日間保持されます。",
           "<strong>ライセンスおよび監査記録：</strong>アカウントおよびライセンス操作の記録には、不可逆ハッシュ化されたユーザーIDが含まれ、最大90日間保持されます。",
-          "<strong>クラッシュレポート：</strong>アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行が含まれます。ファイルパス内のメールアドレス、IPアドレス、ユーザーフォルダ名は保存前にマスキングされます。最大90日間保持されます。",
+          "<strong>クラッシュレポート：</strong>アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行が含まれます。ファイルパス内のメールアドレス、IPアドレス、ユーザーフォルダ名は保存前にマスキングされます。最大30日間保持されます。レポートを送信すると、不正利用を防ぐために Firebase の匿名識別子が作成されます。リクエストの IP アドレスは不可逆なハッシュとしてのみ、最長24時間保存されます。",
           "<strong>国際転送：</strong>Firebase Authenticationは米国のデータセンターからGoogleによって運営されています。購入検証のため、RevenueCatはお客様のデータを米国（AWS）で処理します。この転送は標準契約条項（SCC）によって保護されています。Firestore、Cloud Functions、Cloud KMSのデータはヨーロッパ（europe-west1）のサーバーで処理されます。KVKK第9条に基づくトルコからのデータ転送の法的根拠：[法的根拠：弁護士が記入]。",
           "<strong>サポートメール：</strong>Google Groups（一般消費者向けグループ）を通じて処理され、Googleの<a href='https://policies.google.com/privacy?hl=ja'>プライバシーポリシー</a>および<a href='https://policies.google.com/terms?hl=ja'>利用規約</a>に従います。メッセージはグループのアーカイブに保存されます。"
         ]],
@@ -1809,7 +1824,8 @@ window.NAHI_LEGAL = {
           ["<strong>利用状況およびレイアウトテレメトリ（任意）</strong>", "ランダムなインストールID、グリッドレイアウト（ウィジェット種類、配置、サイズ）、テーマ選択、プラン種別", "Google Cloud Firestore（anonymous_layouts）", "人気のあるウィジェットやレイアウトを分析してUIを改善するため。<strong>個人データ、テキスト、アカウント情報は一切含みません。</strong>"],
           ["<strong>ローカル拡張機能データ</strong>", "アクティブなブラウザタブのメディア状態（曲名、アーティスト、再生状態）", "ローカルブラウザおよびPCアプリのみ", "スマートフォンおよびPC上でウェブメディアを表示するため。クラウドには送信されません。"],
           ["<strong>アプリ検証</strong>", "パッケージ名、アプリ署名証明書、デバイス完全性結果", "Google Play Integrity（Google）", "アプリがGoogle Playからインストールされ、信頼できるデバイスで動作していることを検証し、不正利用を防止するため。Googleはこのデータを第三者と共有しません。"],
-          ["<strong>クラッシュレポート（任意）</strong>", "アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行（メールアドレスとIPはマスキング）", "Google Cloud Functions および Firestore（ヨーロッパ）；Google Groups経由のサポートメール", "クラッシュの分析と修正。お客様の確認がある場合にのみ送信。"]
+          ["<strong>クラッシュレポート（任意）</strong>", "アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行（メールアドレスとIPはマスキング）", "Google Cloud Functions および Firestore（ヨーロッパ）；Google Groups経由のサポートメール", "クラッシュの分析と修正。お客様の確認がある場合にのみ送信。"],
+          ["<strong>広告およびデバイス識別子（無料プランのみ）</strong>", "Google広告ID（Android AD_ID）、おおよその位置情報（IPアドレス経由）、端末モデル、広告の表示および操作に関する指標。", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google広告ポリシー</a>", "無料プランでの2x1ネイティブ広告の配信および無効なトラフィックの防止。Proプランでは広告識別子は一切収集されず、AdMobは完全に無効化されます。ユーザーはAndroidの「設定」>「プライバシー」>「広告」から広告IDをいつでもリセットできます。"]
         ]],
         ["card", [["p", "<strong>データ管理者：</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>連絡先メールアドレス：</strong> nahideck-support@googlegroups.com"], ["p", "<strong>ウェブサイト：</strong> https://nahideck.github.io"]]],
       ]
@@ -1850,7 +1866,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play請求記録：</strong>税務および消費者保護法上の要件によりGoogleによって保持されます。NahiDeckは支払い情報を保存しません。",
           "<strong>監査記録：</strong>アカウントおよびライセンス操作の記録には個人を直接特定できないハッシュ化識別子が含まれ、90日以内に自動削除されます。",
-          "<strong>クラッシュレポート：</strong>90日以内に自動削除されます。"
+          "<strong>クラッシュレポート：</strong>30日以内に自動削除されます。"
         ]],
         ["danger", [
           ["h3", "重要：有効なサブスクリプションを解約してください"],
@@ -1876,7 +1892,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>수집 항목:</strong> 계정 정보(선택), Pro 라이선스 및 기기 페어링 기록, 선택적 익명 사용 통계, 사용자가 전송을 선택한 오류 보고서.",
           "<strong>처리 위치:</strong> 유럽(Firestore, Cloud Functions). 로그인(Firebase Authentication) 및 결제 확인(RevenueCat)은 미국에서 처리되며, 해당 국외 이전 근거는 아래에 명시되어 있습니다.",
-          "<strong>보관 기간:</strong> 기술 로그 30일, 감사 및 오류 기록 90일, 익명 레이아웃 기록 180일. 계정 삭제 시 계정 데이터는 완전히 삭제됩니다.",
+          "<strong>보관 기간:</strong> 기술 로그 30일, 오류 보고서 30일, 감사 기록 90일, 익명 레이아웃 기록 180일. 계정 삭제 시 계정 데이터는 완전히 삭제됩니다.",
           "<strong>이용자의 권리:</strong> 데이터 열람, 정정 및 삭제를 요청할 수 있습니다. 앱 내 또는 계정 삭제 페이지에서 계정을 직접 삭제할 수 있습니다.",
           "<strong>오류 보고서:</strong> 이용자가 전송을 확인한 경우에만 전달됩니다. 선택적 메모와 연락처 이메일이 포함되며 메모는 작성된 그대로 저장되고 이메일과 IP 주소는 마스킹 처리됩니다."
         ]],
@@ -1911,7 +1927,7 @@ window.NAHI_LEGAL = {
           "<strong>원격 분석 데이터:</strong> '설정 > 개인정보'에서 동의를 철회하면 기존 기록이 즉시 삭제됩니다. 활성 기록은 최대 180일 이내에 자동 만료(TTL)되어 삭제됩니다.",
           "<strong>서버 기술 로그:</strong> 인프라 요청 로그는 최대 30일간 보관됩니다.",
           "<strong>라이선스 및 감사 기록:</strong> 계정 및 라이선스 작업 기록은 일방향 해시 처리된 식별자를 포함하며 최대 90일간 보관됩니다.",
-          "<strong>오류 보고서:</strong> 앱 버전, 기기 해시, 오류 유형 및 내용, 스택 추적, 로그 행을 포함합니다. 파일 경로의 이메일 주소, IP 주소 및 사용자 폴더 이름은 저장 전에 마스킹됩니다. 최대 90일간 보관됩니다.",
+          "<strong>오류 보고서:</strong> 앱 버전, 기기 해시, 오류 유형 및 내용, 스택 추적, 로그 행을 포함합니다. 파일 경로의 이메일 주소, IP 주소 및 사용자 폴더 이름은 저장 전에 마스킹됩니다. 최대 30일간 보관됩니다. 보고서를 전송하면 악용 방지를 위해 Firebase 익명 식별자가 생성되며, 요청의 IP 주소는 되돌릴 수 없는 해시로만 최대 24시간 보관됩니다.",
           "<strong>국외 이전:</strong> Firebase Authentication은 미국 데이터 센터에서 Google에 의해 운영됩니다. 결제 확인을 위해 RevenueCat이 미국(AWS)에서 데이터를 처리하며, 표준계약조항(SCC)을 통해 보호됩니다. Firestore, Cloud Functions 및 Cloud KMS 데이터는 유럽(europe-west1) 서버에서 처리됩니다. KVKK 제9조에 따른 튀르키예 국외 이전 근거: [법적 근거: 법률 대리인 작성 예정].",
           "<strong>지원 이메일:</strong> Google Groups(소비자 그룹)를 통해 처리되며 Google의 <a href='https://policies.google.com/privacy?hl=ko'>개인정보 처리방침</a> 및 <a href='https://policies.google.com/terms?hl=ko'>서비스 약관</a>을 따릅니다. 메시지는 그룹 보관함에 저장됩니다."
         ]],
@@ -1925,7 +1941,8 @@ window.NAHI_LEGAL = {
           ["<strong>사용 통계 및 레이아웃(선택)</strong>", "임의 설치 ID, 그리드 레이아웃(위젯 유형, 위치, 크기), 테마 선택, 플랜 등급", "Google Cloud Firestore(anonymous_layouts)", "인기 있는 위젯과 레이아웃을 파악하여 UI 개선. <strong>개인정보, 텍스트 또는 계정 정보는 일체 포함되지 않습니다.</strong>"],
           ["<strong>로컬 확장 프로그램 데이터</strong>", "현재 활성 브라우저 탭의 미디어 재생 정보(곡 제목, 아티스트, 재생 상태)", "로컬 브라우저 및 PC 앱 전용", "스마트폰과 PC에서 웹 미디어를 표시. 클라우드로 절대 전송되지 않습니다."],
           ["<strong>앱 무결성 검증</strong>", "패키지 이름, 앱 서명 인증서 및 기기 무결성 판정 결과", "Google Play Integrity (Google)", "앱이 Google Play에서 정상 설치되었으며 신뢰할 수 있는 기기에서 실행 중인지 검증하고 악용을 방지. Google은 이 데이터를 제3자와 공유하지 않습니다."],
-          ["<strong>오류 보고서(선택)</strong>", "앱 버전, 기기 해시, 오류 유형 및 텍스트, 스택 추적 및 로그 행(이메일 및 IP 마스킹)", "Google Cloud Functions 및 Firestore(유럽); Google Groups 지원 이메일", "앱 오류 분석 및 수정. 사용자 동의 시에만 전송됩니다."]
+          ["<strong>오류 보고서(선택)</strong>", "앱 버전, 기기 해시, 오류 유형 및 텍스트, 스택 추적 및 로그 행(이메일 및 IP 마스킹)", "Google Cloud Functions 및 Firestore(유럽); Google Groups 지원 이메일", "앱 오류 분석 및 수정. 사용자 동의 시에만 전송됩니다."],
+          ["<strong>광고 및 기기 식별자 (무료 플랜 전용)</strong>", "Google 광고 ID (Android AD_ID), 대략적인 위치 (IP 주소 기반), 기기 모델, 광고 노출 및 상호작용 지표.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 광고 정책</a>", "무료 플랜에서 2x1 네이티브 광고 게재 및 무효 트래픽 방지. Pro 플랜에서는 광고 식별자를 일체 수집하지 않으며 AdMob이 완전히 비활성화됩니다. 사용자는 Android '설정' > '개인정보 보호' > '광고'에서 언제든지 광고 ID를 재설정할 수 있습니다."]
         ]],
         ["card", [["p", "<strong>개인정보 처리자:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>문의 이메일:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>웹사이트:</strong> https://nahideck.github.io"]]],
       ]
@@ -1966,7 +1983,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play 결제 기록:</strong> 세법 및 소비자 보호 법령상의 의무로 인해 Google에서 보관합니다. NahiDeck은 결제 세부정보를 저장하지 않습니다.",
           "<strong>감사 기록:</strong> 계정 및 라이선스 작업 기록은 이용자의 신원과 직접 연결할 수 없는 해시 식별자를 포함하며 90일 이내에 자동 삭제됩니다.",
-          "<strong>오류 보고서:</strong> 90일 이내에 자동 삭제됩니다."
+          "<strong>오류 보고서:</strong> 30일 이내에 자동 삭제됩니다."
         ]],
         ["danger", [
           ["h3", "중요: 활성 구독을 먼저 취소하세요"],
@@ -1992,7 +2009,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>हम क्या एकत्र करते हैं:</strong> खाता विवरण (वैकल्पिक), Pro लाइसेंस और डिवाइस पेयरिंग रिकॉर्ड, वैकल्पिक अनाम उपयोग डेटा, और क्रैश रिपोर्ट जो आप भेजने का विकल्प चुनते हैं।",
           "<strong>इसे कहाँ प्रोसेस किया जाता है:</strong> यूरोप में (Firestore, Cloud Functions)। साइन-इन (Firebase Authentication) और खरीदारी सत्यापन (RevenueCat) संयुक्त राज्य अमेरिका में प्रोसेस किए जाते हैं; इस स्थानांतरण का आधार नीचे दिया गया है।",
-          "<strong>हम इसे कब तक रखते हैं:</strong> तकनीकी लॉग 30 दिन, ऑडिट और क्रैश रिकॉर्ड 90 दिन, अनाम लेआउट रिकॉर्ड 180 दिन। अपना खाता हटाने से आपका खाता डेटा हट जाता है।",
+          "<strong>हम इसे कब तक रखते हैं:</strong> तकनीकी लॉग 30 दिन, क्रैश रिपोर्ट 30 दिन, ऑडिट रिकॉर्ड 90 दिन, अनाम लेआउट रिकॉर्ड 180 दिन। अपना खाता हटाने से आपका खाता डेटा हट जाता है।",
           "<strong>आपके अधिकार:</strong> आप डेटा एक्सेस, सुधार और हटाने का अनुरोध कर सकते हैं। आप ऐप में या खाता हटाने वाले पेज पर अपना खाता हटा सकते हैं।",
           "<strong>क्रैश रिपोर्ट:</strong> केवल आपकी पुष्टि के बाद ही भेजी जाती हैं। आपका वैकल्पिक नोट और संपर्क ईमेल शामिल हैं; नोट को वैसे ही संग्रहीत किया जाता है जैसे लिखा गया है, और ईमेल और आईपी पते छुपा दिए जाते हैं।"
         ]],
@@ -2027,7 +2044,7 @@ window.NAHI_LEGAL = {
           "<strong>टेलीमेट्री:</strong> सेटिंग्स > गोपनीयता में सहमति वापस लेने से आपका मौजूदा रिकॉर्ड तुरंत हट जाता है। सक्रिय रिकॉर्ड अधिकतम 180 दिनों (TTL) के भीतर स्वतः समाप्त हो जाते हैं।",
           "<strong>तकनीकी सर्वर लॉग:</strong> अवसंरचना अनुरोध लॉग अधिकतम 30 दिनों तक रखे जाते हैं।",
           "<strong>लाइसेंस और ऑडिट रिकॉर्ड:</strong> खाता और लाइसेंस संचालन के रिकॉर्ड में आपके उपयोगकर्ता पहचानकर्ता का एकतरफा हैश रूप होता है और इसे अधिकतम 90 दिनों तक रखा जाता है।",
-          "<strong>क्रैश रिपोर्ट:</strong> इसमें ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें शामिल हैं। फ़ाइल पथों में ईमेल पते, आईपी पते और उपयोगकर्ता फ़ोल्डर नाम संग्रहीत करने से पहले छुपा दिए जाते हैं। अधिकतम 90 दिनों तक रखे जाते हैं।",
+          "<strong>क्रैश रिपोर्ट:</strong> इसमें ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें शामिल हैं। फ़ाइल पथों में ईमेल पते, आईपी पते और उपयोगकर्ता फ़ोल्डर नाम संग्रहीत करने से पहले छुपा दिए जाते हैं। अधिकतम 30 दिनों तक रखे जाते हैं। रिपोर्ट भेजने पर दुरुपयोग रोकने के लिए एक Firebase अनाम पहचानकर्ता बनाया जाता है; अनुरोध का IP पता केवल एकतरफ़ा हैश के रूप में और अधिकतम 24 घंटे तक रखा जाता है।",
           "<strong>अंतर्राष्ट्रीय स्थानांतरण:</strong> Firebase Authentication को Google द्वारा संयुक्त राज्य अमेरिका के डेटा केंद्रों से संचालित किया जाता है। खरीदारी सत्यापन के लिए, RevenueCat संयुक्त राज्य अमेरिका (AWS) में आपके डेटा को प्रोसेस करता है; यह स्थानांतरण मानक संविदात्मक खंडों द्वारा कवर किया गया है। Firestore, Cloud Functions और Cloud KMS डेटा यूरोप (europe-west1) के सर्वरों पर प्रोसेस किया जाता है। KVKK अनुच्छेद 9 के तहत तुर्की से स्थानांतरण का कानूनी आधार: [कानूनी आधार: वकील द्वारा भरा जाएगा]।",
           "<strong>सहायता ईमेल:</strong> Google Groups (उपभोक्ता समूह) के माध्यम से संसाधित किया जाता है और Google की <a href='https://policies.google.com/privacy?hl=hi'>गोपनीयता नीति</a> और <a href='https://policies.google.com/terms?hl=hi'>सेवा की शर्तों</a> के अधीन है। संदेश समूह के संग्रह में रखे जाते हैं।"
         ]],
@@ -2041,7 +2058,8 @@ window.NAHI_LEGAL = {
           ["<strong>उपयोग और लेआउट टेलीमेट्री (वैकल्पिक)</strong>", "यादृच्छिक इंस्टॉल आईडी, ग्रिड लेआउट (विजेट प्रकार, स्थिति, आकार), थीम विकल्प, योजना स्तर", "Google Cloud Firestore (anonymous_layouts)", "इंटरफ़ेस को बेहतर बनाने के लिए लोकप्रिय विजेट और लेआउट को समझना। <strong>इसमें कोई व्यक्तिगत डेटा, टेक्स्ट या खाता विवरण नहीं है।</strong>"],
           ["<strong>स्थानीय एक्सटेंशन डेटा</strong>", "सक्रिय ब्राउज़र टैब की मीडिया स्थिति (ट्रैक शीर्षक, कलाकार, प्लेबैक स्थिति)", "केवल स्थानीय ब्राउज़र और पीसी ऐप", "फ़ोन और पीसी पर वेब मीडिया दिखाना। कभी भी क्लाउड पर नहीं भेजा जाता।"],
           ["<strong>ऐप सत्यापन</strong>", "पैकेज नाम, ऐप हस्ताक्षर प्रमाणपत्र और डिवाइस अखंडता परिणाम", "Google Play Integrity (Google)", "यह सत्यापित करना कि ऐप Google Play से इंस्टॉल किया गया है और विश्वसनीय डिवाइस पर चल रहा है; दुरुपयोग को रोकना। Google इस डेटा को तीसरे पक्ष के साथ साझा नहीं करता है।"],
-          ["<strong>क्रैश रिपोर्ट (वैकल्पिक)</strong>", "ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें (ईमेल और आईपी छुपाए गए हैं)", "Google Cloud Functions और Firestore (यूरोप); Google Groups के माध्यम से सहायता ईमेल", "क्रैश का विश्लेषण करना और उन्हें ठीक करना। केवल आपकी पुष्टि के साथ भेजा जाता है।"]
+          ["<strong>क्रैश रिपोर्ट (वैकल्पिक)</strong>", "ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें (ईमेल और आईपी छुपाए गए हैं)", "Google Cloud Functions और Firestore (यूरोप); Google Groups के माध्यम से सहायता ईमेल", "क्रैश का विश्लेषण करना और उन्हें ठीक करना। केवल आपकी पुष्टि के साथ भेजा जाता है।"],
+          ["<strong>विज्ञापन और डिवाइस पहचानकर्ता (केवल निःशुल्क प्लान)</strong>", "Google विज्ञापन आईडी (Android AD_ID), अनुमानित स्थान (आईपी पते के माध्यम से), डिवाइस मॉडल, विज्ञापन इंप्रेशन और इंटरैक्शन मेट्रिक्स।", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google विज्ञापन नीतियां</a>", "निःशुल्क प्लान में 2x1 नेटिव विज्ञापन प्रदर्शित करना और अमान्य ट्रैफ़िक को रोकना। Pro प्लान में विज्ञापन पहचानकर्ता एकत्र नहीं किए जाते हैं और AdMob पूरी तरह से अक्षम रहता है। उपयोगकर्ता Android सेटिंग्स > गोपनीयता > विज्ञापन में जाकर कभी भी अपनी विज्ञापन आईडी रीसेट कर सकते हैं।"]
         ]],
         ["card", [["p", "<strong>डेटा नियंत्रक:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>संपर्क ईमेल:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>वेबसाइट:</strong> https://nahideck.github.io"]]],
       ]
@@ -2082,7 +2100,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play बिलिंग रिकॉर्ड:</strong> कर और उपभोक्ता कानून कारणों से Google इन्हें रखता है। NahiDeck भुगतान विवरण संग्रहीत नहीं करता है।",
           "<strong>ऑडिट रिकॉर्ड:</strong> खाता और लाइसेंस संचालन के रिकॉर्ड में एक हैश किया गया पहचानकर्ता होता है जिसे सीधे आपकी पहचान से नहीं जोड़ा जा सकता है, और यह 90 दिनों के भीतर स्वतः हटा दिया जाता है।",
-          "<strong>क्रैश रिपोर्ट:</strong> 90 दिनों के भीतर स्वतः हटा दी जाती हैं।"
+          "<strong>क्रैश रिपोर्ट:</strong> 30 दिनों के भीतर स्वतः हटा दी जाती हैं।"
         ]],
         ["danger", [
           ["h3", "महत्वपूर्ण: अपनी सक्रिय सदस्यता रद्द करें"],
@@ -2108,7 +2126,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>ကျွန်ုပ်တို့ စုဆောင်းသောအချက်အလက်များ -</strong> အကောင့်အချက်အလက် (ရွေးချယ်နိုင်သည်)၊ Pro လိုင်စင်နှင့် စက်တွဲချိတ်မှုမှတ်တမ်းများ၊ အမည်မဖော်ပြသော အသုံးပြုမှုဒေတာ (ရွေးချယ်နိုင်သည်) နှင့် သင်ပေးပို့ရန် ရွေးချယ်သော ချွတ်ယွင်းမှုအစီရင်ခံစာများ။",
           "<strong>မည်သည့်နေရာတွင် လုပ်ဆောင်သနည်း -</strong> ဥရောပတွင် (Firestore, Cloud Functions)။ အကောင့်ဝင်ရောက်ခြင်း (Firebase Authentication) နှင့် ဝယ်ယူမှုစစ်ဆေးခြင်း (RevenueCat) တို့ကို အမေရိကန်ပြည်ထောင်စုတွင် လုပ်ဆောင်ပြီး ဤလွှဲပြောင်းမှု၏ အခြေခံကို အောက်တွင် ဖော်ပြထားပါသည်။",
-          "<strong>မည်မျှကြာကြာ သိမ်းဆည်းသနည်း -</strong> နည်းပညာမှတ်တမ်းများကို ၃၀ ရက်၊ စာရင်းစစ်နှင့် ချွတ်ယွင်းမှုမှတ်တမ်းများကို ၉၀ ရက်၊ အမည်မဖော်ပြသော အပြင်အဆင်မှတ်တမ်းများကို ၁၈၀ ရက် သိမ်းဆည်းပါသည်။ သင့်အကောင့်ကို ဖျက်လိုက်ပါက အကောင့်ဒေတာများအားလုံး ပျက်ပြယ်သွားမည်ဖြစ်ပါသည်။",
+          "<strong>မည်မျှကြာကြာ သိမ်းဆည်းသနည်း -</strong> နည်းပညာမှတ်တမ်းများကို ၃၀ ရက်၊ ချွတ်ယွင်းမှုအစီရင်ခံစာများကို ၃၀ ရက်၊ စာရင်းစစ်မှတ်တမ်းများကို ၉၀ ရက်၊ အမည်မဖော်ပြသော အပြင်အဆင်မှတ်တမ်းများကို ၁၈၀ ရက် သိမ်းဆည်းပါသည်။ သင့်အကောင့်ကို ဖျက်လိုက်ပါက အကောင့်ဒေတာများအားလုံး ပျက်ပြယ်သွားမည်ဖြစ်ပါသည်။",
           "<strong>သင့်အခွင့်အရေးများ -</strong> သင်၏ဒေတာကို ကြည့်ရှုခွင့်၊ ပြင်ဆင်ခွင့်နှင့် ဖျက်ပစ်ခွင့်တို့ကို တောင်းဆိုနိုင်ပါသည်။ အက်ပ်အတွင်း သို့မဟုတ် အကောင့်ဖျက်ခြင်းစာမျက်နှာမှတစ်ဆင့် သင့်အကောင့်ကို ဖျက်နိုင်ပါသည်။",
           "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> သင်အတည်ပြုမှသာ ပေးပို့ပါသည်။ သင်ထည့်သွင်းလိုပါက မှတ်ချက်နှင့် အီးမေးလ်လိပ်စာတို့ ပါဝင်မည်ဖြစ်ပြီး မှတ်ချက်ကို ရေးထားသည့်အတိုင်း သိမ်းဆည်းကာ အီးမေးလ်နှင့် IP လိပ်စာများကို ဖုံးကွယ်ထားမည်ဖြစ်ပါသည်။"
         ]],
@@ -2143,7 +2161,7 @@ window.NAHI_LEGAL = {
           "<strong>အဝေးတိုင်းတာမှုဒေတာ -</strong> ဆက်တင်များ > ကိုယ်ရေးလုံခြုံမှု မှ သဘောတူညီချက်ကို ရုပ်သိမ်းပါက ရှိပြီးသားမှတ်တမ်းကို ချက်ချင်း ဖျက်ပစ်ပါသည်။ လက်ရှိမှတ်တမ်းများသည် ရက်ပေါင်း ၁၈၀ (TTL) အတွင်း အလိုအလျောက် သက်တမ်းကုန်ဆုံးပါသည်။",
           "<strong>နည်းပညာဆာဗာမှတ်တမ်းများ -</strong> အခြေခံအဆောက်အအုံတောင်းဆိုမှုမှတ်တမ်းများကို အများဆုံး ၃၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
           "<strong>လိုင်စင်နှင့် စာရင်းစစ်မှတ်တမ်းများ -</strong> အကောင့်နှင့် လိုင်စင်လုပ်ဆောင်မှုမှတ်တမ်းများတွင် ပြန်ပြောင်း၍မရသော hash ကုဒ်ပါဝင်ပြီး အများဆုံး ၉၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
-          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ ပါဝင်ပါသည်။ သိမ်းဆည်းခြင်းမပြုမီ အီးမေးလ်လိပ်စာများ၊ IP လိပ်စာများနှင့် ဖိုင်လမ်းကြောင်းရှိ အသုံးပြုသူဖိုဒါအမည်များကို ဖုံးကွယ်ထားပါသည်။ အများဆုံး ၉၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
+          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ ပါဝင်ပါသည်။ သိမ်းဆည်းခြင်းမပြုမီ အီးမေးလ်လိပ်စာများ၊ IP လိပ်စာများနှင့် ဖိုင်လမ်းကြောင်းရှိ အသုံးပြုသူဖိုဒါအမည်များကို ဖုံးကွယ်ထားပါသည်။ အများဆုံး ၃၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။ အစီရင်ခံစာပို့သောအခါ အလွဲသုံးစားမှုကို ကာကွယ်ရန် Firebase အမည်မဖော်ပြသော သတ်မှတ်ချက်တစ်ခု ဖန်တီးပါသည်။ တောင်းဆိုမှု၏ IP လိပ်စာကို ပြန်လည်ပြောင်းလဲ၍မရသော hash အဖြစ်သာ အများဆုံး ၂၄ နာရီအထိ သိမ်းဆည်းပါသည်။",
           "<strong>နိုင်ငံတကာသို့ လွှဲပြောင်းမှုများ -</strong> Firebase Authentication ကို အမေရိကန်ပြည်ထောင်စုရှိ ဒေတာစင်တာများမှတစ်ဆင့် Google က လည်ပတ်ပါသည်။ ဝယ်ယူမှုစစ်ဆေးရန်အတွက် RevenueCat သည် အမေရိကန်ပြည်ထောင်စု (AWS) တွင် သင့်ဒေတာကို လုပ်ဆောင်ပြီး ဤလွှဲပြောင်းမှုကို စံသတ်မှတ်ချက်ဆိုင်ရာ စာချုပ်စာတမ်းများဖြင့် အကာအကွယ်ပေးထားပါသည်။ Firestore, Cloud Functions နှင့် Cloud KMS ဒေတာများကို ဥရောပ (europe-west1) ရှိ ဆာဗာများတွင် လုပ်ဆောင်ပါသည်။ KVKK ပုဒ်မ ၉ အရ တူရကီမှ လွှဲပြောင်းမှုများအတွက် ဥပဒေဆိုင်ရာ အခြေခံ - [ဥပဒေဆိုင်ရာ အခြေခံ - ရှေ့နေမှ ဖြည့်စွက်ရန်]။",
           "<strong>အကူအညီပေးရေး အီးမေးလ် -</strong> Google Groups မှတစ်ဆင့် စီမံလုပ်ဆောင်ပြီး Google ၏ <a href='https://policies.google.com/privacy?hl=my'>ကိုယ်ရေးလုံခြုံမှုမူဝါဒ</a> နှင့် <a href='https://policies.google.com/terms?hl=my'>ဝန်ဆောင်မှုစည်းမျဉ်းများ</a> နှင့် သက်ဆိုင်ပါသည်။ မက်ဆေ့ဂျ်များကို အဖွဲ့၏ မော်ကွန်းတိုက်တွင် သိမ်းဆည်းထားပါသည်။"
         ]],
@@ -2157,7 +2175,8 @@ window.NAHI_LEGAL = {
           ["<strong>အသုံးပြုမှုနှင့် အပြင်အဆင်အဝေးတိုင်းတာမှု (ရွေးချယ်နိုင်သည်)</strong>", "ကျပန်းတပ်ဆင်မှု ID၊ ဇယားကွက်အပြင်အဆင် (ဝစ်ဂျက်အမျိုးအစား၊ နေရာ၊ အရွယ်အစား)၊ သီးသန့်ပုံစံရွေးချယ်မှု၊ အစီအစဉ်အဆင့်", "Google Cloud Firestore (anonymous_layouts)", "မျက်နှာပြင်ဒီဇိုင်းကို မြှင့်တင်ရန် လူကြိုက်များသော ဝစ်ဂျက်များနှင့် အပြင်အဆင်များကို လေ့လာခြင်း။ <strong>ကိုယ်ရေးကိုယ်တာဒေတာ၊ စာသား သို့မဟုတ် အကောင့်အချက်အလက်များ လုံးဝမပါဝင်ပါ။</strong>"],
           ["<strong>ဒေသတွင်း extension ဒေတာ</strong>", "ဖွင့်ထားသော ဘရောက်ဆာ tab ၏ မီဒီယာအခြေအနေ (သီချင်းအမည်၊ အဆိုတော်၊ ဖွင့်လက်စအခြေအနေ)", "ဒေသတွင်း ဘရောက်ဆာနှင့် PC အက်ပ်တွင်သာ", "ဝဘ်မီဒီယာကို ဖုန်းနှင့် PC တွင် ပြသရန်။ Cloud သို့ မည်သည့်အခါမျှ မပို့ဆောင်ပါ။"],
           ["<strong>အက်ပ်စစ်မှန်ကြောင်း အတည်ပြုခြင်း</strong>", "ပက်ကေ့ဂျ်အမည်၊ အက်ပ်လက်မှတ်နှင့် စက်ပစ္စည်းစစ်မှန်မှုရလဒ်", "Google Play Integrity (Google)", "အက်ပ်ကို Google Play မှ တပ်ဆင်ထားကြောင်းနှင့် စိတ်ချရသောစက်တွင် အလုပ်လုပ်နေကြောင်း အတည်ပြုခြင်း၊ အလွဲသုံးစားလုပ်မှုကို တားဆီးခြင်း။ Google သည် ဤဒေတာကို အခြားသူများနှင့် မျှဝေခြင်းမရှိပါ။"],
-          ["<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာ (ရွေးချယ်နိုင်သည်)</strong>", "အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ (အီးမေးလ်နှင့် IP ကို ဖုံးကွယ်ထားသည်)", "Google Cloud Functions နှင့် Firestore (ဥရောပ); Google Groups မှတစ်ဆင့် အကူအညီပေးရေး အီးမေးလ်", "ချွတ်ယွင်းမှုများကို လေ့လာဆန်းစစ်ပြီး ပြုပြင်ရန်။ သင်အတည်ပြုမှသာ ပေးပို့ပါသည်။"]
+          ["<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာ (ရွေးချယ်နိုင်သည်)</strong>", "အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ (အီးမေးလ်နှင့် IP ကို ဖုံးကွယ်ထားသည်)", "Google Cloud Functions နှင့် Firestore (ဥရောပ); Google Groups မှတစ်ဆင့် အကူအညီပေးရေး အီးမေးလ်", "ချွတ်ယွင်းမှုများကို လေ့လာဆန်းစစ်ပြီး ပြုပြင်ရန်။ သင်အတည်ပြုမှသာ ပေးပို့ပါသည်။"],
+          ["<strong>ကြော်ငြာနှင့် စက်ပစ္စည်း အထောက်အထားများ (အခမဲ့ အစီအစဉ်အတွက်သာ)</strong>", "Google ကြော်ငြာ ID (Android AD_ID)၊ ခန့်မှန်းခြေ တည်နေရာ (IP လိပ်စာမှတစ်ဆင့်)၊ စက်ပစ္စည်း မော်ဒယ်၊ ကြော်ငြာပြသမှုနှင့် အပြန်အလှန်ဆက်သွယ်မှုဆိုင်ရာ အချက်အလက်များ။", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google ကြော်ငြာ မူဝါဒများ</a>", "အခမဲ့ အစီအစဉ်တွင် 2x1 ပင်ကိုကြော်ငြာများ ပြသရန်နှင့် မမှန်ကန်သော အသွားအလာများကို ကာကွယ်ရန်။ Pro အစီအစဉ်တွင် ကြော်ငြာအထောက်အထားများကို မည်သည့်အခါမျှ မစုဆောင်းဘဲ AdMob ကို အပြီးတိုင် ပိတ်ထားသည်။ အသုံးပြုသူများသည် Android ဆက်တင်များ > ကိုယ်ရေးလုံခြုံမှု > ကြော်ငြာများ အောက်တွင် မိမိတို့၏ ကြော်ငြာ ID ကို အချိန်မရွေး ပြန်လည်သတ်မှတ်နိုင်သည်။"]
         ]],
         ["card", [["p", "<strong>ဒေတာထိန်းချုပ်သူ -</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>ဆက်သွယ်ရန် အီးမေးလ် -</strong> nahideck-support@googlegroups.com"], ["p", "<strong>ဝဘ်ဆိုက် -</strong> https://nahideck.github.io"]]],
       ]
@@ -2198,7 +2217,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>Google Play ငွေတောင်းခံလွှာမှတ်တမ်းများ -</strong> အခွန်နှင့် စားသုံးသူဥပဒေအရ Google က ထိန်းသိမ်းထားပါသည်။ NahiDeck သည် ငွေပေးချေမှုအချက်အလက်များကို သိမ်းဆည်းခြင်းမရှိပါ။",
           "<strong>စာရင်းစစ်မှတ်တမ်းများ -</strong> အကောင့်နှင့် လိုင်စင်လုပ်ဆောင်မှုမှတ်တမ်းများတွင် သင့်အား တိုက်ရိုက်ဖော်ပြခြင်းမပြုနိုင်သော hash အမှတ်အသားပါဝင်ပြီး ရက်ပေါင်း ၉၀ အတွင်း အလိုအလျောက် ပျက်ပြယ်ပါသည်။",
-          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> ရက်ပေါင်း ၉၀ အတွင်း အလိုအလျောက် ပျက်ပြယ်ပါသည်။"
+          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> ရက်ပေါင်း ၃၀ အတွင်း အလိုအလျောက် ပျက်ပြယ်ပါသည်။"
         ]],
         ["danger", [
           ["h3", "အရေးကြီးသည် - သင့်စာရင်းသွင်းမှုကို ပယ်ဖျက်ပါ"],
@@ -2224,7 +2243,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>ما نجمعه:</strong> معلومات الحساب (اختياري)، وسجلات ترخيص Pro واقتران الأجهزة، وبيانات الاستخدام المجهولة الاختيارية، وتقارير الأعطال التي تختار إرسالها.",
           "<strong>أين تتم معالجة البيانات:</strong> في أوروبا (Firestore و Cloud Functions). تتم معالجة تسجيل الدخول (Firebase Authentication) والتحقق من عمليات الشراء (RevenueCat) في الولايات المتحدة؛ الأساس القانوني لهذا النقل موضح أدناه.",
-          "<strong>مدة الاحتفاظ بالبيانات:</strong> السجلات التقنية لمدة 30 يومًا، وسجلات التدقيق والأعطال لمدة 90 يومًا، وسجلات التخطيط المجهولة لمدة 180 يومًا. يؤدي حذف حسابك إلى إزالة كافة بيانات حسابك.",
+          "<strong>مدة الاحتفاظ بالبيانات:</strong> السجلات التقنية لمدة 30 يومًا، وتقارير الأعطال لمدة 30 يومًا، وسجلات التدقيق لمدة 90 يومًا، وسجلات التخطيط المجهولة لمدة 180 يومًا. يؤدي حذف حسابك إلى إزالة كافة بيانات حسابك.",
           "<strong>حقوقك:</strong> يمكنك طلب الوصول إلى بياناتك وتصحيحها وحذفها. يمكنك حذف حسابك من داخل التطبيق أو من صفحة حذف الحساب.",
           "<strong>تقارير الأعطال:</strong> لا تُرسل إلا بعد تأكيدك. يتم تضمين ملاحظتك الاختيارية والبريد الإلكتروني للتواصل؛ وتُحفظ الملاحظة كما هي، بينما يتم حجب عناوين البريد الإلكتروني و IP."
         ]],
@@ -2259,7 +2278,7 @@ window.NAHI_LEGAL = {
           "<strong>بيانات القياس عن بُعد:</strong> يؤدي سحب الموافقة في الإعدادات > الخصوصية إلى حذف السجل الحالي فورًا. تنتهي صلاحية السجلات النشطة تلقائيًا في غضون 180 يومًا (TTL).",
           "<strong>سجلات الخادم التقنية:</strong> يتم الاحتفاظ بسجلات طلبات البنية التحتية لمدة تصل إلى 30 يومًا.",
           "<strong>سجلات الترخيص والتدقيق:</strong> تحتوي سجلات عمليات الحساب والترخيص على صيغة تجزئة أحادية الاتجاه لمعرف المستخدم الخاص بك، ويتم الاحتفاظ بها لمدة تصل إلى 90 يومًا.",
-          "<strong>تقارير الأعطال:</strong> تتضمن إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي، وأسطر السجل. يتم حجب عناوين البريد الإلكتروني وعناوين IP وأسماء مجلدات المستخدمين في مسارات الملفات قبل الحفظ. يتم الاحتفاظ بها لمدة تصل إلى 90 يومًا.",
+          "<strong>تقارير الأعطال:</strong> تتضمن إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي، وأسطر السجل. يتم حجب عناوين البريد الإلكتروني وعناوين IP وأسماء مجلدات المستخدمين في مسارات الملفات قبل الحفظ. يتم الاحتفاظ بها لمدة تصل إلى 30 يومًا. عند إرسال تقرير، يتم إنشاء معرّف Firebase مجهول لمنع إساءة الاستخدام؛ ويُحتفظ بعنوان IP الخاص بالطلب فقط في صورة تجزئة لا يمكن عكسها ولمدة لا تتجاوز 24 ساعة.",
           "<strong>عمليات النقل الدولي:</strong> تُدار خدمة Firebase Authentication بواسطة Google من مراكز بيانات داخل الولايات المتحدة. وللتحقق من المشتريات، تعالج RevenueCat بياناتك في الولايات المتحدة (AWS)؛ وهذا النقل مغطى بالبنود التعاقدية القياسية. وتتم معالجة بيانات Firestore و Cloud Functions و Cloud KMS على خوادم في أوروبا (europe-west1). الأساس القانوني للنقل من تركيا بموجب المادة 9 من قانون KVKK: [الأساس القانوني: سيتم تعبئته بواسطة المستشار القانوني].",
           "<strong>البريد الإلكتروني للدعم:</strong> تتم معالجته عبر مجموعات Google Groups (مجموعة مستهلكين) ويخضع لـ <a href='https://policies.google.com/privacy?hl=ar'>سياسة خصوصية Google</a> و<a href='https://policies.google.com/terms?hl=ar'>شروط الخدمة</a>. وتُحفظ الرسائل في أرشيف المجموعة."
         ]],
@@ -2273,7 +2292,8 @@ window.NAHI_LEGAL = {
           ["<strong>القياس عن بُعد للاستخدام والتخطيط (اختياري)</strong>", "معرف تثبيت عشوائي، تخطيط الشبكة (أنواع الأدوات، المواضع، الأحجام)، السمة المختارة، فئة الخطة", "Google Cloud Firestore (anonymous_layouts)", "فهم الأدوات والتخطيطات الشائعة لتحسين الواجهة. <strong>لا يحتوي على أي بيانات شخصية أو نصوص أو تفاصيل حساب.</strong>"],
           ["<strong>بيانات الإضافة المحلية</strong>", "حالة الوسائط في علامة تبويب المتصفح النشطة (اسم المقطع، الفنان، حالة التشغيل)", "المتصفح المحلي وتطبيق الكمبيوتر فقط", "عرض وسائط الويب على الهاتف والكمبيوتر. لا تُرسل إلى السحابة مطلقًا."],
           ["<strong>التحقق من سلامة التطبيق</strong>", "اسم الحزمة، وشهادة توقيع التطبيق، ونتيجة سلامة الجهاز", "Google Play Integrity (Google)", "التحقق من تثبيت التطبيق عبر Google Play وتشغيله على جهاز موثوق لمنع إساءة الاستخدام. لا تشارك Google هذه البيانات مع جهات خارجية."],
-          ["<strong>تقارير الأعطال (اختياري)</strong>", "إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي وأسطر السجل (تُحجب عناوين البريد الإلكتروني و IP)", "Google Cloud Functions و Firestore (أوروبا)؛ بريد الدعم عبر Google Groups", "تحليل الأعطال وإصلاحها. لا يُرسل إلا بموافقتك."]
+          ["<strong>تقارير الأعطال (اختياري)</strong>", "إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي وأسطر السجل (تُحجب عناوين البريد الإلكتروني و IP)", "Google Cloud Functions و Firestore (أوروبا)؛ بريد الدعم عبر Google Groups", "تحليل الأعطال وإصلاحها. لا يُرسل إلا بموافقتك."],
+          ["<strong>الإعلانات ومعرّفات الأجهزة (الخطة المجانية فقط)</strong>", "معرّف إعلانات Google (Android AD_ID)، والموقع الجغرافي التقريبي (عبر عنوان IP)، وطراز الجهاز، ومقاييس مرات الظهور والتفاعل مع الإعلانات.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>سياسات إعلانات Google</a>", "عرض إعلانات مدمجة مع المحتوى بمقاس 2x1 في الخطة المجانية ومنع الزيارات غير الصالحة. في خطة Pro، لا يتم جمع معرّفات الإعلانات نهائيًا ويتم تعطيل AdMob بالكامل. يمكن للمستخدمين إعادة تعيين معرّف الإعلانات في أي وقت عبر إعدادات Android > الخصوصية > الإعلانات."]
         ]],
         ["card", [["p", "<strong>مراقب البيانات:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>البريد الإلكتروني للتواصل:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>الموقع الإلكتروني:</strong> https://nahideck.github.io"]]],
       ]
@@ -2314,7 +2334,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>سجلات فواتير Google Play:</strong> تحتفظ بها Google لأسباب ضريبية وامتثالًا لقوانين حماية المستهلك. لا يخزن NahiDeck تفاصيل الدفع.",
           "<strong>سجلات التدقيق:</strong> تحتوي سجلات عمليات الحساب والترخيص على معرف مجزأ لا يمكن ربطه مباشرة بهويتك، وتُحذف تلقائيًا في غضون 90 يومًا.",
-          "<strong>تقارير الأعطال:</strong> تُحذف تلقائيًا في غضون 90 يومًا."
+          "<strong>تقارير الأعطال:</strong> تُحذف تلقائيًا في غضون 30 يومًا."
         ]],
         ["danger", [
           ["h3", "هام: قم بإلغاء اشتراكك النشط"],
@@ -2340,7 +2360,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>آنچه جمع‌آوری می‌کنیم:</strong> اطلاعات حساب کاربری (اختیاری)، سوابق مجوز Pro و جفت‌سازی دستگاه‌ها، داده‌های اختیاری و ناشناس استفاده از برنامه، و گزارش‌های خرابی که خودتان ارسال می‌کنید.",
           "<strong>محل پردازش داده‌ها:</strong> در اروپا (Firestore و Cloud Functions). ورود به سیستم (Firebase Authentication) و تأیید خرید (RevenueCat) در ایالات متحده پردازش می‌شوند؛ مبنای قانونی این انتقال در ادامه توضیح داده شده است.",
-          "<strong>مدت زمان نگهداری:</strong> لاگ‌های فنی به مدت ۳۰ روز، سوابق حسابرسی و خرابی‌ها به مدت ۹۰ روز، و سوابق ناشناس چیدمان به مدت ۱۸۰ روز. با حذف حساب کاربری، تمام داده‌های حساب شما حذف خواهند شد.",
+          "<strong>مدت زمان نگهداری:</strong> لاگ‌های فنی به مدت ۳۰ روز، گزارش‌های خرابی به مدت ۳۰ روز، سوابق حسابرسی به مدت ۹۰ روز، و سوابق ناشناس چیدمان به مدت ۱۸۰ روز. با حذف حساب کاربری، تمام داده‌های حساب شما حذف خواهند شد.",
           "<strong>حقوق شما:</strong> شما می‌توانید درخواست دسترسی، تصحیح و حذف داده‌های خود را داشته باشید. می‌توانید حساب خود را از داخل برنامه یا از طریق صفحه حذف حساب کاربری پاک کنید.",
           "<strong>گزارش‌های خرابی:</strong> تنها پس از تأیید شما ارسال می‌شوند. یادداشت اختیاری و ایمیل تماس شما ارسال می‌شود؛ یادداشت همان‌گونه که نوشته شده ذخیره شده و ایمیل و آدرس‌های IP ماسک می‌شوند."
         ]],
@@ -2375,7 +2395,7 @@ window.NAHI_LEGAL = {
           "<strong>داده‌های تله‌متری:</strong> با لغو موافقت در «تنظیمات > حریم خصوصی»، سوابق موجود بلافاصله حذف می‌شوند. سوابق فعال حداکثر ظرف مدت ۱۸۰ روز (TTL) به صورت خودکار منقضی و حذف می‌گردند.",
           "<strong>لاگ‌های فنی سرور:</strong> سوابق درخواست‌های زیرساختی حداکثر تا ۳۰ روز نگهداری می‌شوند.",
           "<strong>سوابق مجوز و حسابرسی:</strong> سوابق عملیات حساب و مجوز حاوی شناسه کاربری هش‌شده شما هستند و حداکثر تا ۹۰ روز نگهداری می‌شوند.",
-          "<strong>گزارش‌های خرابی:</strong> شامل نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ هستند. ایمیل، آدرس‌های IP و نام پوشه کاربری در مسیر فایل‌ها پیش از ذخیره ماسک می‌شوند. حداکثر تا ۹۰ روز نگهداری می‌شوند.",
+          "<strong>گزارش‌های خرابی:</strong> شامل نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ هستند. ایمیل، آدرس‌های IP و نام پوشه کاربری در مسیر فایل‌ها پیش از ذخیره ماسک می‌شوند. حداکثر تا ۳۰ روز نگهداری می‌شوند. هنگام ارسال گزارش، برای جلوگیری از سوءاستفاده یک شناسه ناشناس Firebase ایجاد می‌شود؛ آدرس IP درخواست فقط به صورت هش یک‌طرفه و حداکثر ۲۴ ساعت نگهداری می‌شود.",
           "<strong>انتقال‌های بین‌المللی:</strong> سرویس Firebase Authentication توسط Google از مراکز داده در ایالات متحده مدیریت می‌شود. جهت بررسی خرید، RevenueCat داده‌های شما را در ایالات متحده (AWS) پردازش می‌کند؛ این انتقال بر اساس بندهای استاندارد قراردادی محافظت می‌شود. داده‌های Firestore، Cloud Functions و Cloud KMS بر روی سرورهایی در اروپا (europe-west1) پردازش می‌شوند. مبنای قانونی انتقال از ترکیه طبق ماده ۹ قانون KVKK: [مبنای قانونی: توسط وکیل تکمیل خواهد شد].",
           "<strong>ایمیل پشتیبانی:</strong> از طریق Google Groups پردازش شده و مشمول <a href='https://policies.google.com/privacy?hl=fa'>سیاست حفظ حریم خصوصی</a> و <a href='https://policies.google.com/terms?hl=fa'>شرایط خدمات</a> Google است. پیام‌ها در آرشیو گروه باقی می‌مانند."
         ]],
@@ -2389,7 +2409,8 @@ window.NAHI_LEGAL = {
           ["<strong>تله‌متری استفاده و چیدمان (اختیاری)</strong>", "شناسه نصب تصادفی، چیدمان شبکه (نوع ویجت‌ها، موقعیت، ابعاد)، انتخاب پوسته، نوع پلن", "Google Cloud Firestore (anonymous_layouts)", "شناسایی ویجت‌ها و چیدمان‌های پرطرفدار برای بهبود رابط کاربری. <strong>حاوی هیچ داده شخصی، متن یا اطلاعات حساب کاربری نیست.</strong>"],
           ["<strong>داده‌های افزونه محلی</strong>", "وضعیت رسانه در تب فعال مرورگر (نام قطعه، هنرمند، وضعیت پخش)", "فقط مرورگر محلی و برنامه رایانه", "نمایش رسانه‌های وب روی گوشی و رایانه. هرگز به فضای ابری ارسال نمی‌شود."],
           ["<strong>بررسی اصالت برنامه</strong>", "نام بسته، گواهی امضای برنامه و نتیجه بررسی سلامت دستگاه", "Google Play Integrity (Google)", "بررسی نصب قانونی برنامه از طریق Google Play و اجرا بر روی دستگاه قابل اعتماد؛ پیشگیری از سوءاستفاده. Google این داده‌ها را با اشخاص ثالث به اشتراک نمی‌گذارد."],
-          ["<strong>گزارش‌های خرابی (اختیاری)</strong>", "نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ (ایمیل‌ها و IPها ماسک می‌شوند)", "Google Cloud Functions و Firestore (اروپا)؛ ایمیل پشتیبانی از طریق Google Groups", "تحلیل و رفع خرابی‌ها. تنها با تأیید شما ارسال می‌شود."]
+          ["<strong>گزارش‌های خرابی (اختیاری)</strong>", "نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ (ایمیل‌ها و IPها ماسک می‌شوند)", "Google Cloud Functions و Firestore (اروپا)؛ ایمیل پشتیبانی از طریق Google Groups", "تحلیل و رفع خرابی‌ها. تنها با تأیید شما ارسال می‌شود."],
+          ["<strong>تبلیغات و شناسه‌های دستگاه (فقط طرح رایگان)</strong>", "شناسه تبلیغاتی گوگل (Android AD_ID)، مکان تقریبی (از طریق آدرس IP)، مدل دستگاه، معیارهای نمایش و تعامل با تبلیغات.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>خط‌مشی‌های تبلیغاتی گوگل</a>", "نمایش تبلیغات همسان 2x1 در طرح رایگان و جلوگیری از ترافیک نامعتبر. در طرح Pro، شناسه‌های تبلیغاتی به هیچ وجه جمع‌آوری نمی‌شوند و AdMob کاملاً غیرفعال است. کاربران می‌توانند شناسه تبلیغاتی خود را در تنظیمات اندروید > حریم خصوصی > تبلیغات بازنشانی کنند."]
         ]],
         ["card", [["p", "<strong>کنترل‌کننده داده:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>ایمیل تماس:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>وب‌سایت:</strong> https://nahideck.github.io"]]],
       ]
@@ -2430,7 +2451,7 @@ window.NAHI_LEGAL = {
         ["ul", [
           "<strong>سوابق مالی Google Play:</strong> به دلایل مالیاتی و قوانین مصرف‌کننده توسط Google نگهداری می‌شوند. NahiDeck هیچ اطلاعات پرداختی را ذخیره نمی‌کند.",
           "<strong>سوابق حسابرسی:</strong> سوابق عملیات حساب و مجوز حاوی شناسه‌های هش‌شده هستند که امکان اتصال مستقیم به هویت شما را ندارند و ظرف ۹۰ روز به صورت خودکار حذف می‌شوند.",
-          "<strong>گزارش‌های خرابی:</strong> ظرف ۹۰ روز به صورت خودکار حذف می‌شوند."
+          "<strong>گزارش‌های خرابی:</strong> ظرف ۳۰ روز به صورت خودکار حذف می‌شوند."
         ]],
         ["danger", [
           ["h3", "مهم: اشتراک فعال خود را لغو کنید"],
