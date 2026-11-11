@@ -14,7 +14,7 @@ window.NAHI_LEGAL = {
   tr: {
     privacy: {
       title: "NahiDeck Gizlilik Politikası",
-      updated: "25 Ekim 2026",
+      updated: "11 Kasım 2026",
       blocks: [
         ["p", "NahiDeck (\"biz\", \"uygulama\" veya \"hizmet\"), kullanıcılarının kişisel verilerinin korunmasına ve gizliliğine önem verir. Bu politika; <strong>NahiDeck Android uygulamasını</strong>, <strong>NahiDeck Windows masaüstü istemcisini</strong> ve <strong>NahiDeck Web Tarayıcı Eklentisini (NahiDeck Connect)</strong> kapsar."],
         ["h", "Kısaca"],
@@ -56,8 +56,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetri:</strong> Ayarlar > Gizlilik bölümünden onay kaldırıldığında mevcut kayıt hemen silinir. Aktif kayıtlar en geç 180 gün içinde otomatik silinir (TTL).",
           "<strong>Teknik sunucu günlükleri:</strong> Altyapı istek günlükleri en fazla 30 gün tutulur.",
           "<strong>Lisans ve denetim kayıtları:</strong> Hesap ve lisans işlemlerine ait kayıtlar, kullanıcı kimliğinin karma (hash) hâlini içerir ve en fazla 90 gün tutulur.",
-          "<strong>Çökme raporları:</strong> Uygulama sürümü, cihaz hash'i, hata türü ve metni, stack trace ile günlük satırlarını içerir. E-posta adresleri, IP adresleri ve dosya yollarındaki kullanıcı klasör adları gönderilmeden önce maskelenir. En fazla 30 gün tutulur. Rapor gönderdiğinizde kötüye kullanımı önlemek için bir Firebase anonim kimliği oluşturulur; isteğin IP adresi ise yalnızca geri döndürülemez bir karma (hash) olarak ve en fazla 24 saat saklanır.",
-          "<strong>Yurt dışı aktarım:</strong> Firebase Authentication hizmetini Google, ABD veri merkezlerinde işletir. Satın alma doğrulaması için RevenueCat verilerinizi ABD'de (AWS) işler; bu aktarım Standart Sözleşme Hükümleri ile güvence altındadır. Firestore, Cloud Functions ve Cloud KMS verileri Avrupa'daki (europe-west1) sunucularda işlenir. Türkiye'den yapılan aktarımların KVKK m.9 dayanağı: [HUKUKİ DAYANAK: AVUKAT TARAFINDAN DOLDURULACAK].",
+          "<strong>Çökme raporları:</strong> Uygulama sürümü, cihaz hash'i, hata türü ve metni, stack trace ile günlük satırlarını içerir. E-posta adresleri, IP adresleri ve dosya yollarındaki kullanıcı klasör adları gönderilmeden önce maskelenir. En fazla 30 gün tutulur. Rapor gönderdiğinizde kötüye kullanımı önlemek için bir Firebase anonim kimliği oluşturulur; isteğin IP adresi uygulama veritabanımıza (Firestore) açık olarak kaydedilmez, yalnızca tuzlanmış geri döndürülemez bir karma (hash) sayaç anahtarı olarak en fazla 24 saat tutulur (Google Cloud Run / Cloud Logging teknik altyapı günlükleri ise ağ adresini standart olarak en fazla 30 gün tutabilir).",
+          "<strong>PC saat geri alma koruması (yalnızca masaüstü):</strong> Yalnızca bilgisayarınızın sistem saati son görülen zamandan 5 dakikadan fazla geride tespit edildiğinde (ör. BIOS/CMOS pili bitmesi durumunda meşru Pro lisans kilidini açmak için), masaüstü uygulaması <code>time.google.com</code>, <code>cloudflare.com</code> veya <code>www.apple.com</code> adreslerinden ilk yanıt verene çerezsiz/kimliksiz bir HTTPS <code>HEAD</code> isteği göndererek standart <code>Date</code> başlığını okur; normal çalışmada bu istek yapılmaz.",
+          "<strong>Yurt dışı aktarım ve alıcı tüzel kişiler:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity ve AdMob hizmetleri <strong>Google Ireland Limited</strong> (İrlanda) ve <strong>Google LLC</strong> (ABD) tarafından; satın alma doğrulaması <strong>RevenueCat, Inc.</strong> (ABD) tarafından; statik web barındırma ise <strong>GitHub, Inc. / GitHub B.V.</strong> ve <strong>Fastly, Inc.</strong> (ABD/AB) tarafından sağlanır. Uygulama içi yazı tipleri (Inter, Space Grotesk, JetBrains Mono) yerel olarak paketlenmiştir; Google Fonts sunucularına çalışma zamanında dış çağrı yapılmaz. Firestore, Cloud Functions ve Cloud KMS verileri birincil olarak Avrupa'daki (<code>europe-west1</code>) sunucularda barındırılır; ancak küresel bulut altyapısı ve kimlik/ödeme servisleri kapsamında veriler ABD ve Avrupa Ekonomik Alanı'nda işlenebilir. Türkiye'den yapılan aktarımların 6698 sayılı KVKK m.9 dayanağı (Standart Sözleşme / doğrudan toplama ayrımı): [HUKUKİ DAYANAK: AVUKAT TARAFINDAN DOLDURULACAK].",
           "<strong>Destek e-postası:</strong> Google Groups (tüketici grubu) üzerinden işlenir ve Google'ın <a href='https://policies.google.com/privacy?hl=en'>Gizlilik Politikası</a> ile <a href='https://policies.google.com/terms?hl=en'>Şartlarına</a> tabidir. Mesajlar grubun arşivinde tutulur."
         ]],
         ["h", "7. Haklarınız (KVKK ve GDPR)"],
@@ -71,9 +72,15 @@ window.NAHI_LEGAL = {
           ["<strong>Yerel eklenti verileri</strong>", "Aktif sekmedeki medya durumu (parça adı, sanatçı, oynatma durumu)", "Yalnızca yerel tarayıcı ve PC uygulaması", "Desteklenen tarayıcılardaki medyayı PC ve telefonda göstermek. Buluta gönderilmez."],
           ["<strong>Uygulama doğrulama</strong>", "Paket adı, uygulama imza sertifikası ve cihaz bütünlük sonucu", "Google Play Integrity (Google)", "Uygulamanın Google Play üzerinden yüklenip yüklenmediğini ve güvenilir bir cihazda çalışıp çalışmadığını doğrulamak; kötüye kullanımı önlemek. Google bu verileri üçüncü taraflarla paylaşmaz."],
           ["<strong>Hata raporu (isteğe bağlı)</strong>", "Uygulama sürümü, cihaz hash'i, hata türü ve metni, stack trace ve günlük satırları (e-posta ve IP adresleri maskelenir)", "Google Cloud Functions ve Firestore (Avrupa); destek e-postası Google Groups üzerinden", "Çökmeleri analiz edip düzeltmek. Gönderim kullanıcı onayıyla yapılır."],
-          ["<strong>Reklam ve cihaz tanımlayıcıları (yalnızca Ücretsiz plan)</strong>", "Google Reklam Kimliği (Android AD_ID), yaklaşık coğrafi konum (IP adresi), cihaz modeli, reklam gösterim ve etkileşim metrikleri.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Reklam Politikası</a>", "Ücretsiz planda 2x1 yerel reklam gösterimi ve geçersiz/sahte trafiğin önlenmesi. Pro plana geçildiğinde reklam kimliği toplanmaz ve AdMob tamamen devre dışı bırakılır. Kullanıcılar Android Ayarları > Gizlilik > Reklamlar menüsünden reklam kimliğini diledikleri zaman sıfırlayabilir veya kişiselleştirmeyi kapatabilir."]
+          ["<strong>Reklam ve cihaz tanımlayıcıları (yalnızca Ücretsiz plan)</strong>", "Google Reklam Kimliği (Android AD_ID), yaklaşık coğrafi konum (IP adresi), cihaz modeli, reklam gösterim ve etkileşim metrikleri.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Reklam Politikası</a>", "Ücretsiz planda 2x1 yerel reklam gösterimi ve geçersiz/sahte trafiğin önlenmesi. Pro planda reklam kimliği toplanmaz ve AdMob SDK başlatılmaz. Kullanıcılar Android Ayarları > Gizlilik > Reklamlar menüsünden reklam kimliğini diledikleri zaman sıfırlayabilir veya kişiselleştirmeyi kapatabilir."],
+          ["<strong>Saat geri alma koruması (yalnızca PC, istisnai)</strong>", "PC genel IP adresi, standart HTTPS HEAD isteği (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) veya Apple Inc. (www.apple.com)", "Yalnızca PC sistem saati son görülen zamandan >5 dk gerideyse HTTP Date başlığından gerçek zamanı doğrulayıp meşru Pro lisans kilidini açmak. Normal açılışlarda çağrılmaz; çerez veya cihaz kimliği gönderilmez."],
+          ["<strong>Web sitesi barındırma ve CDN (sayfa açılışı)</strong>", "Ziyaretçi IP adresi, istenen URL, tarayıcı ve işletim sistemi HTTP başlıkları (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. ve Fastly, Inc. (ABD / AEA)", "Statik web sayfalarının sunulması, önbellekleme ve DDoS/güvenlik koruması (standart güvenlik günlüklerinde 30–90 gün tutulur). Sitede takip çerezi bulunmaz; sistem yazı tipleri kullanılır ve Google Fonts sunucularına dış çağrı yapılmaz."]
         ]],
-        ["card", [["p", "<strong>Veri sorumlusu:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-posta:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Web sitesi:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Veri sorumlusu:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>E-posta:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Web sitesi:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -117,11 +124,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Önemli: Aktif aboneliğinizi iptal edin"],
           ["p", "Hesabınızı silmek, Google Play üzerinden başlattığınız aboneliği <strong>otomatik olarak iptal etmez</strong>. Gelecek ödemeleri durdurmak için hesabınızı silmeden önce:"],
-          ["ol", [
-            "Android cihazınızda <strong>Google Play Store</strong>'u açın.",
-            "Profil simgenize dokunun > <strong>Ödemeler ve abonelikler</strong> > <strong>Abonelikler</strong>.",
-            "<strong>NahiDeck</strong> aboneliğini seçip <strong>\"Aboneliği iptal et\"</strong> seçeneğine dokunun."
-          ]]
+          ["ol", ["Android cihazınızda <strong>Google Play Store</strong>'u açın.", "Profil simgenize dokunun > <strong>Ödemeler ve abonelikler</strong> > <strong>Abonelikler</strong>.", "<strong>NahiDeck</strong> aboneliğini seçip <strong>\"Aboneliği iptal et\"</strong> seçeneğine dokunun."]]
         ]]
       ]
     }
@@ -130,7 +133,7 @@ window.NAHI_LEGAL = {
   en: {
     privacy: {
       title: "NahiDeck Privacy Policy",
-      updated: "October 25, 2026",
+      updated: "November 11, 2026",
       blocks: [
         ["p", "NahiDeck (\"we\", \"us\" or \"the app\") values the privacy of its users and the protection of personal data. This policy covers the <strong>NahiDeck Android app</strong>, the <strong>NahiDeck Windows desktop client</strong> and the <strong>NahiDeck web browser extension (NahiDeck Connect)</strong>."],
         ["h", "In brief"],
@@ -172,8 +175,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetry:</strong> Withdrawing consent in Settings > Privacy deletes your existing record immediately. Active records expire automatically within 180 days (TTL).",
           "<strong>Technical server logs:</strong> Infrastructure request logs are kept for up to 30 days.",
           "<strong>Licence and audit records:</strong> Records of account and licence operations contain a hashed (one-way) form of your user identifier and are kept for up to 90 days.",
-          "<strong>Crash reports:</strong> Include the app version, a device hash, the error type and text, the stack trace and log lines. Email addresses, IP addresses and user folder names in file paths are masked before storage. Kept for up to 30 days. When you send a report, a Firebase anonymous identifier is created to prevent abuse; the request's IP address is kept only as a one-way hash and for at most 24 hours.",
-          "<strong>International transfers:</strong> Firebase Authentication is operated by Google from United States data centres. For purchase verification, RevenueCat processes your data in the United States (AWS); this transfer is covered by Standard Contractual Clauses. Firestore, Cloud Functions and Cloud KMS data are processed on servers in Europe (europe-west1). Legal basis for transfers from Turkey under KVKK article 9: [LEGAL BASIS: TO BE COMPLETED BY LAWYER].",
+          "<strong>Crash reports:</strong> Include the app version, a device hash, the error type and text, the stack trace and log lines. Email addresses, IP addresses and user folder names in file paths are masked before storage. Kept for up to 30 days. When you send a report, a Firebase anonymous identifier is created to prevent abuse; the request's IP address is never stored in plain text in our application database (Firestore) and is kept only as a salted one-way hash counter for at most 24 hours (Google Cloud Run / Cloud Logging infrastructure logs may retain request IP addresses for up to 30 days).",
+          "<strong>PC clock-rollback check (desktop only):</strong> Only if your computer's system clock is detected to be more than 5 minutes behind the last recorded timestamp (for example after a CMOS battery drain), the desktop app sends an unauthenticated, cookieless HTTPS <code>HEAD</code> request to the first reachable host among <code>time.google.com</code>, <code>cloudflare.com</code> or <code>www.apple.com</code> solely to read the HTTP <code>Date</code> header and unlock legitimate Pro licences. No request is made during normal operation.",
+          "<strong>International transfers and recipient legal entities:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity and AdMob are provided by <strong>Google Ireland Limited</strong> (Ireland) and <strong>Google LLC</strong> (USA); purchase verification is provided by <strong>RevenueCat, Inc.</strong> (USA); static website hosting is provided by <strong>GitHub, Inc. / GitHub B.V.</strong> and <strong>Fastly, Inc.</strong> (USA/EEA). App fonts (Inter, Space Grotesk, JetBrains Mono) are self-hosted inside the app bundles; no runtime requests are made to Google Fonts servers. Firestore, Cloud Functions and Cloud KMS are hosted primarily in Europe (<code>europe-west1</code>), while authentication, billing and global cloud infrastructure may process data in the United States and the EEA under Standard Contractual Clauses. Legal basis for transfers from Turkey under KVKK article 9: [LEGAL BASIS: TO BE COMPLETED BY LAWYER].",
           "<strong>Support email:</strong> Processed through Google Groups (a consumer group) and subject to Google's <a href='https://policies.google.com/privacy?hl=en'>Privacy Policy</a> and <a href='https://policies.google.com/terms?hl=en'>Terms</a>. Messages are kept in the group archive."
         ]],
         ["h", "7. Your rights (GDPR and KVKK)"],
@@ -187,9 +191,15 @@ window.NAHI_LEGAL = {
           ["<strong>Local extension data</strong>", "Media state of the active browser tab (track title, artist, playback state)", "Local browser and PC app only", "Showing web media on your phone and PC. Never sent to the cloud."],
           ["<strong>App verification</strong>", "Package name, app signing certificate and device integrity result", "Google Play Integrity (Google)", "Verifying that the app was installed from Google Play and runs on a trusted device; preventing abuse. Google does not share this data with third parties."],
           ["<strong>Crash reports (optional)</strong>", "App version, device hash, error type and text, stack trace and log lines (email and IP addresses are masked)", "Google Cloud Functions and Firestore (Europe); support email via Google Groups", "Analysing and fixing crashes. Sent only with your confirmation."],
-          ["<strong>Advertising and device identifiers (Free plan only)</strong>", "Google Advertising ID (Android AD_ID), approximate location (derived from IP address), device model, ad impression and interaction metrics.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Ads Policy</a>", "Serving 2x1 native ads in the Free plan and preventing invalid traffic. In the Pro plan, advertising identifiers are never collected and AdMob is entirely disabled. Users can reset their Advertising ID or opt out of personalized ads under Android Settings > Privacy > Ads."]
+          ["<strong>Advertising and device identifiers (Free plan only)</strong>", "Google Advertising ID (Android AD_ID), approximate location (derived from IP address), device model, ad impression and interaction metrics.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Ads Policy</a>", "Serving 2x1 native ads in the Free plan and preventing invalid traffic. In the Pro plan, advertising identifiers are never collected and the AdMob SDK is not initialized. Users can reset their Advertising ID or opt out of personalized ads under Android Settings > Privacy > Ads."],
+          ["<strong>Clock-rollback check (PC only, exceptional)</strong>", "PC public IP address, standard HTTPS HEAD request (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) or Apple Inc. (www.apple.com)", "Reading the HTTP Date header to verify current time and unlock a legitimate Pro licence only when the local PC clock is >5 minutes behind the last seen time. Never called during normal startup; sends no cookies or device identifiers."],
+          ["<strong>Website hosting and CDN (page load)</strong>", "Visitor IP address, requested URL, browser and operating system HTTP headers (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. and Fastly, Inc. (USA / EEA)", "Serving static web pages, caching and DDoS/security protection (kept in standard security logs for 30–90 days). No tracking cookies are used; system fonts are used with zero external calls to Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Data controller:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Contact email:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Website:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Data controller:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>Contact email:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Website:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -233,11 +243,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Important: cancel your active subscription"],
           ["p", "Deleting your account does <strong>not</strong> cancel a subscription you started through Google Play. To stop future charges, cancel it before deleting your account:"],
-          ["ol", [
-            "Open the <strong>Google Play Store</strong> on your Android device.",
-            "Tap your profile icon > <strong>Payments and subscriptions</strong> > <strong>Subscriptions</strong>.",
-            "Select <strong>NahiDeck</strong> and tap <strong>\"Cancel subscription\"</strong>."
-          ]]
+          ["ol", ["Open the <strong>Google Play Store</strong> on your Android device.", "Tap your profile icon > <strong>Payments and subscriptions</strong> > <strong>Subscriptions</strong>.", "Select <strong>NahiDeck</strong> and tap <strong>\"Cancel subscription\"</strong>."]]
         ]]
       ]
     }
@@ -247,7 +253,7 @@ window.NAHI_LEGAL = {
   es: {
     privacy: {
       title: "Política de privacidad de NahiDeck",
-      updated: "25 de octubre de 2026",
+      updated: "11 de noviembre de 2026",
       blocks: [
         ["p", "NahiDeck («nosotros», «la aplicación» o «el servicio») valora la privacidad de sus usuarios y la protección de sus datos personales. Esta política abarca la <strong>aplicación de NahiDeck para Android</strong>, el <strong>cliente de escritorio para Windows</strong> y la <strong>extensión para navegador (NahiDeck Connect)</strong>."],
         ["h", "En resumen"],
@@ -289,8 +295,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetría:</strong> si retiras el consentimiento en Ajustes > Privacidad, tu registro se elimina de inmediato. Los registros activos caducan automáticamente en un plazo de 180 días (TTL).",
           "<strong>Registros técnicos del servidor:</strong> los registros de solicitudes de la infraestructura se conservan hasta 30 días.",
           "<strong>Registros de licencia y auditoría:</strong> contienen una forma cifrada de un solo sentido (hash) de tu identificador de usuario y se conservan hasta 90 días.",
-          "<strong>Informes de fallos:</strong> incluyen la versión de la app, un hash del dispositivo, el tipo y el texto del error, la traza de la pila y líneas de registro. Las direcciones de correo, las IP y los nombres de carpeta de usuario en las rutas se ocultan antes de guardarse. Se conservan hasta 30 días. Al enviar un informe se crea un identificador anónimo de Firebase para evitar abusos; la dirección IP de la solicitud se conserva solo como hash irreversible y durante un máximo de 24 horas.",
-          "<strong>Transferencias internacionales:</strong> Google opera Firebase Authentication desde centros de datos de Estados Unidos. Para verificar compras, RevenueCat procesa tus datos en Estados Unidos (AWS); esta transferencia se rige por Cláusulas Contractuales Tipo. Los datos de Firestore, Cloud Functions y Cloud KMS se procesan en servidores de Europa (europe-west1). Base jurídica de las transferencias desde Turquía según el artículo 9 de la KVKK: [BASE JURÍDICA: LA COMPLETARÁ EL ABOGADO].",
+          "<strong>Informes de fallos:</strong> incluyen la versión de la app, un hash del dispositivo, el tipo y el texto del error, la traza de la pila y líneas de registro. Las direcciones de correo, las IP y los nombres de carpeta de usuario en las rutas se ocultan antes de guardarse. Se conservan hasta 30 días. Al enviar un informe se crea un identificador anónimo de Firebase para evitar abusos; la dirección IP de la solicitud nunca se almacena en texto plano en nuestra base de datos (Firestore) y solo se conserva como contador hash irreversible con sal durante un máximo de 24 horas (los registros técnicos de infraestructura de Google Cloud Run / Cloud Logging pueden conservar la dirección IP hasta 30 días).",
+          "<strong>Protección contra el retroceso del reloj del PC (solo escritorio):</strong> únicamente cuando se detecta que el reloj del sistema de tu ordenador está más de 5 minutos por detrás de la última marca temporal registrada (por ejemplo, si se agota la pila CMOS/BIOS), la aplicación de escritorio envía una solicitud HTTPS <code>HEAD</code> sin cookies ni identificadores al primer servidor disponible entre <code>time.google.com</code>, <code>cloudflare.com</code> o <code>www.apple.com</code> solo para leer la cabecera HTTP <code>Date</code> y desbloquear licencias Pro legítimas. No se realiza ninguna solicitud durante el funcionamiento normal.",
+          "<strong>Transferencias internacionales y entidades jurídicas destinatarias:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity y AdMob son prestados por <strong>Google Ireland Limited</strong> (Irlanda) y <strong>Google LLC</strong> (EE. UU.); la verificación de compras es prestada por <strong>RevenueCat, Inc.</strong> (EE. UU.); el alojamiento web estático es prestado por <strong>GitHub, Inc. / GitHub B.V.</strong> y <strong>Fastly, Inc.</strong> (EE. UU./EEE). Las fuentes tipográficas de la aplicación (Inter, Space Grotesk, JetBrains Mono) están integradas localmente; no se realizan llamadas en tiempo de ejecución a los servidores de Google Fonts. Los datos de Firestore, Cloud Functions y Cloud KMS se alojan principalmente en Europa (<code>europe-west1</code>), mientras que la autenticación, la facturación y la infraestructura global pueden procesar datos en Estados Unidos y el EEE bajo Cláusulas Contractuales Tipo. Base jurídica de las transferencias desde Turquía según el artículo 9 de la KVKK: [BASE JURÍDICA: LA COMPLETARÁ EL ABOGADO].",
           "<strong>Correo de soporte:</strong> Se procesa a través de Google Groups (grupo de consumidor) y está sujeto a la <a href='https://policies.google.com/privacy?hl=en'>Política de privacidad</a> y a las <a href='https://policies.google.com/terms?hl=en'>Condiciones</a> de Google. Los mensajes se conservan en el archivo del grupo."
         ]],
         ["h", "7. Tus derechos (RGPD y KVKK)"],
@@ -304,9 +311,15 @@ window.NAHI_LEGAL = {
           ["<strong>Datos locales de la extensión</strong>", "Estado del medio de la pestaña activa (título, artista, estado de reproducción)", "Solo el navegador local y la app del PC", "Mostrar el medio web en el teléfono y el PC. Nunca se envía a la nube."],
           ["<strong>Verificación de la app</strong>", "Nombre del paquete, certificado de firma de la app y resultado de integridad del dispositivo", "Google Play Integrity (Google)", "Comprobar que la app se instaló desde Google Play y se ejecuta en un dispositivo de confianza; evitar abusos. Google no comparte estos datos con terceros."],
           ["<strong>Informe de fallos (opcional)</strong>", "Versión de la app, hash del dispositivo, tipo y texto del error, traza de la pila y líneas de registro (las direcciones de correo e IP se ocultan)", "Google Cloud Functions y Firestore (Europa); correo de soporte mediante Google Groups", "Analizar y corregir fallos. Se envía solo con tu confirmación."],
-          ["<strong>Publicidad e identificadores de dispositivo (solo plan Gratuito)</strong>", "ID de publicidad de Google (Android AD_ID), ubicación aproximada (a través de la dirección IP), modelo de dispositivo, métricas de impresión e interacción con anuncios.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de publicidad de Google</a>", "Mostrar anuncios nativos 2x1 en el plan Gratuito y prevenir tráfico no válido. En el plan Pro, no se recopilan identificadores publicitarios y AdMob se desactiva por completo. Los usuarios pueden restablecer su ID de publicidad en Ajustes de Android > Privacidad > Anuncios."]
+          ["<strong>Publicidad e identificadores de dispositivo (solo plan Gratuito)</strong>", "ID de publicidad de Google (Android AD_ID), ubicación aproximada (a través de la dirección IP), modelo de dispositivo, métricas de impresión e interacción con anuncios.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de publicidad de Google</a>", "Mostrar anuncios nativos 2x1 en el plan Gratuito y prevenir tráfico no válido. En el plan Pro, no se recopilan identificadores publicitarios y el SDK de AdMob no se inicializa. Los usuarios pueden restablecer su ID de publicidad en Ajustes de Android > Privacidad > Anuncios."],
+          ["<strong>Verificación de retroceso del reloj (solo PC, excepcional)</strong>", "Dirección IP pública del PC, solicitud HTTPS HEAD estándar (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) o Apple Inc. (www.apple.com)", "Leer la cabecera HTTP Date para verificar la hora real y desbloquear una licencia Pro legítima solo cuando el reloj local del PC esté más de 5 minutos atrasado respecto a la última hora registrada. Nunca se llama en inicios normales; no envía cookies ni identificadores de dispositivo."],
+          ["<strong>Alojamiento web y CDN (carga de página)</strong>", "Dirección IP del visitante, URL solicitada, cabeceras HTTP de navegador y sistema operativo (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. y Fastly, Inc. (EE. UU. / EEE)", "Entrega de páginas web estáticas, caché y protección de seguridad/DDoS (conservado en registros de seguridad estándar durante 30–90 días). No se usan cookies de seguimiento; se usan fuentes del sistema sin llamadas externas a Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Responsable:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Correo de contacto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Sitio web:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Responsable:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>Correo de contacto:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Sitio web:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -350,11 +363,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Importante: cancela tu suscripción activa"],
           ["p", "Eliminar tu cuenta <strong>no cancela</strong> una suscripción iniciada en Google Play. Para evitar futuros cobros, cancélala antes de eliminar tu cuenta:"],
-          ["ol", [
-            "Abre <strong>Google Play Store</strong> en tu dispositivo Android.",
-            "Toca tu icono de perfil > <strong>Pagos y suscripciones</strong> > <strong>Suscripciones</strong>.",
-            "Selecciona <strong>NahiDeck</strong> y toca <strong>«Cancelar suscripción»</strong>."
-          ]]
+          ["ol", ["Abre <strong>Google Play Store</strong> en tu dispositivo Android.", "Toca tu icono de perfil > <strong>Pagos y suscripciones</strong> > <strong>Suscripciones</strong>.", "Selecciona <strong>NahiDeck</strong> y toca <strong>«Cancelar suscripción»</strong>."]]
         ]]
       ]
     }
@@ -364,7 +373,7 @@ window.NAHI_LEGAL = {
   "pt-BR": {
     privacy: {
       title: "Política de Privacidade do NahiDeck",
-      updated: "25 de outubro de 2026",
+      updated: "11 de novembro de 2026",
       blocks: [
         ["p", "O NahiDeck («nós», «aplicativo» ou «serviço») valoriza a privacidade de seus usuários e a proteção dos dados pessoais. Esta política abrange o <strong>aplicativo NahiDeck para Android</strong>, o <strong>cliente NahiDeck para Windows</strong> e a <strong>extensão para navegador (NahiDeck Connect)</strong>."],
         ["h", "Em resumo"],
@@ -406,8 +415,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> ao retirar o consentimento em Configurações > Privacidade, seu registro é excluído imediatamente. Registros ativos expiram automaticamente em até 180 dias (TTL).",
           "<strong>Registros técnicos do servidor:</strong> os registros de solicitações da infraestrutura são mantidos por até 30 dias.",
           "<strong>Registros de licença e auditoria:</strong> contêm uma forma criptografada de sentido único (hash) do seu identificador de usuário e são mantidos por até 90 dias.",
-          "<strong>Relatórios de falhas:</strong> incluem a versão do app, um hash do dispositivo, o tipo e o texto do erro, o rastreamento de pilha e linhas de log. Endereços de e-mail, IPs e nomes de pasta de usuário em caminhos são ocultados antes de serem armazenados. Mantidos por até 30 dias. Ao enviar um relatório, um identificador anônimo do Firebase é criado para evitar abusos; o endereço IP da solicitação é mantido apenas como hash irreversível e por no máximo 24 horas.",
-          "<strong>Transferências internacionais:</strong> O Google opera o Firebase Authentication a partir de data centers nos Estados Unidos. Para verificar compras, a RevenueCat processa seus dados nos Estados Unidos (AWS); essa transferência é coberta por Cláusulas Contratuais Padrão. Os dados do Firestore, Cloud Functions e Cloud KMS são processados em servidores na Europa (europe-west1). Base legal para transferências a partir da Turquia (KVKK, art. 9): [BASE LEGAL: A SER PREENCHIDA PELO ADVOGADO].",
+          "<strong>Relatórios de falhas:</strong> incluem a versão do app, um hash do dispositivo, o tipo e o texto do erro, o rastreamento de pilha e linhas de log. Endereços de e-mail, IPs e nomes de pasta de usuário em caminhos são ocultados antes de serem armazenados. Mantidos por até 30 dias. Ao enviar um relatório, um identificador anônimo do Firebase é criado para evitar abusos; o endereço IP da solicitação nunca é armazenado em texto simples em nosso banco de dados (Firestore) e é mantido apenas como contador hash irreversível com sal por no máximo 24 horas (os registros técnicos de infraestrutura do Google Cloud Run / Cloud Logging podem reter o endereço IP por até 30 dias).",
+          "<strong>Proteção contra retrocesso do relógio do PC (apenas desktop):</strong> somente quando o relógio do sistema do computador é detectado mais de 5 minutos atrasado em relação ao último horário registrado (por exemplo, após descarga da bateria CMOS/BIOS), o aplicativo para desktop envia uma solicitação HTTPS <code>HEAD</code> sem cookies ou identificadores ao primeiro servidor acessível entre <code>time.google.com</code>, <code>cloudflare.com</code> ou <code>www.apple.com</code> apenas para ler o cabeçalho HTTP <code>Date</code> e desbloquear licenças Pro legítimas. Nenhuma solicitação é feita durante a operação normal.",
+          "<strong>Transferências internacionais e entidades jurídicas destinatárias:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity e AdMob são fornecidos pela <strong>Google Ireland Limited</strong> (Irlanda) e <strong>Google LLC</strong> (EUA); a verificação de compras é fornecida pela <strong>RevenueCat, Inc.</strong> (EUA); a hospedagem web estática é fornecida pela <strong>GitHub, Inc. / GitHub B.V.</strong> e <strong>Fastly, Inc.</strong> (EUA/EEE). As fontes do aplicativo (Inter, Space Grotesk, JetBrains Mono) são empacotadas localmente; nenhuma chamada em tempo de execução é feita aos servidores do Google Fonts. Os dados do Firestore, Cloud Functions e Cloud KMS são hospedados principalmente na Europa (<code>europe-west1</code>), enquanto autenticação, faturamento e infraestrutura global podem processar dados nos Estados Unidos e no EEE sob Cláusulas Contratuais Padrão. Base legal para transferências a partir da Turquia (KVKK, art. 9): [BASE LEGAL: A SER PREENCHIDA PELO ADVOGADO].",
           "<strong>E-mail de suporte:</strong> Processado pelo Google Groups (grupo de consumidor) e sujeito à <a href='https://policies.google.com/privacy?hl=en'>Política de Privacidade</a> e aos <a href='https://policies.google.com/terms?hl=en'>Termos</a> do Google. As mensagens ficam guardadas no arquivo do grupo."
         ]],
         ["h", "7. Seus direitos (RGPD e KVKK)"],
@@ -421,9 +431,15 @@ window.NAHI_LEGAL = {
           ["<strong>Dados locais da extensão</strong>", "Estado da mídia na aba ativa (título, artista, reprodução)", "Somente navegador local e app do PC", "Mostrar a mídia da web no celular e no PC. Nunca é enviada à nuvem."],
           ["<strong>Verificação do app</strong>", "Nome do pacote, certificado de assinatura do app e resultado de integridade do dispositivo", "Google Play Integrity (Google)", "Verificar se o app foi instalado pelo Google Play e roda em um dispositivo confiável; prevenir abusos. O Google não compartilha esses dados com terceiros."],
           ["<strong>Relatório de falhas (opcional)</strong>", "Versão do app, hash do dispositivo, tipo e texto do erro, rastreamento de pilha e linhas de log (e-mails e IPs são ocultados)", "Google Cloud Functions e Firestore (Europa); e-mail de suporte via Google Groups", "Analisar e corrigir falhas. Enviado somente com sua confirmação."],
-          ["<strong>Publicidade e identificadores de dispositivo (apenas plano Gratuito)</strong>", "ID de publicidade do Google (Android AD_ID), localização aproximada (via endereço IP), modelo do dispositivo, métricas de impressão e interação com anúncios.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de Anúncios do Google</a>", "Exibição de anúncios nativos 2x1 no plano Gratuito e prevenção de tráfego inválido. No plano Pro, identificadores de publicidade não são coletados e o AdMob é totalmente desativado. Os usuários podem redefinir o ID de publicidade em Configurações do Android > Privacidade > Anúncios."]
+          ["<strong>Publicidade e identificadores de dispositivo (apenas plano Gratuito)</strong>", "ID de publicidade do Google (Android AD_ID), localização aproximada (via endereço IP), modelo do dispositivo, métricas de impressão e interação com anúncios.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de Anúncios do Google</a>", "Exibição de anúncios nativos 2x1 no plano Gratuito e prevenção de tráfego inválido. No plano Pro, identificadores de publicidade não são coletados e o SDK do AdMob não é inicializado. Os usuários podem redefinir o ID de publicidade em Configurações do Android > Privacidade > Anúncios."],
+          ["<strong>Verificação de retrocesso do relógio (apenas PC, excepcional)</strong>", "Endereço IP público do PC, solicitação HTTPS HEAD padrão (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) ou Apple Inc. (www.apple.com)", "Ler o cabeçalho HTTP Date para verificar a hora atual e desbloquear uma licença Pro legítima somente quando o relógio local do PC estiver mais de 5 minutos atrasado em relação ao último horário visto. Nunca chamado na inicialização normal; não envia cookies nem identificadores de dispositivo."],
+          ["<strong>Hospedagem web e CDN (carregamento de página)</strong>", "Endereço IP do visitante, URL solicitada, cabeçalhos HTTP de navegador e sistema operacional (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. e Fastly, Inc. (EUA / EEE)", "Entrega de páginas web estáticas, cache e proteção de segurança/DDoS (mantidos em registros de segurança padrão por 30–90 dias). Não são usados cookies de rastreamento; fontes do sistema são usadas sem chamadas externas ao Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Controlador:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail de contato:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Site:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Controlador:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>E-mail de contato:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Site:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -467,11 +483,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Importante: cancele sua assinatura ativa"],
           ["p", "Excluir a conta <strong>não cancela</strong> uma assinatura feita pelo Google Play. Para evitar cobranças futuras, cancele antes de excluir sua conta:"],
-          ["ol", [
-            "Abra a <strong>Google Play Store</strong> no seu dispositivo Android.",
-            "Toque no ícone do perfil > <strong>Pagamentos e assinaturas</strong> > <strong>Assinaturas</strong>.",
-            "Selecione <strong>NahiDeck</strong> e toque em <strong>«Cancelar assinatura»</strong>."
-          ]]
+          ["ol", ["Abra a <strong>Google Play Store</strong> no seu dispositivo Android.", "Toque no ícone do perfil > <strong>Pagamentos e assinaturas</strong> > <strong>Assinaturas</strong>.", "Selecione <strong>NahiDeck</strong> e toque em <strong>«Cancelar assinatura»</strong>."]]
         ]]
       ]
     }
@@ -481,7 +493,7 @@ window.NAHI_LEGAL = {
   de: {
     privacy: {
       title: "NahiDeck Datenschutzerklärung",
-      updated: "25. Oktober 2026",
+      updated: "11. November 2026",
       blocks: [
         ["p", "NahiDeck («wir», «die App» oder «der Dienst») legt großen Wert auf den Schutz personenbezogener Daten seiner Nutzer. Diese Erklärung gilt für die <strong>NahiDeck-App für Android</strong>, den <strong>NahiDeck-Client für Windows</strong> und die <strong>Browser-Erweiterung (NahiDeck Connect)</strong>."],
         ["h", "Kurz zusammengefasst"],
@@ -523,8 +535,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetrie:</strong> Wenn Sie die Einwilligung unter Einstellungen > Datenschutz widerrufen, wird Ihr Datensatz sofort gelöscht. Aktive Datensätze laufen automatisch nach spätestens 180 Tagen ab (TTL).",
           "<strong>Technische Server-Protokolle:</strong> Anfrage-Protokolle der Infrastruktur werden höchstens 30 Tage aufbewahrt.",
           "<strong>Lizenz- und Prüfprotokolle:</strong> enthalten eine nicht umkehrbare Prüfsumme (Hash) Ihrer Benutzerkennung und werden höchstens 90 Tage aufbewahrt.",
-          "<strong>Absturzberichte:</strong> enthalten App-Version, einen Geräte-Hash, Fehlertyp und Fehlertext, Stack-Trace und Protokollzeilen. E-Mail-Adressen, IP-Adressen und Benutzerordnernamen in Dateipfaden werden vor der Speicherung unkenntlich gemacht. Werden höchstens 30 Tage aufbewahrt. Beim Senden eines Berichts wird zur Missbrauchsvermeidung eine anonyme Firebase-Kennung erstellt; die IP-Adresse der Anfrage wird nur als nicht umkehrbarer Hash und höchstens 24 Stunden gespeichert.",
-          "<strong>Übermittlung in Drittländer:</strong> Google betreibt Firebase Authentication in Rechenzentren in den Vereinigten Staaten. Zur Kaufprüfung verarbeitet RevenueCat Ihre Daten in den USA (AWS); diese Übermittlung erfolgt auf Grundlage der Standardvertragsklauseln. Daten von Firestore, Cloud Functions und Cloud KMS werden auf Servern in Europa (europe-west1) verarbeitet. Rechtsgrundlage für Übermittlungen aus der Türkei nach KVKK Art. 9: [RECHTSGRUNDLAGE: DURCH RECHTSANWALT ZU ERGÄNZEN].",
+          "<strong>Absturzberichte:</strong> enthalten die App-Version, einen Geräte-Hash, Fehlertyp und -text, den Stacktrace und Protokollzeilen. E-Mail-Adressen, IP-Adressen und Benutzerordnernamen in Dateipfaden werden vor dem Speichern maskiert. Bis zu 30 Tage aufbewahrt. Beim Senden eines Berichts wird eine anonyme Firebase-Kennung erstellt, um Missbrauch zu verhindern; die IP-Adresse der Anfrage wird niemals im Klartext in unserer Anwendungsdatenbank (Firestore) gespeichert, sondern nur als gesalzener Einweg-Hash-Zähler für höchstens 24 Stunden aufbewahrt (Infrastrukturprotokolle von Google Cloud Run / Cloud Logging können die IP-Adresse bis zu 30 Tage speichern).",
+          "<strong>Schutz vor Zurückstellen der PC-Uhr (nur Desktop):</strong> Nur wenn festgestellt wird, dass die Systemuhr Ihres Computers mehr als 5 Minuten hinter dem zuletzt aufgezeichneten Zeitstempel liegt (z. B. nach einer leeren CMOS-/BIOS-Batterie), sendet die Desktop-App eine cookielose, nicht authentifizierte HTTPS-<code>HEAD</code>-Anfrage an den ersten erreichbaren Host unter <code>time.google.com</code>, <code>cloudflare.com</code> oder <code>www.apple.com</code>, ausschließlich um den HTTP-<code>Date</code>-Header zu lesen und rechtmäßige Pro-Lizenzen freizuschalten. Im Normalbetrieb erfolgt keine Anfrage.",
+          "<strong>Internationale Übermittlungen und empfangende Rechtsträger:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity und AdMob werden von der <strong>Google Ireland Limited</strong> (Irland) und der <strong>Google LLC</strong> (USA) bereitgestellt; die Kaufüberprüfung erfolgt durch die <strong>RevenueCat, Inc.</strong> (USA); das statische Webhosting wird von der <strong>GitHub, Inc. / GitHub B.V.</strong> und der <strong>Fastly, Inc.</strong> (USA/EWR) bereitgestellt. Die Schriftarten der App (Inter, Space Grotesk, JetBrains Mono) sind lokal eingebettet; zur Laufzeit erfolgen keine Abrufe von Google-Fonts-Servern. Daten in Firestore, Cloud Functions und Cloud KMS werden primär in Europa (<code>europe-west1</code>) verarbeitet, während Authentifizierung, Abrechnung und globale Infrastruktur Daten in den USA und im EWR auf Grundlage von Standardvertragsklauseln verarbeiten können. Rechtsgrundlage für Übermittlungen aus der Türkei gemäß Artikel 9 KVKK: [RECHTSGRUNDLAGE: VOM ANWALT AUSZUFÜLLEN].",
           "<strong>Support-E-Mail:</strong> Wird über Google Groups (Verbrauchergruppe) verarbeitet und unterliegt der <a href='https://policies.google.com/privacy?hl=en'>Datenschutzerklärung</a> und den <a href='https://policies.google.com/terms?hl=en'>Nutzungsbedingungen</a> von Google. Nachrichten werden im Gruppenarchiv gespeichert."
         ]],
         ["h", "7. Ihre Rechte (DSGVO und KVKK)"],
@@ -538,9 +551,15 @@ window.NAHI_LEGAL = {
           ["<strong>Lokale Erweiterungsdaten</strong>", "Medienstatus des aktiven Browser-Tabs (Titel, Interpret, Wiedergabestatus)", "Nur lokaler Browser und PC-App", "Anzeige der Web-Medien auf Handy und PC. Wird nie in die Cloud gesendet."],
           ["<strong>App-Überprüfung</strong>", "Paketname, App-Signaturzertifikat und Ergebnis der Geräteintegrität", "Google Play Integrity (Google)", "Prüfung, ob die App über Google Play installiert wurde und auf einem vertrauenswürdigen Gerät läuft; Missbrauch verhindern. Google gibt diese Daten nicht an Dritte weiter."],
           ["<strong>Absturzbericht (optional)</strong>", "App-Version, Geräte-Hash, Fehlertyp und Fehlertext, Stack-Trace und Protokollzeilen (E-Mail- und IP-Adressen werden unkenntlich gemacht)", "Google Cloud Functions und Firestore (Europa); Support-E-Mail über Google Groups", "Analyse und Behebung von Abstürzen. Wird nur nach Ihrer Bestätigung gesendet."],
-          ["<strong>Werbung und Gerätekennungen (nur kostenloser Plan)</strong>", "Google-Werbe-ID (Android AD_ID), ungefähre Standortdaten (über IP-Adresse), Gerätemodell, Anzeigenimpressionen und Interaktionsmetriken.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google-Werberichtlinie</a>", "Bereitstellung von 2x1 nativen Werbeanzeigen im kostenlosen Plan und Verhinderung von ungültigem Datenverkehr. Im Pro-Plan werden keine Werbekennungen erfasst und AdMob ist vollständig deaktiviert. Nutzer können ihre Werbe-ID unter Android-Einstellungen > Datenschutz > Werbung zurücksetzen."]
+          ["<strong>Werbung und Gerätekennungen (nur kostenloser Tarif)</strong>", "Google-Werbe-ID (Android AD_ID), ungefährer Standort (anhand der IP-Adresse), Gerätemodell, Anzeigenimpressions- und Interaktionsmetriken.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google-Werberichtlinien</a>", "Auslieferung nativer 2x1-Anzeigen im kostenlosen Tarif und Schutz vor ungültigem Traffic. Im Pro-Tarif werden keine Werbekennungen erhoben und das AdMob-SDK wird nicht initialisiert. Nutzer können ihre Werbe-ID jederzeit unter Android-Einstellungen > Datenschutz > Werbung zurücksetzen."],
+          ["<strong>Prüfung bei zurückgestellter Uhr (nur PC, Ausnahmefall)</strong>", "Öffentliche IP-Adresse des PCs, standardmäßige HTTPS-HEAD-Anfrage (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) oder Apple Inc. (www.apple.com)", "Auslesen des HTTP-Date-Headers zur Überprüfung der aktuellen Uhrzeit und Freischaltung einer rechtmäßigen Pro-Lizenz nur dann, wenn die lokale PC-Uhr mehr als 5 Minuten hinter der zuletzt gesehenen Zeit liegt. Wird beim normalen Start nie aufgerufen; sendet keine Cookies oder Gerätekennungen."],
+          ["<strong>Webhosting und CDN (Seitenaufruf)</strong>", "IP-Adresse des Besuchers, angeforderte URL, HTTP-Header von Browser und Betriebssystem (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. und Fastly, Inc. (USA / EWR)", "Auslieferung statischer Webseiten, Caching und DDoS-/Sicherheitsschutz (Aufbewahrung in Standard-Sicherheitsprotokollen für 30–90 Tage). Es werden keine Tracking-Cookies eingesetzt; es werden Systemschriftarten ohne externe Aufrufe an Google Fonts verwendet."]
         ]],
-        ["card", [["p", "<strong>Verantwortlich:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-Mail:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Website:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Verantwortlich:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>E-Mail:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Website:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -584,11 +603,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Wichtig: Aktives Abo kündigen"],
           ["p", "Das Löschen Ihres Kontos kündigt ein über Google Play abgeschlossenes Abo <strong>nicht automatisch</strong>. Kündigen Sie es vor dem Löschen, damit keine weiteren Zahlungen anfallen:"],
-          ["ol", [
-            "Öffnen Sie den <strong>Google Play Store</strong> auf Ihrem Android-Gerät.",
-            "Tippen Sie auf Ihr Profilsymbol > <strong>Zahlungen und Abos</strong> > <strong>Abos</strong>.",
-            "Wählen Sie <strong>NahiDeck</strong> und tippen Sie auf <strong>«Abo kündigen»</strong>."
-          ]]
+          ["ol", ["Öffnen Sie den <strong>Google Play Store</strong> auf Ihrem Android-Gerät.", "Tippen Sie auf Ihr Profilsymbol > <strong>Zahlungen und Abos</strong> > <strong>Abos</strong>.", "Wählen Sie <strong>NahiDeck</strong> und tippen Sie auf <strong>«Abo kündigen»</strong>."]]
         ]]
       ]
     }
@@ -598,7 +613,7 @@ window.NAHI_LEGAL = {
   fr: {
     privacy: {
       title: "Politique de confidentialité de NahiDeck",
-      updated: "25 octobre 2026",
+      updated: "11 novembre 2026",
       blocks: [
         ["p", "NahiDeck («nous», «l’application» ou «le service») accorde une grande importance à la vie privée de ses utilisateurs et à la protection des données personnelles. Cette politique couvre l’<strong>application NahiDeck pour Android</strong>, le <strong>client NahiDeck pour Windows</strong> et l’<strong>extension de navigateur (NahiDeck Connect)</strong>."],
         ["h", "En bref"],
@@ -640,8 +655,9 @@ window.NAHI_LEGAL = {
           "<strong>Télémétrie :</strong> si vous retirez votre consentement dans Paramètres > Confidentialité, votre enregistrement est supprimé immédiatement. Les enregistrements actifs expirent automatiquement sous 180 jours (TTL).",
           "<strong>Journaux techniques du serveur :</strong> les journaux de requêtes de l’infrastructure sont conservés 30 jours au maximum.",
           "<strong>Journaux de licence et d’audit :</strong> contiennent une forme condensée à sens unique (hash) de votre identifiant utilisateur et sont conservés 90 jours au maximum.",
-          "<strong>Rapports de plantage :</strong> contiennent la version de l’application, un hash de l’appareil, le type et le texte de l’erreur, la trace de pile et des lignes de journal. Les adresses e-mail, adresses IP et noms de dossier utilisateur dans les chemins sont masqués avant stockage. Conservés 30 jours au maximum. Lors de l’envoi d’un rapport, un identifiant anonyme Firebase est créé pour prévenir les abus ; l’adresse IP de la requête n’est conservée que sous forme de hash irréversible, pendant 24 heures au maximum.",
-          "<strong>Transferts internationaux :</strong> Google exploite Firebase Authentication depuis des centres de données situés aux États-Unis. Pour la vérification des achats, RevenueCat traite vos données aux États-Unis (AWS) ; ce transfert est encadré par des clauses contractuelles types. Les données Firestore, Cloud Functions et Cloud KMS sont traitées sur des serveurs situés en Europe (europe-west1). Base juridique des transferts depuis la Turquie au titre de l’article 9 de la loi KVKK : [BASE JURIDIQUE : À COMPLÉTER PAR L’AVOCAT].",
+          "<strong>Rapports de plantage :</strong> comprennent la version de l'application, un hachage de l'appareil, le type et le texte de l'erreur, la trace de pile et des lignes de journal. Les adresses e-mail, les adresses IP et les noms de dossiers utilisateur dans les chemins sont masqués avant l'enregistrement. Conservés jusqu'à 30 jours. Lors de l'envoi d'un rapport, un identifiant anonyme Firebase est créé pour éviter les abus ; l'adresse IP de la requête n'est jamais enregistrée en clair dans notre base de données (Firestore) et n'est conservée que sous forme de compteur haché salé à sens unique pendant 24 heures maximum (les journaux d'infrastructure Google Cloud Run / Cloud Logging peuvent conserver l'adresse IP jusqu'à 30 jours).",
+          "<strong>Protection contre le recul de l'horloge du PC (ordinateur uniquement) :</strong> uniquement lorsqu'il est détecté que l'horloge système de votre ordinateur a plus de 5 minutes de retard par rapport au dernier horodatage enregistré (par exemple après l'épuisement de la pile CMOS/BIOS), l'application de bureau envoie une requête HTTPS <code>HEAD</code> sans cookie ni identifiant au premier hôte joignable parmi <code>time.google.com</code>, <code>cloudflare.com</code> ou <code>www.apple.com</code> uniquement pour lire l'en-tête HTTP <code>Date</code> et déverrouiller les licences Pro légitimes. Aucune requête n'est effectuée en fonctionnement normal.",
+          "<strong>Transferts internationaux et entités juridiques destinataires :</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity et AdMob sont fournis par <strong>Google Ireland Limited</strong> (Irlande) et <strong>Google LLC</strong> (États-Unis) ; la vérification des achats est fournie par <strong>RevenueCat, Inc.</strong> (États-Unis) ; l'hébergement web statique est assuré par <strong>GitHub, Inc. / GitHub B.V.</strong> et <strong>Fastly, Inc.</strong> (États-Unis/EEE). Les polices de l'application (Inter, Space Grotesk, JetBrains Mono) sont hébergées localement dans l'application ; aucun appel externe n'est effectué vers Google Fonts lors de l'exécution. Les données Firestore, Cloud Functions et Cloud KMS sont hébergées principalement en Europe (<code>europe-west1</code>), tandis que l'authentification, la facturation et l'infrastructure mondiale peuvent traiter des données aux États-Unis et dans l'EEE sous Clauses Contractuelles Types. Base juridique des transferts depuis la Turquie au titre de l'article 9 de la KVKK : [BASE JURIDIQUE : À COMPLÉTER PAR L'AVOCAT].",
           "<strong>E-mail d’assistance :</strong> Traité via Google Groups (groupe grand public) et soumis à la <a href='https://policies.google.com/privacy?hl=en'>Politique de confidentialité</a> et aux <a href='https://policies.google.com/terms?hl=en'>Conditions</a> de Google. Les messages sont conservés dans l’archive du groupe."
         ]],
         ["h", "7. Vos droits (RGPD et KVKK)"],
@@ -655,9 +671,15 @@ window.NAHI_LEGAL = {
           ["<strong>Données locales de l’extension</strong>", "État du média de l’onglet actif (titre, artiste, lecture)", "Uniquement le navigateur local et l’application PC", "Afficher le média web sur le téléphone et le PC. Jamais envoyé dans le cloud."],
           ["<strong>Vérification de l’application</strong>", "Nom du paquet, certificat de signature de l’application et résultat d’intégrité de l’appareil", "Google Play Integrity (Google)", "Vérifier que l’application a été installée depuis Google Play et s’exécute sur un appareil de confiance ; prévenir les abus. Google ne partage pas ces données avec des tiers."],
           ["<strong>Rapport de plantage (facultatif)</strong>", "Version de l’application, hash de l’appareil, type et texte de l’erreur, trace de pile et lignes de journal (adresses e-mail et IP masquées)", "Google Cloud Functions et Firestore (Europe) ; e-mail d’assistance via Google Groups", "Analyser et corriger les plantages. Envoyé uniquement avec votre confirmation."],
-          ["<strong>Publicité et identifiants d'appareil (forfait Gratuit uniquement)</strong>", "Identifiant publicitaire Google (Android AD_ID), localisation approximative (via adresse IP), modèle d'appareil, métriques d'impression et d'interaction publicitaire.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Règles relatives aux annonces Google</a>", "Diffusion d'annonces natives 2x1 dans le forfait Gratuit et prévention du trafic incorrect. Dans le forfait Pro, aucun identifiant publicitaire n'est collecté et AdMob est totalement désactivé. Les utilisateurs peuvent réinitialiser leur identifiant publicitaire dans Paramètres Android > Confidentialité > Annonces."]
+          ["<strong>Publicité et identifiants d'appareil (offre Gratuite uniquement)</strong>", "Identifiant publicitaire Google (Android AD_ID), localisation approximative (via l'adresse IP), modèle d'appareil, mesures d'impression et d'interaction publicitaires.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Règles Google Ads</a>", "Diffusion d'annonces natives 2x1 dans l'offre Gratuite et prévention du trafic incorrect. Dans l'offre Pro, aucun identifiant publicitaire n'est collecté et le SDK AdMob n'est pas initialisé. Les utilisateurs peuvent réinitialiser leur identifiant publicitaire dans Paramètres Android > Confidentialité > Annonces."],
+          ["<strong>Vérification du recul de l'horloge (PC uniquement, exceptionnel)</strong>", "Adresse IP publique du PC, requête HTTPS HEAD standard (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) ou Apple Inc. (www.apple.com)", "Lire l'en-tête HTTP Date pour vérifier l'heure réelle et déverrouiller une licence Pro légitime uniquement lorsque l'horloge locale du PC a plus de 5 minutes de retard sur la dernière heure enregistrée. Jamais appelé lors d'un démarrage normal ; n'envoie ni cookies ni identifiants d'appareil."],
+          ["<strong>Hébergement web et CDN (chargement de page)</strong>", "Adresse IP du visiteur, URL demandée, en-têtes HTTP du navigateur et du système d'exploitation (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. et Fastly, Inc. (États-Unis / EEE)", "Diffusion des pages web statiques, mise en cache et protection DDoS/sécurité (conservées dans les journaux de sécurité standard pendant 30 à 90 jours). Aucun cookie de suivi n'est utilisé ; des polices système sont utilisées sans appel externe à Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Responsable :</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail :</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Site web :</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Responsable :</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>E-mail :</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Site web :</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -701,11 +723,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Important : résiliez votre abonnement"],
           ["p", "La suppression de votre compte <strong>ne résilie pas</strong> automatiquement un abonnement souscrit via Google Play. Pour éviter de nouveaux prélèvements, résiliez-le avant de supprimer votre compte :"],
-          ["ol", [
-            "Ouvrez le <strong>Google Play Store</strong> sur votre appareil Android.",
-            "Appuyez sur votre icône de profil > <strong>Paiements et abonnements</strong> > <strong>Abonnements</strong>.",
-            "Sélectionnez <strong>NahiDeck</strong> et appuyez sur <strong>«Résilier l’abonnement»</strong>."
-          ]]
+          ["ol", ["Ouvrez le <strong>Google Play Store</strong> sur votre appareil Android.", "Appuyez sur votre icône de profil > <strong>Paiements et abonnements</strong> > <strong>Abonnements</strong>.", "Sélectionnez <strong>NahiDeck</strong> et appuyez sur <strong>«Résilier l’abonnement»</strong>."]]
         ]]
       ]
     }
@@ -715,7 +733,7 @@ window.NAHI_LEGAL = {
   az: {
     privacy: {
       title: "NahiDeck Məxfilik Siyasəti",
-      updated: "25 oktyabr 2026",
+      updated: "11 noyabr 2026",
       blocks: [
         ["p", "NahiDeck («biz», «tətbiq» və ya «xidmət») istifadəçilərinin məxfiliyinə və şəxsi məlumatların qorunmasına önəm verir. Bu siyasət <strong>NahiDeck Android tətbiqini</strong>, <strong>NahiDeck Windows masaüstü müştərisini</strong> və <strong>brauzer genişlənməsini (NahiDeck Connect)</strong> əhatə edir."],
         ["h", "Qısa məzmun"],
@@ -757,8 +775,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetriya:</strong> Ayarlar > Məxfilik bölməsində razılığı geri götürdükdə mövcud qeyd dərhal silinir. Aktiv qeydlər ən geci 180 gün ərzində avtomatik silinir (TTL).",
           "<strong>Texniki server jurnalları:</strong> infrastruktur sorğu jurnalları ən çox 30 gün saxlanılır.",
           "<strong>Lisenziya və audit qeydləri:</strong> hesab və lisenziya əməliyyatlarına aid qeydlər istifadəçi identifikatorunun hash (geri döndərilməz) formasını ehtiva edir və ən çox 90 gün saxlanılır.",
-          "<strong>Çökmə hesabatları:</strong> tətbiq versiyası, cihaz hash-i, xəta növü və mətni, stack trace və jurnal sətirlərini ehtiva edir. E-poçt ünvanları, IP ünvanları və fayl yollarındakı istifadəçi qovluq adları saxlanılmazdan əvvəl gizlədilir. Ən çox 30 gün saxlanılır. Hesabat göndərdiyiniz zaman sui-istifadənin qarşısını almaq üçün anonim Firebase identifikatoru yaradılır; sorğunun IP ünvanı yalnız geri döndərilməz hash şəklində və ən çox 24 saat saxlanılır.",
-          "<strong>Xarici ölkələrə ötürmə:</strong> Firebase Authentication xidmətini Google ABŞ-dakı data mərkəzlərindən işlədir. Satın alma yoxlanışı üçün RevenueCat məlumatlarınızı ABŞ-da (AWS) emal edir; bu ötürmə Standart Müqavilə Bəndləri ilə təmin olunur. Firestore, Cloud Functions və Cloud KMS məlumatları Avropadakı (europe-west1) serverlərdə emal olunur. Türkiyədən ötürmələr üçün KVKK m.9 əsası: [HÜQUQİ ƏSAS: VƏKİL TƏRƏFİNDƏN DOLDURULACAQ].",
+          "<strong>Çökmə hesabatları:</strong> tətbiq versiyası, cihaz heşi, xəta növü və mətni, stack trace və jurnal sətirlərini ehtiva edir. E-poçt ünvanları, IP ünvanları və fayl yollarındakı istifadəçi qovluğu adları saxlanmazdan əvvəl maskalanır. Ən çox 30 gün saxlanılır. Hesabat göndərdiyiniz zaman sui-istifadənin qarşısını almaq üçün anonim Firebase identifikatoru yaradılır; sorğunun IP ünvanı tətbiq verilənlər bazamızda (Firestore) heç vaxt açıq şəkildə saxlanılmır, yalnız duzlanmış biristiqamətli heş sayğacı kimi ən çox 24 saat saxlanılır (Google Cloud Run / Cloud Logging infrastruktur jurnalları isə IP ünvanını 30 günə qədər saxlaya bilər).",
+          "<strong>PC saatının geri çəkilməsindən qorunma (yalnız masaüstü):</strong> yalnız kompüterinizin sistem saatı son qeydə alınmış vaxtdan 5 dəqiqədən çox geridə aşkar edildikdə (məsələn, CMOS/BIOS batareyası bitdikdə qanuni Pro lisenziya kilidini açmaq üçün), masaüstü tətbiqi yalnız HTTP <code>Date</code> başlığını oxumaq məqsədilə <code>time.google.com</code>, <code>cloudflare.com</code> və ya <code>www.apple.com</code> ünvanlarından ilk cavab verənə kukisiz və identifikatorsuz HTTPS <code>HEAD</code> sorğusu göndərir; normal iş zamanı bu sorğu edilmir.",
+          "<strong>Beynəlxalq ötürmələr və alıcı hüquqi şəxslər:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity və AdMob xidmətləri <strong>Google Ireland Limited</strong> (İrlandiya) və <strong>Google LLC</strong> (ABŞ) tərəfindən; alış doğrulaması <strong>RevenueCat, Inc.</strong> (ABŞ) tərəfindən; statik veb хостинq isə <strong>GitHub, Inc. / GitHub B.V.</strong> və <strong>Fastly, Inc.</strong> (ABŞ/AİB) tərəfindən təmin edilir. Tətbiqdaxili şriftlər (Inter, Space Grotesk, JetBrains Mono) yerli olaraq paketlənmişdir; iş zamanı Google Fonts серверlərinə xarici sorğu göndərilmir. Firestore, Cloud Functions və Cloud KMS məlumatları əsasən Avropadakı (<code>europe-west1</code>) serverlərdə saxlanılır, kimlik doğrulama, ödəniş və qlobal bulud infrastrukturu isə məlumatları Standart Müqavilə Şərtləri əsasında ABŞ və AİB-də emal edə bilər. Türkiyədən edilən ötürmələrin 6698 saylı KVKK m.9 üzrə hüquqi əsası: [HÜQUQİ ƏSAS: VƏKİL TƏRƏFİNDƏN DOLDURULACAQ].",
           "<strong>Dəstək e-poçtu:</strong> Google Groups (istehlakçı qrupu) vasitəsilə emal olunur və Google-un <a href='https://policies.google.com/privacy?hl=en'>Məxfilik Siyasəti</a> və <a href='https://policies.google.com/terms?hl=en'>Şərtlərinə</a> tabedir. Mesajlar qrupun arxivində saxlanılır."
         ]],
         ["h", "7. Hüquqlarınız (GDPR və KVKK)"],
@@ -772,9 +791,15 @@ window.NAHI_LEGAL = {
           ["<strong>Yerli genişlənmə məlumatları</strong>", "Aktiv vərəqdəki media statusu (mahnı adı, ifaçı, oxutma vəziyyəti)", "Yalnız yerli brauzer və PC tətbiqi", "Veb mediasını telefon və PC-də göstərmək. Heç vaxt buluda göndərilmir."],
           ["<strong>Tətbiqin yoxlanılması</strong>", "Paket adı, tətbiq imza sertifikatı və cihazın bütövlük nəticəsi", "Google Play Integrity (Google)", "Tətbiqin Google Play vasitəsilə quraşdırılıb-quraşdırılmadığını və etibarlı cihazda işləyib-işləmədiyini yoxlamaq; sui-istifadənin qarşısını almaq. Google bu məlumatları üçüncü tərəflərlə paylaşmır."],
           ["<strong>Xəta hesabatı (könüllü)</strong>", "Tətbiq versiyası, cihaz hash-i, xəta növü və mətni, stack trace və jurnal sətirləri (e-poçt və IP ünvanları gizlədilir)", "Google Cloud Functions və Firestore (Avropa); dəstək e-poçtu Google Groups vasitəsilə", "Çökmələri təhlil edib düzəltmək. Yalnız siz təsdiq etdikdə göndərilir."],
-          ["<strong>Reklam və cihaz identifikatorları (yalnız Pulsuz plan)</strong>", "Google Reklam İdentifikatoru (Android AD_ID), təxmini coğrafi məkan (IP ünvanı vasitəsilə), cihaz modeli, reklam nümayişi və qarşılıqlı əlaqə göstəriciləri.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Reklam Siyasəti</a>", "Pulsuz planda 2x1 yerli reklam nümayişi və saxta/etibarsız trafikin qarşısının alınması. Pro plana keçdikdə reklam identifikatorları toplanmır və AdMob tamamilə söndürülür. İstifadəçilər Android Parametrləri > Məxfilik > Reklamlar bölməsindən reklam identifikatorunu sıfırlaya bilərlər."]
+          ["<strong>Reklam və cihaz identifikatorları (yalnız Pulsuz plan)</strong>", "Google Reklam İdentifikatoru (Android AD_ID), təxmini coğrafi məkan (IP ünvanı vasitəsilə), cihaz modeli, reklam göstərişi və qarşılıqlı əlaqə metrikləri.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google Reklam Siyasəti</a>", "Pulsuz planda 2x1 yerli reklamların göstərilməsi və etibarsız trafikin qarşısının alınması. Pro planda reklam identifikatorları toplanmır və AdMob SDK işə salınmır. İstifadəçilər Android Parametrləri > Məxfilik > Reklamlar menyusundan reklam identifikatorunu istənilən vaxt sıfırlaya bilərlər."],
+          ["<strong>Saatın geri çəkilməsi yoxlaması (yalnız PC, istisna hallarda)</strong>", "PC ümumi IP ünvanı, standart HTTPS HEAD sorğusu (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) və ya Apple Inc. (www.apple.com)", "Yalnız yerli PC saatı son görünən vaxtdan >5 dəqiqə geridə olduqda HTTP Date başlığından cari vaxtı doğrulamaq və qanuni Pro lisenziya kilidini açmaq. Normal işə düşmə zamanı heç vaxt çağırılmır; kuki və ya cihaz identifikatoru göndəرمir."],
+          ["<strong>Veb xostinq və CDN (səhifə açılışı)</strong>", "Ziyarətçi IP ünvanı, sorğulanan URL, brauzer və əməliyyat sistemi HTTP başlıqları (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. və Fastly, Inc. (ABŞ / AİB)", "Statik veb səhifələrin çatdırılması, keşləmə və DDoS/təhlükəsizlik qorunması (standart təhlükəsizlik jurnallarında 30–90 gün saxlanılır). İzləmə kukiləri istifadə edilmir; sistem şriftləri işlədilir və Google Fonts serverlərinə xarici çağırış edilmir."]
         ]],
-        ["card", [["p", "<strong>Nəzarətçi:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-poçt:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Veb sayt:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Nəzarətçi:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>E-poçt:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Veb sayt:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -818,11 +843,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Vacib: aktiv abunəliyinizi ləğv edin"],
           ["p", "Hesabı silmək Google Play vasitəsilə başladığınız abunəliyi <strong>avtomatik ləğv etmir</strong>. Gələcək ödənişlərin qarşısını almaq üçün hesabı silməzdən əvvəl abunəliyi ləğv edin:"],
-          ["ol", [
-            "Android cihazınızda <strong>Google Play Store</strong> tətbiqini açın.",
-            "Profil ikonunuza toxunun > <strong>Ödənişlər və abunəliklər</strong> > <strong>Abunəliklər</strong>.",
-            "<strong>NahiDeck</strong>-i seçin və <strong>«Abunəliyi ləğv et»</strong> düyməsinə toxunun."
-          ]]
+          ["ol", ["Android cihazınızda <strong>Google Play Store</strong> tətbiqini açın.", "Profil ikonunuza toxunun > <strong>Ödənişlər və abunəliklər</strong> > <strong>Abunəliklər</strong>.", "<strong>NahiDeck</strong>-i seçin və <strong>«Abunəliyi ləğv et»</strong> düyməsinə toxunun."]]
         ]]
       ]
     }
@@ -832,7 +853,7 @@ window.NAHI_LEGAL = {
   "zh-TW": {
     privacy: {
       title: "NahiDeck 隱私權政策",
-      updated: "2026 年 10 月 25 日",
+      updated: "2026 年 11 月 11 日",
       blocks: [
         ["p", "NahiDeck（以下稱「我們」或「本應用程式」）重視使用者的隱私與個人資料保護。本政策涵蓋 <strong>NahiDeck Android 應用程式</strong>、<strong>NahiDeck Windows 桌面用戶端</strong>，以及 <strong>NahiDeck 瀏覽器擴充功能（NahiDeck Connect）</strong>。"],
         ["h", "簡要摘要"],
@@ -874,8 +895,9 @@ window.NAHI_LEGAL = {
           "<strong>遙測資料：</strong>在「設定 > 隱私權」撤回同意後，現有紀錄會立即刪除。有效紀錄會在最長 180 天內自動刪除（TTL）。",
           "<strong>技術伺服器紀錄：</strong>基礎設施請求紀錄最多保留 30 天。",
           "<strong>授權與稽核紀錄：</strong>包含您使用者 ID 的單向雜湊（hash）值，最多保留 90 天。",
-          "<strong>當機報告：</strong>包含 App 版本、裝置雜湊值、錯誤類型與訊息、堆疊追蹤及日誌行。電子郵件、IP 位址及檔案路徑中的使用者資料夾名稱會在儲存前遮蔽。最多保留 30 天。傳送報告時，會建立 Firebase 匿名識別碼以防止濫用；請求的 IP 位址僅以不可還原的雜湊值保存，且最多 24 小時。",
-          "<strong>跨境傳輸：</strong>Firebase Authentication 由 Google 於美國資料中心營運。為驗證購買，RevenueCat 於美國（AWS）處理您的資料，此傳輸以標準契約條款為依據。Firestore、Cloud Functions 與 Cloud KMS 資料於歐洲（europe-west1）伺服器處理。依 KVKK 第 9 條，從土耳其傳輸的法律依據：[法律依據：由律師填寫]。",
+          "<strong>當機報告：</strong>包含應用程式版本、裝置雜湊值、錯誤類型與文字、堆疊追蹤及日誌行。電子郵件地址、IP 位址及檔案路徑中的使用者資料夾名稱會在儲存前遮罩處理，最長保留 30 天。傳送報告時會建立一個 Firebase 匿名識別碼以防止濫用；請求的 IP 位址絕不會以明文儲存在我們的應用程式資料庫（Firestore）中，僅作為加鹽單向雜湊計數器保留最長 24 小時（Google Cloud Run / Cloud Logging 基礎架構日誌則可能依標準保留 IP 位址最長 30 天）。",
+          "<strong>電腦時鐘回撥保護（僅限桌面版）：</strong>僅在偵測到您電腦的系統時鐘比最後記錄的時間戳記慢超過 5 分鐘時（例如主機板 CMOS/BIOS 電池沒電後），桌面應用程式才會向 <code>time.google.com</code>、<code>cloudflare.com</code> 或 <code>www.apple.com</code> 中第一個可連線的主機發送不含 Cookie 與識別碼的 HTTPS <code>HEAD</code> 請求，僅用於讀取 HTTP <code>Date</code> 標頭以解鎖合法的 Pro 授權。正常運作期間不會發送此請求。",
+          "<strong>跨境傳輸與接收方法律實體：</strong>Firebase Authentication、Cloud Functions、Firestore、Cloud KMS、Play Integrity 與 AdMob 由 <strong>Google Ireland Limited</strong>（愛爾蘭）及 <strong>Google LLC</strong>（美國）提供；購買驗證由 <strong>RevenueCat, Inc.</strong>（美國）提供；靜態網站託管由 <strong>GitHub, Inc. / GitHub B.V.</strong> 與 <strong>Fastly, Inc.</strong>（美國／歐洲經濟區）提供。應用程式內建字型（Inter、Space Grotesk、JetBrains Mono）均隨附於本機套件中，執行期間不會向 Google Fonts 伺服器發起任何外部請求。Firestore、Cloud Functions 與 Cloud KMS 資料主要託管於歐洲（<code>europe-west1</code>），而身分驗證、帳務及全球雲端基礎架構可能會依標準契約條款在美國與歐洲經濟區處理資料。自土耳其境內進行跨境傳輸之 KVKK 第 9 條法律依據：[法律依據：待律師填寫]。",
           "<strong>支援電子郵件：</strong>透過 Google Groups（消費者群組）處理，並適用 Google 的<a href='https://policies.google.com/privacy?hl=en'>隱私權政策</a>與<a href='https://policies.google.com/terms?hl=en'>服務條款</a>。郵件會保存在群組封存中。"
         ]],
         ["h", "7. 您的權利（GDPR 與 KVKK）"],
@@ -889,9 +911,15 @@ window.NAHI_LEGAL = {
           ["<strong>本機擴充功能資料</strong>", "目前分頁的媒體狀態（歌曲名稱、演出者、播放狀態）", "僅限本機瀏覽器與電腦應用程式", "在手機與電腦上顯示網頁媒體。絕不傳送到雲端。"],
           ["<strong>應用程式驗證</strong>", "套件名稱、應用程式簽章憑證與裝置完整性結果", "Google Play Integrity（Google）", "驗證應用程式是否透過 Google Play 安裝並在可信任的裝置上執行；防止濫用。Google 不會將這些資料分享給第三方。"],
           ["<strong>當機報告（選填）</strong>", "App 版本、裝置雜湊值、錯誤類型與訊息、堆疊追蹤及日誌行（電子郵件與 IP 位址會被遮蔽）", "Google Cloud Functions 與 Firestore（歐洲）；支援電子郵件透過 Google Groups", "分析並修正當機問題。僅在您確認後傳送。"],
-          ["<strong>廣告與裝置識別碼（僅限免費版）</strong>", "Google 廣告 ID（Android AD_ID）、約略地理位置（透過 IP 位址）、裝置型號、廣告曝光與互動指標。", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 廣告政策</a>", "於免費版中投放 2x1 原生廣告並防範無效流量。升級至 Pro 專業版後，絕不收集廣告識別碼且 AdMob 完全停用。使用者可隨時至 Android「設定」>「隱私權」>「廣告」重設廣告 ID 或關閉個人化廣告。"]
+          ["<strong>廣告與裝置識別碼（僅限免費方案）</strong>", "Google 廣告 ID（Android AD_ID）、粗略位置（透過 IP 位址推算）、裝置型號、廣告曝光與互動指標。", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 廣告政策</a>", "在免費方案中顯示 2x1 原生廣告並防範無效流量。在 Pro 方案中不會收集任何廣告識別碼，且不會初始化 AdMob SDK。使用者可隨時在「Android 設定 > 隱私權 > 廣告」中重設廣告 ID。"],
+          ["<strong>時鐘回撥檢查（僅限電腦，例外情況）</strong>", "電腦公網 IP 位址、標準 HTTPS HEAD 請求（User-Agent: NahiDeck/1.0）", "Google LLC (time.google.com)、Cloudflare, Inc. (cloudflare.com) 或 Apple Inc. (www.apple.com)", "僅在本機電腦時鐘比最後記錄時間慢超過 5 分鐘時讀取 HTTP Date 標頭以驗證目前時間並解鎖合法的 Pro 授權。正常啟動時絕不會呼叫；不傳送 Cookie 或裝置識別碼。"],
+          ["<strong>網站託管與 CDN（頁面載入）</strong>", "訪客 IP 位址、請求的 URL、瀏覽器與作業系統 HTTP 標頭（User-Agent、Accept-Language）", "GitHub Pages — GitHub, Inc. / GitHub B.V. 與 Fastly, Inc.（美國／歐洲經濟區）", "提供靜態網頁、快取及 DDoS／安全防護（於標準安全日誌中保留 30–90 天）。不使用追蹤 Cookie；採用系統字型，不向 Google Fonts 發起外部請求。"]
         ]],
-        ["card", [["p", "<strong>資料控制者：</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>聯絡信箱：</strong>nahideck-support@googlegroups.com"], ["p", "<strong>網站：</strong>https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>資料控制者：</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>聯絡信箱：</strong>nahideck-support@googlegroups.com"],
+          ["p", "<strong>網站：</strong>https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -935,11 +963,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "重要：請取消有效訂閱"],
           ["p", "刪除帳號<strong>不會自動取消</strong>透過 Google Play 開始的訂閱。若要避免之後的扣款，請在刪除帳號前先取消："],
-          ["ol", [
-            "在您的 Android 裝置上開啟 <strong>Google Play 商店</strong>。",
-            "點選個人頭像 > <strong>付款與訂閱項目</strong> > <strong>訂閱項目</strong>。",
-            "選擇 <strong>NahiDeck</strong>，並點選 <strong>「取消訂閱」</strong>。"
-          ]]
+          ["ol", ["在您的 Android 裝置上開啟 <strong>Google Play 商店</strong>。", "點選個人頭像 > <strong>付款與訂閱項目</strong> > <strong>訂閱項目</strong>。", "選擇 <strong>NahiDeck</strong>，並點選 <strong>「取消訂閱」</strong>。"]]
         ]]
       ]
     }
@@ -949,7 +973,7 @@ window.NAHI_LEGAL = {
   "zh-CN": {
     privacy: {
       title: "NahiDeck 隐私政策",
-      updated: "2026 年 10 月 25 日",
+      updated: "2026 年 11 月 11 日",
       blocks: [
         ["p", "NahiDeck（以下简称“我们”或“本应用”）重视用户的隐私和个人信息保护。本政策涵盖 <strong>NahiDeck Android 应用</strong>、<strong>NahiDeck Windows 桌面客户端</strong>以及 <strong>NahiDeck 浏览器扩展（NahiDeck Connect）</strong>。"],
         ["h", "简要摘要"],
@@ -991,8 +1015,9 @@ window.NAHI_LEGAL = {
           "<strong>遥测：</strong>在“设置 > 隐私”中撤回同意后，现有记录会立即删除。有效记录会在最长 180 天内自动过期删除（TTL）。",
           "<strong>技术服务器日志：</strong>基础设施请求日志最长保留 30 天。",
           "<strong>授权与审计记录：</strong>包含您用户 ID 的单向哈希（hash）值，最长保留 90 天。",
-          "<strong>崩溃报告：</strong>包含应用版本、设备哈希值、错误类型与信息、堆栈跟踪及日志行。电子邮件、IP 地址及文件路径中的用户文件夹名称会在存储前被遮蔽。最长保留 30 天。发送报告时，会创建 Firebase 匿名标识符以防止滥用；请求的 IP 地址仅以不可逆哈希值保存，且最长 24 小时。",
-          "<strong>跨境传输：</strong>Firebase Authentication 由 Google 在美国数据中心运营。为验证购买，RevenueCat 在美国（AWS）处理您的数据，该传输以标准合同条款为依据。Firestore、Cloud Functions 与 Cloud KMS 数据在欧洲（europe-west1）服务器上处理。依据 KVKK 第 9 条，从土耳其传输的法律依据：[法律依据：由律师填写]。",
+          "<strong>崩溃报告：</strong>包含应用版本、设备哈希值、错误类型和文本、堆栈跟踪以及日志行。电子邮件地址、IP 地址和文件路径中的用户文件夹名称在存储前会被掩码处理，最长保留 30 天。发送报告时会创建一个 Firebase 匿名标识符以防止滥用；请求的 IP 地址绝不会以明文形式存储在我们的应用数据库（Firestore）中，仅作为加盐单向哈希计数器保留最长 24 小时（Google Cloud Run / Cloud Logging 基础设施日志可能会按标准保留 IP 地址最长 30 天）。",
+          "<strong>电脑时钟回拨保护（仅限桌面版）：</strong>仅当检测到您电脑的系统时钟比最后记录的时间戳慢超过 5 分钟时（例如主板 CMOS/BIOS 电池耗尽后），桌面应用才会向 <code>time.google.com</code>、<code>cloudflare.com</code> 或 <code>www.apple.com</code> 中第一个可连接的主机发送不带 Cookie 和标识符的 HTTPS <code>HEAD</code> 请求，仅用于读取 HTTP <code>Date</code> 响应头以解锁合法的 Pro 许可证。正常运行期间不会发送此请求。",
+          "<strong>跨境传输与接收方法律实体：</strong>Firebase Authentication、Cloud Functions、Firestore、Cloud KMS、Play Integrity 和 AdMob 由 <strong>Google Ireland Limited</strong>（爱尔兰）和 <strong>Google LLC</strong>（美国）提供；购买验证由 <strong>RevenueCat, Inc.</strong>（美国）提供；静态网站托管由 <strong>GitHub, Inc. / GitHub B.V.</strong> 和 <strong>Fastly, Inc.</strong>（美国/欧洲经济区）提供。应用内字体（Inter、Space Grotesk、JetBrains Mono）已本地打包在应用内，运行时不会向 Google Fonts 服务器发起任何外部调用。Firestore、Cloud Functions 和 Cloud KMS 数据主要托管在欧洲（<code>europe-west1</code>），而身份验证、账单和全球云基础设施可能会在标准合同条款下于美国和欧洲经济区处理数据。根据土耳其 KVKK 第 9 条进行跨境传输的法律依据：[法律依据：由律师填写]。",
           "<strong>支持邮件：</strong>通过 Google Groups（消费者群组）处理，适用 Google 的<a href='https://policies.google.com/privacy?hl=en'>隐私权政策</a>和<a href='https://policies.google.com/terms?hl=en'>服务条款</a>。邮件会保存在群组存档中。"
         ]],
         ["h", "7. 您的权利（GDPR 与 KVKK）"],
@@ -1006,9 +1031,15 @@ window.NAHI_LEGAL = {
           ["<strong>本地扩展数据</strong>", "当前标签页的媒体状态（歌曲名、艺术家、播放状态）", "仅限本地浏览器和电脑应用", "在手机和电脑上显示网页媒体。绝不发送到云端。"],
           ["<strong>应用验证</strong>", "包名、应用签名证书及设备完整性结果", "Google Play Integrity（Google）", "验证应用是否通过 Google Play 安装并在可信设备上运行；防止滥用。Google 不会将这些数据分享给第三方。"],
           ["<strong>崩溃报告（可选）</strong>", "应用版本、设备哈希值、错误类型与信息、堆栈跟踪及日志行（电子邮件和 IP 地址会被遮蔽）", "Google Cloud Functions 与 Firestore（欧洲）；支持邮箱通过 Google Groups", "分析并修复崩溃问题。仅在您确认后发送。"],
-          ["<strong>广告与设备标识符（仅限免费版）</strong>", "Google 广告 ID（Android AD_ID）、大致地理位置（通过 IP 地址）、设备型号、广告展示与互动指标。", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 广告政策</a>", "在免费版中展示 2x1 原生广告并防止无效流量。升级至 Pro 专业版后，绝不收集广告标识符且 AdMob 完全禁用。用户可随时在 Android“设置”>“隐私”>“广告”中重置广告 ID 或关闭个性化广告。"]
+          ["<strong>广告与设备标识符（仅限免费版）</strong>", "Google 广告 ID（Android AD_ID）、粗略位置（通过 IP 地址推算）、设备型号、广告展示与互动指标。", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 广告政策</a>", "在免费版中展示 2x1 原生广告并防止无效流量。在 Pro 版中不会收集任何广告标识符，且不会初始化 AdMob SDK。用户可随时在“Android 设置 > 隐私 > 广告”中重置广告 ID。"],
+          ["<strong>时钟回拨检查（仅限电脑，例外情况）</strong>", "电脑公网 IP 地址、标准 HTTPS HEAD 请求（User-Agent: NahiDeck/1.0）", "Google LLC (time.google.com)、Cloudflare, Inc. (cloudflare.com) 或 Apple Inc. (www.apple.com)", "仅在本地电脑时钟比最后记录时间慢超过 5 分钟时读取 HTTP Date 响应头以验证当前时间并解锁合法的 Pro 许可证。正常启动时绝不会调用；不发送 Cookie 或设备标识符。"],
+          ["<strong>网站托管与 CDN（页面加载）</strong>", "访客 IP 地址、请求的 URL、浏览器与操作系统 HTTP 请求头（User-Agent、Accept-Language）", "GitHub Pages — GitHub, Inc. / GitHub B.V. 与 Fastly, Inc.（美国 / 欧洲经济区）", "提供静态网页、缓存和 DDoS/安全防护（在标准安全日志中保留 30–90 天）。不使用跟踪 Cookie；使用系统字体，不向 Google Fonts 发起外部请求。"]
         ]],
-        ["card", [["p", "<strong>数据控制者：</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>联系邮箱：</strong>nahideck-support@googlegroups.com"], ["p", "<strong>网站：</strong>https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>数据控制者：</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>联系邮箱：</strong>nahideck-support@googlegroups.com"],
+          ["p", "<strong>网站：</strong>https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1052,11 +1083,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "重要：请取消有效订阅"],
           ["p", "删除账号<strong>不会自动取消</strong>通过 Google Play 发起的订阅。为避免之后继续扣费，请在删除账号前先取消："],
-          ["ol", [
-            "在您的 Android 设备上打开 <strong>Google Play 商店</strong>。",
-            "点击个人头像 > <strong>付款和订阅</strong> > <strong>订阅</strong>。",
-            "选择 <strong>NahiDeck</strong>，并点击 <strong>“取消订阅”</strong>。"
-          ]]
+          ["ol", ["在您的 Android 设备上打开 <strong>Google Play 商店</strong>。", "点击个人头像 > <strong>付款和订阅</strong> > <strong>订阅</strong>。", "选择 <strong>NahiDeck</strong>，并点击 <strong>“取消订阅”</strong>。"]]
         ]]
       ]
     }
@@ -1066,7 +1093,7 @@ window.NAHI_LEGAL = {
   "pt-PT": {
     privacy: {
       title: "Política de Privacidade do NahiDeck",
-      updated: "25 de outubro de 2026",
+      updated: "11 de novembro de 2026",
       blocks: [
         ["p", "O NahiDeck («nós», «aplicação» ou «serviço») valoriza a privacidade dos seus utilizadores e a proteção dos dados pessoais. Esta política abrange a <strong>aplicação NahiDeck para Android</strong>, o <strong>cliente NahiDeck para Windows</strong> e a <strong>extensão de navegador web (NahiDeck Connect)</strong>."],
         ["h", "Em resumo"],
@@ -1108,8 +1135,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> Retirar o consentimento em Definições > Privacidade elimina o seu registo existente de imediato. Os registos ativos expiram automaticamente no prazo de 180 dias (TTL).",
           "<strong>Registos técnicos do servidor:</strong> Os registos de pedidos da infraestrutura são conservados durante um máximo de 30 dias.",
           "<strong>Registos de licença e de auditoria:</strong> Os registos das operações de conta e de licença contêm uma versão com hash (unidirecional) do identificador de utilizador e são conservados durante um máximo de 90 dias.",
-          "<strong>Relatórios de falhas:</strong> Incluem a versão da aplicação, o hash do dispositivo, o tipo e texto do erro, o rastreio da pilha e linhas de registo. Os endereços de e-mail, os endereços IP e os nomes de pastas de utilizador em caminhos de ficheiros são mascarados antes do armazenamento. Conservados durante um máximo de 30 dias. Ao enviar um relatório, é criado um identificador anónimo do Firebase para prevenir abusos; o endereço IP do pedido é conservado apenas como hash irreversível e durante um máximo de 24 horas.",
-          "<strong>Transferências internacionais:</strong> O Firebase Authentication é operado pela Google a partir de centros de dados nos Estados Unidos. Para verificação de compras, a RevenueCat processa os seus dados nos Estados Unidos (AWS); esta transferência está coberta por Cláusulas Contratuais-Tipo. Os dados do Firestore, Cloud Functions e Cloud KMS são processados em servidores na Europa (europe-west1). Base legal para transferências a partir da Turquia ao abrigo do artigo 9.º da KVKK: [BASE LEGAL: A PREENCHER POR ADVOGADO].",
+          "<strong>Relatórios de falhas:</strong> incluem a versão da aplicação, um hash do dispositivo, o tipo e o texto do erro, o rastreio de pilha e linhas de registo. Os endereços de e-mail, os IPs e os nomes de pastas de utilizador nos caminhos são ocultados antes de serem guardados. Mantidos até 30 dias. Ao enviar um relatório é criado um identificador anónimo do Firebase para evitar abusos; o endereço IP do pedido nunca é guardado em texto simples na nossa base de dados (Firestore) e é mantido apenas como contador hash irreversível com sal durante, no máximo, 24 horas (os registos técnicos de infraestrutura do Google Cloud Run / Cloud Logging podem reter o endereço IP até 30 dias).",
+          "<strong>Proteção contra recuo do relógio do PC (apenas computador):</strong> apenas quando se deteta que o relógio do sistema do computador está mais de 5 minutos atrasado em relação ao último registo temporal (por exemplo, após descarga da pilha CMOS/BIOS), a aplicação para computador envia um pedido HTTPS <code>HEAD</code> sem cookies nem identificadores ao primeiro servidor acessível entre <code>time.google.com</code>, <code>cloudflare.com</code> ou <code>www.apple.com</code> apenas para ler o cabeçalho HTTP <code>Date</code> e desbloquear licenças Pro legítimas. Nenhum pedido é efetuado durante o funcionamento normal.",
+          "<strong>Transferências internacionais e entidades jurídicas destinatárias:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity e AdMob são fornecidos pela <strong>Google Ireland Limited</strong> (Irlanda) e pela <strong>Google LLC</strong> (EUA); a verificação de compras é fornecida pela <strong>RevenueCat, Inc.</strong> (EUA); o alojamento web estático é fornecido pela <strong>GitHub, Inc. / GitHub B.V.</strong> e pela <strong>Fastly, Inc.</strong> (EUA/EEE). Os tipos de letra da aplicação (Inter, Space Grotesk, JetBrains Mono) estão integrados localmente; não são feitas chamadas em tempo de execução aos servidores do Google Fonts. Os dados do Firestore, Cloud Functions e Cloud KMS são alojados principalmente na Europa (<code>europe-west1</code>), enquanto a autenticação, a faturação e a infraestrutura global podem tratar dados nos Estados Unidos e no EEE ao abrigo de Cláusulas Contratuais-Tipo. Base jurídica para transferências a partir da Turquia ao abrigo do artigo 9.º da KVKK: [BASE JURÍDICA: A PREENCHER PELO ADVOGADO].",
           "<strong>E-mail de apoio:</strong> Processado através do Google Groups (grupo de consumidores) e sujeito à <a href='https://policies.google.com/privacy?hl=en'>Política de Privacidade</a> e aos <a href='https://policies.google.com/terms?hl=en'>Termos</a> da Google. As mensagens são conservadas no arquivo do grupo."
         ]],
         ["h", "7. Os seus direitos (RGPD e KVKK)"],
@@ -1123,9 +1151,15 @@ window.NAHI_LEGAL = {
           ["<strong>Dados locais da extensão</strong>", "Estado multimédia do separador ativo no navegador (título da faixa, artista, estado de reprodução)", "Apenas navegador local e aplicação de computador", "Apresentar multimédia da web no telemóvel e computador. Nunca é enviado para a nuvem."],
           ["<strong>Verificação da aplicação</strong>", "Nome do pacote, certificado de assinatura da aplicação e resultado de integridade do dispositivo", "Google Play Integrity (Google)", "Verificar se a aplicação foi instalada a partir do Google Play e se é executada num dispositivo fidedigno; prevenção de abusos. A Google não partilha estes dados com terceiros."],
           ["<strong>Relatórios de falhas (opcional)</strong>", "Versão da aplicação, hash do dispositivo, tipo e texto do erro, rastreio de pilha e linhas de registo (endereços de e-mail e de IP mascarados)", "Google Cloud Functions e Firestore (Europa); e-mail de apoio via Google Groups", "Análise e correção de falhas. Enviado apenas mediante a sua confirmação."],
-          ["<strong>Publicidade e identificadores de dispositivo (apenas plano Gratuito)</strong>", "ID de publicidade da Google (Android AD_ID), localização aproximada (através do endereço IP), modelo do dispositivo, métricas de impressão e interação com anúncios.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de Anúncios da Google</a>", "Apresentação de anúncios nativos 2x1 no plano Gratuito e prevenção de tráfego inválido. No plano Pro, os identificadores de publicidade não são recolhidos e o AdMob é totalmente desativado. Os utilizadores podem repor o ID de publicidade nas Definições do Android > Privacidade > Anúncios."]
+          ["<strong>Publicidade e identificadores do dispositivo (apenas plano Gratuito)</strong>", "ID de publicidade da Google (Android AD_ID), localização aproximada (através do endereço IP), modelo do dispositivo, métricas de impressões e interação com anúncios.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Política de Anúncios da Google</a>", "Apresentação de anúncios nativos 2x1 no plano Gratuito e prevenção de tráfego inválido. No plano Pro, não são recolhidos identificadores de publicidade e o SDK do AdMob não é inicializado. Os utilizadores podem repor o ID de publicidade em Definições do Android > Privacidade > Anúncios."],
+          ["<strong>Verificação de recuo do relógio (apenas PC, excecional)</strong>", "Endereço IP público do PC, pedido HTTPS HEAD padrão (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) ou Apple Inc. (www.apple.com)", "Ler o cabeçalho HTTP Date para verificar a hora atual e desbloquear uma licença Pro legítima apenas quando o relógio local do PC estiver mais de 5 minutos atrasado face à última hora registada. Nunca é chamado no arranque normal; não envia cookies nem identificadores do dispositivo."],
+          ["<strong>Alojamento web e CDN (carregamento de página)</strong>", "Endereço IP do visitante, URL solicitado, cabeçalhos HTTP do navegador e do sistema operativo (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. e Fastly, Inc. (EUA / EEE)", "Disponibilização de páginas web estáticas, cache e proteção de segurança/DDoS (mantidos em registos de segurança padrão durante 30–90 dias). Não são usados cookies de rastreio; são usados tipos de letra do sistema sem chamadas externas ao Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Responsável pelo tratamento:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail de contacto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Website:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Responsável pelo tratamento:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>E-mail de contacto:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Website:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1169,11 +1203,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Importante: cancele a sua subscrição ativa"],
           ["p", "Eliminar a sua conta <strong>não cancela</strong> uma subscrição iniciada através do Google Play. Para evitar cobranças futuras, cancele-a antes de eliminar a sua conta:"],
-          ["ol", [
-            "Abra a <strong>Google Play Store</strong> no seu dispositivo Android.",
-            "Toque no ícone do perfil > <strong>Pagamentos e subscrições</strong> > <strong>Subscrições</strong>.",
-            "Selecione <strong>NahiDeck</strong> e toque em <strong>«Cancelar subscrição»</strong>."
-          ]]
+          ["ol", ["Abra a <strong>Google Play Store</strong> no seu dispositivo Android.", "Toque no ícone do perfil > <strong>Pagamentos e subscrições</strong> > <strong>Subscrições</strong>.", "Selecione <strong>NahiDeck</strong> e toque em <strong>«Cancelar subscrição»</strong>."]]
         ]]
       ]
     }
@@ -1183,7 +1213,7 @@ window.NAHI_LEGAL = {
   it: {
     privacy: {
       title: "Informativa sulla privacy di NahiDeck",
-      updated: "25 ottobre 2026",
+      updated: "11 novembre 2026",
       blocks: [
         ["p", "NahiDeck (\"noi\", \"l'applicazione\" o \"il servizio\") attribuisce grande valore alla privacy dei propri utenti e alla protezione dei dati personali. La presente informativa copre l'<strong>applicazione Android NahiDeck</strong>, il <strong>client desktop Windows NahiDeck</strong> e l'<strong>estensione per browser web (NahiDeck Connect)</strong>."],
         ["h", "In breve"],
@@ -1225,8 +1255,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> La revoca del consenso in Impostazioni > Privacy elimina immediatamente il record esistente. I record attivi scadono automaticamente entro 180 giorni (TTL).",
           "<strong>Log tecnici del server:</strong> I log delle richieste di infrastruttura sono conservati per un massimo di 30 giorni.",
           "<strong>Record di licenza e di audit:</strong> I record delle operazioni di account e licenza contengono una forma con hash unidirezionale dell'ID utente e sono conservati per un massimo di 90 giorni.",
-          "<strong>Segnalazioni di arresto anomalo:</strong> Includono versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log. Gli indirizzi email, gli indirizzi IP e i nomi di cartelle utente nei percorsi dei file vengono mascherati prima della memorizzazione. Conservati per un massimo di 30 giorni. Quando invii una segnalazione, viene creato un identificatore anonimo Firebase per prevenire abusi; l'indirizzo IP della richiesta viene conservato solo come hash irreversibile e per al massimo 24 ore.",
-          "<strong>Trasferimenti internazionali:</strong> Firebase Authentication è gestito da Google dai data center negli Stati Uniti. Per la verifica degli acquisti, RevenueCat elabora i tuoi dati negli Stati Uniti (AWS); questo trasferimento è disciplinato dalle Clausole Contrattuali Standard. I dati di Firestore, Cloud Functions e Cloud KMS vengono elaborati su server in Europa (europe-west1). Base giuridica per i trasferimenti dalla Turchia ai sensi dell'art. 9 della legge KVKK: [BASE GIURIDICA: DA COMPILARE A CURA DELL'AVVOCATO].",
+          "<strong>Segnalazioni di arresto anomalo:</strong> includono la versione dell'app, un hash del dispositivo, il tipo e il testo dell'errore, lo stack trace e righe di registro. Gli indirizzi e-mail, gli indirizzi IP e i nomi delle cartelle utente nei percorsi vengono mascherati prima del salvataggio. Conservate fino a 30 giorni. Quando invii una segnalazione viene creato un identificatore anonimo Firebase per prevenire abusi; l'indirizzo IP della richiesta non viene mai salvato in chiaro nel nostro database applicativo (Firestore) ed è conservato solo come contatore hash unidirezionale con salt per un massimo di 24 ore (i log infrastrutturali di Google Cloud Run / Cloud Logging possono conservare l'indirizzo IP fino a 30 giorni).",
+          "<strong>Protezione contro l'arretramento dell'orologio del PC (solo desktop):</strong> solo se viene rilevato che l'orologio di sistema del computer è indietro di oltre 5 minuti rispetto all'ultimo timestamp registrato (ad esempio dopo lo scaricamento della batteria CMOS/BIOS), l'app desktop invia una richiesta HTTPS <code>HEAD</code> priva di cookie e identificatori al primo host raggiungibile tra <code>time.google.com</code>, <code>cloudflare.com</code> o <code>www.apple.com</code> esclusivamente per leggere l'intestazione HTTP <code>Date</code> e sbloccare le licenze Pro legittime. Nessuna richiesta viene effettuata durante il normale funzionamento.",
+          "<strong>Trasferimenti internazionali ed entità giuridiche destinatarie:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity e AdMob sono forniti da <strong>Google Ireland Limited</strong> (Irlanda) e <strong>Google LLC</strong> (USA); la verifica degli acquisti è fornita da <strong>RevenueCat, Inc.</strong> (USA); l'hosting web statico è fornito da <strong>GitHub, Inc. / GitHub B.V.</strong> e <strong>Fastly, Inc.</strong> (USA/SEE). I caratteri tipografici dell'app (Inter, Space Grotesk, JetBrains Mono) sono inclusi localmente nel pacchetto dell'app; non vengono effettuate chiamate runtime ai server di Google Fonts. I dati di Firestore, Cloud Functions e Cloud KMS sono ospitati principalmente in Europa (<code>europe-west1</code>), mentre autenticazione, fatturazione e infrastruttura globale possono trattare dati negli Stati Uniti e nel SEE in base a Clausole Contrattuali Tipo. Base giuridica per i trasferimenti dalla Turchia ai sensi dell'articolo 9 della KVKK: [BASE GIURIDICA: DA COMPILARE A CURA DELL'AVVOCATO].",
           "<strong>Email di assistenza:</strong> Elaborata tramite Google Groups (gruppo utenti) ed è soggetta alle <a href='https://policies.google.com/privacy?hl=en'>Norme sulla privacy</a> e ai <a href='https://policies.google.com/terms?hl=en'>Termini</a> di Google. I messaggi sono conservati nell'archivio del gruppo."
         ]],
         ["h", "7. I tuoi diritti (GDPR e KVKK)"],
@@ -1240,9 +1271,15 @@ window.NAHI_LEGAL = {
           ["<strong>Dati locali dell'estensione</strong>", "Stato multimediale della scheda attiva del browser (titolo del brano, artista, stato di riproduzione)", "Esclusivamente browser locale e applicazione PC", "Visualizzazione dei file multimediali web su smartphone e PC. Mai inviati al cloud."],
           ["<strong>Verifica dell'applicazione</strong>", "Nome del pacchetto, certificato di firma dell'app e risultato di integrità del dispositivo", "Google Play Integrity (Google)", "Verifica che l'applicazione sia stata installata da Google Play e sia in esecuzione su un dispositivo affidabile; prevenzione di abusi. Google non condivide questi dati con terze parti."],
           ["<strong>Segnalazioni di arresto anomalo (facoltative)</strong>", "Versione dell'app, hash del dispositivo, tipo e testo dell'errore, stack trace e righe di log (indirizzi email e IP mascherati)", "Google Cloud Functions e Firestore (Europa); email di supporto tramite Google Groups", "Analisi e risoluzione degli arresti anomali. Inviate solo previa tua conferma."],
-          ["<strong>Pubblicità e identificatori del dispositivo (solo piano Gratuito)</strong>", "ID pubblicità di Google (Android AD_ID), posizione approssimativa (tramite indirizzo IP), modello di dispositivo, metriche di impressione e interazione pubblicitaria.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Norme sugli annunci di Google</a>", "Erogazione di annunci nativi 2x1 nel piano Gratuito e prevenzione del traffico non valido. Nel piano Pro, non vengono raccolti identificatori pubblicitari e AdMob è completamente disattivato. Gli utenti possono reimpostare il proprio ID pubblicità in Impostazioni Android > Privacy > Annunci."]
+          ["<strong>Pubblicità e identificatori del dispositivo (solo piano Gratuito)</strong>", "ID pubblicità di Google (Android AD_ID), posizione approssimativa (tramite indirizzo IP), modello del dispositivo, metriche di impressioni e interazione con gli annunci.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Norme pubblicitarie di Google</a>", "Visualizzazione di annunci nativi 2x1 nel piano Gratuito e prevenzione del traffico non valido. Nel piano Pro non vengono raccolti identificatori pubblicitari e l'SDK AdMob non viene inizializzato. Gli utenti possono reimpostare il proprio ID pubblicità in Impostazioni Android > Privacy > Annunci."],
+          ["<strong>Controllo arretramento orologio (solo PC, eccezionale)</strong>", "Indirizzo IP pubblico del PC, richiesta HTTPS HEAD standard (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) o Apple Inc. (www.apple.com)", "Leggere l'intestazione HTTP Date per verificare l'ora corrente e sbloccare una licenza Pro legittima solo quando l'orologio locale del PC è indietro di oltre 5 minuti rispetto all'ultima ora registrata. Mai chiamato durante il normale avvio; non invia cookie né identificatori del dispositivo."],
+          ["<strong>Hosting web e CDN (caricamento pagina)</strong>", "Indirizzo IP del visitatore, URL richiesto, intestazioni HTTP del browser e del sistema operativo (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. e Fastly, Inc. (USA / SEE)", "Erogazione delle pagine web statiche, caching e protezione DDoS/sicurezza (conservati nei log di sicurezza standard per 30–90 giorni). Non vengono utilizzati cookie di tracciamento; vengono usati font di sistema senza chiamate esterne a Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Titolare del trattamento:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email di contatto:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Sito web:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Titolare del trattamento:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>Email di contatto:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Sito web:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1286,11 +1323,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Importante: annulla l'abbonamento attivo"],
           ["p", "L'eliminazione dell'account <strong>non annulla automaticamente</strong> un abbonamento sottoscritto tramite Google Play. Per evitare addebiti futuri, annullalo prima di eliminare il tuo account:"],
-          ["ol", [
-            "Apri <strong>Google Play Store</strong> sul tuo dispositivo Android.",
-            "Tocca l'icona del profilo > <strong>Pagamenti e abbonamenti</strong> > <strong>Abbonamenti</strong>.",
-            "Seleziona <strong>NahiDeck</strong> e tocca <strong>\"Annulla abbonamento\"</strong>."
-          ]]
+          ["ol", ["Apri <strong>Google Play Store</strong> sul tuo dispositivo Android.", "Tocca l'icona del profilo > <strong>Pagamenti e abbonamenti</strong> > <strong>Abbonamenti</strong>.", "Seleziona <strong>NahiDeck</strong> e tocca <strong>\"Annulla abbonamento\"</strong>."]]
         ]]
       ]
     }
@@ -1300,7 +1333,7 @@ window.NAHI_LEGAL = {
   pl: {
     privacy: {
       title: "Polityka prywatności NahiDeck",
-      updated: "25 października 2026",
+      updated: "11 listopada 2026 r.",
       blocks: [
         ["p", "NahiDeck („my”, „nasz” lub „usługa”) przykłada dużą wagę do ochrony prywatności swoich użytkowników i bezpieczeństwa danych osobowych. Niniejsza polityka obejmuje <strong>aplikację NahiDeck na system Android</strong>, <strong>klienta NahiDeck na system Windows</strong> oraz <strong>rozszerzenie przeglądarki internetowej (NahiDeck Connect)</strong>."],
         ["h", "W skrócie"],
@@ -1342,8 +1375,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetria:</strong> Wycofanie zgody w Ustawienia > Prywatność powoduje natychmiastowe usunięcie dotychczasowego rekordu. Aktywne rekordy wygasają automatycznie w ciągu maksymalnie 180 dni (TTL).",
           "<strong>Dzienniki techniczne serwera:</strong> Dzienniki żądań infrastruktury są przechowywane przez maksymalnie 30 dni.",
           "<strong>Rejestry licencji i audytu:</strong> Rejestry operacji na koncie i licencji zawierają jednokierunkowy skrót (hash) Twojego identyfikatora użytkownika i są przechowywane przez maksymalnie 90 dni.",
-          "<strong>Raporty o awariach:</strong> Zawierają wersję aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu oraz wiersze dziennika. Adresy e-mail, adresy IP i nazwy folderów użytkownika w ścieżkach plików są maskowane przed zapisaniem. Przechowywane przez maksymalnie 30 dni. Podczas wysyłania raportu tworzony jest anonimowy identyfikator Firebase w celu zapobiegania nadużyciom; adres IP żądania jest przechowywany wyłącznie jako nieodwracalny skrót i przez maksymalnie 24 godziny.",
-          "<strong>Transfery międzynarodowe:</strong> Usługa Firebase Authentication jest prowadzona przez firmę Google w centrach danych w Stanach Zjednoczonych. W celu weryfikacji zakupów RevenueCat przetwarza dane w Stanach Zjednoczonych (AWS); transfer ten opiera się na Standardowych Klauzulach Umownych. Dane Firestore, Cloud Functions i Cloud KMS są przetwarzane na serwerach w Europie (europe-west1). Podstawa prawna transferu z Turcji na mocy art. 9 KVKK: [PODSTAWA PRAWNA: DO UZUPEŁNIENIA PRZEZ PRAWNIKA].",
+          "<strong>Raporty o awariach:</strong> zawierają wersję aplikacji, skrót (hash) urządzenia, typ i treść błędu, zrzut stosu (stack trace) oraz wiersze dziennika. Adresy e-mail, adresy IP i nazwy folderów użytkownika w ścieżkach plików są maskowane przed zapisaniem. Przechowywane do 30 dni. Podczas wysyłania raportu tworzony jest anonimowy identyfikator Firebase, aby zapobiegać nadużyciom; adres IP żądania nigdy nie jest zapisywany otwartym tekstem w naszej bazie danych (Firestore) i jest przechowywany wyłącznie jako solony jednokierunkowy licznik skrótu przez maksymalnie 24 godziny (dzienniki infrastruktury Google Cloud Run / Cloud Logging mogą przechowywać adres IP do 30 dni).",
+          "<strong>Ochrona przed cofnięciem zegara PC (tylko wersja komputerowa):</strong> wyłącznie wtedy, gdy wykryte zostanie, że zegar systemowy komputera jest cofnięty o ponad 5 minut względem ostatniego zapisanego znacznika czasu (np. po rozładowaniu baterii CMOS/BIOS), aplikacja komputerowa wysyła pozbawione plików cookie i identyfikatorów żądanie HTTPS <code>HEAD</code> do pierwszego dostępnego hosta spośród <code>time.google.com</code>, <code>cloudflare.com</code> lub <code>www.apple.com</code> wyłącznie w celu odczytania nagłówka HTTP <code>Date</code> i odblokowania legalnej licencji Pro. Podczas normalnej pracy żadne żądanie nie jest wykonywane.",
+          "<strong>Przekazywanie danych za granicę i podmioty prawne będące odbiorcami:</strong> usługi Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity oraz AdMob są świadczone przez <strong>Google Ireland Limited</strong> (Irlandia) oraz <strong>Google LLC</strong> (USA); weryfikacja zakupów jest realizowana przez <strong>RevenueCat, Inc.</strong> (USA); statyczny hosting stron internetowych zapewniają <strong>GitHub, Inc. / GitHub B.V.</strong> oraz <strong>Fastly, Inc.</strong> (USA/EOG). Czcionki aplikacji (Inter, Space Grotesk, JetBrains Mono) są wbudowane lokalnie w pakiecie aplikacji; w czasie działania nie są wykonywane żadne zapytania do serwerów Google Fonts. Dane Firestore, Cloud Functions i Cloud KMS są hostowane głównie w Europie (<code>europe-west1</code>), natomiast uwierzytelnianie, rozliczenia i globalna infrastruktura mogą przetwarzać dane w USA i EOG na podstawie standardowych klauzul umownych. Podstawa prawna przekazywania danych z Turcji zgodnie z art. 9 ustawy KVKK: [PODSTAWA PRAWNA: DO UZUPEŁNIENIA PRZEZ PRAWNIKA].",
           "<strong>E-mail wsparcia:</strong> Przetwarzany za pośrednictwem Google Groups (grupa konsumencka) i podlega <a href='https://policies.google.com/privacy?hl=en'>Polityce prywatności</a> oraz <a href='https://policies.google.com/terms?hl=en'>Warunkom korzystania z usług</a> firmy Google. Wiadomości są przechowywane w archiwum grupy."
         ]],
         ["h", "7. Twoje prawa (RODO i KVKK)"],
@@ -1357,9 +1391,15 @@ window.NAHI_LEGAL = {
           ["<strong>Lokalne dane rozszerzenia</strong>", "Stan multimediów aktywnej karty przeglądarki (tytuł utworu, wykonawca, stan odtwarzania)", "Tylko lokalna przeglądarka i aplikacja PC", "Wyświetlanie multimediów internetowych na telefonie i komputerze. Nigdy nie są wysyłane do chmury."],
           ["<strong>Weryfikacja aplikacji</strong>", "Nazwa pakietu, certyfikat podpisu aplikacji i wynik integralności urządzenia", "Google Play Integrity (Google)", "Weryfikacja, czy aplikacja została zainstalowana z Google Play i działa na zaufanym urządzeniu; zapobieganie nadużyciom. Google nie udostępnia tych danych stronom trzecim."],
           ["<strong>Raporty o awariach (opcjonalnie)</strong>", "Wersja aplikacji, skrót urządzenia, typ i treść błędu, zrzut stosu i wiersze dziennika (adresy e-mail i IP są maskowane)", "Google Cloud Functions i Firestore (Europa); e-mail wsparcia przez Google Groups", "Analizowanie i naprawianie awarii. Wysyłane wyłącznie za Twoim potwierdzeniem."],
-          ["<strong>Reklamy i identyfikatory urządzeń (tylko plan Bezpłatny)</strong>", "Identyfikator reklamowy Google (Android AD_ID), przybliżona lokalizacja (na podstawie adresu IP), model urządzenia, wskaźniki wyświetleń i interakcji z reklamami.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Zasady Google dotyczące reklam</a>", "Wyświetlanie natywnych reklam 2x1 w planie Bezpłatnym oraz zapobieganie nieprawidłowemu ruchowi. W planie Pro identyfikatory reklamowe nie są gromadzone, a usługa AdMob jest całkowicie wyłączona. Użytkownicy mogą zresetować identyfikator reklamowy w menu Ustawienia Androida > Prywatność > Reklamy."]
+          ["<strong>Reklamy i identyfikatory urządzeń (tylko plan Bezpłatny)</strong>", "Identyfikator wyświetlania reklam Google (Android AD_ID), przybliżona lokalizacja (na podstawie adresu IP), model urządzenia, wskaźniki wyświetleń i interakcji z reklamami.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Zasady Google Ads</a>", "Wyświetlanie reklam natywnych 2x1 w planie Bezpłatnym i zapobieganie nieprawidłowemu ruchowi. W planie Pro identyfikatory reklamowe nie są zbierane, a pakiet SDK AdMob nie jest inicjowany. Użytkownicy mogą zresetować identyfikator reklamowy w menu Ustawienia Androida > Prywatność > Reklamy."],
+          ["<strong>Weryfikacja cofnięcia zegara (tylko PC, wyjątkowo)</strong>", "Publiczny adres IP komputera PC, standardowe żądanie HTTPS HEAD (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) lub Apple Inc. (www.apple.com)", "Odczytanie nagłówka HTTP Date w celu zweryfikowania aktualnego czasu i odblokowania legalnej licencji Pro wyłącznie wtedy, gdy lokalny zegar PC jest opóźniony o ponad 5 minut względem ostatnio zapisanego czasu. Nigdy nie wywoływane podczas normalnego uruchamiania; nie wysyła plików cookie ani identyfikatorów urządzenia."],
+          ["<strong>Hosting strony internetowej i CDN (otwarcie strony)</strong>", "Adres IP odwiedzającego, żądany adres URL, nagłówki HTTP przeglądarki i systemu operacyjnego (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. oraz Fastly, Inc. (USA / EOG)", "Udostępnianie statycznych stron internetowych, buforowanie i ochrona DDoS/bezpieczeństwa (przechowywane w standardowych dziennikach bezpieczeństwa przez 30–90 dni). Brak śledzących plików cookie; używane są czcionki systemowe bez zewnętrznych wywołań do Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Administrator danych:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>E-mail kontaktowy:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Strona internetowa:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Administrator danych:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>E-mail kontaktowy:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Strona internetowa:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1403,11 +1443,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Ważne: anuluj aktywną subskrypcję"],
           ["p", "Usunięcie konta <strong>nie powoduje automatycznego anulowania</strong> subskrypcji rozpoczętej przez Google Play. Aby uniknąć opłat w przyszłości, anuluj ją przed usunięciem konta:"],
-          ["ol", [
-            "Otwórz <strong>Sklep Google Play</strong> na urządzeniu z systemem Android.",
-            "Dotknij ikony profilu > <strong>Płatności i subskrypcje</strong> > <strong>Subskrypcje</strong>.",
-            "Wybierz <strong>NahiDeck</strong> i dotknij <strong>\"Anuluj subskrypcję\"</strong>."
-          ]]
+          ["ol", ["Otwórz <strong>Sklep Google Play</strong> na urządzeniu z systemem Android.", "Dotknij ikony profilu > <strong>Płatności i subskrypcje</strong> > <strong>Subskrypcje</strong>.", "Wybierz <strong>NahiDeck</strong> i dotknij <strong>\"Anuluj subskrypcję\"</strong>."]]
         ]]
       ]
     }
@@ -1417,7 +1453,7 @@ window.NAHI_LEGAL = {
   ru: {
     privacy: {
       title: "Политика конфиденциальности NahiDeck",
-      updated: "25 октября 2026 г.",
+      updated: "11 ноября 2026 г.",
       blocks: [
         ["p", "NahiDeck («мы», «приложение» или «сервис») уделяет особое внимание защите конфиденциальности пользователей и безопасности персональных данных. Настоящая политика распространяется на <strong>Android-приложение NahiDeck</strong>, <strong>десктопный клиент NahiDeck для Windows</strong> и <strong>расширение для веб-браузеров (NahiDeck Connect)</strong>."],
         ["h", "Кратко"],
@@ -1459,8 +1495,9 @@ window.NAHI_LEGAL = {
           "<strong>Телеметрия:</strong> При отзыве согласия в «Настройки > Конфиденциальность» текущая запись немедленно удаляется. Активные записи автоматически удаляются по истечении 180 дней (TTL).",
           "<strong>Технические журналы серверов:</strong> Журналы запросов инфраструктуры хранятся не более 30 дней.",
           "<strong>Записи о лицензиях и аудите:</strong> Записи операций с аккаунтом и лицензиями содержат необратимый хеш идентификатора пользователя и хранятся не более 90 дней.",
-          "<strong>Отчеты о сбоях:</strong> Содержат версию приложения, хеш устройства, тип и текст ошибки, трассировку стека и строки журнала. Адреса эл. почты, IP-адреса и имена пользовательских папок в путях к файлам маскируются перед сохранением. Хранятся не более 30 дней. При отправке отчета создается анонимный идентификатор Firebase для предотвращения злоупотреблений; IP-адрес запроса хранится только в виде необратимого хеша и не более 24 часов.",
-          "<strong>Международная передача данных:</strong> Сервис Firebase Authentication обслуживается компанией Google в дата-центрах США. Для проверки покупок RevenueCat обрабатывает данные в США (AWS); передача защищена Стандартными договорными условиями. Данные Firestore, Cloud Functions и Cloud KMS обрабатываются на серверах в Европе (europe-west1). Правовые основания для передачи из Турции согласно ст. 9 KVKK: [ПРАВОВОЕ ОСНОВАНИЕ: ЗАПОЛНЯЕТСЯ ЮРИСТОМ].",
+          "<strong>Отчёты о сбоях:</strong> включают версию приложения, хеш устройства, тип и текст ошибки, трассировку стека и строки журнала. Адреса электронной почты, IP-адреса и имена пользовательских папок в путях к файлам маскируются перед сохранением. Хранятся до 30 дней. При отправке отчёта создаётся анонимный идентификатор Firebase для предотвращения злоупотреблений; IP-адрес запроса никогда не сохраняется в открытом виде в нашей базе данных (Firestore) и хранится только в виде солёного необратимого хеш-счётчика не более 24 часов (инфраструктурные журналы Google Cloud Run / Cloud Logging могут хранить IP-адрес до 30 дней).",
+          "<strong>Защита от перевода часов ПК назад (только для настольной версии):</strong> только если обнаруживается, что системные часы вашего компьютера отстают более чем на 5 минут от последней зафиксированной отметки времени (например, при разряде батарейки CMOS/BIOS), настольное приложение отправляет HTTPS-запрос <code>HEAD</code> без файлов cookie и идентификаторов первому доступному узлу из <code>time.google.com</code>, <code>cloudflare.com</code> или <code>www.apple.com</code> исключительно для чтения HTTP-заголовка <code>Date</code> и разблокировки подлинной лицензии Pro. При обычной работе этот запрос не выполняется.",
+          "<strong>Международная передача данных и юридические лица-получатели:</strong> сервисы Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity и AdMob предоставляются компаниями <strong>Google Ireland Limited</strong> (Ирландия) и <strong>Google LLC</strong> (США); проверка покупок осуществляется компанией <strong>RevenueCat, Inc.</strong> (США); статический веб-хостинг предоставляется компаниями <strong>GitHub, Inc. / GitHub B.V.</strong> и <strong>Fastly, Inc.</strong> (США/ЕЭЗ). Шрифты приложения (Inter, Space Grotesk, JetBrains Mono) встроены локально в пакет приложения; во время работы внешние запросы к серверам Google Fonts не выполняются. Данные Firestore, Cloud Functions и Cloud KMS размещаются преимущественно в Европе (<code>europe-west1</code>), тогда как аутентификация, биллинг и глобальная облачная инфраструктура могут обрабатывать данные в США и ЕЭЗ на основании Стандартных договорных положений. Правовое основание для передачи данных из Турции по статье 9 закона KVKK: [ПРАВОВОЕ ОСНОВАНИЕ: ЗАПОЛНЯЕТСЯ ЮРИСТОМ].",
           "<strong>Электронная почта поддержки:</strong> Обрабатывается через Google Groups (пользовательская группа) в соответствии с <a href='https://policies.google.com/privacy?hl=en'>Политикой конфиденциальности</a> и <a href='https://policies.google.com/terms?hl=en'>Условиями использования</a> Google. Сообщения сохраняются в архиве группы."
         ]],
         ["h", "7. Ваши права (GDPR и KVKK)"],
@@ -1474,9 +1511,15 @@ window.NAHI_LEGAL = {
           ["<strong>Локальные данные расширения</strong>", "Состояние медиа в активной вкладке браузера (название трека, исполнитель, статус воспроизведения)", "Только локальный браузер и приложение для ПК", "Отображение воспроизводимого контента на телефоне и ПК. Никогда не отправляется в облако."],
           ["<strong>Проверка подлинности приложения</strong>", "Имя пакета, сертификат подписи приложения и результат проверки целостности устройства", "Google Play Integrity (Google)", "Подтверждение того, что приложение установлено из Google Play и запущено на надежном устройстве; предотвращение злоупотреблений. Google не передает эти данные третьим лицам."],
           ["<strong>Отчеты о сбоях (необязательно)</strong>", "Версия приложения, хеш устройства, тип и текст ошибки, трассировка стека и строки журнала (эл. почта и IP маскируются)", "Google Cloud Functions и Firestore (Европа); поддержка через Google Groups", "Анализ и устранение сбоев. Отправляется только с вашего согласия."],
-          ["<strong>Реклама и идентификаторы устройства (только бесплатный план)</strong>", "Рекламный идентификатор Google (Android AD_ID), приблизительное местоположение (по IP-адресу), модель устройства, показатели показов и взаимодействия с рекламой.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Политика рекламы Google</a>", "Показ нативной рекламы 2x1 в бесплатном плане и предотвращение недействительного трафика. В плане Pro рекламные идентификаторы не собираются, а AdMob полностью отключается. Пользователи могут сбросить рекламный идентификатор в разделе «Настройки Android» > «Конфиденциальность» > «Реклама»."]
+          ["<strong>Реклама и идентификаторы устройств (только Бесплатный план)</strong>", "Рекламный идентификатор Google (Android AD_ID), приблизительное местоположение (по IP-адресу), модель устройства, показатели показов и взаимодействия с рекламой.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Правила Google в отношении рекламы</a>", "Показ нативных объявлений 2x1 в Бесплатном плане и защита от недействительного трафика. В плане Pro рекламные идентификаторы не собираются, а SDK AdMob не инициализируется. Пользователи могут сбросить рекламный идентификатор в меню Настройки Android > Конфиденциальность > Реклама."],
+          ["<strong>Проверка перевода часов назад (только ПК, в исключительных случаях)</strong>", "Публичный IP-адрес ПК, стандартный запрос HTTPS HEAD (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) или Apple Inc. (www.apple.com)", "Чтение HTTP-заголовка Date для проверки текущего времени и разблокировки подлинной лицензии Pro только в том случае, если локальные часы ПК отстают более чем на 5 минут от последнего зафиксированного времени. Никогда не вызывается при обычном запуске; не отправляет файлы cookie или идентификаторы устройства."],
+          ["<strong>Веб-хостинг и CDN (загрузка страницы)</strong>", "IP-адрес посетителя, запрашиваемый URL, HTTP-заголовки браузера и операционной системы (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. и Fastly, Inc. (США / ЕЭЗ)", "Доставка статических веб-страниц, кэширование и защита от DDoS-атак (хранятся в стандартных журналах безопасности 30–90 дней). Отслеживающие файлы cookie не используются; применяются системные шрифты без внешних обращений к Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Оператор данных:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Контактный адрес:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Веб-сайт:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Оператор данных:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>Контактный адрес:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Веб-сайт:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1520,11 +1563,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Важно: отмените действующую подписку"],
           ["p", "Удаление аккаунта <strong>не отменяет автоматически</strong> подписку, оформленную через Google Play. Во избежание дальнейших списаний отмените ее перед удалением аккаунта:"],
-          ["ol", [
-            "Откройте <strong>Google Play Маркет</strong> на устройстве Android.",
-            "Нажмите на значок профиля > <strong>Платежи и подписки</strong> > <strong>Подписки</strong>.",
-            "Выберите <strong>NahiDeck</strong> и нажмите <strong>«Отменить подписку»</strong>."
-          ]]
+          ["ol", ["Откройте <strong>Google Play Маркет</strong> на устройстве Android.", "Нажмите на значок профиля > <strong>Платежи и подписки</strong> > <strong>Подписки</strong>.", "Выберите <strong>NahiDeck</strong> и нажмите <strong>«Отменить подписку»</strong>."]]
         ]]
       ]
     }
@@ -1534,7 +1573,7 @@ window.NAHI_LEGAL = {
   id: {
     privacy: {
       title: "Kebijakan Privasi NahiDeck",
-      updated: "25 Oktober 2026",
+      updated: "11 November 2026",
       blocks: [
         ["p", "NahiDeck (\"kami\", \"aplikasi\", atau \"layanan\") menghargai privasi penggunanya dan perlindungan data pribadi. Kebijakan ini mencakup <strong>aplikasi Android NahiDeck</strong>, <strong>klien desktop Windows NahiDeck</strong>, dan <strong>ekstensi browser web (NahiDeck Connect)</strong>."],
         ["h", "Secara singkat"],
@@ -1576,8 +1615,9 @@ window.NAHI_LEGAL = {
           "<strong>Telemetri:</strong> Menarik persetujuan di Pengaturan > Privasi akan segera menghapus catatan yang ada. Catatan aktif kedaluwarsa secara otomatis dalam 180 hari (TTL).",
           "<strong>Log server teknis:</strong> Log permintaan infrastruktur disimpan hingga 30 hari.",
           "<strong>Catatan lisensi dan audit:</strong> Catatan operasi akun dan lisensi berisi hash satu arah dari pengenal pengguna Anda dan disimpan hingga 90 hari.",
-          "<strong>Laporan kerusakan:</strong> Berisi versi aplikasi, hash perangkat, jenis dan teks kesalahan, pelacakan tumpukan, dan baris log. Alamat email, alamat IP, dan nama folder pengguna dalam jalur berkas disamarkan sebelum disimpan. Disimpan hingga 30 hari. Saat Anda mengirim laporan, pengenal anonim Firebase dibuat untuk mencegah penyalahgunaan; alamat IP permintaan hanya disimpan sebagai hash satu arah dan paling lama 24 jam.",
-          "<strong>Transfer internasional:</strong> Firebase Authentication dioperasikan oleh Google dari pusat data di Amerika Serikat. Untuk verifikasi pembelian, RevenueCat memproses data Anda di Amerika Serikat (AWS); transfer ini dilindungi oleh Klausul Kontrak Standar. Data Firestore, Cloud Functions, dan Cloud KMS diproses di server di Eropa (europe-west1). Dasar hukum transfer dari Turki berdasarkan Pasal 9 KVKK: [DASAR HUKUM: AKAN DIISI OLEH PENGACARA].",
+          "<strong>Laporan kerusakan (crash):</strong> mencakup versi aplikasi, hash perangkat, jenis dan teks kesalahan, stack trace, serta baris log. Alamat email, alamat IP, dan nama folder pengguna pada jalur file disamarkan sebelum disimpan. Disimpan hingga 30 hari. Saat Anda mengirim laporan, pengidentifikasi anonim Firebase dibuat untuk mencegah penyalahgunaan; alamat IP permintaan tidak pernah disimpan dalam teks biasa di database aplikasi kami (Firestore) dan hanya disimpan sebagai penghitung hash satu arah ber-salt paling lama 24 jam (log infrastruktur Google Cloud Run / Cloud Logging dapat menyimpan alamat IP hingga 30 hari).",
+          "<strong>Perlindungan kemunduran jam PC (khusus desktop):</strong> hanya jika jam sistem komputer Anda terdeteksi tertinggal lebih dari 5 menit dari stempel waktu terakhir yang tercatat (misalnya setelah baterai CMOS/BIOS habis), aplikasi desktop mengirimkan permintaan HTTPS <code>HEAD</code> tanpa cookie dan tanpa pengidentifikasi ke host pertama yang dapat dijangkau di antara <code>time.google.com</code>, <code>cloudflare.com</code>, atau <code>www.apple.com</code> semata-mata untuk membaca header HTTP <code>Date</code> dan membuka kunci lisensi Pro yang sah. Tidak ada permintaan yang dilakukan selama pengoperasian normal.",
+          "<strong>Transfer internasional dan badan hukum penerima:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity, dan AdMob disediakan oleh <strong>Google Ireland Limited</strong> (Irlandia) dan <strong>Google LLC</strong> (AS); verifikasi pembelian disediakan oleh <strong>RevenueCat, Inc.</strong> (AS); hosting web statis disediakan oleh <strong>GitHub, Inc. / GitHub B.V.</strong> dan <strong>Fastly, Inc.</strong> (AS/EEA). Font aplikasi (Inter, Space Grotesk, JetBrains Mono) dikemas secara lokal di dalam aplikasi; tidak ada panggilan runtime ke server Google Fonts. Data Firestore, Cloud Functions, dan Cloud KMS dihosting terutama di Eropa (<code>europe-west1</code>), sementara autentikasi, penagihan, dan infrastruktur cloud global dapat memproses data di Amerika Serikat dan EEA berdasarkan Klausul Kontrak Standar. Dasar hukum untuk transfer dari Turki berdasarkan pasal 9 KVKK: [DASAR HUKUM: AKAN DIISI OLEH PENGACARA].",
           "<strong>Email dukungan:</strong> Diproses melalui Google Groups (grup konsumen) dan tunduk pada <a href='https://policies.google.com/privacy?hl=en'>Kebijakan Privasi</a> serta <a href='https://policies.google.com/terms?hl=en'>Persyaratan Layanan</a> Google. Pesan disimpan dalam arsip grup."
         ]],
         ["h", "7. Hak Anda (GDPR dan KVKK)"],
@@ -1591,9 +1631,15 @@ window.NAHI_LEGAL = {
           ["<strong>Data ekstensi lokal</strong>", "Status media dari tab browser yang aktif (judul trek, artis, status pemutaran)", "Hanya browser lokal dan aplikasi PC", "Menampilkan media web di ponsel dan PC Anda. Tidak pernah dikirim ke cloud."],
           ["<strong>Verifikasi aplikasi</strong>", "Nama paket, sertifikat penandatanganan aplikasi, dan hasil integritas perangkat", "Google Play Integrity (Google)", "Memverifikasi bahwa aplikasi dipasang dari Google Play dan berjalan di perangkat tepercaya; mencegah penyalahgunaan. Google tidak membagikan data ini kepada pihak ketiga."],
           ["<strong>Laporan kerusakan (opsional)</strong>", "Versi aplikasi, hash perangkat, jenis dan teks kesalahan, stack trace, dan baris log (email dan IP disamarkan)", "Google Cloud Functions dan Firestore (Eropa); email dukungan melalui Google Groups", "Menganalisis dan memperbaiki kerusakan. Hanya dikirim dengan persetujuan Anda."],
-          ["<strong>Iklan dan pengidentifikasi perangkat (hanya paket Gratis)</strong>", "ID Iklan Google (Android AD_ID), perkiraan lokasi (melalui alamat IP), model perangkat, metrik tayangan dan interaksi iklan.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Kebijakan Iklan Google</a>", "Menayangkan iklan native 2x1 pada paket Gratis dan mencegah lalu lintas tidak valid. Pada paket Pro, pengidentifikasi iklan tidak dikumpulkan dan AdMob dinonaktifkan sepenuhnya. Pengguna dapat menyetel ulang ID Iklan di Pengaturan Android > Privasi > Iklan."]
+          ["<strong>Iklan dan pengidentifikasi perangkat (khusus paket Gratis)</strong>", "ID Iklan Google (Android AD_ID), perkiraan lokasi (melalui alamat IP), model perangkat, metrik tayangan dan interaksi iklan.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Kebijakan Iklan Google</a>", "Menampilkan iklan native 2x1 pada paket Gratis dan mencegah trafik tidak valid. Pada paket Pro, pengidentifikasi iklan tidak dikumpulkan dan SDK AdMob tidak diinisialisasi. Pengguna dapat mengatur ulang ID Iklan kapan saja melalui Setelan Android > Privasi > Iklan."],
+          ["<strong>Pemeriksaan kemunduran jam (khusus PC, pengecualian)</strong>", "Alamat IP publik PC, permintaan HTTPS HEAD standar (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com), atau Apple Inc. (www.apple.com)", "Membaca header HTTP Date untuk memverifikasi waktu saat ini dan membuka kunci lisensi Pro yang sah hanya ketika jam PC lokal tertinggal >5 menit dari waktu terakhir yang tercatat. Tidak pernah dipanggil saat startup normal; tidak mengirim cookie atau pengidentifikasi perangkat."],
+          ["<strong>Hosting situs web dan CDN (pemuatan halaman)</strong>", "Alamat IP pengunjung, URL yang diminta, header HTTP browser dan sistem operasi (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. dan Fastly, Inc. (AS / EEA)", "Menyajikan halaman web statis, caching, dan perlindungan DDoS/keamanan (disimpan dalam log keamanan standar selama 30–90 hari). Tidak ada cookie pelacakan yang digunakan; menggunakan font sistem tanpa panggilan eksternal ke Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Pengendali data:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email kontak:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Situs web:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Pengendali data:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>Email kontak:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Situs web:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1637,11 +1683,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Penting: batalkan langganan aktif Anda"],
           ["p", "Menghapus akun Anda <strong>tidak membatalkan secara otomatis</strong> langganan yang Anda mulai melalui Google Play. Untuk menghindari tagihan di masa mendatang, batalkan sebelum menghapus akun Anda:"],
-          ["ol", [
-            "Buka <strong>Google Play Store</strong> di perangkat Android Anda.",
-            "Ketuk ikon profil Anda > <strong>Pembayaran & langganan</strong> > <strong>Langganan</strong>.",
-            "Pilih <strong>NahiDeck</strong> dan ketuk <strong>\"Batalkan langganan\"</strong>."
-          ]]
+          ["ol", ["Buka <strong>Google Play Store</strong> di perangkat Android Anda.", "Ketuk ikon profil Anda > <strong>Pembayaran & langganan</strong> > <strong>Langganan</strong>.", "Pilih <strong>NahiDeck</strong> dan ketuk <strong>\"Batalkan langganan\"</strong>."]]
         ]]
       ]
     }
@@ -1651,7 +1693,7 @@ window.NAHI_LEGAL = {
   vi: {
     privacy: {
       title: "Chính sách quyền riêng tư của NahiDeck",
-      updated: "25 tháng 10 năm 2026",
+      updated: "11 tháng 11 năm 2026",
       blocks: [
         ["p", "NahiDeck (\"chúng tôi\", \"ứng dụng\", hoặc \"dịch vụ\") coi trọng quyền riêng tư của người dùng và bảo vệ dữ liệu cá nhân. Chính sách này áp dụng cho <strong>ứng dụng Android NahiDeck</strong>, <strong>ứng dụng máy tính Windows NahiDeck</strong> và <strong>tiện ích mở rộng trình duyệt web (NahiDeck Connect)</strong>."],
         ["h", "Tóm tắt"],
@@ -1693,8 +1735,9 @@ window.NAHI_LEGAL = {
           "<strong>Dữ liệu đo lường từ xa:</strong> Rút lại sự đồng ý trong Cài đặt > Quyền riêng tư sẽ xóa bản ghi hiện có ngay lập tức. Các bản ghi đang hoạt động sẽ tự động hết hạn trong vòng 180 ngày (TTL).",
           "<strong>Nhật ký máy chủ kỹ thuật:</strong> Nhật ký yêu cầu hạ tầng được lưu giữ tối đa 30 ngày.",
           "<strong>Dữ liệu bản quyền và kiểm toán:</strong> Bản ghi hoạt động tài khoản và bản quyền chứa mã băm một chiều của mã định danh người dùng và được lưu tối đa 90 ngày.",
-          "<strong>Báo cáo sự cố:</strong> Bao gồm phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và các dòng nhật ký. Địa chỉ email, địa chỉ IP và tên thư mục người dùng trong đường dẫn tệp được che dấu trước khi lưu. Được giữ tối đa 30 ngày. Khi bạn gửi báo cáo, một mã định danh ẩn danh của Firebase được tạo để ngăn chặn lạm dụng; địa chỉ IP của yêu cầu chỉ được lưu dưới dạng hash một chiều và tối đa 24 giờ.",
-          "<strong>Chuyển giao quốc tế:</strong> Firebase Authentication được Google vận hành từ các trung tâm dữ liệu tại Hoa Kỳ. Để xác minh giao dịch mua hàng, RevenueCat xử lý dữ liệu của bạn tại Hoa Kỳ (AWS); việc chuyển giao này tuân thủ các Điều khoản hợp đồng tiêu chuẩn. Dữ liệu Firestore, Cloud Functions và Cloud KMS được xử lý trên máy chủ tại Châu Âu (europe-west1). Căn cứ pháp lý chuyển giao từ Thổ Nhĩ Kỳ theo Điều 9 KVKK: [CĂN CỨ PHÁP LÝ: DO LUẬT SƯ ĐIỀN].",
+          "<strong>Báo cáo sự cố:</strong> bao gồm phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, dấu vết ngăn xếp (stack trace) và các dòng nhật ký. Địa chỉ email, địa chỉ IP và tên thư mục người dùng trong đường dẫn tệp được che giấu trước khi lưu trữ. Được lưu giữ tối đa 30 ngày. Khi bạn gửi báo cáo, một mã định danh ẩn danh Firebase sẽ được tạo để ngăn chặn lạm dụng; địa chỉ IP của yêu cầu không bao giờ được lưu dưới dạng văn bản thuần túy trong cơ sở dữ liệu ứng dụng (Firestore) mà chỉ được giữ dưới dạng bộ đếm băm một chiều có muối tối đa 24 giờ (nhật ký hạ tầng Google Cloud Run / Cloud Logging có thể lưu giữ địa chỉ IP tối đa 30 ngày).",
+          "<strong>Bảo vệ chống lùi đồng hồ PC (chỉ bản máy tính):</strong> chỉ khi phát hiện đồng hồ hệ thống trên máy tính của bạn chậm hơn 5 phút so với dấu thời gian được ghi nhận gần nhất (ví dụ sau khi hết pin CMOS/BIOS), ứng dụng máy tính mới gửi một yêu cầu HTTPS <code>HEAD</code> không cookie, không định danh tới máy chủ phản hồi đầu tiên trong số <code>time.google.com</code>, <code>cloudflare.com</code> hoặc <code>www.apple.com</code> chỉ để đọc tiêu đề HTTP <code>Date</code> và mở khóa giấy phép Pro hợp lệ. Không có yêu cầu nào được thực hiện trong quá trình hoạt động bình thường.",
+          "<strong>Chuyển dữ liệu quốc tế và pháp nhân nhận dữ liệu:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity và AdMob được cung cấp bởi <strong>Google Ireland Limited</strong> (Ireland) và <strong>Google LLC</strong> (Hoa Kỳ); xác minh giao dịch mua được cung cấp bởi <strong>RevenueCat, Inc.</strong> (Hoa Kỳ); dịch vụ lưu trữ web tĩnh được cung cấp bởi <strong>GitHub, Inc. / GitHub B.V.</strong> và <strong>Fastly, Inc.</strong> (Hoa Kỳ/EEA). Phông chữ trong ứng dụng (Inter, Space Grotesk, JetBrains Mono) được đóng gói cục bộ; không có lệnh gọi thời gian chạy nào tới máy chủ Google Fonts. Dữ liệu Firestore, Cloud Functions và Cloud KMS được lưu trữ chính tại châu Âu (<code>europe-west1</code>), trong khi xác thực, thanh toán và hạ tầng đám mây toàn cầu có thể xử lý dữ liệu tại Hoa Kỳ và EEA theo Các điều khoản hợp đồng tiêu chuẩn. Cơ sở pháp lý cho việc chuyển dữ liệu từ Thổ Nhĩ Kỳ theo điều 9 của KVKK: [CƠ SỞ PHÁP LÝ: DO LUẬT SƯ ĐIỀN].",
           "<strong>Email hỗ trợ:</strong> Được xử lý qua Google Groups (nhóm người dùng) và tuân theo <a href='https://policies.google.com/privacy?hl=en'>Chính sách quyền riêng tư</a> cùng <a href='https://policies.google.com/terms?hl=en'>Điều khoản dịch vụ</a> của Google. Thư được lưu trong kho lưu trữ nhóm."
         ]],
         ["h", "7. Quyền của bạn (GDPR và KVKK)"],
@@ -1708,9 +1751,15 @@ window.NAHI_LEGAL = {
           ["<strong>Dữ liệu tiện ích cục bộ</strong>", "Trạng thái đa phương tiện của tab trình duyệt đang hoạt động (tên bài hát, nghệ sĩ, trạng thái phát)", "Chỉ trên trình duyệt cục bộ và ứng dụng máy tính", "Hiển thị nội dung phát đa phương tiện trên điện thoại và máy tính. Không bao giờ gửi lên đám mây."],
           ["<strong>Xác minh ứng dụng</strong>", "Tên gói, chứng chỉ ký ứng dụng và kết quả tính toàn vẹn của thiết bị", "Google Play Integrity (Google)", "Xác minh ứng dụng được cài đặt từ Google Play và chạy trên thiết bị đáng tin cậy; ngăn chặn hành vi lạm dụng. Google không chia sẻ dữ liệu này cho bên thứ ba."],
           ["<strong>Báo cáo sự cố (tùy chọn)</strong>", "Phiên bản ứng dụng, mã băm thiết bị, loại và nội dung lỗi, stack trace và dòng nhật ký (email và IP được che dấu)", "Google Cloud Functions và Firestore (Châu Âu); hỗ trợ email qua Google Groups", "Phân tích và khắc phục sự cố. Chỉ gửi khi có sự đồng ý của bạn."],
-          ["<strong>Quảng cáo và mã nhận dạng thiết bị (chỉ dành cho gói Miễn phí)</strong>", "Mã nhận dạng quảng cáo Google (Android AD_ID), vị trí ước tính (qua địa chỉ IP), kiểu thiết bị, số liệu hiển thị và tương tác với quảng cáo.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Chính sách quảng cáo của Google</a>", "Hiển thị quảng cáo gốc 2x1 trong gói Miễn phí và ngăn chặn lưu lượng truy cập không hợp lệ. Trong gói Pro, không thu thập mã nhận dạng quảng cáo và AdMob bị tắt hoàn toàn. Người dùng có thể đặt lại Mã nhận dạng quảng cáo trong Cài đặt Android > Quyền riêng tư > Quảng cáo."]
+          ["<strong>Quảng cáo và mã định danh thiết bị (chỉ gói Miễn phí)</strong>", "ID quảng cáo của Google (Android AD_ID), vị trí tương đối (qua địa chỉ IP), kiểu thiết bị, số liệu hiển thị và tương tác quảng cáo.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Chính sách quảng cáo của Google</a>", "Hiển thị quảng cáo tự nhiên 2x1 trong gói Miễn phí và ngăn chặn lưu lượng truy cập không hợp lệ. Ở gói Pro, mã định danh quảng cáo không được thu thập và SDK AdMob không được khởi tạo. Người dùng có thể đặt lại ID quảng cáo bất cứ lúc nào trong Cài đặt Android > Quyền riêng tư > Quảng cáo."],
+          ["<strong>Kiểm tra lùi đồng hồ (chỉ PC, trường hợp ngoại lệ)</strong>", "Địa chỉ IP công cộng của PC, yêu cầu HTTPS HEAD tiêu chuẩn (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) hoặc Apple Inc. (www.apple.com)", "Đọc tiêu đề HTTP Date để xác minh thời gian hiện tại và mở khóa giấy phép Pro hợp lệ chỉ khi đồng hồ PC cục bộ chậm hơn 5 phút so với lần ghi nhận cuối cùng. Không bao giờ được gọi khi khởi động bình thường; không gửi cookie hay mã định danh thiết bị."],
+          ["<strong>Lưu trữ trang web và CDN (tải trang)</strong>", "Địa chỉ IP của khách truy cập, URL được yêu cầu, tiêu đề HTTP của trình duyệt và hệ điều hành (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. và Fastly, Inc. (Hoa Kỳ / EEA)", "Phân phối trang web tĩnh, bộ nhớ đệm và bảo vệ DDoS/bảo mật (được lưu trong nhật ký bảo mật tiêu chuẩn từ 30–90 ngày). Không sử dụng cookie theo dõi; sử dụng phông chữ hệ thống và không gọi tới Google Fonts."]
         ]],
-        ["card", [["p", "<strong>Bên kiểm soát dữ liệu:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>Email liên hệ:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>Trang web:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>Bên kiểm soát dữ liệu:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>Email liên hệ:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>Trang web:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1754,11 +1803,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "Quan trọng: hủy gói đăng ký đang hoạt động"],
           ["p", "Xóa tài khoản <strong>không tự động hủy</strong> gói đăng ký bạn đã kích hoạt qua Google Play. Để tránh bị trừ tiền trong tương lai, hãy hủy gói đăng ký trước khi xóa tài khoản:"],
-          ["ol", [
-            "Mở <strong>Google Play Store</strong> trên thiết bị Android.",
-            "Nhấn vào biểu tượng hồ sơ của bạn > <strong>Thanh toán và gói thuê bao</strong> > <strong>Gói thuê bao</strong>.",
-            "Chọn <strong>NahiDeck</strong> và nhấn <strong>\"Hủy gói thuê bao\"</strong>."
-          ]]
+          ["ol", ["Mở <strong>Google Play Store</strong> trên thiết bị Android.", "Nhấn vào biểu tượng hồ sơ của bạn > <strong>Thanh toán và gói thuê bao</strong> > <strong>Gói thuê bao</strong>.", "Chọn <strong>NahiDeck</strong> và nhấn <strong>\"Hủy gói thuê bao\"</strong>."]]
         ]]
       ]
     }
@@ -1768,7 +1813,7 @@ window.NAHI_LEGAL = {
   ja: {
     privacy: {
       title: "NahiDeck プライバシーポリシー",
-      updated: "2026年10月25日",
+      updated: "2026年11月11日",
       blocks: [
         ["p", "NahiDeck（以下「当社」、「本アプリ」または「本サービス」）は、ユーザーのプライバシー保護および個人データの保護を重視しています。本ポリシーは、<strong>NahiDeck Androidアプリ</strong>、<strong>NahiDeck Windowsデスクトップクライアント</strong>、および<strong>Webブラウザ拡張機能（NahiDeck Connect）</strong>に適用されます。"],
         ["h", "概要"],
@@ -1810,8 +1855,9 @@ window.NAHI_LEGAL = {
           "<strong>テレメトリ：</strong>「設定 > プライバシー」で同意を撤回すると、既存の記録は即座に削除されます。有効な記録は最大180日以内に自動的に有効期限切れ（TTL）となります。",
           "<strong>技術サーバーログ：</strong>インフラストラクチャのリクエストログは最大30日間保持されます。",
           "<strong>ライセンスおよび監査記録：</strong>アカウントおよびライセンス操作の記録には、不可逆ハッシュ化されたユーザーIDが含まれ、最大90日間保持されます。",
-          "<strong>クラッシュレポート：</strong>アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行が含まれます。ファイルパス内のメールアドレス、IPアドレス、ユーザーフォルダ名は保存前にマスキングされます。最大30日間保持されます。レポートを送信すると、不正利用を防ぐために Firebase の匿名識別子が作成されます。リクエストの IP アドレスは不可逆なハッシュとしてのみ、最長24時間保存されます。",
-          "<strong>国際転送：</strong>Firebase Authenticationは米国のデータセンターからGoogleによって運営されています。購入検証のため、RevenueCatはお客様のデータを米国（AWS）で処理します。この転送は標準契約条項（SCC）によって保護されています。Firestore、Cloud Functions、Cloud KMSのデータはヨーロッパ（europe-west1）のサーバーで処理されます。KVKK第9条に基づくトルコからのデータ転送の法的根拠：[法的根拠：弁護士が記入]。",
+          "<strong>クラッシュレポート：</strong>アプリのバージョン、デバイスハッシュ、エラーの種類と内容、スタックトレース、ログ行が含まれます。メールアドレス、IPアドレス、ファイルパス内のユーザーフォルダ名は保存前にマスクされます。最大30日間保持されます。レポート送信時には不正利用防止のためFirebaseの匿名IDが作成されます。リクエスト元のIPアドレスがアプリのデータベース（Firestore）に平文で保存されることはなく、ソルト付きの一方向ハッシュカウンタとしてのみ最大24時間保持されます（Google Cloud Run / Cloud Loggingのインフラストラクチャログは標準で最大30日間IPアドレスを保持する場合があります）。",
+          "<strong>PC時計の巻き戻し保護（デスクトップ版のみ）：</strong>お使いのPCのシステム時計が最後に記録されたタイムスタンプより5分以上遅れていることが検出された場合（CMOS/BIOS電池切れの後など）に限り、デスクトップアプリは正規のProライセンスのロックを解除するため、HTTPの<code>Date</code>ヘッダーを読み取る目的でのみ、<code>time.google.com</code>、<code>cloudflare.com</code>、または<code>www.apple.com</code>のうち最初に応答したホストへCookieや識別子を含まないHTTPS <code>HEAD</code>リクエストを送信します。通常動作時にこのリクエストは行われません。",
+          "<strong>国際データ移転および受領法人：</strong>Firebase Authentication、Cloud Functions、Firestore、Cloud KMS、Play Integrity、およびAdMobは<strong>Google Ireland Limited</strong>（アイルランド）および<strong>Google LLC</strong>（米国）によって提供され、購入確認は<strong>RevenueCat, Inc.</strong>（米国）によって提供され、静的ウェブホスティングは<strong>GitHub, Inc. / GitHub B.V.</strong>および<strong>Fastly, Inc.</strong>（米国／EEA）によって提供されます。アプリ内フォント（Inter、Space Grotesk、JetBrains Mono）はアプリ内にローカル同梱されており、実行時にGoogle Fontsサーバーへの外部通信は行われません。Firestore、Cloud Functions、Cloud KMSのデータは主に欧州（<code>europe-west1</code>）でホストされますが、認証、決済、グローバルクラウド基盤は標準契約条項に基づき米国およびEEAでデータを処理する場合があります。トルコからの移転に関するKVKK第9条の法的根拠：[法的根拠：弁護士により記入予定]。",
           "<strong>サポートメール：</strong>Google Groups（一般消費者向けグループ）を通じて処理され、Googleの<a href='https://policies.google.com/privacy?hl=ja'>プライバシーポリシー</a>および<a href='https://policies.google.com/terms?hl=ja'>利用規約</a>に従います。メッセージはグループのアーカイブに保存されます。"
         ]],
         ["h", "7. お客様の権利（GDPRおよびKVKK）"],
@@ -1825,9 +1871,15 @@ window.NAHI_LEGAL = {
           ["<strong>ローカル拡張機能データ</strong>", "アクティブなブラウザタブのメディア状態（曲名、アーティスト、再生状態）", "ローカルブラウザおよびPCアプリのみ", "スマートフォンおよびPC上でウェブメディアを表示するため。クラウドには送信されません。"],
           ["<strong>アプリ検証</strong>", "パッケージ名、アプリ署名証明書、デバイス完全性結果", "Google Play Integrity（Google）", "アプリがGoogle Playからインストールされ、信頼できるデバイスで動作していることを検証し、不正利用を防止するため。Googleはこのデータを第三者と共有しません。"],
           ["<strong>クラッシュレポート（任意）</strong>", "アプリバージョン、デバイスハッシュ、エラーの種類とテキスト、スタックトレース、ログ行（メールアドレスとIPはマスキング）", "Google Cloud Functions および Firestore（ヨーロッパ）；Google Groups経由のサポートメール", "クラッシュの分析と修正。お客様の確認がある場合にのみ送信。"],
-          ["<strong>広告およびデバイス識別子（無料プランのみ）</strong>", "Google広告ID（Android AD_ID）、おおよその位置情報（IPアドレス経由）、端末モデル、広告の表示および操作に関する指標。", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google広告ポリシー</a>", "無料プランでの2x1ネイティブ広告の配信および無効なトラフィックの防止。Proプランでは広告識別子は一切収集されず、AdMobは完全に無効化されます。ユーザーはAndroidの「設定」>「プライバシー」>「広告」から広告IDをいつでもリセットできます。"]
+          ["<strong>広告およびデバイス識別子（無料プランのみ）</strong>", "Google 広告 ID（Android AD_ID）、おおよその位置情報（IPアドレス経由）、デバイスモデル、広告の表示回数およびインタラクション指標。", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 広告ポリシー</a>", "無料プランでの2x1ネイティブ広告の表示および無効なトラフィックの防止。Proプランでは広告識別子は一切収集されず、AdMob SDKも初期化されません。ユーザーは「Android 設定 > プライバシー > 広告」からいつでも広告IDをリセットできます。"],
+          ["<strong>時計巻き戻しチェック（PCのみ、例外時）</strong>", "PCの公開IPアドレス、標準のHTTPS HEADリクエスト（User-Agent: NahiDeck/1.0）", "Google LLC (time.google.com)、Cloudflare, Inc. (cloudflare.com) または Apple Inc. (www.apple.com)", "ローカルPCの時計が最終記録時刻より5分以上遅れている場合にのみ、HTTP Dateヘッダーを読み取って現在時刻を確認し、正規のProライセンスのロックを解除するため。通常の起動時には呼び出されず、Cookieやデバイス識別子も送信されません。"],
+          ["<strong>ウェブホスティングおよびCDN（ページ読み込み時）</strong>", "訪問者のIPアドレス、リクエストされたURL、ブラウザおよびOSのHTTPヘッダー（User-Agent、Accept-Language）", "GitHub Pages — GitHub, Inc. / GitHub B.V. および Fastly, Inc.（米国／EEA）", "静的ウェブページの配信、キャッシュ、およびDDoS／セキュリティ保護（標準のセキュリティログに30〜90日間保持）。追跡Cookieは使用せず、システムフォントを使用しておりGoogle Fontsへの外部通信は行われません。"]
         ]],
-        ["card", [["p", "<strong>データ管理者：</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>連絡先メールアドレス：</strong> nahideck-support@googlegroups.com"], ["p", "<strong>ウェブサイト：</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>データ管理者：</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>連絡先メールアドレス：</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>ウェブサイト：</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1871,11 +1923,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "重要：有効なサブスクリプションを解約してください"],
           ["p", "アカウントを削除しても、Google Playを通じて開始されたサブスクリプションは<strong>自動的に解約されません</strong>。今後の請求を停止するため、アカウント削除前に解約してください："],
-          ["ol", [
-            "Android端末で <strong>Google Play ストア</strong> を開きます。",
-            "プロフィールアイコン > <strong>お支払いと定期購入</strong> > <strong>定期購入</strong> をタップします。",
-            "<strong>NahiDeck</strong> を選択し、<strong>「定期購入を解約」</strong> をタップします。"
-          ]]
+          ["ol", ["Android端末で <strong>Google Play ストア</strong> を開きます。", "プロフィールアイコン > <strong>お支払いと定期購入</strong> > <strong>定期購入</strong> をタップします。", "<strong>NahiDeck</strong> を選択し、<strong>「定期購入を解約」</strong> をタップします。"]]
         ]]
       ]
     }
@@ -1885,7 +1933,7 @@ window.NAHI_LEGAL = {
   ko: {
     privacy: {
       title: "NahiDeck 개인정보 처리방침",
-      updated: "2026년 10월 25일",
+      updated: "2026년 11월 11일",
       blocks: [
         ["p", "NahiDeck(\"당사\", \"앱\" 또는 \"서비스\")은 이용자의 개인정보 보호 및 권리 보호를 매우 중요하게 여깁니다. 본 방침은 <strong>NahiDeck Android 앱</strong>, <strong>NahiDeck Windows 데스크톱 클라이언트</strong> 및 <strong>웹 브라우저 확장 프로그램(NahiDeck Connect)</strong>에 적용됩니다."],
         ["h", "요약"],
@@ -1927,8 +1975,9 @@ window.NAHI_LEGAL = {
           "<strong>원격 분석 데이터:</strong> '설정 > 개인정보'에서 동의를 철회하면 기존 기록이 즉시 삭제됩니다. 활성 기록은 최대 180일 이내에 자동 만료(TTL)되어 삭제됩니다.",
           "<strong>서버 기술 로그:</strong> 인프라 요청 로그는 최대 30일간 보관됩니다.",
           "<strong>라이선스 및 감사 기록:</strong> 계정 및 라이선스 작업 기록은 일방향 해시 처리된 식별자를 포함하며 최대 90일간 보관됩니다.",
-          "<strong>오류 보고서:</strong> 앱 버전, 기기 해시, 오류 유형 및 내용, 스택 추적, 로그 행을 포함합니다. 파일 경로의 이메일 주소, IP 주소 및 사용자 폴더 이름은 저장 전에 마스킹됩니다. 최대 30일간 보관됩니다. 보고서를 전송하면 악용 방지를 위해 Firebase 익명 식별자가 생성되며, 요청의 IP 주소는 되돌릴 수 없는 해시로만 최대 24시간 보관됩니다.",
-          "<strong>국외 이전:</strong> Firebase Authentication은 미국 데이터 센터에서 Google에 의해 운영됩니다. 결제 확인을 위해 RevenueCat이 미국(AWS)에서 데이터를 처리하며, 표준계약조항(SCC)을 통해 보호됩니다. Firestore, Cloud Functions 및 Cloud KMS 데이터는 유럽(europe-west1) 서버에서 처리됩니다. KVKK 제9조에 따른 튀르키예 국외 이전 근거: [법적 근거: 법률 대리인 작성 예정].",
+          "<strong>오류 보고서:</strong> 앱 버전, 기기 해시, 오류 유형 및 텍스트, 스택 트레이스, 로그 줄을 포함합니다. 이메일 주소, IP 주소, 파일 경로의 사용자 폴더 이름은 저장 전에 마스킹됩니다. 최대 30일간 보관됩니다. 보고서를 보낼 때 악용 방지를 위해 Firebase 익명 식별자가 생성되며, 요청 IP 주소는 앱 데이터베이스(Firestore)에 평문으로 저장되지 않고 솔트 처리된 단방향 해시 카운터로만 최대 24시간 동안 보관됩니다(Google Cloud Run / Cloud Logging 인프라 로그는 표준에 따라 최대 30일간 IP 주소를 보관할 수 있습니다).",
+          "<strong>PC 시계 되돌림 방지(데스크톱 전용):</strong> 컴퓨터의 시스템 시계가 마지막으로 기록된 타임스탬프보다 5분 이상 뒤처진 것으로 감지된 경우(예: CMOS/BIOS 배터리 방전 후)에 한해, 데스크톱 앱은 정당한 Pro 라이선스 잠금을 해제하기 위해 HTTP <code>Date</code> 헤더만 읽을 목적으로 <code>time.google.com</code>, <code>cloudflare.com</code> 또는 <code>www.apple.com</code> 중 가장 먼저 응답하는 호스트에 쿠키나 식별자가 없는 HTTPS <code>HEAD</code> 요청을 보냅니다. 정상 작동 중에는 요청하지 않습니다.",
+          "<strong>국외 이전 및 수신 법인:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity 및 AdMob은 <strong>Google Ireland Limited</strong>(아일랜드)와 <strong>Google LLC</strong>(미국)가 제공하며, 구매 검증은 <strong>RevenueCat, Inc.</strong>(미국)가 제공하고, 정적 웹사이트 호스팅은 <strong>GitHub, Inc. / GitHub B.V.</strong> 및 <strong>Fastly, Inc.</strong>(미국/EEA)가 제공합니다. 앱 글꼴(Inter, Space Grotesk, JetBrains Mono)은 앱 내부에 로컬로 번들링되어 있으며 실행 중에 Google Fonts 서버로 외부 요청을 보내지 않습니다. Firestore, Cloud Functions, Cloud KMS 데이터는 주로 유럽(<code>europe-west1</code>)에서 호스팅되며, 인증·결제 및 글로벌 클라우드 인프라는 표준계약조항에 따라 미국과 EEA에서 데이터를 처리할 수 있습니다. 튀르키예에서의 국외 이전에 관한 KVKK 제9조 법적 근거: [법적 근거: 변호사가 작성 예정].",
           "<strong>지원 이메일:</strong> Google Groups(소비자 그룹)를 통해 처리되며 Google의 <a href='https://policies.google.com/privacy?hl=ko'>개인정보 처리방침</a> 및 <a href='https://policies.google.com/terms?hl=ko'>서비스 약관</a>을 따릅니다. 메시지는 그룹 보관함에 저장됩니다."
         ]],
         ["h", "7. 정보주체의 권리(GDPR 및 KVKK)"],
@@ -1942,9 +1991,15 @@ window.NAHI_LEGAL = {
           ["<strong>로컬 확장 프로그램 데이터</strong>", "현재 활성 브라우저 탭의 미디어 재생 정보(곡 제목, 아티스트, 재생 상태)", "로컬 브라우저 및 PC 앱 전용", "스마트폰과 PC에서 웹 미디어를 표시. 클라우드로 절대 전송되지 않습니다."],
           ["<strong>앱 무결성 검증</strong>", "패키지 이름, 앱 서명 인증서 및 기기 무결성 판정 결과", "Google Play Integrity (Google)", "앱이 Google Play에서 정상 설치되었으며 신뢰할 수 있는 기기에서 실행 중인지 검증하고 악용을 방지. Google은 이 데이터를 제3자와 공유하지 않습니다."],
           ["<strong>오류 보고서(선택)</strong>", "앱 버전, 기기 해시, 오류 유형 및 텍스트, 스택 추적 및 로그 행(이메일 및 IP 마스킹)", "Google Cloud Functions 및 Firestore(유럽); Google Groups 지원 이메일", "앱 오류 분석 및 수정. 사용자 동의 시에만 전송됩니다."],
-          ["<strong>광고 및 기기 식별자 (무료 플랜 전용)</strong>", "Google 광고 ID (Android AD_ID), 대략적인 위치 (IP 주소 기반), 기기 모델, 광고 노출 및 상호작용 지표.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 광고 정책</a>", "무료 플랜에서 2x1 네이티브 광고 게재 및 무효 트래픽 방지. Pro 플랜에서는 광고 식별자를 일체 수집하지 않으며 AdMob이 완전히 비활성화됩니다. 사용자는 Android '설정' > '개인정보 보호' > '광고'에서 언제든지 광고 ID를 재설정할 수 있습니다."]
+          ["<strong>광고 및 기기 식별자(무료 플랜 전용)</strong>", "Google 광고 ID(Android AD_ID), 대략적인 위치(IP 주소 기반), 기기 모델, 광고 노출 및 상호작용 지표.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google 광고 정책</a>", "무료 플랜에서 2x1 네이티브 광고를 게재하고 무효 트래픽을 방지합니다. Pro 플랜에서는 광고 식별자를 수집하지 않으며 AdMob SDK를 초기화하지 않습니다. 사용자는 Android 설정 > 개인정보 보호 > 광고에서 언제든지 광고 ID를 재설정할 수 있습니다."],
+          ["<strong>시계 되돌림 확인(PC 전용, 예외적 상황)</strong>", "PC 공인 IP 주소, 표준 HTTPS HEAD 요청(User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) 또는 Apple Inc. (www.apple.com)", "로컬 PC 시계가 마지막 확인 시간보다 5분 이상 느린 경우에만 HTTP Date 헤더를 읽어 현재 시간을 확인하고 정당한 Pro 라이선스 잠금을 해제합니다. 정상 시작 시에는 호출되지 않으며 쿠키나 기기 식별자를 전송하지 않습니다."],
+          ["<strong>웹사이트 호스팅 및 CDN(페이지 로드)</strong>", "방문자 IP 주소, 요청된 URL, 브라우저 및 운영체제 HTTP 헤더(User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. 및 Fastly, Inc.(미국 / EEA)", "정적 웹페이지 제공, 캐싱 및 DDoS/보안 보호(표준 보안 로그에 30~90일간 보관). 추적 쿠키를 사용하지 않으며, 시스템 글꼴을 사용하여 Google Fonts에 대한 외부 호출이 없습니다."]
         ]],
-        ["card", [["p", "<strong>개인정보 처리자:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>문의 이메일:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>웹사이트:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>개인정보 처리자:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>문의 이메일:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>웹사이트:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -1988,11 +2043,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "중요: 활성 구독을 먼저 취소하세요"],
           ["p", "계정을 삭제하더라도 Google Play를 통해 결제된 구독은 <strong>자동으로 취소되지 않습니다</strong>. 향후 요금 청구를 방지하려면 계정을 삭제하기 전에 먼저 구독을 취소하세요:"],
-          ["ol", [
-            "Android 기기에서 <strong>Google Play 스토어</strong>를 엽니다.",
-            "프로필 아이콘 > <strong>결제 및 정기 결제</strong> > <strong>정기 결제</strong>를 누릅니다.",
-            "<strong>NahiDeck</strong>을 선택하고 <strong>\"정기 결제 취소\"</strong>를 누릅니다."
-          ]]
+          ["ol", ["Android 기기에서 <strong>Google Play 스토어</strong>를 엽니다.", "프로필 아이콘 > <strong>결제 및 정기 결제</strong> > <strong>정기 결제</strong>를 누릅니다.", "<strong>NahiDeck</strong>을 선택하고 <strong>\"정기 결제 취소\"</strong>를 누릅니다."]]
         ]]
       ]
     }
@@ -2002,7 +2053,7 @@ window.NAHI_LEGAL = {
   hi: {
     privacy: {
       title: "NahiDeck गोपनीयता नीति",
-      updated: "25 अक्टूबर 2026",
+      updated: "11 नवंबर 2026",
       blocks: [
         ["p", "NahiDeck (\"हम\", \"हमारा\" या \"ऐप\") अपने उपयोगकर्ताओं की गोपनीयता और व्यक्तिगत डेटा की सुरक्षा को अत्यधिक महत्व देता है। यह नीति <strong>NahiDeck Android ऐप</strong>, <strong>NahiDeck Windows डेस्कटॉप क्लाइंट</strong> और <strong>वेब ब्राउज़र एक्सटेंशन (NahiDeck Connect)</strong> को कवर करती है।"],
         ["h", "संक्षेप में"],
@@ -2044,8 +2095,9 @@ window.NAHI_LEGAL = {
           "<strong>टेलीमेट्री:</strong> सेटिंग्स > गोपनीयता में सहमति वापस लेने से आपका मौजूदा रिकॉर्ड तुरंत हट जाता है। सक्रिय रिकॉर्ड अधिकतम 180 दिनों (TTL) के भीतर स्वतः समाप्त हो जाते हैं।",
           "<strong>तकनीकी सर्वर लॉग:</strong> अवसंरचना अनुरोध लॉग अधिकतम 30 दिनों तक रखे जाते हैं।",
           "<strong>लाइसेंस और ऑडिट रिकॉर्ड:</strong> खाता और लाइसेंस संचालन के रिकॉर्ड में आपके उपयोगकर्ता पहचानकर्ता का एकतरफा हैश रूप होता है और इसे अधिकतम 90 दिनों तक रखा जाता है।",
-          "<strong>क्रैश रिपोर्ट:</strong> इसमें ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें शामिल हैं। फ़ाइल पथों में ईमेल पते, आईपी पते और उपयोगकर्ता फ़ोल्डर नाम संग्रहीत करने से पहले छुपा दिए जाते हैं। अधिकतम 30 दिनों तक रखे जाते हैं। रिपोर्ट भेजने पर दुरुपयोग रोकने के लिए एक Firebase अनाम पहचानकर्ता बनाया जाता है; अनुरोध का IP पता केवल एकतरफ़ा हैश के रूप में और अधिकतम 24 घंटे तक रखा जाता है।",
-          "<strong>अंतर्राष्ट्रीय स्थानांतरण:</strong> Firebase Authentication को Google द्वारा संयुक्त राज्य अमेरिका के डेटा केंद्रों से संचालित किया जाता है। खरीदारी सत्यापन के लिए, RevenueCat संयुक्त राज्य अमेरिका (AWS) में आपके डेटा को प्रोसेस करता है; यह स्थानांतरण मानक संविदात्मक खंडों द्वारा कवर किया गया है। Firestore, Cloud Functions और Cloud KMS डेटा यूरोप (europe-west1) के सर्वरों पर प्रोसेस किया जाता है। KVKK अनुच्छेद 9 के तहत तुर्की से स्थानांतरण का कानूनी आधार: [कानूनी आधार: वकील द्वारा भरा जाएगा]।",
+          "<strong>क्रैश रिपोर्ट:</strong> इसमें ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और पाठ, स्टैक ट्रेस और लॉग पंक्तियाँ शामिल होती हैं। ईमेल पते, IP पते और फ़ाइल पथों में उपयोगकर्ता फ़ोल्डर के नाम सहेजे जाने से पहले मास्क कर दिए जाते हैं। अधिकतम 30 दिनों तक रखे जाते हैं। जब आप रिपोर्ट भेजते हैं तो दुरुपयोग रोकने के लिए एक अनाम Firebase पहचानकर्ता बनाया जाता है; अनुरोध का IP पता हमारे एप्लिकेशन डेटाबेस (Firestore) में कभी भी सादे टेक्स्ट में संग्रहीत नहीं किया जाता है और इसे केवल साल्टेड एक-तरफ़ा हैश काउंटर के रूप में अधिकतम 24 घंटे तक रखा जाता है (Google Cloud Run / Cloud Logging इंफ्रास्ट्रक्चर लॉग मानक रूप से 30 दिनों तक IP पता रख सकते हैं)।",
+          "<strong>PC घड़ी पीछे जाने से सुरक्षा (केवल डेस्कटॉप):</strong> केवल तभी जब आपके कंप्यूटर की सिस्टम घड़ी अंतिम दर्ज समय से 5 मिनट से अधिक पीछे पाई जाती है (उदाहरण के लिए CMOS/BIOS बैटरी समाप्त होने के बाद), डेस्कटॉप ऐप वैध Pro लाइसेंस को अनलॉक करने के लिए केवल HTTP <code>Date</code> हेडर पढ़ने के उद्देश्य से <code>time.google.com</code>, <code>cloudflare.com</code> या <code>www.apple.com</code> में से पहले उपलब्ध होस्ट को बिना कुकी और बिना पहचानकर्ता वाला HTTPS <code>HEAD</code> अनुरोध भेजता है। सामान्य संचालन के दौरान कोई अनुरोध नहीं किया जाता है।",
+          "<strong>अंतर्राष्ट्रीय डेटा स्थानांतरण और प्राप्तकर्ता कानूनी संस्थाएँ:</strong> Firebase Authentication, Cloud Functions, Firestore, Cloud KMS, Play Integrity और AdMob सेवाएँ <strong>Google Ireland Limited</strong> (आयरलैंड) और <strong>Google LLC</strong> (USA) द्वारा प्रदान की जाती हैं; खरीद सत्यापन <strong>RevenueCat, Inc.</strong> (USA) द्वारा प्रदान किया जाता है; और स्थिर वेबसाइट होस्टिंग <strong>GitHub, Inc. / GitHub B.V.</strong> तथा <strong>Fastly, Inc.</strong> (USA/EEA) द्वारा प्रदान की जाती है। ऐप के फ़ॉन्ट (Inter, Space Grotesk, JetBrains Mono) स्थानीय रूप से ऐप में ही बंडल किए गए हैं; रनटाइम पर Google Fonts सर्वरों को कोई बाहरी कॉल नहीं की जाती है। Firestore, Cloud Functions और Cloud KMS डेटा मुख्य रूप से यूरोप (<code>europe-west1</code>) में होस्ट किया जाता है, जबकि प्रमाणीकरण, बिलिंग और वैश्विक क्लाउड इंफ्रास्ट्रक्चर मानक संविदात्मक खंडों के तहत संयुक्त राज्य अमेरिका और EEA में डेटा संसाधित कर सकते हैं। तुर्की से स्थानांतरण के लिए KVKK अनुच्छेद 9 के तहत कानूनी आधार: [कानूनी आधार: वकील द्वारा भरा जाएगा]।",
           "<strong>सहायता ईमेल:</strong> Google Groups (उपभोक्ता समूह) के माध्यम से संसाधित किया जाता है और Google की <a href='https://policies.google.com/privacy?hl=hi'>गोपनीयता नीति</a> और <a href='https://policies.google.com/terms?hl=hi'>सेवा की शर्तों</a> के अधीन है। संदेश समूह के संग्रह में रखे जाते हैं।"
         ]],
         ["h", "7. आपके अधिकार (GDPR और KVKK)"],
@@ -2059,9 +2111,15 @@ window.NAHI_LEGAL = {
           ["<strong>स्थानीय एक्सटेंशन डेटा</strong>", "सक्रिय ब्राउज़र टैब की मीडिया स्थिति (ट्रैक शीर्षक, कलाकार, प्लेबैक स्थिति)", "केवल स्थानीय ब्राउज़र और पीसी ऐप", "फ़ोन और पीसी पर वेब मीडिया दिखाना। कभी भी क्लाउड पर नहीं भेजा जाता।"],
           ["<strong>ऐप सत्यापन</strong>", "पैकेज नाम, ऐप हस्ताक्षर प्रमाणपत्र और डिवाइस अखंडता परिणाम", "Google Play Integrity (Google)", "यह सत्यापित करना कि ऐप Google Play से इंस्टॉल किया गया है और विश्वसनीय डिवाइस पर चल रहा है; दुरुपयोग को रोकना। Google इस डेटा को तीसरे पक्ष के साथ साझा नहीं करता है।"],
           ["<strong>क्रैश रिपोर्ट (वैकल्पिक)</strong>", "ऐप संस्करण, डिवाइस हैश, त्रुटि का प्रकार और विवरण, स्टैक ट्रेस और लॉग लाइनें (ईमेल और आईपी छुपाए गए हैं)", "Google Cloud Functions और Firestore (यूरोप); Google Groups के माध्यम से सहायता ईमेल", "क्रैश का विश्लेषण करना और उन्हें ठीक करना। केवल आपकी पुष्टि के साथ भेजा जाता है।"],
-          ["<strong>विज्ञापन और डिवाइस पहचानकर्ता (केवल निःशुल्क प्लान)</strong>", "Google विज्ञापन आईडी (Android AD_ID), अनुमानित स्थान (आईपी पते के माध्यम से), डिवाइस मॉडल, विज्ञापन इंप्रेशन और इंटरैक्शन मेट्रिक्स।", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google विज्ञापन नीतियां</a>", "निःशुल्क प्लान में 2x1 नेटिव विज्ञापन प्रदर्शित करना और अमान्य ट्रैफ़िक को रोकना। Pro प्लान में विज्ञापन पहचानकर्ता एकत्र नहीं किए जाते हैं और AdMob पूरी तरह से अक्षम रहता है। उपयोगकर्ता Android सेटिंग्स > गोपनीयता > विज्ञापन में जाकर कभी भी अपनी विज्ञापन आईडी रीसेट कर सकते हैं।"]
+          ["<strong>विज्ञापन और डिवाइस पहचानकर्ता (केवल निःशुल्क प्लान)</strong>", "Google विज्ञापन ID (Android AD_ID), अनुमानित स्थान (IP पते के माध्यम से), डिवाइस मॉडल, विज्ञापन इंप्रेशन और इंटरैक्शन मेट्रिक्स।", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google विज्ञापन नीति</a>", "निःशुल्क प्लान में 2x1 नेटिव विज्ञापन दिखाना और अमान्य ट्रैफ़िक को रोकना। Pro प्लान में विज्ञापन पहचानकर्ता एकत्र नहीं किए जाते हैं और AdMob SDK को इनिशियलाइज़ नहीं किया जाता है। उपयोगकर्ता Android सेटिंग्स > गोपनीयता > विज्ञापन में जाकर कभी भी अपना विज्ञापन ID रीसेट कर सकते हैं।"],
+          ["<strong>घड़ी पीछे जाने की जाँच (केवल PC, अपवाद स्वरूप)</strong>", "PC का सार्वजनिक IP पता, मानक HTTPS HEAD अनुरोध (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com), Cloudflare, Inc. (cloudflare.com) या Apple Inc. (www.apple.com)", "केवल तब HTTP Date हेडर पढ़कर वर्तमान समय सत्यापित करना और वैध Pro लाइसेंस अनलॉक करना जब स्थानीय PC घड़ी अंतिम देखे गए समय से 5 मिनट से अधिक पीछे हो। सामान्य स्टार्टअप पर कभी कॉल नहीं किया जाता; कोई कुकी या डिवाइस पहचानकर्ता नहीं भेजता।"],
+          ["<strong>वेबसाइट होस्टिंग और CDN (पेज लोड होने पर)</strong>", "आगंतुक का IP पता, अनुरोधित URL, ब्राउज़र और ऑपरेटिंग सिस्टम के HTTP हेडर (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. और Fastly, Inc. (USA / EEA)", "स्थिर वेब पेजों की डिलीवरी, कैशिंग और DDoS/सुरक्षा संरक्षण (मानक सुरक्षा लॉग में 30–90 दिनों तक रखा जाता है)। कोई ट्रैकिंग कुकी उपयोग नहीं की जाती; सिस्टम फ़ॉन्ट का उपयोग होता है और Google Fonts को कोई बाहरी कॉल नहीं की जाती।"]
         ]],
-        ["card", [["p", "<strong>डेटा नियंत्रक:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>संपर्क ईमेल:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>वेबसाइट:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>डेटा नियंत्रक:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>संपर्क ईमेल:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>वेबसाइट:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -2105,11 +2163,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "महत्वपूर्ण: अपनी सक्रिय सदस्यता रद्द करें"],
           ["p", "अपना खाता हटाने से Google Play के माध्यम से शुरू की गई सदस्यता <strong>स्वतः रद्द नहीं होती है</strong>। भविष्य के शुल्कों को रोकने के लिए, अपना खाता हटाने से पहले इसे रद्द करें:"],
-          ["ol", [
-            "अपने एंड्रॉइड डिवाइस पर <strong>Google Play Store</strong> खोलें।",
-            "अपने प्रोफ़ाइल आइकन > <strong>भुगतान और सदस्यताएं</strong> > <strong>सदस्यताएं</strong> पर टैप करें।",
-            "<strong>NahiDeck</strong> चुनें और <strong>\"सदस्यता रद्द करें\"</strong> पर टैप करें।"
-          ]]
+          ["ol", ["अपने एंड्रॉइड डिवाइस पर <strong>Google Play Store</strong> खोलें।", "अपने प्रोफ़ाइल आइकन > <strong>भुगतान और सदस्यताएं</strong> > <strong>सदस्यताएं</strong> पर टैप करें।", "<strong>NahiDeck</strong> चुनें और <strong>\"सदस्यता रद्द करें\"</strong> पर टैप करें।"]]
         ]]
       ]
     }
@@ -2119,7 +2173,7 @@ window.NAHI_LEGAL = {
   my: {
     privacy: {
       title: "NahiDeck ကိုယ်ရေးအချက်အလက် လုံခြုံမှုမူဝါဒ",
-      updated: "၂၀၂၆ အောက်တိုဘာ ၂၅",
+      updated: "၂၀၂၆ ခုနှစ်၊ နိုဝင်ဘာလ ၁၁ ရက်",
       blocks: [
         ["p", "NahiDeck (\"ကျွန်ုပ်တို့\" သို့မဟုတ် \"အက်ပ်\") သည် အသုံးပြုသူများ၏ ကိုယ်ရေးကိုယ်တာလုံခြုံမှုနှင့် ကိုယ်ရေးအချက်အလက် ကာကွယ်ရေးကို အလွန်အလေးထားပါသည်။ ဤမူဝါဒသည် <strong>NahiDeck Android အက်ပ်</strong>၊ <strong>NahiDeck Windows ဒက်စ်တော့ခ်အက်ပ်</strong> နှင့် <strong>ဝဘ်ဘရောက်ဆာ extension (NahiDeck Connect)</strong> တို့နှင့် သက်ဆိုင်ပါသည်။"],
         ["h", "အကျဉ်းချုပ်"],
@@ -2161,8 +2215,9 @@ window.NAHI_LEGAL = {
           "<strong>အဝေးတိုင်းတာမှုဒေတာ -</strong> ဆက်တင်များ > ကိုယ်ရေးလုံခြုံမှု မှ သဘောတူညီချက်ကို ရုပ်သိမ်းပါက ရှိပြီးသားမှတ်တမ်းကို ချက်ချင်း ဖျက်ပစ်ပါသည်။ လက်ရှိမှတ်တမ်းများသည် ရက်ပေါင်း ၁၈၀ (TTL) အတွင်း အလိုအလျောက် သက်တမ်းကုန်ဆုံးပါသည်။",
           "<strong>နည်းပညာဆာဗာမှတ်တမ်းများ -</strong> အခြေခံအဆောက်အအုံတောင်းဆိုမှုမှတ်တမ်းများကို အများဆုံး ၃၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
           "<strong>လိုင်စင်နှင့် စာရင်းစစ်မှတ်တမ်းများ -</strong> အကောင့်နှင့် လိုင်စင်လုပ်ဆောင်မှုမှတ်တမ်းများတွင် ပြန်ပြောင်း၍မရသော hash ကုဒ်ပါဝင်ပြီး အများဆုံး ၉၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။",
-          "<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာများ -</strong> အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ ပါဝင်ပါသည်။ သိမ်းဆည်းခြင်းမပြုမီ အီးမေးလ်လိပ်စာများ၊ IP လိပ်စာများနှင့် ဖိုင်လမ်းကြောင်းရှိ အသုံးပြုသူဖိုဒါအမည်များကို ဖုံးကွယ်ထားပါသည်။ အများဆုံး ၃၀ ရက်အထိ ထိန်းသိမ်းထားပါသည်။ အစီရင်ခံစာပို့သောအခါ အလွဲသုံးစားမှုကို ကာကွယ်ရန် Firebase အမည်မဖော်ပြသော သတ်မှတ်ချက်တစ်ခု ဖန်တီးပါသည်။ တောင်းဆိုမှု၏ IP လိပ်စာကို ပြန်လည်ပြောင်းလဲ၍မရသော hash အဖြစ်သာ အများဆုံး ၂၄ နာရီအထိ သိမ်းဆည်းပါသည်။",
-          "<strong>နိုင်ငံတကာသို့ လွှဲပြောင်းမှုများ -</strong> Firebase Authentication ကို အမေရိကန်ပြည်ထောင်စုရှိ ဒေတာစင်တာများမှတစ်ဆင့် Google က လည်ပတ်ပါသည်။ ဝယ်ယူမှုစစ်ဆေးရန်အတွက် RevenueCat သည် အမေရိကန်ပြည်ထောင်စု (AWS) တွင် သင့်ဒေတာကို လုပ်ဆောင်ပြီး ဤလွှဲပြောင်းမှုကို စံသတ်မှတ်ချက်ဆိုင်ရာ စာချုပ်စာတမ်းများဖြင့် အကာအကွယ်ပေးထားပါသည်။ Firestore, Cloud Functions နှင့် Cloud KMS ဒေတာများကို ဥရောပ (europe-west1) ရှိ ဆာဗာများတွင် လုပ်ဆောင်ပါသည်။ KVKK ပုဒ်မ ၉ အရ တူရကီမှ လွှဲပြောင်းမှုများအတွက် ဥပဒေဆိုင်ရာ အခြေခံ - [ဥပဒေဆိုင်ရာ အခြေခံ - ရှေ့နေမှ ဖြည့်စွက်ရန်]။",
+          "<strong>ပျက်စီးမှု အစီရင်ခံစာများ -</strong> အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် စာသား၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ ပါဝင်သည်။ အီးမေးလ်လိပ်စာများ၊ IP လိပ်စာများနှင့် ဖိုင်လမ်းကြောင်းများရှိ အသုံးပြုသူဖိုလ်ဒါအမည်များကို မသိမ်းဆည်းမီ ဖုံးကွယ်ထားသည်။ အများဆုံး ရက် ၃၀ အထိ သိမ်းဆည်းပါသည်။ အစီရင်ခံစာ ပေးပို့သည့်အခါ အလွဲသုံးစားမှုကို ကာကွယ်ရန် အမည်မသိ Firebase ID တစ်ခုကို ဖန်တီးပြီး တောင်းဆိုချက်၏ IP လိပ်စာကို ကျွန်ုပ်တို့၏ အက်ပ်ဒေတာဘေ့စ် (Firestore) တွင် စာသားအတိုင်း လုံးဝမသိမ်းဆည်းဘဲ ပြန်ပြောင်းမရသော salted one-way hash ကောင်တာအဖြစ်သာ အများဆုံး ၂၄ နာရီ သိမ်းဆည်းပါသည် (Google Cloud Run / Cloud Logging အခြေခံအဆောက်အအုံ မှတ်တမ်းများသည် IP လိပ်စာကို အများဆုံး ရက် ၃၀ အထိ သိမ်းဆည်းနိုင်သည်)။",
+          "<strong>PC နာရီ နောက်ပြန်ဆုတ်ခြင်းမှ ကာကွယ်မှု (ဒက်စ်တော့သာ) -</strong> သင့်ကွန်ပျူတာ၏ စနစ်နာရီသည် နောက်ဆုံးမှတ်တမ်းတင်ထားသော အချိန်ထက် ၅ မိနစ်ထက်ပို၍ နောက်ကျနေကြောင်း တွေ့ရှိမှသာ (ဥပမာ CMOS/BIOS ဘက်ထရီ ကုန်သွားပြီးနောက်) တရားဝင် Pro လိုင်စင်ကို ပြန်ဖွင့်ပေးရန် HTTP <code>Date</code> ခေါင်းစီးကို ဖတ်ရှုရန်အတွက်သာ ဒက်စ်တော့အက်ပ်သည် <code>time.google.com</code>၊ <code>cloudflare.com</code> သို့မဟုတ် <code>www.apple.com</code> တို့အနက် ပထမဆုံး ချိတ်ဆက်နိုင်သော ဆာဗာသို့ ကွတ်ကီးနှင့် စက်ပစ္စည်းအမှတ်အသား မပါဝင်သည့် HTTPS <code>HEAD</code> တောင်းဆိုချက်တစ်ခု ပေးပို့ပါသည်။ ပုံမှန်အသုံးပြုချိန်တွင် ဤတောင်းဆိုချက်ကို မပြုလုပ်ပါ။",
+          "<strong>နိုင်ငံတကာ ဒေတာလွှဲပြောင်းမှုများနှင့် လက်ခံသည့် တရားဝင်အဖွဲ့အစည်းများ -</strong> Firebase Authentication၊ Cloud Functions၊ Firestore၊ Cloud KMS၊ Play Integrity နှင့် AdMob တို့ကို <strong>Google Ireland Limited</strong> (အိုင်ယာလန်) နှင့် <strong>Google LLC</strong> (အမေရိကန်) တို့က ပံ့ပိုးပေးပြီး၊ ဝယ်ယူမှု အတည်ပြုခြင်းကို <strong>RevenueCat, Inc.</strong> (အမေရိကန်) က ပံ့ပိုးပေးကာ၊ တည်ငြိမ်ဝက်ဘ်ဆိုက် လွှင့်တင်ခြင်းကို <strong>GitHub, Inc. / GitHub B.V.</strong> နှင့် <strong>Fastly, Inc.</strong> (အမေရိကန်/EEA) တို့က ပံ့ပိုးပေးပါသည်။ အက်ပ်ဖောင့်များ (Inter, Space Grotesk, JetBrains Mono) ကို အက်ပ်အတွင်း၌ပင် ထည့်သွင်းထားသဖြင့် အသုံးပြုနေစဉ် Google Fonts ဆာဗာများသို့ ပြင်ပချိတ်ဆက်မှု လုံးဝမပြုလုပ်ပါ။ Firestore၊ Cloud Functions နှင့် Cloud KMS ဒေတာများကို ဥရောပ (<code>europe-west1</code>) ရှိ ဆာဗာများတွင် အဓိကထားရှိပြီး အကောင့်ဝင်ခြင်း၊ ငွေပေးချေမှုနှင့် ကမ္ဘာလုံးဆိုင်ရာ အခြေခံအဆောက်အအုံများသည် စံသတ်မှတ်ထားသော စာချုပ်စည်းမျဉ်းများအောက်တွင် အမေရိကန်နှင့် EEA တို့၌ ဒေတာများကို စီမံဆောင်ရွက်နိုင်ပါသည်။ တူရကီနိုင်ငံမှ လွှဲပြောင်းမှုများအတွက် KVKK ပုဒ်မ ၉ အရ ဥပဒေကြောင်းအရ အခြေခံ - [ဥပဒေကြောင်းအရ အခြေခံ - ရှေ့နေမှ ဖြည့်စွက်ရန်]။",
           "<strong>အကူအညီပေးရေး အီးမေးလ် -</strong> Google Groups မှတစ်ဆင့် စီမံလုပ်ဆောင်ပြီး Google ၏ <a href='https://policies.google.com/privacy?hl=my'>ကိုယ်ရေးလုံခြုံမှုမူဝါဒ</a> နှင့် <a href='https://policies.google.com/terms?hl=my'>ဝန်ဆောင်မှုစည်းမျဉ်းများ</a> နှင့် သက်ဆိုင်ပါသည်။ မက်ဆေ့ဂျ်များကို အဖွဲ့၏ မော်ကွန်းတိုက်တွင် သိမ်းဆည်းထားပါသည်။"
         ]],
         ["h", "7. သင့်အခွင့်အရေးများ (GDPR နှင့် KVKK)"],
@@ -2176,9 +2231,15 @@ window.NAHI_LEGAL = {
           ["<strong>ဒေသတွင်း extension ဒေတာ</strong>", "ဖွင့်ထားသော ဘရောက်ဆာ tab ၏ မီဒီယာအခြေအနေ (သီချင်းအမည်၊ အဆိုတော်၊ ဖွင့်လက်စအခြေအနေ)", "ဒေသတွင်း ဘရောက်ဆာနှင့် PC အက်ပ်တွင်သာ", "ဝဘ်မီဒီယာကို ဖုန်းနှင့် PC တွင် ပြသရန်။ Cloud သို့ မည်သည့်အခါမျှ မပို့ဆောင်ပါ။"],
           ["<strong>အက်ပ်စစ်မှန်ကြောင်း အတည်ပြုခြင်း</strong>", "ပက်ကေ့ဂျ်အမည်၊ အက်ပ်လက်မှတ်နှင့် စက်ပစ္စည်းစစ်မှန်မှုရလဒ်", "Google Play Integrity (Google)", "အက်ပ်ကို Google Play မှ တပ်ဆင်ထားကြောင်းနှင့် စိတ်ချရသောစက်တွင် အလုပ်လုပ်နေကြောင်း အတည်ပြုခြင်း၊ အလွဲသုံးစားလုပ်မှုကို တားဆီးခြင်း။ Google သည် ဤဒေတာကို အခြားသူများနှင့် မျှဝေခြင်းမရှိပါ။"],
           ["<strong>ချွတ်ယွင်းမှုအစီရင်ခံစာ (ရွေးချယ်နိုင်သည်)</strong>", "အက်ပ်ဗားရှင်း၊ စက်ပစ္စည်း hash၊ အမှားအမျိုးအစားနှင့် ဖော်ပြချက်၊ stack trace နှင့် မှတ်တမ်းလိုင်းများ (အီးမေးလ်နှင့် IP ကို ဖုံးကွယ်ထားသည်)", "Google Cloud Functions နှင့် Firestore (ဥရောပ); Google Groups မှတစ်ဆင့် အကူအညီပေးရေး အီးမေးလ်", "ချွတ်ယွင်းမှုများကို လေ့လာဆန်းစစ်ပြီး ပြုပြင်ရန်။ သင်အတည်ပြုမှသာ ပေးပို့ပါသည်။"],
-          ["<strong>ကြော်ငြာနှင့် စက်ပစ္စည်း အထောက်အထားများ (အခမဲ့ အစီအစဉ်အတွက်သာ)</strong>", "Google ကြော်ငြာ ID (Android AD_ID)၊ ခန့်မှန်းခြေ တည်နေရာ (IP လိပ်စာမှတစ်ဆင့်)၊ စက်ပစ္စည်း မော်ဒယ်၊ ကြော်ငြာပြသမှုနှင့် အပြန်အလှန်ဆက်သွယ်မှုဆိုင်ရာ အချက်အလက်များ။", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google ကြော်ငြာ မူဝါဒများ</a>", "အခမဲ့ အစီအစဉ်တွင် 2x1 ပင်ကိုကြော်ငြာများ ပြသရန်နှင့် မမှန်ကန်သော အသွားအလာများကို ကာကွယ်ရန်။ Pro အစီအစဉ်တွင် ကြော်ငြာအထောက်အထားများကို မည်သည့်အခါမျှ မစုဆောင်းဘဲ AdMob ကို အပြီးတိုင် ပိတ်ထားသည်။ အသုံးပြုသူများသည် Android ဆက်တင်များ > ကိုယ်ရေးလုံခြုံမှု > ကြော်ငြာများ အောက်တွင် မိမိတို့၏ ကြော်ငြာ ID ကို အချိန်မရွေး ပြန်လည်သတ်မှတ်နိုင်သည်။"]
+          ["<strong>ကြော်ငြာနှင့် စက်ပစ္စည်း အမှတ်အသားများ (အခမဲ့ အစီအစဉ်သာ)</strong>", "Google ကြော်ငြာ ID (Android AD_ID)၊ ခန့်မှန်းတည်နေရာ (IP လိပ်စာမှတစ်ဆင့်)၊ စက်ပစ္စည်း မော်ဒယ်၊ ကြော်ငြာပြသမှုနှင့် တုံ့ပြန်မှု ဆိုင်ရာ အချက်အလက်များ။", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>Google ကြော်ငြာ မူဝါဒ</a>", "အခမဲ့ အစီအစဉ်တွင် 2x1 ပုံစံတူ ကြော်ငြာများ ပြသရန်နှင့် မမှန်ကန်သော အသုံးပြုမှုများကို ကာကွယ်ရန်။ Pro အစီအစဉ်တွင် ကြော်ငြာ အမှတ်အသားများကို လုံးဝ မကောက်ခံသလို AdMob SDK ကိုလည်း စတင်အသုံးပြုခြင်း မရှိပါ။ အသုံးပြုသူများသည် Android ဆက်တင်များ > ကိုယ်ရေးလုံခြုံမှု > ကြော်ငြာများ တွင် ကြော်ငြာ ID ကို အချိန်မရွေး ပြန်လည်သတ်မှတ်နိုင်သည်။"],
+          ["<strong>နာရီ နောက်ပြန်ဆုတ်မှု စစ်ဆေးခြင်း (PC သာ၊ ခြွင်းချက်အခြေအနေ)</strong>", "PC အများသုံး IP လိပ်စာ၊ စံသတ်မှတ်ထားသော HTTPS HEAD တောင်းဆိုချက် (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com)၊ Cloudflare, Inc. (cloudflare.com) သို့မဟုတ် Apple Inc. (www.apple.com)", "PC စနစ်နာရီသည် နောက်ဆုံးမှတ်တမ်းတင်ထားသော အချိန်ထက် ၅ မိနစ်ကျော် နောက်ကျနေသည့်အခါမှသာ HTTP Date ခေါင်းစီးကို ဖတ်ရှု၍ လက်ရှိအချိန်ကို အတည်ပြုပြီး တရားဝင် Pro လိုင်စင်ကို ပြန်ဖွင့်ပေးရန်။ ပုံမှန်ဖွင့်ချိန်တွင် လုံးဝမခေါ်ဆိုပါ၊ ကွတ်ကီး သို့မဟုတ် စက်ပစ္စည်းအမှတ်အသားများ မပေးပို့ပါ။"],
+          ["<strong>ဝက်ဘ်ဆိုက် လွှင့်တင်ခြင်းနှင့် CDN (စာမျက်နှာ ဖွင့်ချိန်)</strong>", "ဝင်ရောက်ကြည့်ရှုသူ၏ IP လိပ်စာ၊ တောင်းဆိုထားသော URL၊ ဘရောက်ဇာနှင့် စက်လည်ပတ်မှုစနစ် HTTP ခေါင်းစီးများ (User-Agent, Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. နှင့် Fastly, Inc. (အမေရိကန် / EEA)", "တည်ငြိမ်ဝက်ဘ်စာမျက်နှာများ ပေးပို့ခြင်း၊ ကက်ရှ်သိမ်းခြင်းနှင့် DDoS/လုံခြုံရေး ကာကွယ်ခြင်း (စံလုံခြုံရေးမှတ်တမ်းများတွင် ရက် ၃၀ မှ ၉၀ အထိ သိမ်းဆည်းသည်)။ ခြေရာခံ ကွတ်ကီးများ မသုံးပါ၊ စနစ်ဖောင့်များကိုသာ အသုံးပြုပြီး Google Fonts သို့ ပြင်ပခေါ်ဆိုမှု မရှိပါ။"]
         ]],
-        ["card", [["p", "<strong>ဒေတာထိန်းချုပ်သူ -</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>ဆက်သွယ်ရန် အီးမေးလ် -</strong> nahideck-support@googlegroups.com"], ["p", "<strong>ဝဘ်ဆိုက် -</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>ဒေတာထိန်းချုပ်သူ -</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>ဆက်သွယ်ရန် အီးမေးလ် -</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>ဝဘ်ဆိုက် -</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -2222,11 +2283,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "အရေးကြီးသည် - သင့်စာရင်းသွင်းမှုကို ပယ်ဖျက်ပါ"],
           ["p", "သင့်အကောင့်ကို ဖျက်လိုက်ရုံဖြင့် Google Play မှတစ်ဆင့် စတင်ခဲ့သော စာရင်းသွင်းမှုမှာ <strong>အလိုအလျောက် ပယ်ဖျက်သွားမည် မဟုတ်ပါ</strong>။ နောင်တွင် ငွေဖြတ်တောက်မှု မဖြစ်စေရန် အကောင့်မဖျက်မီ ၎င်းကို ဦးစွာ ပယ်ဖျက်ပါ -"],
-          ["ol", [
-            "သင့် Android စက်တွင် <strong>Google Play Store</strong> ကို ဖွင့်ပါ။",
-            "ပရိုဖိုင်အိုင်ကွန် > <strong>ငွေပေးချေမှုများနှင့် စာရင်းသွင်းမှုများ</strong> > <strong>စာရင်းသွင်းမှုများ</strong> ကို နှိပ်ပါ။",
-            "<strong>NahiDeck</strong> ကို ရွေးချယ်ပြီး <strong>\"စာရင်းသွင်းမှု ပယ်ဖျက်ရန်\"</strong> ကို နှိပ်ပါ။"
-          ]]
+          ["ol", ["သင့် Android စက်တွင် <strong>Google Play Store</strong> ကို ဖွင့်ပါ။", "ပရိုဖိုင်အိုင်ကွန် > <strong>ငွေပေးချေမှုများနှင့် စာရင်းသွင်းမှုများ</strong> > <strong>စာရင်းသွင်းမှုများ</strong> ကို နှိပ်ပါ။", "<strong>NahiDeck</strong> ကို ရွေးချယ်ပြီး <strong>\"စာရင်းသွင်းမှု ပယ်ဖျက်ရန်\"</strong> ကို နှိပ်ပါ။"]]
         ]]
       ]
     }
@@ -2236,7 +2293,7 @@ window.NAHI_LEGAL = {
   ar: {
     privacy: {
       title: "سياسة خصوصية NahiDeck",
-      updated: "٢٥ أكتوبر ٢٠٢٦",
+      updated: "11 نوفمبر 2026",
       blocks: [
         ["p", "يولي NahiDeck (\"نحن\" أو \"التطبيق\" أو \"الخدمة\") أهمية قصوى لخصوصية مستخدميه وحماية البيانات الشخصية. تنطبق هذه السياسة على <strong>تطبيق NahiDeck لنظام Android</strong> و<strong>عميل NahiDeck لنظام Windows</strong> و<strong>إضافة متصفح الويب (NahiDeck Connect)</strong>."],
         ["h", "باختصار"],
@@ -2278,8 +2335,9 @@ window.NAHI_LEGAL = {
           "<strong>بيانات القياس عن بُعد:</strong> يؤدي سحب الموافقة في الإعدادات > الخصوصية إلى حذف السجل الحالي فورًا. تنتهي صلاحية السجلات النشطة تلقائيًا في غضون 180 يومًا (TTL).",
           "<strong>سجلات الخادم التقنية:</strong> يتم الاحتفاظ بسجلات طلبات البنية التحتية لمدة تصل إلى 30 يومًا.",
           "<strong>سجلات الترخيص والتدقيق:</strong> تحتوي سجلات عمليات الحساب والترخيص على صيغة تجزئة أحادية الاتجاه لمعرف المستخدم الخاص بك، ويتم الاحتفاظ بها لمدة تصل إلى 90 يومًا.",
-          "<strong>تقارير الأعطال:</strong> تتضمن إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي، وأسطر السجل. يتم حجب عناوين البريد الإلكتروني وعناوين IP وأسماء مجلدات المستخدمين في مسارات الملفات قبل الحفظ. يتم الاحتفاظ بها لمدة تصل إلى 30 يومًا. عند إرسال تقرير، يتم إنشاء معرّف Firebase مجهول لمنع إساءة الاستخدام؛ ويُحتفظ بعنوان IP الخاص بالطلب فقط في صورة تجزئة لا يمكن عكسها ولمدة لا تتجاوز 24 ساعة.",
-          "<strong>عمليات النقل الدولي:</strong> تُدار خدمة Firebase Authentication بواسطة Google من مراكز بيانات داخل الولايات المتحدة. وللتحقق من المشتريات، تعالج RevenueCat بياناتك في الولايات المتحدة (AWS)؛ وهذا النقل مغطى بالبنود التعاقدية القياسية. وتتم معالجة بيانات Firestore و Cloud Functions و Cloud KMS على خوادم في أوروبا (europe-west1). الأساس القانوني للنقل من تركيا بموجب المادة 9 من قانون KVKK: [الأساس القانوني: سيتم تعبئته بواسطة المستشار القانوني].",
+          "<strong>تقارير الأعطال:</strong> تتضمن إصدار التطبيق، وتجزئة (Hash) الجهاز، ونوع الخطأ ونصه، وتتبع المكدس (Stack trace)، وأسطر السجل. يتم إخفاء عناوين البريد الإلكتروني وعناوين IP وأسماء مجلدات المستخدم في مسارات الملفات قبل الحفظ. يُحتفظ بها لمدة تصل إلى 30 يومًا. عند إرسال تقرير، يتم إنشاء معرّف مجهول في Firebase لمنع إساءة الاستخدام؛ ولا يتم أبدًا تخزين عنوان IP الخاص بالطلب كنص صريح في قاعدة بيانات تطبيقنا (Firestore)، بل يُحفظ فقط كعداد تجزئة أحادي الاتجاه مملّح (Salted Hash) لمدة أقصاها 24 ساعة (قد تحتفظ سجلات البنية التحتية في Google Cloud Run / Cloud Logging بعنوان IP لمدة تصل إلى 30 يومًا).",
+          "<strong>الحماية من إرجاع ساعة الكمبيوتر (لإصدار سطح المكتب فقط):</strong> فقط عندما يتم اكتشاف أن ساعة النظام في جهاز الكمبيوتر الخاص بك متأخرة بأكثر من 5 دقائق عن آخر طابع زمني مسجل (على سبيل المثال بعد نفاد بطارية CMOS/BIOS)، يرسل تطبيق سطح المكتب طلب HTTPS <code>HEAD</code> خاليًا من ملفات تعريف الارتباط والمعرّفات إلى أول مضيف متاح من بين <code>time.google.com</code> أو <code>cloudflare.com</code> أو <code>www.apple.com</code> فقط لقراءة ترويسة HTTP <code>Date</code> وإلغاء قفل تراخيص Pro الشرعية. لا يتم إجراء أي طلب أثناء التشغيل العادي.",
+          "<strong>عمليات النقل الدولية والكيانات القانونية المستلمة:</strong> تُقدَّم خدمات Firebase Authentication وCloud Functions وFirestore وCloud KMS وPlay Integrity وAdMob بواسطة <strong>Google Ireland Limited</strong> (أيرلندا) و<strong>Google LLC</strong> (الولايات المتحدة)؛ وتُقدَّم خدمة التحقق من المشتريات بواسطة <strong>RevenueCat, Inc.</strong> (الولايات المتحدة)؛ وتُقدَّم استضافة الموقع الثابت بواسطة <strong>GitHub, Inc. / GitHub B.V.</strong> و<strong>Fastly, Inc.</strong> (الولايات المتحدة / المنطقة الاقتصادية الأوروبية). خطوط التطبيق (Inter وSpace Grotesk وJetBrains Mono) مدمجة محليًا داخل حزمة التطبيق؛ ولا يتم إجراء أي استدعاءات خارجية لخوادم Google Fonts أثناء التشغيل. تُستضاف بيانات Firestore وCloud Functions وCloud KMS بشكل أساسي في أوروبا (<code>europe-west1</code>)، بينما قد تعالج خدمات المصادقة والفوترة والبنية التحتية السحابية العالمية البيانات في الولايات المتحدة والمنطقة الاقتصادية الأوروبية بموجب البنود التعاقدية القياسية. الأساس القانوني لعمليات النقل من تركيا بموجب المادة 9 من قانون KVKK: [الأساس القانوني: يملأه المحامي].",
           "<strong>البريد الإلكتروني للدعم:</strong> تتم معالجته عبر مجموعات Google Groups (مجموعة مستهلكين) ويخضع لـ <a href='https://policies.google.com/privacy?hl=ar'>سياسة خصوصية Google</a> و<a href='https://policies.google.com/terms?hl=ar'>شروط الخدمة</a>. وتُحفظ الرسائل في أرشيف المجموعة."
         ]],
         ["h", "7. حقوقك (GDPR و KVKK)"],
@@ -2293,9 +2351,15 @@ window.NAHI_LEGAL = {
           ["<strong>بيانات الإضافة المحلية</strong>", "حالة الوسائط في علامة تبويب المتصفح النشطة (اسم المقطع، الفنان، حالة التشغيل)", "المتصفح المحلي وتطبيق الكمبيوتر فقط", "عرض وسائط الويب على الهاتف والكمبيوتر. لا تُرسل إلى السحابة مطلقًا."],
           ["<strong>التحقق من سلامة التطبيق</strong>", "اسم الحزمة، وشهادة توقيع التطبيق، ونتيجة سلامة الجهاز", "Google Play Integrity (Google)", "التحقق من تثبيت التطبيق عبر Google Play وتشغيله على جهاز موثوق لمنع إساءة الاستخدام. لا تشارك Google هذه البيانات مع جهات خارجية."],
           ["<strong>تقارير الأعطال (اختياري)</strong>", "إصدار التطبيق، وتجزئة الجهاز، ونوع الخطأ ونصه، والتتبع التراكمي وأسطر السجل (تُحجب عناوين البريد الإلكتروني و IP)", "Google Cloud Functions و Firestore (أوروبا)؛ بريد الدعم عبر Google Groups", "تحليل الأعطال وإصلاحها. لا يُرسل إلا بموافقتك."],
-          ["<strong>الإعلانات ومعرّفات الأجهزة (الخطة المجانية فقط)</strong>", "معرّف إعلانات Google (Android AD_ID)، والموقع الجغرافي التقريبي (عبر عنوان IP)، وطراز الجهاز، ومقاييس مرات الظهور والتفاعل مع الإعلانات.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>سياسات إعلانات Google</a>", "عرض إعلانات مدمجة مع المحتوى بمقاس 2x1 في الخطة المجانية ومنع الزيارات غير الصالحة. في خطة Pro، لا يتم جمع معرّفات الإعلانات نهائيًا ويتم تعطيل AdMob بالكامل. يمكن للمستخدمين إعادة تعيين معرّف الإعلانات في أي وقت عبر إعدادات Android > الخصوصية > الإعلانات."]
+          ["<strong>الإعلانات ومعرّفات الأجهزة (الخطة المجانية فقط)</strong>", "معرّف إعلانات Google (Android AD_ID)، والموقع الجغرافي التقريبي (عبر عنوان IP)، وطراز الجهاز، ومقاييس مرات الظهور والتفاعل مع الإعلانات.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>سياسات إعلانات Google</a>", "عرض إعلانات مدمجة مع المحتوى بمقاس 2x1 في الخطة المجانية ومنع الزيارات غير الصالحة. في خطة Pro، لا يتم جمع معرّفات الإعلانات نهائيًا ولا تتم تهيئة حزمة SDK الخاصة بـ AdMob. يمكن للمستخدمين إعادة تعيين معرّف الإعلانات في أي وقت عبر إعدادات Android > الخصوصية > الإعلانات."],
+          ["<strong>التحقق من إرجاع الساعة (للكمبيوتر فقط، استثنائي)</strong>", "عنوان IP العام للكمبيوتر، طلب HTTPS HEAD قياسي (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com) أو Cloudflare, Inc. (cloudflare.com) أو Apple Inc. (www.apple.com)", "قراءة ترويسة HTTP Date للتحقق من الوقت الفعلي وإلغاء قفل ترخيص Pro الشرعي فقط عندما تكون ساعة الكمبيوتر المحلية متأخرة بأكثر من 5 دقائق عن آخر وقت مسجل. لا يتم استدعاؤه أبدًا أثناء بدء التشغيل العادي؛ ولا يرسل ملفات تعريف ارتباط أو معرّفات للجهاز."],
+          ["<strong>استضافة الموقع وشبكة CDN (عند تحميل الصفحة)</strong>", "عنوان IP للزائر، وعنوان URL المطلوب، وترويسات HTTP للمتصفح ونظام التشغيل (User-Agent وAccept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. وFastly, Inc. (الولايات المتحدة / المنطقة الاقتصادية الأوروبية)", "تقديم صفحات الويب الثابتة والتخزين المؤقت والحماية الأمنية ومن هجمات DDoS (يُحتفظ بها في سجلات الأمان القياسية لمدة 30–90 يومًا). لا تُستخدم ملفات تعريف ارتباط للتتبع؛ وتُستخدم خطوط النظام دون أي استدعاءات خارجية لخدمة Google Fonts."]
         ]],
-        ["card", [["p", "<strong>مراقب البيانات:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>البريد الإلكتروني للتواصل:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>الموقع الإلكتروني:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>مراقب البيانات:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>البريد الإلكتروني للتواصل:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>الموقع الإلكتروني:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -2339,11 +2403,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "هام: قم بإلغاء اشتراكك النشط"],
           ["p", "حذف حسابك <strong>لا يؤدي تلقائيًا إلى إلغاء</strong> الاشتراك الذي بدأته عبر Google Play. لتجنب أي رسوم مستقبلية، قم بإلغاء الاشتراك قبل حذف حسابك:"],
-          ["ol", [
-            "افتح <strong>متجر Google Play</strong> على جهاز Android الخاص بك.",
-            "اضغط على أيقونة ملفك الشخصي > <strong>الدفعات والاشتراكات</strong> > <strong>الاشتراكات</strong>.",
-            "حدد <strong>NahiDeck</strong> ثم اضغط على <strong>\"إلغاء الاشتراك\"</strong>."
-          ]]
+          ["ol", ["افتح <strong>متجر Google Play</strong> على جهاز Android الخاص بك.", "اضغط على أيقونة ملفك الشخصي > <strong>الدفعات والاشتراكات</strong> > <strong>الاشتراكات</strong>.", "حدد <strong>NahiDeck</strong> ثم اضغط على <strong>\"إلغاء الاشتراك\"</strong>."]]
         ]]
       ]
     }
@@ -2353,7 +2413,7 @@ window.NAHI_LEGAL = {
   fa: {
     privacy: {
       title: "سیاست حفظ حریم خصوصی NahiDeck",
-      updated: "۲۵ اکتبر ۲۰۲۶",
+      updated: "۱۱ نوامبر ۲۰۲۶",
       blocks: [
         ["p", "برنامه NahiDeck («ما»، «برنامه» یا «سرویس») به حفظ حریم خصوصی کاربران و حفاظت از داده‌های شخصی اهمیت ویژه‌ای می‌دهد. این سیاست‌نامه شامل <strong>برنامه Android برنامه NahiDeck</strong>، <strong>کلاینت دسکتاپ Windows برنامه NahiDeck</strong> و <strong>افزونه مرورگر وب (NahiDeck Connect)</strong> می‌باشد."],
         ["h", "به طور خلاصه"],
@@ -2395,8 +2455,9 @@ window.NAHI_LEGAL = {
           "<strong>داده‌های تله‌متری:</strong> با لغو موافقت در «تنظیمات > حریم خصوصی»، سوابق موجود بلافاصله حذف می‌شوند. سوابق فعال حداکثر ظرف مدت ۱۸۰ روز (TTL) به صورت خودکار منقضی و حذف می‌گردند.",
           "<strong>لاگ‌های فنی سرور:</strong> سوابق درخواست‌های زیرساختی حداکثر تا ۳۰ روز نگهداری می‌شوند.",
           "<strong>سوابق مجوز و حسابرسی:</strong> سوابق عملیات حساب و مجوز حاوی شناسه کاربری هش‌شده شما هستند و حداکثر تا ۹۰ روز نگهداری می‌شوند.",
-          "<strong>گزارش‌های خرابی:</strong> شامل نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ هستند. ایمیل، آدرس‌های IP و نام پوشه کاربری در مسیر فایل‌ها پیش از ذخیره ماسک می‌شوند. حداکثر تا ۳۰ روز نگهداری می‌شوند. هنگام ارسال گزارش، برای جلوگیری از سوءاستفاده یک شناسه ناشناس Firebase ایجاد می‌شود؛ آدرس IP درخواست فقط به صورت هش یک‌طرفه و حداکثر ۲۴ ساعت نگهداری می‌شود.",
-          "<strong>انتقال‌های بین‌المللی:</strong> سرویس Firebase Authentication توسط Google از مراکز داده در ایالات متحده مدیریت می‌شود. جهت بررسی خرید، RevenueCat داده‌های شما را در ایالات متحده (AWS) پردازش می‌کند؛ این انتقال بر اساس بندهای استاندارد قراردادی محافظت می‌شود. داده‌های Firestore، Cloud Functions و Cloud KMS بر روی سرورهایی در اروپا (europe-west1) پردازش می‌شوند. مبنای قانونی انتقال از ترکیه طبق ماده ۹ قانون KVKK: [مبنای قانونی: توسط وکیل تکمیل خواهد شد].",
+          "<strong>گزارش‌های خرابی:</strong> شامل نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ هستند. ایمیل، آدرس‌های IP و نام پوشه کاربری در مسیر فایل‌ها پیش از ذخیره ماسک می‌شوند. حداکثر تا ۳۰ روز نگهداری می‌شوند. هنگام ارسال گزارش، برای جلوگیری از سوءاستفاده یک شناسه ناشناس Firebase ایجاد می‌شود؛ آدرس IP درخواست هرگز به صورت متن ساده در پایگاه داده برنامه ما (Firestore) ذخیره نمی‌شود و فقط به صورت شمارنده هش یک‌طرفه نمک‌زده (Salted) حداکثر تا ۲۴ ساعت نگهداری می‌شود (لاگ‌های زیرساختی Google Cloud Run / Cloud Logging ممکن است آدرس IP را به طور استاندارد تا ۳۰ روز نگه دارند).",
+          "<strong>محافظت در برابر عقب کشیدن ساعت رایانه (فقط نسخه دسکتاپ):</strong> تنها زمانی که تشخیص داده شود ساعت سیستم رایانه شما بیش از ۵ دقیقه از آخرین زمان ثبت‌شده عقب‌تر است (مثلاً پس از تمام شدن باتری CMOS/BIOS)، برنامه دسکتاپ صرفاً برای خواندن هدر HTTP <code>Date</code> و باز کردن قفل مجوزهای قانونی Pro، یک درخواست HTTPS <code>HEAD</code> بدون کوکی و بدون شناسه به اولین میزبان در دسترس از بین <code>time.google.com</code>، <code>cloudflare.com</code> یا <code>www.apple.com</code> ارسال می‌کند. در عملکرد عادی هیچ درخواستی ارسال نمی‌شود.",
+          "<strong>انتقال‌های بین‌المللی و اشخاص حقوقی دریافت‌کننده:</strong> سرویس‌های Firebase Authentication، Cloud Functions، Firestore، Cloud KMS، Play Integrity و AdMob توسط <strong>Google Ireland Limited</strong> (ایرلند) و <strong>Google LLC</strong> (ایالات متحده) ارائه می‌شوند؛ تأیید خرید توسط <strong>RevenueCat, Inc.</strong> (ایالات متحده) انجام می‌شود؛ و میزبانی وب استاتیک توسط <strong>GitHub, Inc. / GitHub B.V.</strong> و <strong>Fastly, Inc.</strong> (ایالات متحده / منطقه اقتصادی اروپا) ارائه می‌گردد. فونت‌های برنامه (Inter، Space Grotesk، JetBrains Mono) به صورت محلی در بسته برنامه قرار دارند و در زمان اجرا هیچ فراخوانی خارجی به سرورهای Google Fonts انجام نمی‌شود. داده‌های Firestore، Cloud Functions و Cloud KMS عمدتاً در اروپا (<code>europe-west1</code>) میزبانی می‌شوند، در حالی که احراز هویت، صورت‌حساب و زیرساخت ابری جهانی ممکن است داده‌ها را بر اساس بندهای استاندارد قراردادی در ایالات متحده و منطقه اقتصادی اروپا پردازش کنند. مبنای قانونی انتقال از ترکیه طبق ماده ۹ قانون KVKK: [مبنای قانونی: توسط وکیل تکمیل خواهد شد].",
           "<strong>ایمیل پشتیبانی:</strong> از طریق Google Groups پردازش شده و مشمول <a href='https://policies.google.com/privacy?hl=fa'>سیاست حفظ حریم خصوصی</a> و <a href='https://policies.google.com/terms?hl=fa'>شرایط خدمات</a> Google است. پیام‌ها در آرشیو گروه باقی می‌مانند."
         ]],
         ["h", "7. حقوق شما (GDPR و KVKK)"],
@@ -2410,9 +2471,15 @@ window.NAHI_LEGAL = {
           ["<strong>داده‌های افزونه محلی</strong>", "وضعیت رسانه در تب فعال مرورگر (نام قطعه، هنرمند، وضعیت پخش)", "فقط مرورگر محلی و برنامه رایانه", "نمایش رسانه‌های وب روی گوشی و رایانه. هرگز به فضای ابری ارسال نمی‌شود."],
           ["<strong>بررسی اصالت برنامه</strong>", "نام بسته، گواهی امضای برنامه و نتیجه بررسی سلامت دستگاه", "Google Play Integrity (Google)", "بررسی نصب قانونی برنامه از طریق Google Play و اجرا بر روی دستگاه قابل اعتماد؛ پیشگیری از سوءاستفاده. Google این داده‌ها را با اشخاص ثالث به اشتراک نمی‌گذارد."],
           ["<strong>گزارش‌های خرابی (اختیاری)</strong>", "نسخه برنامه، هش دستگاه، نوع و متن خطا، ردگیری پشته و خطوط لاگ (ایمیل‌ها و IPها ماسک می‌شوند)", "Google Cloud Functions و Firestore (اروپا)؛ ایمیل پشتیبانی از طریق Google Groups", "تحلیل و رفع خرابی‌ها. تنها با تأیید شما ارسال می‌شود."],
-          ["<strong>تبلیغات و شناسه‌های دستگاه (فقط طرح رایگان)</strong>", "شناسه تبلیغاتی گوگل (Android AD_ID)، مکان تقریبی (از طریق آدرس IP)، مدل دستگاه، معیارهای نمایش و تعامل با تبلیغات.", "Google AdMob (Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>خط‌مشی‌های تبلیغاتی گوگل</a>", "نمایش تبلیغات همسان 2x1 در طرح رایگان و جلوگیری از ترافیک نامعتبر. در طرح Pro، شناسه‌های تبلیغاتی به هیچ وجه جمع‌آوری نمی‌شوند و AdMob کاملاً غیرفعال است. کاربران می‌توانند شناسه تبلیغاتی خود را در تنظیمات اندروید > حریم خصوصی > تبلیغات بازنشانی کنند."]
+          ["<strong>تبلیغات و شناسه‌های دستگاه (فقط طرح رایگان)</strong>", "شناسه تبلیغاتی گوگل (Android AD_ID)، مکان تقریبی (از طریق آدرس IP)، مدل دستگاه، معیارهای نمایش و تعامل با تبلیغات.", "Google AdMob (Google Ireland Limited / Google LLC) — <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>خط‌مشی‌های تبلیغاتی گوگل</a>", "نمایش تبلیغات همسان 2x1 در طرح رایگان و جلوگیری از ترافیک نامعتبر. در طرح Pro، شناسه‌های تبلیغاتی به هیچ وجه جمع‌آوری نمی‌شوند و SDK مربوط به AdMob مقداردهی اولیه نمی‌شود. کاربران می‌توانند شناسه تبلیغاتی خود را در تنظیمات اندروید > حریم خصوصی > تبلیغات بازنشانی کنند."],
+          ["<strong>بررسی عقب کشیدن ساعت (فقط رایانه، در موارد استثنایی)</strong>", "آدرس IP عمومی رایانه، درخواست استاندارد HTTPS HEAD (User-Agent: NahiDeck/1.0)", "Google LLC (time.google.com)، Cloudflare, Inc. (cloudflare.com) یا Apple Inc. (www.apple.com)", "خواندن هدر HTTP Date برای تأیید زمان واقعی و باز کردن قفل مجوز قانونی Pro، تنها زمانی که ساعت محلی رایانه بیش از ۵ دقیقه از آخرین زمان ثبت‌شده عقب باشد. در راه‌اندازی عادی هرگز فراخوانی نمی‌شود و هیچ کوکی یا شناسه دستگاهی ارسال نمی‌کند."],
+          ["<strong>میزبانی وب‌سایت و CDN (هنگام بارگذاری صفحه)</strong>", "آدرس IP بازدیدکننده، نشانی URL درخواستی، هدرهای HTTP مرورگر و سیستم‌عامل (User-Agent، Accept-Language)", "GitHub Pages — GitHub, Inc. / GitHub B.V. و Fastly, Inc. (ایالات متحده / منطقه اقتصادی اروپا)", "ارائه صفحات وب استاتیک، حافظه نهان و محافظت امنیتی/DDoS (نگهداری در لاگ‌های امنیتی استاندارد به مدت ۳۰ تا ۹۰ روز). هیچ کوکی ردیابی استفاده نمی‌شود؛ از فونت‌های سیستمی بدون هیچ فراخوانی خارجی به Google Fonts استفاده می‌شود."]
         ]],
-        ["card", [["p", "<strong>کنترل‌کننده داده:</strong> Kaya Furkan İPEKCİ"], ["p", "<strong>ایمیل تماس:</strong> nahideck-support@googlegroups.com"], ["p", "<strong>وب‌سایت:</strong> https://nahideck.github.io"]]],
+        ["card", [
+          ["p", "<strong>کنترل‌کننده داده:</strong> Kaya Furkan İPEKCİ"],
+          ["p", "<strong>ایمیل تماس:</strong> nahideck-support@googlegroups.com"],
+          ["p", "<strong>وب‌سایت:</strong> https://nahideck.github.io"]
+        ]]
       ]
     },
     delete: {
@@ -2456,11 +2523,7 @@ window.NAHI_LEGAL = {
         ["danger", [
           ["h3", "مهم: اشتراک فعال خود را لغو کنید"],
           ["p", "حذف حساب کاربری باعث <strong>لغو خودکار</strong> اشتراک خریداری‌شده از طریق Google Play نمی‌شود. جهت جلوگیری از کسر هزینه در دوره‌های بعدی، پیش از حذف حساب کاربری اشتراک خود را لغو کنید:"],
-          ["ol", [
-            "برنامه <strong>Google Play Store</strong> را در دستگاه Android خود باز کنید.",
-            "روی نماد نمایه خود ضربه بزنید > <strong>پرداخت‌ها و اشتراک‌ها</strong> > <strong>اشتراک‌ها</strong>.",
-            "برنامه <strong>NahiDeck</strong> را انتخاب کرده و <strong>«لغو اشتراک»</strong> را لمس کنید."
-          ]]
+          ["ol", ["برنامه <strong>Google Play Store</strong> را در دستگاه Android خود باز کنید.", "روی نماد نمایه خود ضربه بزنید > <strong>پرداخت‌ها و اشتراک‌ها</strong> > <strong>اشتراک‌ها</strong>.", "برنامه <strong>NahiDeck</strong> را انتخاب کرده و <strong>«لغو اشتراک»</strong> را لمس کنید."]]
         ]]
       ]
     }
