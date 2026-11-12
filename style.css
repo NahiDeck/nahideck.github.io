@@ -194,11 +194,30 @@ select.lang {
 /* Butonlar: aynı boyut, aynı biçim */
 .actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 260px));
+  grid-template-columns: repeat(3, minmax(0, 260px));
   justify-content: center;
   gap: 16px;
   margin-top: 40px;
 }
+@media (max-width: 900px) {
+  .actions { grid-template-columns: 1fr; gap: 12px; justify-items: center; }
+  .actions .btn { width: 100%; max-width: 300px; }
+}
+/* Microsoft Store: bağlantı gelene kadar pasif ve "Yakında" etiketli */
+.btn.btn-disabled {
+  flex-direction: column;
+  gap: 2px;
+  height: auto;
+  min-height: 56px;
+  padding: 8px 16px;
+  text-align: center;
+  line-height: 1.2;
+  background: var(--soon-bg);
+  color: var(--muted);
+  cursor: default;
+}
+.btn.btn-disabled:hover { opacity: 1; }
+.btn-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; }
 .btn {
   display: flex;
   align-items: center;
