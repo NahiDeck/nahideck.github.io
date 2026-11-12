@@ -8,7 +8,7 @@
   // Gerçek indirme bağlantıları: Android için Play Store, Windows için doğrudan en güncel release kurulum paketi.
   var DOWNLOADS = {
     android: "https://play.google.com/store/apps/details?id=app.nahideck.mobile",
-    windows: "https://github.com/NahiDeck/nahideck-releases/releases/latest/download/NahiDeck_1.0.0_x64-setup.exe"
+    windows: "https://github.com/NahiDeck/nahideck-releases/releases/latest/download/NahiDeck-setup.exe"
   };
 
   var STORAGE_KEY = "nahideck_site_lang";
