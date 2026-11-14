@@ -5,13 +5,12 @@
 (function () {
   "use strict";
 
-  // Gerçek indirme bağlantıları: Android için Play Store, Windows için doğrudan en güncel release kurulum paketi.
+  // Gerçek indirme bağlantıları: Android için Play Store, Windows için doğrudan en güncel release kurulum paketi ve Microsoft Store.
   var DOWNLOADS = {
     android: "https://play.google.com/store/apps/details?id=app.nahideck.mobile",
     windows: "https://github.com/NahiDeck/nahideck-releases/releases/latest/download/NahiDeck-setup.exe",
-    // Microsoft Store ürün bağlantısı: Store'da uygulama oluşturulup bağlantı alınınca buraya yazılır.
-    // Boşken düğme pasif ve "Yakında" etiketli kalır (uydurma bağlantı konmaz).
-    store: ""
+    // Microsoft Store ürün bağlantısı:
+    store: "https://apps.microsoft.com/store/detail/9P1JVB6MV0V0?cid=DevShareMWAPCS"
   };
 
   var STORAGE_KEY = "nahideck_site_lang";
@@ -232,12 +231,18 @@
   function applyDownloads() {
     var a = document.getElementById("download-android");
     var w = document.getElementById("download-windows");
-    if (a) a.href = DOWNLOADS.android;
+    if (a) {
+      a.href = DOWNLOADS.android;
+      a.target = "_blank";
+      a.rel = "noopener";
+    }
     if (w) w.href = DOWNLOADS.windows;
     var s = document.getElementById("download-store");
     var tag = document.getElementById("download-store-tag");
     if (s && DOWNLOADS.store) {
       s.href = DOWNLOADS.store;
+      s.target = "_blank";
+      s.rel = "noopener";
       s.classList.remove("btn-disabled");
       s.removeAttribute("aria-disabled");
       s.removeAttribute("tabindex");

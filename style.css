@@ -191,27 +191,20 @@ select.lang {
 :root[data-theme="light"] .hero h1,
 :root[data-theme="light"] .hero p { color: #0F172A; }
 
-/* Butonlar: aynı boyut, aynı biçim */
+/* Butonlar: aynı boyut, aynı biçim, iki satırlı ferah hiyerarşi */
 .actions {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 260px));
+  grid-template-columns: repeat(3, minmax(0, 280px));
   justify-content: center;
   gap: 16px;
   margin-top: 40px;
 }
 @media (max-width: 900px) {
   .actions { grid-template-columns: 1fr; gap: 12px; justify-items: center; }
-  .actions .btn { width: 100%; max-width: 300px; }
+  .actions .btn { width: 100%; max-width: 320px; }
 }
 /* Microsoft Store: bağlantı gelene kadar pasif ve "Yakında" etiketli */
 .btn.btn-disabled {
-  flex-direction: column;
-  gap: 2px;
-  height: auto;
-  min-height: 56px;
-  padding: 8px 16px;
-  text-align: center;
-  line-height: 1.2;
   background: var(--soon-bg);
   color: var(--muted);
   cursor: default;
@@ -220,17 +213,32 @@ select.lang {
 .btn-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; }
 .btn {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  border-radius: 999px;
-  font-size: 16px;
-  font-weight: 600;
+  gap: 3px;
+  min-height: 64px;
+  height: auto;
+  padding: 10px 18px;
+  border-radius: 16px;
+  text-align: center;
   background: var(--accent);
   color: var(--accent-text);
   transition: opacity 0.15s;
 }
 .btn:hover { opacity: 0.88; text-decoration: none; }
+.btn-main {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.btn-sub {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.82;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
 
 .soon {
   margin-top: 48px;
@@ -514,7 +522,7 @@ select.lang {
   .hero-logo { width: 76px; height: 76px; margin-bottom: 24px; }
   .hero h1, .hero p { padding: 0 8px; }
   .actions { grid-template-columns: 1fr; gap: 12px; justify-items: center; }
-  .btn { width: 100%; max-width: 300px; }
+  .btn { width: 100%; max-width: 320px; }
   .feature { flex: 1 1 100%; }
   .features { padding-bottom: 64px; }
   .showcase-row { flex-direction: column; gap: 20px; align-items: stretch; }

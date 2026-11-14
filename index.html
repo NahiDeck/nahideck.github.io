@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NahiDeck</title>
-  <meta name="description" content="NahiDeck: your phone becomes the control panel for your PC.">
+  <meta name="description" content="NahiDeck: your phone becomes the control panel for your computer.">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
@@ -30,16 +30,23 @@
       <div class="hero-logo">
         <img src="assets/app-logo-transparent.svg" alt="NahiDeck">
       </div>
-      <h1 data-i18n="hero_title">Your phone, the control panel for your PC</h1>
+      <h1 data-i18n="hero_title">Your phone, the control panel for your computer</h1>
       <p data-i18n="hero_sub">Control music, volume, streams and shortcuts from your phone. Set it up once and you are done</p>
 
       <div class="actions">
-        <a id="download-android" class="btn" href="#" data-i18n="dl_android">Download for Android</a>
-        <a id="download-store" class="btn btn-disabled" aria-disabled="true" tabindex="-1">
-          <span data-i18n="dl_store">Get it from Microsoft Store</span>
-          <span class="btn-tag" id="download-store-tag" data-i18n="soon">Coming soon</span>
+        <a id="download-android" class="btn" href="#" target="_blank" rel="noopener">
+          <span class="btn-main" data-i18n="dl_android">Download for Android</span>
+          <span class="btn-sub">Google Play</span>
         </a>
-        <a id="download-windows" class="btn" href="#" data-i18n="dl_direct">Direct download for Windows 10/11</a>
+        <a id="download-store" class="btn" href="https://apps.microsoft.com/store/detail/9P1JVB6MV0V0?cid=DevShareMWAPCS" target="_blank" rel="noopener">
+          <span class="btn-main" data-i18n="dl_store">Get it from Microsoft Store</span>
+          <span class="btn-sub">Windows 10 / 11</span>
+          <span class="btn-tag" id="download-store-tag" data-i18n="soon" hidden>Coming soon</span>
+        </a>
+        <a id="download-windows" class="btn" href="#" target="_blank" rel="noopener">
+          <span class="btn-main" data-i18n="dl_direct">Direct download</span>
+          <span class="btn-sub">Windows 10 / 11</span>
+        </a>
       </div>
 
       <p class="soon">
